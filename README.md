@@ -9,6 +9,7 @@
 ## ✨ 功能特性
 
 ### 📚 Tab 1: 刷题 (Drill)
+
 - **卡片式滑动界面**：流畅的左右滑动切换题目
 - **主题/难度筛选**：支持按主题（导数基础、极限与连续、积分等）和难度（基础、进阶）筛选题目
 - **答案检查**：输入答案后实时检查正确性
@@ -17,12 +18,14 @@
 - **错题记录**：自动记录做错的题目到错题本
 
 ### 📖 Tab 2: 公式 (Formulas)
+
 - **分类浏览**：按类别查看公式（极限与连续、导数、积分、级数）
 - **搜索功能**：快速搜索公式名称、描述或分类
 - **公式详情**：查看公式的详细说明和应用示例
 - **收藏功能**：收藏常用公式，方便快速查阅
 
 ### 👤 Tab 3: 个人 (Profile)
+
 - **学习统计**：
   - 总答题数、正确数、错误数
   - 正确率统计
@@ -105,17 +108,20 @@ assets/
 ### 安装步骤
 
 1. **克隆仓库**
+
    ```bash
    git clone git@github.com:zengchanghuan/math_seckill.git
    cd math_seckill
    ```
 
 2. **安装依赖**
+
    ```bash
    flutter pub get
    ```
 
 3. **iOS 依赖安装**（仅 iOS 开发需要）
+
    ```bash
    cd ios
    pod install
@@ -123,10 +129,11 @@ assets/
    ```
 
 4. **运行应用**
+
    ```bash
    # 运行在连接的设备或模拟器上
    flutter run
-   
+
    # 或指定平台
    flutter run -d ios
    flutter run -d android
@@ -146,12 +153,14 @@ flutter build appbundle --release
 ## 📊 数据说明
 
 ### 题目数据 (problems.json)
+
 - 包含 10 道示例微积分题目
 - 涵盖主题：导数基础、极限与连续、积分
 - 难度等级：基础、进阶
 - 每道题目包含：问题、答案、详细解答
 
 ### 公式数据 (formulas.json)
+
 - 包含 18 个微积分核心公式
 - 分类：极限与连续、导数、积分、级数
 - 每个公式包含：名称、公式、描述、应用示例
@@ -159,6 +168,7 @@ flutter build appbundle --release
 ## 🎯 使用说明
 
 ### 刷题功能
+
 1. 在"刷题"标签页选择主题和难度
 2. 左右滑动卡片查看不同题目
 3. 在输入框中输入答案
@@ -167,12 +177,14 @@ flutter build appbundle --release
 6. 点击"下一题"继续练习
 
 ### 公式查阅
+
 1. 在"公式"标签页浏览公式分类
 2. 使用搜索框快速查找公式
 3. 点击公式卡片查看详细信息
 4. 点击心形图标收藏常用公式
 
 ### 学习统计
+
 1. 在"我"标签页查看学习统计
 2. 查看总答题数、正确率等数据
 3. 访问错题本复习做错的题目
@@ -182,32 +194,31 @@ flutter build appbundle --release
 ## 🔧 开发说明
 
 ### 状态管理
+
 使用 GetX 进行状态管理：
+
 - `DrillController`：管理刷题相关状态
 - `FormulaController`：管理公式相关状态
 - `ProfileController`：管理个人相关状态
 
 ### 数据持久化
+
 使用 SharedPreferences 存储：
+
 - 用户答题记录和统计
 - 错题本
 - 收藏的公式
 - 用户设置（主题、字体大小）
 
 ### LaTeX 渲染
+
 由于 Flutter 3.10.3 的限制，使用自定义 `MathText` 组件：
+
 - 将常见 LaTeX 符号转换为 Unicode
 - 简化分数显示
 - 支持可选择的文本显示
 
 **注意**：如需更好的 LaTeX 渲染效果，建议升级 Flutter SDK 到 3.13+ 并使用 `flutter_math_fork` 或 `flutter_tex` 库。
-
-## 📝 开发者信息
-
-- **开发者**：zengchanghuan
-- **技术栈**：Flutter, SwiftUI, Objective-C, Swift
-- **开发目标**：成为机器学习 AI 工程师
-- **当前学习**：线性代数、概率与统计
 
 ## 🐛 已知问题
 
