@@ -39,11 +39,11 @@
 
 ## 🛠 技术栈
 
-- **框架**：Flutter 3.10.3
+- **框架**：Flutter 3.35.6
 - **状态管理**：GetX 4.6.5
 - **本地存储**：SharedPreferences 2.2.2
-- **LaTeX 渲染**：自定义 MathText 组件（兼容 Flutter 3.10）
-- **开发语言**：Dart 3.0.3
+- **LaTeX 渲染**：自定义 MathText 组件（可升级使用 flutter_math_fork）
+- **开发语言**：Dart 3.9.2
 
 ## 📁 项目结构
 
@@ -100,8 +100,8 @@ assets/
 
 ### 环境要求
 
-- Flutter SDK >= 3.0.3
-- Dart SDK >= 3.0.3
+- Flutter SDK >= 3.13.0（推荐 3.35.6+）
+- Dart SDK >= 3.0.3（推荐 3.9.2+）
 - iOS 12.0+ (iOS 开发)
 - Android API 21+ (Android 开发)
 
@@ -212,22 +212,23 @@ flutter build appbundle --release
 
 ### LaTeX 渲染
 
-由于 Flutter 3.10.3 的限制，使用自定义 `MathText` 组件：
+当前使用自定义 `MathText` 组件：
 
 - 将常见 LaTeX 符号转换为 Unicode
 - 简化分数显示
 - 支持可选择的文本显示
 
-**注意**：如需更好的 LaTeX 渲染效果，建议升级 Flutter SDK 到 3.13+ 并使用 `flutter_math_fork` 或 `flutter_tex` 库。
+**注意**：项目已升级到 Flutter 3.35.6，可以使用 `flutter_math_fork` 或 `flutter_tex` 库获得更好的数学公式渲染效果。
 
 ## 🐛 已知问题
 
 1. Metal Toolchain 警告：Xcode 中可能出现 Metal toolchain 搜索路径警告，这是系统级别的警告，不影响构建和运行。
-2. LaTeX 渲染：当前使用简化的文本显示，如需更好的数学公式渲染，建议升级 Flutter SDK。
+2. LaTeX 渲染：当前使用简化的文本显示，可以升级使用 `flutter_math_fork` 获得更好的数学公式渲染效果。
 
 ## 🔮 未来计划
 
-- [ ] 升级 Flutter SDK 以支持更好的 LaTeX 渲染
+- [x] 升级 Flutter SDK 到 3.35.6
+- [ ] 集成 flutter_math_fork 以获得更好的 LaTeX 渲染
 - [ ] 扩展题库，添加更多题目和公式
 - [ ] 添加题目收藏功能
 - [ ] 实现学习计划和每日练习提醒
@@ -244,4 +245,5 @@ flutter build appbundle --release
 
 ---
 
-**最后更新**：2024年11月30日
+**最后更新**：2024年11月30日  
+**Flutter 版本**：3.35.6 (stable)
