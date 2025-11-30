@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/drill_controller.dart';
-import '../widgets/topic_selector.dart';
 import '../widgets/problem_card.dart';
 import '../widgets/progress_bar.dart';
 import '../widgets/drill_drawer.dart';
@@ -19,10 +18,6 @@ class DrillPage extends StatelessWidget {
       drawer: const DrillDrawer(),
       appBar: AppBar(
         title: const Text('刷题'),
-        bottom: const PreferredSize(
-          preferredSize: Size.fromHeight(60),
-          child: TopicSelector(),
-        ),
       ),
       body: Obx(() {
         if (problemService.isLoading.value) {

@@ -1,0 +1,14 @@
+# AI 题目生成工具依赖
+
+# 智谱AI (推荐，国内可用)
+zhipuai>=2.0.0
+
+# 通义千问
+dashscope>=1.10.0
+
+# 文心一言
+requests>=2.31.0
+
+# OpenAI / Kimi (使用 OpenAI 兼容接口)
+openai>=1.0.0
+
