@@ -67,7 +67,7 @@ class FormulaDetailPage extends StatelessWidget {
                 mathStyle: MathStyle.display,
                 textStyle: const TextStyle(
                   color: Colors.black87,
-                  fontSize: 30,
+                  fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -78,8 +78,8 @@ class FormulaDetailPage extends StatelessWidget {
             Text(
               '描述',
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
             const SizedBox(height: 8),
             Text(
@@ -92,8 +92,8 @@ class FormulaDetailPage extends StatelessWidget {
             Text(
               '应用示例',
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
             const SizedBox(height: 8),
             Container(
@@ -108,7 +108,7 @@ class FormulaDetailPage extends StatelessWidget {
                 mathStyle: MathStyle.text,
                 textStyle: const TextStyle(
                   color: Colors.black87,
-                  fontSize: 30,
+                  fontSize: 24,
                 ),
               ),
             ),
@@ -118,4 +118,3 @@ class FormulaDetailPage extends StatelessWidget {
     );
   }
 }
-

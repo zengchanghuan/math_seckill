@@ -34,15 +34,15 @@ class WrongProblemsPage extends StatelessWidget {
                 Text(
                   '暂无错题',
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: Colors.grey.shade600,
-                  ),
+                        color: Colors.grey.shade600,
+                      ),
                 ),
                 const SizedBox(height: 8),
                 Text(
                   '继续保持，加油！',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Colors.grey.shade500,
-                  ),
+                        color: Colors.grey.shade500,
+                      ),
                 ),
               ],
             ),
@@ -82,7 +82,7 @@ class WrongProblemsPage extends StatelessWidget {
                             mathStyle: MathStyle.text,
                             textStyle: const TextStyle(
                               color: Colors.black87,
-                              fontSize: 30,
+                              fontSize: 24,
                             ),
                           ),
                         ),
@@ -99,17 +99,23 @@ class WrongProblemsPage extends StatelessWidget {
                             children: [
                               Text(
                                 '正确答案：',
-                                style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                ),
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleSmall
+                                    ?.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                    ),
                               ),
                               const SizedBox(height: 8),
                               Text(
                                 problem.answer,
-                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.blue.shade900,
-                                ),
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyLarge
+                                    ?.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue.shade900,
+                                    ),
                               ),
                             ],
                           ),
@@ -126,9 +132,12 @@ class WrongProblemsPage extends StatelessWidget {
                             children: [
                               Text(
                                 '解答：',
-                                style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                ),
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleSmall
+                                    ?.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                    ),
                               ),
                               const SizedBox(height: 8),
                               Math.tex(
@@ -136,7 +145,7 @@ class WrongProblemsPage extends StatelessWidget {
                                 mathStyle: MathStyle.text,
                                 textStyle: const TextStyle(
                                   color: Colors.black87,
-                                  fontSize: 30,
+                                  fontSize: 24,
                                 ),
                               ),
                             ],
@@ -154,4 +163,3 @@ class WrongProblemsPage extends StatelessWidget {
     );
   }
 }
-

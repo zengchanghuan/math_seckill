@@ -91,7 +91,7 @@ class FormulaCard extends StatelessWidget {
                             mathStyle: MathStyle.text,
                             textStyle: const TextStyle(
                               color: Colors.black87,
-                              fontSize: 30,
+                              fontSize: 24,
                             ),
                           ),
                         ),
