@@ -220,6 +220,7 @@ flutter build appbundle --release
 - 可自定义文本样式和大小
 
 **使用方式**：
+
 ```dart
 Math.tex(
   '\\frac{d}{dx}(x^2) = 2x',
