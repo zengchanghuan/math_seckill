@@ -37,6 +37,7 @@ class ProblemCard extends StatelessWidget {
         elevation: 4,
         color: cardColor,
         child: SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
           child: Padding(
             padding: const EdgeInsets.all(20),
             child: Column(
@@ -199,9 +200,111 @@ class ProblemCard extends StatelessWidget {
 
                 const SizedBox(height: 16),
 
-                // 解答展示区
+                // 答案反馈区域
                 if (answerStatus != null) ...[
-                  if (answerStatus == false)
+                  // 错误答案提示：显示正确答案
+                  if (answerStatus == false) ...[
+                    Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: Colors.orange.shade50,
+                        borderRadius: BorderRadius.circular(8),
+                        border:
+                            Border.all(color: Colors.orange.shade300, width: 2),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.info_outline,
+                                color: Colors.orange.shade700,
+                                size: 24,
+                              ),
+                              const SizedBox(width: 12),
+                              Text(
+                                '正确答案是：选项 ${problem.answer}',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium
+                                    ?.copyWith(
+                                      color: Colors.orange.shade900,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                    ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 12),
+                          // 显示正确答案的内容
+                          if (options.isNotEmpty) ...[
+                            Container(
+                              padding: const EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8),
+                                border:
+                                    Border.all(color: Colors.orange.shade400),
+                              ),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    width: 32,
+                                    height: 32,
+                                    decoration: BoxDecoration(
+                                      color: Colors.orange.shade700,
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        problem.answer,
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 12),
+                                  Expanded(
+                                    child: LayoutBuilder(
+                                      builder: (context, constraints) {
+                                        final correctIndex =
+                                            problem.answer.codeUnitAt(0) - 65;
+                                        if (correctIndex >= 0 &&
+                                            correctIndex < options.length) {
+                                          return SingleChildScrollView(
+                                            scrollDirection: Axis.horizontal,
+                                            child: ConstrainedBox(
+                                              constraints: BoxConstraints(
+                                                minWidth: constraints.maxWidth,
+                                              ),
+                                              child: Math.tex(
+                                                LatexHelper.cleanLatex(
+                                                    options[correctIndex]),
+                                                mathStyle: MathStyle.text,
+                                                textStyle: const TextStyle(
+                                                  color: Colors.black87,
+                                                  fontSize: 18,
+                                                ),
+                                              ),
+                                            ),
+                                          );
+                                        }
+                                        return const SizedBox.shrink();
+                                      },
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 12),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: TextButton.icon(
@@ -212,6 +315,7 @@ class ProblemCard extends StatelessWidget {
                         label: Text(showSolution ? '隐藏解答' : '查看解答'),
                       ),
                     ),
+                  ],
                   if (showSolution) ...[
                     const SizedBox(height: 8),
                     Container(

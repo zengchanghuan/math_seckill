@@ -66,6 +66,8 @@ class DrillPage extends StatelessWidget {
             Expanded(
               child: PageView.builder(
                 controller: controller.pageController,
+                physics: const AlwaysScrollableScrollPhysics(),
+                allowImplicitScrolling: false,
                 onPageChanged: (index) {
                   controller.currentIndex.value = index;
                 },
