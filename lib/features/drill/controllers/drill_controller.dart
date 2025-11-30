@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter/material.dart';
+import 'dart:async';
 import 'dart:convert';
 import '../../../core/models/problem.dart';
 import '../../../core/models/user_stats.dart';
@@ -19,12 +21,20 @@ class DrillController extends GetxController {
 
   final Rx<UserStats> userStats = UserStats().obs;
 
+  PageController? pageController;
+
   @override
   void onInit() {
     super.onInit();
     loadUserStats();
     loadWrongProblems();
     filterProblems();
+  }
+
+  @override
+  void onClose() {
+    pageController?.dispose();
+    super.onClose();
   }
 
   void filterProblems() {
@@ -46,6 +56,9 @@ class DrillController extends GetxController {
     userAnswers.clear();
     answerStatus.clear();
     showSolution.clear();
+    // 重置 PageController
+    pageController?.dispose();
+    pageController = PageController(initialPage: 0);
   }
 
   void setTopic(String topic) {
@@ -60,6 +73,41 @@ class DrillController extends GetxController {
 
   void setAnswer(String problemId, String answer) {
     userAnswers[problemId] = answer;
+  }
+
+  void selectAnswer(String problemId, String selectedOption) {
+    // 保存用户选择的答案
+    userAnswers[problemId] = selectedOption;
+
+    // 检查答案
+    final problem = currentProblems.firstWhere((p) => p.id == problemId);
+    final correctAnswer = problem.answer.trim().toUpperCase();
+    final isCorrect = selectedOption.toUpperCase() == correctAnswer;
+
+    // 更新答案状态
+    answerStatus[problemId] = isCorrect;
+
+    // 更新统计和错题本
+    if (!isCorrect) {
+      if (!wrongProblemIds.contains(problemId)) {
+        wrongProblemIds.add(problemId);
+        saveWrongProblems();
+      }
+    }
+    updateUserStats(isCorrect, problem.topic);
+
+    // 如果答案正确，延迟后自动滑动到下一题
+    if (isCorrect && pageController != null) {
+      Timer(const Duration(milliseconds: 800), () {
+        if (currentIndex.value < currentProblems.length - 1) {
+          currentIndex.value++;
+          pageController!.nextPage(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut,
+          );
+        }
+      });
+    }
   }
 
   void checkAnswer(String problemId) {

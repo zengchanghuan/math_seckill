@@ -4,7 +4,13 @@
     "topic": "导数基础",
     "difficulty": "基础",
     "question": "求函数 $f(x) = x^2 + 3x + 2$ 的导数。",
-    "answer": "2x+3",
+    "answer": "A",
+    "options": [
+      "$2x + 3$",
+      "$x + 3$",
+      "$2x^2 + 3$",
+      "$x^2 + 3$"
+    ],
     "solution": "使用基本求导法则：\\n$f'(x) = \\frac{d}{dx}(x^2) + \\frac{d}{dx}(3x) + \\frac{d}{dx}(2)$\\n$f'(x) = 2x + 3 + 0 = 2x + 3$",
     "tags": ["导数", "多项式"]
   },
@@ -13,7 +19,13 @@
     "topic": "导数基础",
     "difficulty": "基础",
     "question": "求函数 $f(x) = \\sin(x)$ 的导数。",
-    "answer": "cos(x)",
+    "answer": "B",
+    "options": [
+      "$\\sin(x)$",
+      "$\\cos(x)$",
+      "$-\\sin(x)$",
+      "$-\\cos(x)$"
+    ],
     "solution": "根据三角函数的导数公式：\\n$f'(x) = \\cos(x)$",
     "tags": ["导数", "三角函数"]
   },
@@ -22,7 +34,13 @@
     "topic": "导数基础",
     "difficulty": "进阶",
     "question": "使用链式法则求 $f(x) = \\sin(x^2)$ 的导数。",
-    "answer": "2x*cos(x^2)",
+    "answer": "C",
+    "options": [
+      "$\\cos(x^2)$",
+      "$2x\\sin(x^2)$",
+      "$2x\\cos(x^2)$",
+      "$x\\cos(x^2)$"
+    ],
     "solution": "设 $u = x^2$，则 $f(x) = \\sin(u)$\\n$f'(x) = \\cos(u) \\cdot \\frac{du}{dx} = \\cos(x^2) \\cdot 2x = 2x\\cos(x^2)$",
     "tags": ["导数", "链式法则"]
   },
@@ -31,7 +49,13 @@
     "topic": "极限与连续",
     "difficulty": "基础",
     "question": "求极限：$\\lim_{x \\to 0} \\frac{\\sin(x)}{x}$",
-    "answer": "1",
+    "answer": "A",
+    "options": [
+      "$1$",
+      "$0$",
+      "$\\infty$",
+      "$-1$"
+    ],
     "solution": "这是重要极限之一。\\n$\\lim_{x \\to 0} \\frac{\\sin(x)}{x} = 1$",
     "tags": ["极限", "重要极限"]
   },
@@ -40,7 +64,13 @@
     "topic": "极限与连续",
     "difficulty": "进阶",
     "question": "求极限：$\\lim_{x \\to \\infty} \\frac{x^2 + 3x + 2}{2x^2 - x + 1}$",
-    "answer": "1/2",
+    "answer": "B",
+    "options": [
+      "$1$",
+      "$\\frac{1}{2}$",
+      "$2$",
+      "$\\infty$"
+    ],
     "solution": "当 $x \\to \\infty$ 时，分子和分母都除以最高次项：\\n$\\lim_{x \\to \\infty} \\frac{x^2 + 3x + 2}{2x^2 - x + 1} = \\lim_{x \\to \\infty} \\frac{1 + \\frac{3}{x} + \\frac{2}{x^2}}{2 - \\frac{1}{x} + \\frac{1}{x^2}} = \\frac{1}{2}$",
     "tags": ["极限", "无穷大"]
   },
@@ -49,7 +79,13 @@
     "topic": "积分",
     "difficulty": "基础",
     "question": "求不定积分：$\\int x^2 dx$",
-    "answer": "x^3/3+C",
+    "answer": "C",
+    "options": [
+      "$x^2 + C$",
+      "$2x + C$",
+      "$\\frac{x^3}{3} + C$",
+      "$x^3 + C$"
+    ],
     "solution": "使用基本积分公式：\\n$\\int x^2 dx = \\frac{x^3}{3} + C$",
     "tags": ["积分", "不定积分"]
   },
@@ -58,7 +94,13 @@
     "topic": "积分",
     "difficulty": "进阶",
     "question": "使用分部积分法求：$\\int x e^x dx$",
-    "answer": "x*e^x-e^x+C",
+    "answer": "D",
+    "options": [
+      "$x e^x + C$",
+      "$e^x + C$",
+      "$x^2 e^x + C$",
+      "$e^x(x-1) + C$"
+    ],
     "solution": "设 $u = x$，$dv = e^x dx$，则 $du = dx$，$v = e^x$\\n$\\int x e^x dx = x e^x - \\int e^x dx = x e^x - e^x + C = e^x(x-1) + C$",
     "tags": ["积分", "分部积分"]
   },
@@ -67,7 +109,13 @@
     "topic": "导数基础",
     "difficulty": "进阶",
     "question": "求函数 $f(x) = \\frac{x^2 + 1}{x}$ 的导数。",
-    "answer": "1-1/x^2",
+    "answer": "A",
+    "options": [
+      "$1 - \\frac{1}{x^2}$",
+      "$\\frac{2x}{x^2}$",
+      "$x - \\frac{1}{x}$",
+      "$2x + \\frac{1}{x^2}$"
+    ],
     "solution": "使用商法则：\\n$f'(x) = \\frac{(2x)(x) - (x^2+1)(1)}{x^2} = \\frac{2x^2 - x^2 - 1}{x^2} = \\frac{x^2 - 1}{x^2} = 1 - \\frac{1}{x^2}$",
     "tags": ["导数", "商法则"]
   },
@@ -76,7 +124,13 @@
     "topic": "积分",
     "difficulty": "基础",
     "question": "求定积分：$\\int_0^1 x dx$",
-    "answer": "1/2",
+    "answer": "B",
+    "options": [
+      "$0$",
+      "$\\frac{1}{2}$",
+      "$1$",
+      "$2$"
+    ],
     "solution": "$\\int_0^1 x dx = \\left[\\frac{x^2}{2}\\right]_0^1 = \\frac{1}{2} - 0 = \\frac{1}{2}$",
     "tags": ["积分", "定积分"]
   },
@@ -85,9 +139,14 @@
     "topic": "极限与连续",
     "difficulty": "基础",
     "question": "求极限：$\\lim_{x \\to 2} (x^2 + 3x - 2)$",
-    "answer": "8",
+    "answer": "C",
+    "options": [
+      "$6$",
+      "$7$",
+      "$8$",
+      "$9$"
+    ],
     "solution": "直接代入：\\n$\\lim_{x \\to 2} (x^2 + 3x - 2) = 2^2 + 3(2) - 2 = 4 + 6 - 2 = 8$",
     "tags": ["极限", "连续函数"]
   }
 ]
-

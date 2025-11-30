@@ -16,14 +16,14 @@ class ProblemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.find<DrillController>();
-    final answerController = TextEditingController(
-      text: controller.userAnswers[problem.id] ?? '',
-    );
 
     return Obx(() {
+      final selectedAnswer = controller.userAnswers[problem.id];
       final answerStatus = controller.answerStatus[problem.id];
       final showSolution = controller.showSolution[problem.id] ?? false;
-      final hasAnswer = answerController.text.isNotEmpty;
+
+      // 获取选项列表
+      final options = problem.options;
 
       Color cardColor = Colors.white;
       if (answerStatus == true) {
@@ -36,150 +36,233 @@ class ProblemCard extends StatelessWidget {
         margin: const EdgeInsets.all(16),
         elevation: 4,
         color: cardColor,
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              // 题目展示区
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade100,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: LayoutBuilder(
-                  builder: (context, constraints) {
-                    return SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: ConstrainedBox(
-                        constraints: BoxConstraints(
-                          minWidth: constraints.maxWidth,
-                        ),
-                        child: Math.tex(
-                          LatexHelper.cleanLatex(problem.question),
-                          mathStyle: MathStyle.text,
-                          textStyle: const TextStyle(
-                            color: Colors.black87,
-                            fontSize: 24,
-                          ),
-                        ),
-                      ),
-                    );
-                  },
-                ),
-              ),
-              const SizedBox(height: 24),
-
-              // 答案输入区
-              TextField(
-                controller: answerController,
-                decoration: InputDecoration(
-                  labelText: '请输入答案',
-                  hintText: '例如: 2x+3, cos(x), 1/2',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  suffixIcon: answerStatus != null
-                      ? Icon(
-                          answerStatus ? Icons.check_circle : Icons.cancel,
-                          color: answerStatus ? Colors.green : Colors.red,
-                        )
-                      : null,
-                ),
-                onChanged: (value) {
-                  controller.setAnswer(problem.id, value);
-                },
-                enabled: answerStatus == null,
-              ),
-              const SizedBox(height: 24),
-
-              // 操作按钮区
-              Wrap(
-                spacing: 12,
-                runSpacing: 12,
-                alignment: WrapAlignment.center,
-                children: [
-                  if (answerStatus == null && hasAnswer)
-                    ElevatedButton.icon(
-                      onPressed: () => controller.checkAnswer(problem.id),
-                      icon: const Icon(Icons.check),
-                      label: const Text('检查'),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue,
-                        foregroundColor: Colors.white,
-                      ),
-                    ),
-                  if (answerStatus != null)
-                    TextButton.icon(
-                      onPressed: () => controller.toggleSolution(problem.id),
-                      icon: Icon(showSolution
-                          ? Icons.visibility_off
-                          : Icons.visibility),
-                      label: Text(showSolution ? '隐藏答案' : '查看答案'),
-                    ),
-                  if (answerStatus != null)
-                    ElevatedButton.icon(
-                      onPressed: () => controller.nextProblem(),
-                      icon: const Icon(Icons.arrow_forward),
-                      label: const Text('下一题'),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.green,
-                        foregroundColor: Colors.white,
-                      ),
-                    ),
-                ],
-              ),
-
-              // 解答展示区
-              if (showSolution) ...[
-                const SizedBox(height: 24),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                // 题目展示区
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: Colors.blue.shade50,
+                    color: Colors.grey.shade100,
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: Colors.blue.shade200),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '解答：',
-                        style:
-                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                  child: LayoutBuilder(
+                    builder: (context, constraints) {
+                      return SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: ConstrainedBox(
+                          constraints: BoxConstraints(
+                            minWidth: constraints.maxWidth,
+                          ),
+                          child: Math.tex(
+                            LatexHelper.cleanLatex(problem.question),
+                            mathStyle: MathStyle.text,
+                            textStyle: const TextStyle(
+                              color: Colors.black87,
+                              fontSize: 24,
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                const SizedBox(height: 24),
+
+                // 选项区域
+                if (options.isNotEmpty && options.length >= 4) ...[
+                  Text(
+                    '请选择答案：',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                  const SizedBox(height: 12),
+                  ...List.generate(options.length, (index) {
+                    final optionLabel =
+                        String.fromCharCode(65 + index); // A, B, C, D
+                    final isSelected = selectedAnswer == optionLabel;
+                    final isCorrect = answerStatus == true && isSelected;
+                    final isWrong = answerStatus == false && isSelected;
+                    final isCorrectOption = problem.answer == optionLabel;
+
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 10),
+                      child: InkWell(
+                        onTap: answerStatus == null
+                            ? () {
+                                controller.selectAnswer(
+                                    problem.id, optionLabel);
+                              }
+                            : null,
+                        borderRadius: BorderRadius.circular(12),
+                        child: Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: isSelected
+                                ? (isCorrect
+                                    ? Colors.green.shade100
+                                    : isWrong
+                                        ? Colors.red.shade100
+                                        : Colors.blue.shade100)
+                                : Colors.white,
+                            border: Border.all(
+                              color: isSelected
+                                  ? (isCorrect
+                                      ? Colors.green
+                                      : isWrong
+                                          ? Colors.red
+                                          : Colors.blue)
+                                  : Colors.grey.shade300,
+                              width: isSelected ? 2 : 1,
+                            ),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Row(
+                            children: [
+                              // 选项标签 (A, B, C, D)
+                              Container(
+                                width: 40,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                  color: isSelected
+                                      ? (isCorrect
+                                          ? Colors.green
+                                          : isWrong
+                                              ? Colors.red
+                                              : Colors.blue)
+                                      : Colors.grey.shade300,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    optionLabel,
+                                    style: TextStyle(
+                                      color: isSelected
+                                          ? Colors.white
+                                          : Colors.black87,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: 16),
+                              // 选项内容
+                              Expanded(
+                                child: LayoutBuilder(
+                                  builder: (context, constraints) {
+                                    return SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: ConstrainedBox(
+                                        constraints: BoxConstraints(
+                                          minWidth: constraints.maxWidth,
+                                        ),
+                                        child: Math.tex(
+                                          LatexHelper.cleanLatex(
+                                              options[index]),
+                                          mathStyle: MathStyle.text,
+                                          textStyle: const TextStyle(
+                                            color: Colors.black87,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ),
+                              // 状态图标
+                              if (answerStatus != null && isCorrectOption)
+                                const Icon(
+                                  Icons.check_circle,
+                                  color: Colors.green,
+                                  size: 24,
+                                )
+                              else if (answerStatus != null && isWrong)
+                                const Icon(
+                                  Icons.cancel,
+                                  color: Colors.red,
+                                  size: 24,
+                                ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    );
+                  }),
+                ],
+
+                const SizedBox(height: 16),
+
+                // 解答展示区
+                if (answerStatus != null) ...[
+                  if (answerStatus == false)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      child: TextButton.icon(
+                        onPressed: () => controller.toggleSolution(problem.id),
+                        icon: Icon(showSolution
+                            ? Icons.visibility_off
+                            : Icons.visibility),
+                        label: Text(showSolution ? '隐藏解答' : '查看解答'),
+                      ),
+                    ),
+                  if (showSolution) ...[
+                    const SizedBox(height: 8),
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: Colors.blue.shade50,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: Colors.blue.shade200),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '解答：',
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.blue.shade900,
                                 ),
-                      ),
-                      const SizedBox(height: 8),
-                      LayoutBuilder(
-                        builder: (context, constraints) {
-                          return SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: ConstrainedBox(
-                              constraints: BoxConstraints(
-                                minWidth: constraints.maxWidth,
-                              ),
-                              child: Math.tex(
-                                LatexHelper.cleanLatex(problem.solution),
-                                mathStyle: MathStyle.text,
-                                textStyle: const TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 24,
+                          ),
+                          const SizedBox(height: 8),
+                          LayoutBuilder(
+                            builder: (context, constraints) {
+                              return SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: ConstrainedBox(
+                                  constraints: BoxConstraints(
+                                    minWidth: constraints.maxWidth,
+                                  ),
+                                  child: Math.tex(
+                                    LatexHelper.cleanLatex(problem.solution),
+                                    mathStyle: MathStyle.text,
+                                    textStyle: const TextStyle(
+                                      color: Colors.black87,
+                                      fontSize: 24,
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ),
-                          );
-                        },
+                              );
+                            },
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                ),
+                    ),
+                  ],
+                ],
               ],
-            ],
+            ),
           ),
         ),
       );

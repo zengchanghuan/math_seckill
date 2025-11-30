@@ -56,13 +56,16 @@ class DrillPage extends StatelessWidget {
           );
         }
 
+        // 初始化 PageController（如果还没有）
+        controller.pageController ??= PageController(
+          initialPage: controller.currentIndex.value,
+        );
+
         return Column(
           children: [
             Expanded(
               child: PageView.builder(
-                controller: PageController(
-                  initialPage: controller.currentIndex.value,
-                ),
+                controller: controller.pageController,
                 onPageChanged: (index) {
                   controller.currentIndex.value = index;
                 },
