@@ -1,0 +1,84 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../controllers/drill_controller.dart';
+import '../widgets/topic_selector.dart';
+import '../widgets/problem_card.dart';
+import '../widgets/progress_bar.dart';
+import '../../../core/services/problem_service.dart';
+
+class DrillPage extends StatelessWidget {
+  const DrillPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final controller = Get.put(DrillController());
+    final problemService = Get.find<ProblemService>();
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('刷题'),
+        bottom: const PreferredSize(
+          preferredSize: Size.fromHeight(60),
+          child: TopicSelector(),
+        ),
+      ),
+      body: Obx(() {
+        if (problemService.isLoading.value) {
+          return const Center(child: CircularProgressIndicator());
+        }
+
+        if (controller.currentProblems.isEmpty) {
+          return Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.inbox,
+                  size: 64,
+                  color: Colors.grey.shade400,
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  '暂无题目',
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    color: Colors.grey.shade600,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  '请选择其他主题或难度',
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: Colors.grey.shade500,
+                  ),
+                ),
+              ],
+            ),
+          );
+        }
+
+        return Column(
+          children: [
+            Expanded(
+              child: PageView.builder(
+                controller: PageController(
+                  initialPage: controller.currentIndex.value,
+                ),
+                onPageChanged: (index) {
+                  controller.currentIndex.value = index;
+                },
+                itemCount: controller.currentProblems.length,
+                itemBuilder: (context, index) {
+                  return ProblemCard(
+                    problem: controller.currentProblems[index],
+                  );
+                },
+              ),
+            ),
+            const ProgressBar(),
+          ],
+        );
+      }),
+    );
+  }
+}
+
