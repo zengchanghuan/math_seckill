@@ -65,11 +65,21 @@ class ProfilePage extends StatelessWidget {
           const Divider(height: 1),
           _buildListTile(
             context,
-            icon: Icons.settings,
-            title: '设置',
-            subtitle: '主题、字体大小等',
+            icon: Icons.palette,
+            title: '主题设置',
+            subtitle: '深色/浅色模式',
             onTap: () {
-              _showSettingsDialog(context, controller);
+              _showThemeDialog(context, controller);
+            },
+          ),
+          const Divider(height: 1),
+          _buildListTile(
+            context,
+            icon: Icons.text_fields,
+            title: '字体大小',
+            subtitle: '调整文字显示大小',
+            onTap: () {
+              _showFontSizeDialog(context, controller);
             },
           ),
         ],
@@ -93,23 +103,42 @@ class ProfilePage extends StatelessWidget {
     );
   }
 
-  void _showSettingsDialog(BuildContext context, ProfileController controller) {
+  void _showThemeDialog(BuildContext context, ProfileController controller) {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('设置'),
+        title: const Text('主题设置'),
+        content: Obx(() => SwitchListTile(
+          title: const Text('深色模式'),
+          subtitle: Text(controller.isDarkMode.value ? '当前使用深色主题' : '当前使用浅色主题'),
+          value: controller.isDarkMode.value,
+          onChanged: (value) {
+            controller.toggleDarkMode();
+          },
+        )),
+        actions: [
+          TextButton(
+            onPressed: () => Get.back(),
+            child: const Text('确定'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showFontSizeDialog(BuildContext context, ProfileController controller) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('字体大小'),
         content: Obx(() => Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SwitchListTile(
-              title: const Text('深色模式'),
-              value: controller.isDarkMode.value,
-              onChanged: (value) {
-                controller.toggleDarkMode();
-              },
+            Text(
+              '当前字体大小: ${controller.fontSize.value.toInt()}',
+              style: Theme.of(context).textTheme.titleMedium,
             ),
-            const SizedBox(height: 8),
-            Text('字体大小: ${controller.fontSize.value.toInt()}'),
+            const SizedBox(height: 16),
             Slider(
               value: controller.fontSize.value,
               min: 12,
@@ -119,6 +148,20 @@ class ProfilePage extends StatelessWidget {
               onChanged: (value) {
                 controller.setFontSize(value);
               },
+            ),
+            const SizedBox(height: 8),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  '12',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+                Text(
+                  '24',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+              ],
             ),
           ],
         )),
