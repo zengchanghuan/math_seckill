@@ -47,5 +47,9 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSBonjourServices</key>
+	<array/>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>This app needs access to local network for development and debugging purposes.</string>
 </dict>
 </plist>
