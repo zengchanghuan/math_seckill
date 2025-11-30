@@ -42,15 +42,19 @@ class FormulaCard extends StatelessWidget {
                         children: [
                           Text(
                             formula.name,
-                            style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                              fontWeight: FontWeight.bold,
-                            ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleLarge
+                                ?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                ),
                           ),
                           const SizedBox(height: 4),
                           Chip(
                             label: Text(formula.category),
                             padding: EdgeInsets.zero,
-                            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            materialTapTargetSize:
+                                MaterialTapTargetSize.shrinkWrap,
                           ),
                         ],
                       ),
@@ -87,7 +91,7 @@ class FormulaCard extends StatelessWidget {
                             mathStyle: MathStyle.text,
                             textStyle: const TextStyle(
                               color: Colors.black87,
-                              fontSize: 14,
+                              fontSize: 30,
                             ),
                           ),
                         ),
@@ -99,8 +103,8 @@ class FormulaCard extends StatelessWidget {
                 Text(
                   formula.description,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Colors.grey.shade700,
-                  ),
+                        color: Colors.grey.shade700,
+                      ),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -112,4 +116,3 @@ class FormulaCard extends StatelessWidget {
     });
   }
 }
-
