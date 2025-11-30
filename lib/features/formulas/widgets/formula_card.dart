@@ -68,18 +68,31 @@ class FormulaCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 Container(
+                  width: double.infinity,
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     color: Colors.grey.shade100,
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Math.tex(
-                    LatexHelper.cleanLatex(formula.formula),
-                    mathStyle: MathStyle.text,
-                    textStyle: const TextStyle(
-                      color: Colors.black87,
-                      fontSize: 16,
-                    ),
+                  child: LayoutBuilder(
+                    builder: (context, constraints) {
+                      return SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: ConstrainedBox(
+                          constraints: BoxConstraints(
+                            minWidth: constraints.maxWidth,
+                          ),
+                          child: Math.tex(
+                            LatexHelper.cleanLatex(formula.formula),
+                            mathStyle: MathStyle.text,
+                            textStyle: const TextStyle(
+                              color: Colors.black87,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                      );
+                    },
                   ),
                 ),
                 const SizedBox(height: 8),
