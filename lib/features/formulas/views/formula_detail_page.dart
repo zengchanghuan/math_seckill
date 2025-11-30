@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
+import '../../../utils/latex_helper.dart';
 import '../../../core/models/formula.dart';
 import '../controllers/formula_controller.dart';
 
@@ -62,7 +63,7 @@ class FormulaDetailPage extends StatelessWidget {
                 border: Border.all(color: Colors.blue.shade200, width: 2),
               ),
               child: Math.tex(
-                formula.formula,
+                LatexHelper.cleanLatex(formula.formula),
                 mathStyle: MathStyle.display,
                 textStyle: const TextStyle(
                   color: Colors.black87,
@@ -103,7 +104,7 @@ class FormulaDetailPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Math.tex(
-                formula.example,
+                LatexHelper.cleanLatex(formula.example),
                 mathStyle: MathStyle.text,
                 textStyle: const TextStyle(
                   color: Colors.black87,

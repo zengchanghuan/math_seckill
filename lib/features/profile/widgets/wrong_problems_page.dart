@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
+import '../../../utils/latex_helper.dart';
 import '../../../core/services/problem_service.dart';
 import '../../drill/controllers/drill_controller.dart';
 
@@ -77,7 +78,7 @@ class WrongProblemsPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Math.tex(
-                            problem.question,
+                            LatexHelper.cleanLatex(problem.question),
                             mathStyle: MathStyle.text,
                             textStyle: const TextStyle(
                               color: Colors.black87,
@@ -131,7 +132,7 @@ class WrongProblemsPage extends StatelessWidget {
                               ),
                               const SizedBox(height: 8),
                               Math.tex(
-                                problem.solution,
+                                LatexHelper.cleanLatex(problem.solution),
                                 mathStyle: MathStyle.text,
                                 textStyle: const TextStyle(
                                   color: Colors.black87,

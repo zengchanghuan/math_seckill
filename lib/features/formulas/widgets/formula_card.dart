@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
+import '../../../utils/latex_helper.dart';
 import '../../../core/models/formula.dart';
 import '../controllers/formula_controller.dart';
 import '../views/formula_detail_page.dart';
@@ -73,7 +74,7 @@ class FormulaCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Math.tex(
-                    formula.formula,
+                    LatexHelper.cleanLatex(formula.formula),
                     mathStyle: MathStyle.text,
                     textStyle: const TextStyle(
                       color: Colors.black87,
