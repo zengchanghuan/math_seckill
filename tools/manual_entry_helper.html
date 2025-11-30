@@ -185,7 +185,7 @@
 <body>
     <div class="container">
         <h1>📝 微积分题目快速录入工具</h1>
-        
+
         <div class="tips">
             <h3>💡 快速录入技巧</h3>
             <ul>
@@ -336,7 +336,7 @@
             const jsonStr = JSON.stringify(problem, null, 2);
             document.getElementById('jsonContent').textContent = jsonStr;
             document.getElementById('jsonOutput').style.display = 'block';
-            
+
             // 滚动到输出区域
             document.getElementById('jsonOutput').scrollIntoView({ behavior: 'smooth' });
         }
@@ -393,12 +393,12 @@
 
             document.getElementById('previewContent').innerHTML = html;
             document.getElementById('preview').style.display = 'block';
-            
+
             // 重新渲染 MathJax
             if (window.MathJax) {
                 MathJax.typesetPromise([document.getElementById('previewContent')]);
             }
-            
+
             // 滚动到预览区域
             document.getElementById('preview').scrollIntoView({ behavior: 'smooth' });
         }
