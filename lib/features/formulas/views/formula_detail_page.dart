@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../widgets/math_text.dart';
+import 'package:flutter_math_fork/flutter_math.dart';
 import '../../../core/models/formula.dart';
 import '../controllers/formula_controller.dart';
 
@@ -61,8 +61,9 @@ class FormulaDetailPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: Colors.blue.shade200, width: 2),
               ),
-              child: MathText(
+              child: Math.tex(
                 formula.formula,
+                mathStyle: MathStyle.display,
                 textStyle: const TextStyle(
                   color: Colors.black87,
                   fontSize: 24,
@@ -101,8 +102,9 @@ class FormulaDetailPage extends StatelessWidget {
                 color: Colors.grey.shade100,
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: MathText(
+              child: Math.tex(
                 formula.example,
+                mathStyle: MathStyle.text,
                 textStyle: const TextStyle(
                   color: Colors.black87,
                   fontSize: 16,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../widgets/math_text.dart';
+import 'package:flutter_math_fork/flutter_math.dart';
 import '../../../core/models/formula.dart';
 import '../controllers/formula_controller.dart';
 import '../views/formula_detail_page.dart';
@@ -72,8 +72,9 @@ class FormulaCard extends StatelessWidget {
                     color: Colors.grey.shade100,
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: MathText(
+                  child: Math.tex(
                     formula.formula,
+                    mathStyle: MathStyle.text,
                     textStyle: const TextStyle(
                       color: Colors.black87,
                       fontSize: 16,

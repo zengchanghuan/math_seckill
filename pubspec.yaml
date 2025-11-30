@@ -38,8 +38,8 @@ dependencies:
   # State management
   get: ^4.6.5
 
-  # LaTeX rendering - using simple text display for Flutter 3.10 compatibility
-  # For better rendering, upgrade Flutter SDK to 3.13+ and use flutter_math_fork
+  # LaTeX rendering
+  flutter_math_fork: ^0.7.2
 
   # Local storage
   shared_preferences: ^2.2.2
