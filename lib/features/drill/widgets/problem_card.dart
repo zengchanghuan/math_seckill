@@ -43,18 +43,31 @@ class ProblemCard extends StatelessWidget {
             children: [
               // 题目展示区
               Container(
+                width: double.infinity,
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   color: Colors.grey.shade100,
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: Math.tex(
-                  LatexHelper.cleanLatex(problem.question),
-                  mathStyle: MathStyle.text,
-                  textStyle: const TextStyle(
-                    color: Colors.black87,
-                    fontSize: 30,
-                  ),
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    return SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(
+                          minWidth: constraints.maxWidth,
+                        ),
+                        child: Math.tex(
+                          LatexHelper.cleanLatex(problem.question),
+                          mathStyle: MathStyle.text,
+                          textStyle: const TextStyle(
+                            color: Colors.black87,
+                            fontSize: 30,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
               const SizedBox(height: 24),
@@ -101,7 +114,9 @@ class ProblemCard extends StatelessWidget {
                   if (answerStatus != null)
                     TextButton.icon(
                       onPressed: () => controller.toggleSolution(problem.id),
-                      icon: Icon(showSolution ? Icons.visibility_off : Icons.visibility),
+                      icon: Icon(showSolution
+                          ? Icons.visibility_off
+                          : Icons.visibility),
                       label: Text(showSolution ? '隐藏答案' : '查看答案'),
                     ),
                   if (answerStatus != null)
@@ -121,6 +136,7 @@ class ProblemCard extends StatelessWidget {
               if (showSolution) ...[
                 const SizedBox(height: 24),
                 Container(
+                  width: double.infinity,
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     color: Colors.blue.shade50,
@@ -132,19 +148,32 @@ class ProblemCard extends StatelessWidget {
                     children: [
                       Text(
                         '解答：',
-                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blue.shade900,
-                        ),
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.blue.shade900,
+                                ),
                       ),
                       const SizedBox(height: 8),
-                      Math.tex(
-                        LatexHelper.cleanLatex(problem.solution),
-                        mathStyle: MathStyle.text,
-                        textStyle: const TextStyle(
-                          color: Colors.black87,
-                          fontSize: 30,
-                        ),
+                      LayoutBuilder(
+                        builder: (context, constraints) {
+                          return SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: ConstrainedBox(
+                              constraints: BoxConstraints(
+                                minWidth: constraints.maxWidth,
+                              ),
+                              child: Math.tex(
+                                LatexHelper.cleanLatex(problem.solution),
+                                mathStyle: MathStyle.text,
+                                textStyle: const TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 30,
+                                ),
+                              ),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),
@@ -157,4 +186,3 @@ class ProblemCard extends StatelessWidget {
     });
   }
 }
-
