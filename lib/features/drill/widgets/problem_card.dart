@@ -53,7 +53,7 @@ class ProblemCard extends StatelessWidget {
                   mathStyle: MathStyle.text,
                   textStyle: const TextStyle(
                     color: Colors.black87,
-                    fontSize: 18,
+                    fontSize: 30,
                   ),
                 ),
               ),
@@ -143,7 +143,7 @@ class ProblemCard extends StatelessWidget {
                         mathStyle: MathStyle.text,
                         textStyle: const TextStyle(
                           color: Colors.black87,
-                          fontSize: 16,
+                          fontSize: 30,
                         ),
                       ),
                     ],

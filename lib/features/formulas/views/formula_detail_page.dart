@@ -67,7 +67,7 @@ class FormulaDetailPage extends StatelessWidget {
                 mathStyle: MathStyle.display,
                 textStyle: const TextStyle(
                   color: Colors.black87,
-                  fontSize: 24,
+                  fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -108,7 +108,7 @@ class FormulaDetailPage extends StatelessWidget {
                 mathStyle: MathStyle.text,
                 textStyle: const TextStyle(
                   color: Colors.black87,
-                  fontSize: 16,
+                  fontSize: 30,
                 ),
               ),
             ),
