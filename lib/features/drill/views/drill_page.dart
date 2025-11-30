@@ -4,6 +4,7 @@ import '../controllers/drill_controller.dart';
 import '../widgets/topic_selector.dart';
 import '../widgets/problem_card.dart';
 import '../widgets/progress_bar.dart';
+import '../widgets/drill_drawer.dart';
 import '../../../core/services/problem_service.dart';
 
 class DrillPage extends StatelessWidget {
@@ -15,6 +16,7 @@ class DrillPage extends StatelessWidget {
     final problemService = Get.find<ProblemService>();
 
     return Scaffold(
+      drawer: const DrillDrawer(),
       appBar: AppBar(
         title: const Text('刷题'),
         bottom: const PreferredSize(
