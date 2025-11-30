@@ -6,28 +6,35 @@ import 'core/services/formula_service.dart';
 import 'features/drill/views/drill_page.dart';
 import 'features/formulas/views/formula_list_page.dart';
 import 'features/profile/views/profile_page.dart';
+import 'features/onboarding/views/theme_selection_page.dart';
 import 'widgets/bottom_nav_bar.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   // 初始化服务
   Get.put(ProblemService(), permanent: true);
   Get.put(FormulaService(), permanent: true);
-  
+
   // 加载设置
   final prefs = await SharedPreferences.getInstance();
   final isDarkMode = prefs.getBool('is_dark_mode') ?? false;
-  
-  runApp(MyApp(isDarkMode: isDarkMode));
+  final themeSelected = prefs.getBool('theme_selected') ?? false;
+
+  runApp(MyApp(
+    isDarkMode: isDarkMode,
+    showThemeSelection: !themeSelected,
+  ));
 }
 
 class MyApp extends StatelessWidget {
   final bool isDarkMode;
+  final bool showThemeSelection;
 
   const MyApp({
     super.key,
     required this.isDarkMode,
+    this.showThemeSelection = false,
   });
 
   @override
@@ -50,7 +57,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
-      home: const MainPage(),
+      home: showThemeSelection ? const ThemeSelectionPage() : const MainPage(),
     );
   }
 }
