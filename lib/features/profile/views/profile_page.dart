@@ -30,8 +30,6 @@ class ProfilePage extends StatelessWidget {
             const StatsCard(),
             const SizedBox(height: 8),
             _buildFunctionList(context, controller),
-            const SizedBox(height: 24),
-            _buildAboutSection(context),
           ],
         ),
       ),
@@ -177,67 +175,4 @@ class ProfilePage extends StatelessWidget {
     );
   }
 
-  Widget _buildAboutSection(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.all(16),
-      child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '关于我',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-            ),
-            const SizedBox(height: 16),
-            _buildInfoRow(context, '开发者', 'zengchanghuan'),
-            const SizedBox(height: 12),
-            _buildInfoRow(
-                context, '技术栈', 'Flutter, SwiftUI, Objective-C, Swift'),
-            const SizedBox(height: 12),
-            _buildInfoRow(
-              context,
-              '开发目标',
-              '成为机器学习AI工程师\n(目前正在学习 线性代数、概率与统计)',
-            ),
-            const SizedBox(height: 16),
-            const Divider(),
-            const SizedBox(height: 12),
-            Text(
-              '这是一个用于学习微积分的刷题应用，帮助您更好地掌握微积分知识。',
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Colors.grey.shade600,
-                  ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildInfoRow(BuildContext context, String label, String value) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(
-          width: 80,
-          child: Text(
-            label,
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey.shade700,
-                ),
-          ),
-        ),
-        Expanded(
-          child: Text(
-            value,
-            style: Theme.of(context).textTheme.bodyMedium,
-          ),
-        ),
-      ],
-    );
-  }
 }
