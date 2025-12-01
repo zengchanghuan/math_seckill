@@ -40,15 +40,15 @@ class FormulaListPage extends StatelessWidget {
                 Text(
                   '未找到公式',
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: Colors.grey.shade600,
-                  ),
+                        color: Colors.grey.shade600,
+                      ),
                 ),
                 const SizedBox(height: 8),
                 Text(
                   '请尝试其他搜索关键词',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Colors.grey.shade500,
-                  ),
+                        color: Colors.grey.shade500,
+                      ),
                 ),
               ],
             ),
@@ -67,12 +67,12 @@ class FormulaListPage extends StatelessWidget {
                 children: [
                   _buildCategoryChip('全部', controller),
                   const SizedBox(width: 8),
-                  ...formulaService.getAllCategories().map((category) => 
-                    Padding(
-                      padding: const EdgeInsets.only(right: 8),
-                      child: _buildCategoryChip(category, controller),
-                    ),
-                  ),
+                  ...formulaService.getAllCategories().map(
+                        (category) => Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: _buildCategoryChip(category, controller),
+                        ),
+                      ),
                 ],
               ),
             ),
@@ -109,4 +109,5 @@ class FormulaListPage extends StatelessWidget {
     });
   }
 }
+
 

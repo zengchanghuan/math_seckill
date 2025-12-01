@@ -38,7 +38,8 @@ class ProfilePage extends StatelessWidget {
     );
   }
 
-  Widget _buildFunctionList(BuildContext context, ProfileController controller) {
+  Widget _buildFunctionList(
+      BuildContext context, ProfileController controller) {
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
@@ -109,13 +110,14 @@ class ProfilePage extends StatelessWidget {
       builder: (context) => AlertDialog(
         title: const Text('主题设置'),
         content: Obx(() => SwitchListTile(
-          title: const Text('深色模式'),
-          subtitle: Text(controller.isDarkMode.value ? '当前使用深色主题' : '当前使用浅色主题'),
-          value: controller.isDarkMode.value,
-          onChanged: (value) {
-            controller.toggleDarkMode();
-          },
-        )),
+              title: const Text('深色模式'),
+              subtitle:
+                  Text(controller.isDarkMode.value ? '当前使用深色主题' : '当前使用浅色主题'),
+              value: controller.isDarkMode.value,
+              onChanged: (value) {
+                controller.toggleDarkMode();
+              },
+            )),
         actions: [
           TextButton(
             onPressed: () => Get.back(),
@@ -132,39 +134,39 @@ class ProfilePage extends StatelessWidget {
       builder: (context) => AlertDialog(
         title: const Text('字体大小'),
         content: Obx(() => Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              '当前字体大小: ${controller.fontSize.value.toInt()}',
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            const SizedBox(height: 16),
-            Slider(
-              value: controller.fontSize.value,
-              min: 12,
-              max: 24,
-              divisions: 12,
-              label: controller.fontSize.value.toInt().toString(),
-              onChanged: (value) {
-                controller.setFontSize(value);
-              },
-            ),
-            const SizedBox(height: 8),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  '12',
-                  style: Theme.of(context).textTheme.bodySmall,
+                  '当前字体大小: ${controller.fontSize.value.toInt()}',
+                  style: Theme.of(context).textTheme.titleMedium,
                 ),
-                Text(
-                  '24',
-                  style: Theme.of(context).textTheme.bodySmall,
+                const SizedBox(height: 16),
+                Slider(
+                  value: controller.fontSize.value,
+                  min: 12,
+                  max: 24,
+                  divisions: 12,
+                  label: controller.fontSize.value.toInt().toString(),
+                  onChanged: (value) {
+                    controller.setFontSize(value);
+                  },
+                ),
+                const SizedBox(height: 8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '12',
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                    Text(
+                      '24',
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                  ],
                 ),
               ],
-            ),
-          ],
-        )),
+            )),
         actions: [
           TextButton(
             onPressed: () => Get.back(),
@@ -186,13 +188,14 @@ class ProfilePage extends StatelessWidget {
             Text(
               '关于我',
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
             const SizedBox(height: 16),
             _buildInfoRow(context, '开发者', 'zengchanghuan'),
             const SizedBox(height: 12),
-            _buildInfoRow(context, '技术栈', 'Flutter, SwiftUI, Objective-C, Swift'),
+            _buildInfoRow(
+                context, '技术栈', 'Flutter, SwiftUI, Objective-C, Swift'),
             const SizedBox(height: 12),
             _buildInfoRow(
               context,
@@ -205,8 +208,8 @@ class ProfilePage extends StatelessWidget {
             Text(
               '这是一个用于学习微积分的刷题应用，帮助您更好地掌握微积分知识。',
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: Colors.grey.shade600,
-              ),
+                    color: Colors.grey.shade600,
+                  ),
             ),
           ],
         ),
@@ -223,9 +226,9 @@ class ProfilePage extends StatelessWidget {
           child: Text(
             label,
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              fontWeight: FontWeight.bold,
-              color: Colors.grey.shade700,
-            ),
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey.shade700,
+                ),
           ),
         ),
         Expanded(
@@ -238,4 +241,3 @@ class ProfilePage extends StatelessWidget {
     );
   }
 }
-

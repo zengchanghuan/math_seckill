@@ -62,4 +62,3 @@ class ProfileController extends GetxController {
     loadUserStats();
   }
 }
-

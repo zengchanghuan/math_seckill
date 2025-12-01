@@ -5,7 +5,7 @@ import '../../../core/services/formula_service.dart';
 
 class FormulaController extends GetxController {
   final FormulaService _formulaService = Get.find<FormulaService>();
-  
+
   final RxList<Formula> filteredFormulas = <Formula>[].obs;
   final RxString searchQuery = ''.obs;
   final RxString selectedCategory = '全部'.obs;
@@ -20,21 +20,23 @@ class FormulaController extends GetxController {
 
   void filterFormulas() {
     List<Formula> formulas;
-    
+
     if (selectedCategory.value == '全部') {
       formulas = _formulaService.getAllFormulas();
     } else {
       formulas = _formulaService.getFormulasByCategory(selectedCategory.value);
     }
-    
+
     if (searchQuery.value.isNotEmpty) {
       formulas = _formulaService.searchFormulas(searchQuery.value);
       // 如果选择了分类，需要再次过滤
       if (selectedCategory.value != '全部') {
-        formulas = formulas.where((f) => f.category == selectedCategory.value).toList();
+        formulas = formulas
+            .where((f) => f.category == selectedCategory.value)
+            .toList();
       }
     }
-    
+
     filteredFormulas.value = formulas;
   }
 
@@ -74,10 +76,12 @@ class FormulaController extends GetxController {
   Future<void> saveFavorites() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      await prefs.setStringList('favorite_formulas', favoriteFormulaIds.toList());
+      await prefs.setStringList(
+          'favorite_formulas', favoriteFormulaIds.toList());
     } catch (e) {
       print('Error saving favorites: $e');
     }
   }
 }
+
 

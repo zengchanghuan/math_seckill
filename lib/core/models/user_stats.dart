@@ -36,8 +36,10 @@ class UserStats {
       correctCount: json['correctCount'] as int? ?? 0,
       wrongCount: json['wrongCount'] as int? ?? 0,
       topicStats: (json['topicStats'] as Map<String, dynamic>?)?.map(
-        (key, value) => MapEntry(key, TopicStats.fromJson(value as Map<String, dynamic>)),
-      ) ?? {},
+            (key, value) => MapEntry(
+                key, TopicStats.fromJson(value as Map<String, dynamic>)),
+          ) ??
+          {},
     );
   }
 
@@ -46,7 +48,8 @@ class UserStats {
       'totalProblems': totalProblems,
       'correctCount': correctCount,
       'wrongCount': wrongCount,
-      'topicStats': topicStats.map((key, value) => MapEntry(key, value.toJson())),
+      'topicStats':
+          topicStats.map((key, value) => MapEntry(key, value.toJson())),
     };
   }
 }
@@ -79,4 +82,5 @@ class TopicStats {
     };
   }
 }
+
 

@@ -16,7 +16,8 @@ class ProblemService extends GetxService {
   Future<void> loadProblems() async {
     try {
       isLoading.value = true;
-      final String jsonString = await rootBundle.loadString('assets/data/problems.json');
+      final String jsonString =
+          await rootBundle.loadString('assets/data/problems.json');
       final List<dynamic> jsonData = json.decode(jsonString);
       _allProblems = jsonData.map((json) => Problem.fromJson(json)).toList();
     } catch (e) {
@@ -39,7 +40,8 @@ class ProblemService extends GetxService {
     return _allProblems.where((p) => p.difficulty == difficulty).toList();
   }
 
-  List<Problem> getProblemsByTopicAndDifficulty(String topic, String difficulty) {
+  List<Problem> getProblemsByTopicAndDifficulty(
+      String topic, String difficulty) {
     return _allProblems
         .where((p) => p.topic == topic && p.difficulty == difficulty)
         .toList();
@@ -61,4 +63,5 @@ class ProblemService extends GetxService {
     }
   }
 }
+
 

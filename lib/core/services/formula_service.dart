@@ -16,7 +16,8 @@ class FormulaService extends GetxService {
   Future<void> loadFormulas() async {
     try {
       isLoading.value = true;
-      final String jsonString = await rootBundle.loadString('assets/data/formulas.json');
+      final String jsonString =
+          await rootBundle.loadString('assets/data/formulas.json');
       final List<dynamic> jsonData = json.decode(jsonString);
       _allFormulas = jsonData.map((json) => Formula.fromJson(json)).toList();
     } catch (e) {
@@ -58,4 +59,5 @@ class FormulaService extends GetxService {
     }
   }
 }
+
 

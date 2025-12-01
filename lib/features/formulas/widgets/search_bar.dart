@@ -36,4 +36,3 @@ class FormulaSearchBar extends StatelessWidget {
     );
   }
 }
-

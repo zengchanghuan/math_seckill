@@ -18,7 +18,7 @@ class FavoritesPage extends StatelessWidget {
       ),
       body: Obx(() {
         final favoriteIds = formulaController.favoriteFormulaIds;
-        
+
         if (favoriteIds.isEmpty) {
           return Center(
             child: Column(
@@ -33,15 +33,15 @@ class FavoritesPage extends StatelessWidget {
                 Text(
                   '暂无收藏',
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: Colors.grey.shade600,
-                  ),
+                        color: Colors.grey.shade600,
+                      ),
                 ),
                 const SizedBox(height: 8),
                 Text(
                   '在公式页面点击心形图标收藏公式',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Colors.grey.shade500,
-                  ),
+                        color: Colors.grey.shade500,
+                      ),
                 ),
               ],
             ),
@@ -64,4 +64,5 @@ class FavoritesPage extends StatelessWidget {
     );
   }
 }
+
 

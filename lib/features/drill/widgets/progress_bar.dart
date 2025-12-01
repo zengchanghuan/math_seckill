@@ -38,8 +38,8 @@ class ProgressBar extends StatelessWidget {
                 Text(
                   '$progress / $total',
                   style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+                        fontWeight: FontWeight.bold,
+                      ),
                 ),
               ],
             ),
@@ -57,4 +57,3 @@ class ProgressBar extends StatelessWidget {
     });
   }
 }
-

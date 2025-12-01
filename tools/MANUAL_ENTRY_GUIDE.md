@@ -5,6 +5,7 @@
 ## 方法 1: 使用网页工具（最推荐 ⭐⭐⭐⭐⭐）
 
 ### 优势
+
 - ✅ **最快速度**：可视化界面，无需手写 JSON
 - ✅ **实时预览**：立即看到题目效果
 - ✅ **格式保证**：自动生成正确格式的 JSON
@@ -13,6 +14,7 @@
 ### 使用步骤
 
 1. **打开工具**
+
    ```bash
    # 在浏览器中打开
    open tools/manual_entry_helper.html
@@ -36,6 +38,7 @@
    - 粘贴到 JSON 数组中
 
 4. **验证**
+
    ```bash
    python tools/validate_problems.py
    ```
@@ -52,6 +55,7 @@
 ## 方法 2: 使用 AI 辅助生成（推荐 ⭐⭐⭐⭐）
 
 ### 优势
+
 - ✅ **速度快**：AI 生成题目内容
 - ✅ **质量高**：AI 生成的题目格式规范
 - ✅ **只需校对**：人工只需检查和微调
@@ -59,14 +63,15 @@
 ### 使用步骤
 
 1. **打开提示词模板**
+
    ```bash
    open tools/ai_prompt_template.md
    ```
 
 2. **复制提示词到 AI 工具**
-   - 智谱AI: https://open.bigmodel.cn/
-   - 通义千问: https://tongyi.aliyun.com/
-   - 文心一言: https://yiyan.baidu.com/
+   - 智谱AI: <https://open.bigmodel.cn/>
+   - 通义千问: <https://tongyi.aliyun.com/>
+   - 文心一言: <https://yiyan.baidu.com/>
 
 3. **修改参数**
    - 修改主题（如"导数基础"）
@@ -88,17 +93,20 @@
 ## 方法 3: 直接编辑 JSON（适合熟悉格式的用户 ⭐⭐⭐）
 
 ### 优势
+
 - ✅ **完全控制**：直接编辑，灵活性高
 - ✅ **批量操作**：可以一次添加多道题目
 
 ### 使用步骤
 
 1. **打开文件**
+
    ```bash
    code assets/data/problems.json
    ```
 
 2. **参考现有格式**
+
    ```json
    {
      "id": "p11",
@@ -125,6 +133,7 @@
    - JSON 格式必须正确（逗号、引号等）
 
 4. **验证**
+
    ```bash
    python tools/validate_problems.py
    ```
@@ -209,4 +218,5 @@
 - **效率**：使用网页工具，每道题目 2-3 分钟
 - **速度**：批量录入，一次 10-20 道题目
 - **准确率**：使用验证工具，错误率 < 5%
+
 

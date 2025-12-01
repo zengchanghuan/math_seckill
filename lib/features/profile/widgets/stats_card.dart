@@ -24,8 +24,8 @@ class StatsCard extends StatelessWidget {
               Text(
                 '学习统计',
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+                      fontWeight: FontWeight.bold,
+                    ),
               ),
               const SizedBox(height: 20),
               Row(
@@ -81,8 +81,8 @@ class StatsCard extends StatelessWidget {
               Text(
                 '主题分析',
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+                      fontWeight: FontWeight.bold,
+                    ),
               ),
               const SizedBox(height: 12),
               Row(
@@ -135,9 +135,9 @@ class StatsCard extends StatelessWidget {
           Text(
             value,
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-              fontWeight: FontWeight.bold,
-              color: color,
-            ),
+                  fontWeight: FontWeight.bold,
+                  color: color,
+                ),
           ),
           const SizedBox(height: 4),
           Text(
@@ -174,9 +174,9 @@ class StatsCard extends StatelessWidget {
           Text(
             topic,
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              fontWeight: FontWeight.bold,
-              color: color,
-            ),
+                  fontWeight: FontWeight.bold,
+                  color: color,
+                ),
             textAlign: TextAlign.center,
           ),
         ],
@@ -184,4 +184,5 @@ class StatsCard extends StatelessWidget {
     );
   }
 }
+
 

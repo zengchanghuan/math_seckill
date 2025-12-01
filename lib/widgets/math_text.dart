@@ -64,4 +64,3 @@ class MathText extends StatelessWidget {
     return cleaned;
   }
 }
-
