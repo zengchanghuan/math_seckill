@@ -12,7 +12,10 @@
       "$x^2 + 3$"
     ],
     "solution": "使用基本求导法则：\\n$f'(x) = \\frac{d}{dx}(x^2) + \\frac{d}{dx}(3x) + \\frac{d}{dx}(2)$\\n$f'(x) = 2x + 3 + 0 = 2x + 3$",
-    "tags": ["导数", "多项式"]
+    "tags": [
+      "导数",
+      "多项式"
+    ]
   },
   {
     "id": "p2",
@@ -27,7 +30,10 @@
       "$-\\cos(x)$"
     ],
     "solution": "根据三角函数的导数公式：\\n$f'(x) = \\cos(x)$",
-    "tags": ["导数", "三角函数"]
+    "tags": [
+      "导数",
+      "三角函数"
+    ]
   },
   {
     "id": "p3",
@@ -42,7 +48,10 @@
       "$x\\cos(x^2)$"
     ],
     "solution": "设 $u = x^2$，则 $f(x) = \\sin(u)$\\n$f'(x) = \\cos(u) \\cdot \\frac{du}{dx} = \\cos(x^2) \\cdot 2x = 2x\\cos(x^2)$",
-    "tags": ["导数", "链式法则"]
+    "tags": [
+      "导数",
+      "链式法则"
+    ]
   },
   {
     "id": "p4",
@@ -57,7 +66,10 @@
       "$-1$"
     ],
     "solution": "这是重要极限之一。\\n$\\lim_{x \\to 0} \\frac{\\sin(x)}{x} = 1$",
-    "tags": ["极限", "重要极限"]
+    "tags": [
+      "极限",
+      "重要极限"
+    ]
   },
   {
     "id": "p5",
@@ -72,7 +84,10 @@
       "$\\infty$"
     ],
     "solution": "当 $x \\to \\infty$ 时，分子和分母都除以最高次项：\\n$\\lim_{x \\to \\infty} \\frac{x^2 + 3x + 2}{2x^2 - x + 1} = \\lim_{x \\to \\infty} \\frac{1 + \\frac{3}{x} + \\frac{2}{x^2}}{2 - \\frac{1}{x} + \\frac{1}{x^2}} = \\frac{1}{2}$",
-    "tags": ["极限", "无穷大"]
+    "tags": [
+      "极限",
+      "无穷大"
+    ]
   },
   {
     "id": "p6",
@@ -87,7 +102,10 @@
       "$x^3 + C$"
     ],
     "solution": "使用基本积分公式：\\n$\\int x^2 dx = \\frac{x^3}{3} + C$",
-    "tags": ["积分", "不定积分"]
+    "tags": [
+      "积分",
+      "不定积分"
+    ]
   },
   {
     "id": "p7",
@@ -102,7 +120,10 @@
       "$e^x(x-1) + C$"
     ],
     "solution": "设 $u = x$，$dv = e^x dx$，则 $du = dx$，$v = e^x$\\n$\\int x e^x dx = x e^x - \\int e^x dx = x e^x - e^x + C = e^x(x-1) + C$",
-    "tags": ["积分", "分部积分"]
+    "tags": [
+      "积分",
+      "分部积分"
+    ]
   },
   {
     "id": "p8",
@@ -117,7 +138,10 @@
       "$2x + \\frac{1}{x^2}$"
     ],
     "solution": "使用商法则：\\n$f'(x) = \\frac{(2x)(x) - (x^2+1)(1)}{x^2} = \\frac{2x^2 - x^2 - 1}{x^2} = \\frac{x^2 - 1}{x^2} = 1 - \\frac{1}{x^2}$",
-    "tags": ["导数", "商法则"]
+    "tags": [
+      "导数",
+      "商法则"
+    ]
   },
   {
     "id": "p9",
@@ -132,7 +156,10 @@
       "$2$"
     ],
     "solution": "$\\int_0^1 x dx = \\left[\\frac{x^2}{2}\\right]_0^1 = \\frac{1}{2} - 0 = \\frac{1}{2}$",
-    "tags": ["积分", "定积分"]
+    "tags": [
+      "积分",
+      "定积分"
+    ]
   },
   {
     "id": "p10",
@@ -147,7 +174,10 @@
       "$9$"
     ],
     "solution": "直接代入：\\n$\\lim_{x \\to 2} (x^2 + 3x - 2) = 2^2 + 3(2) - 2 = 4 + 6 - 2 = 8$",
-    "tags": ["极限", "连续函数"]
+    "tags": [
+      "极限",
+      "连续函数"
+    ]
   },
   {
     "id": "p11",
@@ -162,7 +192,10 @@
       "$\\ln(x)$"
     ],
     "solution": "指数函数的导数公式：\\n$f'(x) = e^x$",
-    "tags": ["导数", "指数函数"]
+    "tags": [
+      "导数",
+      "指数函数"
+    ]
   },
   {
     "id": "p12",
@@ -177,7 +210,10 @@
       "$-\\cos(x)$"
     ],
     "solution": "根据三角函数的导数公式：\\n$f'(x) = -\\sin(x)$",
-    "tags": ["导数", "三角函数"]
+    "tags": [
+      "导数",
+      "三角函数"
+    ]
   },
   {
     "id": "p13",
@@ -192,7 +228,10 @@
       "$\\ln(x)$"
     ],
     "solution": "对数函数的导数公式：\\n$f'(x) = \\frac{1}{x}$",
-    "tags": ["导数", "对数函数"]
+    "tags": [
+      "导数",
+      "对数函数"
+    ]
   },
   {
     "id": "p14",
@@ -207,7 +246,10 @@
       "$\\sin(x) + x \\cos(x)$"
     ],
     "solution": "设 $u = x$，$v = \\sin(x)$，则 $u' = 1$，$v' = \\cos(x)$\\n$f'(x) = u'v + uv' = 1 \\cdot \\sin(x) + x \\cdot \\cos(x) = \\sin(x) + x \\cos(x)$",
-    "tags": ["导数", "乘积法则"]
+    "tags": [
+      "导数",
+      "乘积法则"
+    ]
   },
   {
     "id": "p15",
@@ -222,7 +264,11 @@
       "$2x e^{2x}$"
     ],
     "solution": "使用链式法则，设 $u = 2x$，则 $f(x) = e^u$\\n$f'(x) = e^u \\cdot \\frac{du}{dx} = e^{2x} \\cdot 2 = 2e^{2x}$",
-    "tags": ["导数", "链式法则", "指数函数"]
+    "tags": [
+      "导数",
+      "链式法则",
+      "指数函数"
+    ]
   },
   {
     "id": "p16",
@@ -237,7 +283,11 @@
       "$\\frac{2}{x^2 + 1}$"
     ],
     "solution": "使用链式法则，设 $u = x^2 + 1$，则 $f(x) = \\ln(u)$\\n$f'(x) = \\frac{1}{u} \\cdot \\frac{du}{dx} = \\frac{1}{x^2 + 1} \\cdot 2x = \\frac{2x}{x^2 + 1}$",
-    "tags": ["导数", "链式法则", "对数函数"]
+    "tags": [
+      "导数",
+      "链式法则",
+      "对数函数"
+    ]
   },
   {
     "id": "p17",
@@ -252,7 +302,11 @@
       "$\\infty$"
     ],
     "solution": "这是重要极限之一。\\n$\\lim_{x \\to 0} \\frac{e^x - 1}{x} = 1$",
-    "tags": ["极限", "重要极限", "指数函数"]
+    "tags": [
+      "极限",
+      "重要极限",
+      "指数函数"
+    ]
   },
   {
     "id": "p18",
@@ -267,7 +321,10 @@
       "$\\infty$"
     ],
     "solution": "因式分解：\\n$\\lim_{x \\to 1} \\frac{x^2 - 1}{x - 1} = \\lim_{x \\to 1} \\frac{(x-1)(x+1)}{x - 1} = \\lim_{x \\to 1} (x+1) = 2$",
-    "tags": ["极限", "因式分解"]
+    "tags": [
+      "极限",
+      "因式分解"
+    ]
   },
   {
     "id": "p19",
@@ -282,7 +339,10 @@
       "$2$"
     ],
     "solution": "使用重要极限和三角恒等式：\\n$\\lim_{x \\to 0} \\frac{1 - \\cos(x)}{x^2} = \\lim_{x \\to 0} \\frac{2\\sin^2(\\frac{x}{2})}{x^2} = \\frac{1}{2}$",
-    "tags": ["极限", "三角函数"]
+    "tags": [
+      "极限",
+      "三角函数"
+    ]
   },
   {
     "id": "p20",
@@ -297,7 +357,11 @@
       "$\\infty$"
     ],
     "solution": "这是重要极限之一。\\n$\\lim_{x \\to 0} \\frac{\\ln(1 + x)}{x} = 1$",
-    "tags": ["极限", "重要极限", "对数函数"]
+    "tags": [
+      "极限",
+      "重要极限",
+      "对数函数"
+    ]
   },
   {
     "id": "p21",
@@ -312,7 +376,11 @@
       "$\\infty$"
     ],
     "solution": "这是重要极限之一。\\n$\\lim_{x \\to \\infty} \\left(1 + \\frac{1}{x}\\right)^x = e$",
-    "tags": ["极限", "重要极限", "自然常数"]
+    "tags": [
+      "极限",
+      "重要极限",
+      "自然常数"
+    ]
   },
   {
     "id": "p22",
@@ -327,7 +395,11 @@
       "$1$"
     ],
     "solution": "使用重要极限：\\n$\\lim_{x \\to 0} \\frac{\\sin(3x)}{\\sin(2x)} = \\lim_{x \\to 0} \\frac{\\frac{\\sin(3x)}{3x} \\cdot 3x}{\\frac{\\sin(2x)}{2x} \\cdot 2x} = \\frac{3}{2}$",
-    "tags": ["极限", "重要极限", "三角函数"]
+    "tags": [
+      "极限",
+      "重要极限",
+      "三角函数"
+    ]
   },
   {
     "id": "p23",
@@ -342,7 +414,11 @@
       "$\\ln(e^x) + C$"
     ],
     "solution": "指数函数的积分公式：\\n$\\int e^x dx = e^x + C$",
-    "tags": ["积分", "不定积分", "指数函数"]
+    "tags": [
+      "积分",
+      "不定积分",
+      "指数函数"
+    ]
   },
   {
     "id": "p24",
@@ -357,7 +433,11 @@
       "$\\ln(x^2) + C$"
     ],
     "solution": "对数函数的积分公式：\\n$\\int \\frac{1}{x} dx = \\ln|x| + C$",
-    "tags": ["积分", "不定积分", "对数函数"]
+    "tags": [
+      "积分",
+      "不定积分",
+      "对数函数"
+    ]
   },
   {
     "id": "p25",
@@ -372,7 +452,11 @@
       "$-\\sin(x) + C$"
     ],
     "solution": "三角函数的积分公式：\\n$\\int \\sin(x) dx = -\\cos(x) + C$",
-    "tags": ["积分", "不定积分", "三角函数"]
+    "tags": [
+      "积分",
+      "不定积分",
+      "三角函数"
+    ]
   },
   {
     "id": "p26",
@@ -387,7 +471,11 @@
       "$2$"
     ],
     "solution": "$\\int_0^{\\pi} \\sin(x) dx = \\left[-\\cos(x)\\right]_0^{\\pi} = -\\cos(\\pi) - (-\\cos(0)) = -(-1) - (-1) = 2$",
-    "tags": ["积分", "定积分", "三角函数"]
+    "tags": [
+      "积分",
+      "定积分",
+      "三角函数"
+    ]
   },
   {
     "id": "p27",
@@ -402,7 +490,11 @@
       "$\\frac{1}{2} x^2 e^{x^2} + C$"
     ],
     "solution": "设 $u = x^2$，则 $du = 2x dx$，即 $x dx = \\frac{du}{2}$\\n$\\int x e^{x^2} dx = \\int e^u \\cdot \\frac{du}{2} = \\frac{1}{2} e^u + C = \\frac{1}{2} e^{x^2} + C$",
-    "tags": ["积分", "换元法", "指数函数"]
+    "tags": [
+      "积分",
+      "换元法",
+      "指数函数"
+    ]
   },
   {
     "id": "p28",
@@ -417,7 +509,11 @@
       "$x \\cos(x) - \\sin(x) + C$"
     ],
     "solution": "设 $u = x$，$dv = \\cos(x) dx$，则 $du = dx$，$v = \\sin(x)$\\n$\\int x \\cos(x) dx = x \\sin(x) - \\int \\sin(x) dx = x \\sin(x) + \\cos(x) + C$",
-    "tags": ["积分", "分部积分", "三角函数"]
+    "tags": [
+      "积分",
+      "分部积分",
+      "三角函数"
+    ]
   },
   {
     "id": "p29",
@@ -432,7 +528,10 @@
       "$1$"
     ],
     "solution": "$\\int_0^1 x^2 dx = \\left[\\frac{x^3}{3}\\right]_0^1 = \\frac{1}{3} - 0 = \\frac{1}{3}$",
-    "tags": ["积分", "定积分"]
+    "tags": [
+      "积分",
+      "定积分"
+    ]
   },
   {
     "id": "p30",
@@ -447,6 +546,287 @@
       "$\\frac{1}{2} \\ln(x^2 + 1) + C$"
     ],
     "solution": "设 $u = x^2 + 1$，则 $du = 2x dx$，即 $x dx = \\frac{du}{2}$\\n$\\int \\frac{x}{x^2 + 1} dx = \\int \\frac{1}{u} \\cdot \\frac{du}{2} = \\frac{1}{2} \\ln|u| + C = \\frac{1}{2} \\ln(x^2 + 1) + C$",
-    "tags": ["积分", "换元法", "对数函数"]
+    "tags": [
+      "积分",
+      "换元法",
+      "对数函数"
+    ]
+  },
+  {
+    "id": "p31",
+    "topic": "导数基础",
+    "difficulty": "基础",
+    "question": "求函数 $f(x) = x^3 - 2x^2 + 5x - 1$ 的导数。",
+    "answer": "A",
+    "options": [
+      "$3x^2 - 4x + 5$",
+      "$3x^2 - 2x + 5$",
+      "$x^2 - 4x + 5$",
+      "$3x^2 - 4x + 1$"
+    ],
+    "solution": "使用基本求导法则：\\n$f'(x) = \\frac{d}{dx}(x^3) - \\frac{d}{dx}(2x^2) + \\frac{d}{dx}(5x) - \\frac{d}{dx}(1)$\\n$f'(x) = 3x^2 - 4x + 5 - 0 = 3x^2 - 4x + 5$",
+    "tags": [
+      "导数",
+      "多项式"
+    ]
+  },
+  {
+    "id": "p32",
+    "topic": "导数基础",
+    "difficulty": "基础",
+    "question": "求函数 $f(x) = \\tan(x)$ 的导数。",
+    "answer": "B",
+    "options": [
+      "$\\sec^2(x)$",
+      "$\\sec^2(x)$",
+      "$\\tan^2(x)$",
+      "$\\cos^2(x)$"
+    ],
+    "solution": "根据三角函数的导数公式：\\n$f'(x) = \\sec^2(x) = \\frac{1}{\\cos^2(x)}$",
+    "tags": [
+      "导数",
+      "三角函数"
+    ]
+  },
+  {
+    "id": "p33",
+    "topic": "导数基础",
+    "difficulty": "基础",
+    "question": "求函数 $f(x) = x^4$ 的导数。",
+    "answer": "C",
+    "options": [
+      "$x^3$",
+      "$3x^3$",
+      "$4x^3$",
+      "$x^4$"
+    ],
+    "solution": "使用幂函数求导法则：\\n$f'(x) = 4x^{4-1} = 4x^3$",
+    "tags": [
+      "导数",
+      "幂函数"
+    ]
+  },
+  {
+    "id": "p34",
+    "topic": "导数基础",
+    "difficulty": "基础",
+    "question": "求函数 $f(x) = \\sqrt{x}$ 的导数。",
+    "answer": "D",
+    "options": [
+      "$\\frac{1}{2\\sqrt{x}}$",
+      "$\\frac{1}{\\sqrt{x}}$",
+      "$2\\sqrt{x}$",
+      "$\\frac{1}{2\\sqrt{x}}$"
+    ],
+    "solution": "将 $\\sqrt{x} = x^{1/2}$，使用幂函数求导法则：\\n$f'(x) = \\frac{1}{2}x^{-1/2} = \\frac{1}{2\\sqrt{x}}$",
+    "tags": [
+      "导数",
+      "根式函数"
+    ]
+  },
+  {
+    "id": "p35",
+    "topic": "导数基础",
+    "difficulty": "进阶",
+    "question": "求函数 $f(x) = x^2 e^x$ 的导数。",
+    "answer": "A",
+    "options": [
+      "$e^x(x^2 + 2x)$",
+      "$2x e^x$",
+      "$x^2 e^x$",
+      "$e^x(2x + 1)$"
+    ],
+    "solution": "使用乘积法则：\\n设 $u = x^2$，$v = e^x$，则 $u' = 2x$，$v' = e^x$\\n$f'(x) = u'v + uv' = 2x e^x + x^2 e^x = e^x(x^2 + 2x)$",
+    "tags": [
+      "导数",
+      "乘积法则",
+      "指数函数"
+    ]
+  },
+  {
+    "id": "p36",
+    "topic": "导数基础",
+    "difficulty": "进阶",
+    "question": "求函数 $f(x) = \\frac{e^x}{x}$ 的导数。",
+    "answer": "B",
+    "options": [
+      "$\\frac{e^x}{x^2}$",
+      "$\\frac{e^x(x-1)}{x^2}$",
+      "$\\frac{e^x}{x}$",
+      "$\\frac{x e^x - e^x}{x}$"
+    ],
+    "solution": "使用商法则：\\n$f'(x) = \\frac{(e^x)(x) - (e^x)(1)}{x^2} = \\frac{x e^x - e^x}{x^2} = \\frac{e^x(x-1)}{x^2}$",
+    "tags": [
+      "导数",
+      "商法则",
+      "指数函数"
+    ]
+  },
+  {
+    "id": "p37",
+    "topic": "极限与连续",
+    "difficulty": "基础",
+    "question": "求极限：$\\lim_{x \\to 3} (2x + 5)$",
+    "answer": "C",
+    "options": [
+      "$10$",
+      "$11$",
+      "$11$",
+      "$12$"
+    ],
+    "solution": "直接代入：\\n$\\lim_{x \\to 3} (2x + 5) = 2(3) + 5 = 6 + 5 = 11$",
+    "tags": [
+      "极限",
+      "连续函数"
+    ]
+  },
+  {
+    "id": "p38",
+    "topic": "极限与连续",
+    "difficulty": "基础",
+    "question": "求极限：$\\lim_{x \\to 0} \\frac{x^2}{x}$",
+    "answer": "D",
+    "options": [
+      "$0$",
+      "$1$",
+      "$\\infty$",
+      "$0$"
+    ],
+    "solution": "约分：\\n$\\lim_{x \\to 0} \\frac{x^2}{x} = \\lim_{x \\to 0} x = 0$",
+    "tags": [
+      "极限",
+      "约分"
+    ]
+  },
+  {
+    "id": "p39",
+    "topic": "极限与连续",
+    "difficulty": "基础",
+    "question": "求极限：$\\lim_{x \\to \\infty} \\frac{3x + 1}{x + 2}$",
+    "answer": "A",
+    "options": [
+      "$3$",
+      "$1$",
+      "$\\infty$",
+      "$0$"
+    ],
+    "solution": "当 $x \\to \\infty$ 时，分子和分母都除以最高次项：\\n$\\lim_{x \\to \\infty} \\frac{3x + 1}{x + 2} = \\lim_{x \\to \\infty} \\frac{3 + \\frac{1}{x}}{1 + \\frac{2}{x}} = 3$",
+    "tags": [
+      "极限",
+      "无穷大"
+    ]
+  },
+  {
+    "id": "p40",
+    "topic": "极限与连续",
+    "difficulty": "进阶",
+    "question": "求极限：$\\lim_{x \\to 0} \\frac{\\tan(x)}{x}$",
+    "answer": "B",
+    "options": [
+      "$0$",
+      "$1$",
+      "$\\infty$",
+      "$-1$"
+    ],
+    "solution": "使用重要极限：\\n$\\lim_{x \\to 0} \\frac{\\tan(x)}{x} = \\lim_{x \\to 0} \\frac{\\sin(x)}{x \\cos(x)} = \\lim_{x \\to 0} \\frac{\\sin(x)}{x} \\cdot \\frac{1}{\\cos(x)} = 1 \\cdot 1 = 1$",
+    "tags": [
+      "极限",
+      "重要极限",
+      "三角函数"
+    ]
+  },
+  {
+    "id": "p41",
+    "topic": "积分",
+    "difficulty": "基础",
+    "question": "求不定积分：$\\int \\cos(x) dx$",
+    "answer": "C",
+    "options": [
+      "$\\cos(x) + C$",
+      "$-\\sin(x) + C$",
+      "$\\sin(x) + C$",
+      "$\\sin^2(x) + C$"
+    ],
+    "solution": "三角函数的积分公式：\\n$\\int \\cos(x) dx = \\sin(x) + C$",
+    "tags": [
+      "积分",
+      "不定积分",
+      "三角函数"
+    ]
+  },
+  {
+    "id": "p42",
+    "topic": "积分",
+    "difficulty": "基础",
+    "question": "求不定积分：$\\int 3x^2 dx$",
+    "answer": "D",
+    "options": [
+      "$x^3 + C$",
+      "$3x + C$",
+      "$x^2 + C$",
+      "$x^3 + C$"
+    ],
+    "solution": "使用基本积分公式：\\n$\\int 3x^2 dx = 3 \\cdot \\frac{x^3}{3} + C = x^3 + C$",
+    "tags": [
+      "积分",
+      "不定积分"
+    ]
+  },
+  {
+    "id": "p43",
+    "topic": "积分",
+    "difficulty": "基础",
+    "question": "求定积分：$\\int_0^{\\pi/2} \\cos(x) dx$",
+    "answer": "A",
+    "options": [
+      "$1$",
+      "$0$",
+      "$-1$",
+      "$2$"
+    ],
+    "solution": "$\\int_0^{\\pi/2} \\cos(x) dx = \\left[\\sin(x)\\right]_0^{\\pi/2} = \\sin(\\pi/2) - \\sin(0) = 1 - 0 = 1$",
+    "tags": [
+      "积分",
+      "定积分",
+      "三角函数"
+    ]
+  },
+  {
+    "id": "p44",
+    "topic": "积分",
+    "difficulty": "进阶",
+    "question": "使用分部积分法求：$\\int x^2 e^x dx$",
+    "answer": "B",
+    "options": [
+      "$x^2 e^x + C$",
+      "$e^x(x^2 - 2x + 2) + C$",
+      "$2x e^x + C$",
+      "$e^x(x^2 + 2x) + C$"
+    ],
+    "solution": "设 $u = x^2$，$dv = e^x dx$，则 $du = 2x dx$，$v = e^x$\\n$\\int x^2 e^x dx = x^2 e^x - \\int 2x e^x dx$\\n再次使用分部积分：设 $u = 2x$，$dv = e^x dx$，则 $du = 2 dx$，$v = e^x$\\n$= x^2 e^x - (2x e^x - 2e^x) + C = e^x(x^2 - 2x + 2) + C$",
+    "tags": [
+      "积分",
+      "分部积分",
+      "指数函数"
+    ]
+  },
+  {
+    "id": "p45",
+    "topic": "积分",
+    "difficulty": "进阶",
+    "question": "使用换元法求：$\\int \\sin(2x) dx$",
+    "answer": "C",
+    "options": [
+      "$\\sin(2x) + C$",
+      "$2\\cos(2x) + C$",
+      "$-\\frac{1}{2}\\cos(2x) + C$",
+      "$\\cos(2x) + C$"
+    ],
+    "solution": "设 $u = 2x$，则 $du = 2 dx$，即 $dx = \\frac{du}{2}$\\n$\\int \\sin(2x) dx = \\int \\sin(u) \\cdot \\frac{du}{2} = -\\frac{1}{2}\\cos(u) + C = -\\frac{1}{2}\\cos(2x) + C$",
+    "tags": [
+      "积分",
+      "换元法",
+      "三角函数"
+    ]
   }
 ]
