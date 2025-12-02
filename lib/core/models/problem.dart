@@ -47,7 +47,7 @@ class Problem {
     }
 
     return Problem(
-      id: json['id'] as String,
+      id: (json['id'] ?? json['questionId']) as String, // 兼容后端返回的questionId字段
       topic: json['topic'] as String,
       difficulty: difficulty,
       type: json['type'] as String?, // 如果缺失，构造函数会默认为'choice'
