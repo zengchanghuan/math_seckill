@@ -40,7 +40,7 @@ class DrillController extends GetxController {
     print('⏳ 等待ProblemServiceV2初始化...');
     // 等待一小段时间，确保onInit执行完成
     await Future.delayed(const Duration(milliseconds: 100));
-    
+
     // 检查索引是否加载
     int retries = 0;
     while (_problemService.getAllTopics().isEmpty && retries < 20) {
@@ -48,13 +48,14 @@ class DrillController extends GetxController {
       await Future.delayed(const Duration(milliseconds: 100));
       retries++;
     }
-    
+
     if (_problemService.getAllTopics().isEmpty) {
       print('❌ ProblemServiceV2初始化超时，索引仍为空');
     } else {
-      print('✅ ProblemServiceV2初始化完成，索引有${_problemService.getAllTopics().length}个主题');
+      print(
+          '✅ ProblemServiceV2初始化完成，索引有${_problemService.getAllTopics().length}个主题');
     }
-    
+
     print('🎯 开始调用 filterProblems()');
     await filterProblems();
   }
