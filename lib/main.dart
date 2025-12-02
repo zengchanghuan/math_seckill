@@ -26,7 +26,8 @@ void main() async {
 
   // 在后台初始化服务（不阻塞UI）
   Get.put(ProblemServiceV2(), permanent: true);
-  Get.put(FormulaService(), permanent: true);
+  // FormulaService暂时不需要（公式库待开发）
+  // Get.put(FormulaService(), permanent: true);
 }
 
 class MyApp extends StatelessWidget {
