@@ -32,12 +32,11 @@ class DrillController extends GetxController {
     loadUserStats();
     loadWrongProblems();
     // 延迟过滤题目，等待ProblemService加载完成
-    _initProblems();
-  }
-
-  Future<void> _initProblems() async {
-    // 异步过滤题目
-    await filterProblems();
+    Future.delayed(const Duration(milliseconds: 500), () {
+      if (Get.isRegistered<DrillController>()) {
+        filterProblems();
+      }
+    });
   }
 
   @override
@@ -47,33 +46,43 @@ class DrillController extends GetxController {
   }
 
   Future<void> filterProblems() async {
+    print('🔍 开始过滤题目: 主题=${selectedTopic.value}, 难度=${selectedDifficulty.value}');
     List<Problem> problems;
 
-    // 异步加载题目
-    if (selectedTopic.value == '全部' && selectedDifficulty.value == '全部') {
-      // 加载所有主题（按需）
-      await _problemService.getProblemsByTopic('全部');
-      problems = _problemService.getAllProblems();
-    } else if (selectedTopic.value == '全部') {
-      problems = await _problemService
-          .getProblemsByDifficulty(selectedDifficulty.value);
-    } else if (selectedDifficulty.value == '全部') {
-      problems = await _problemService.getProblemsByTopic(selectedTopic.value);
-    } else {
-      problems = await _problemService.getProblemsByTopicAndDifficulty(
-        selectedTopic.value,
-        selectedDifficulty.value,
-      );
-    }
+    try {
+      // 异步加载题目
+      if (selectedTopic.value == '全部' && selectedDifficulty.value == '全部') {
+        // 加载所有主题（按需）
+        print('📚 加载所有主题...');
+        problems = await _problemService.getProblemsByTopic('全部');
+      } else if (selectedTopic.value == '全部') {
+        print('📚 按难度加载: ${selectedDifficulty.value}');
+        problems = await _problemService
+            .getProblemsByDifficulty(selectedDifficulty.value);
+      } else if (selectedDifficulty.value == '全部') {
+        print('📚 加载主题: ${selectedTopic.value}');
+        problems = await _problemService.getProblemsByTopic(selectedTopic.value);
+      } else {
+        print('📚 加载主题+难度: ${selectedTopic.value} ${selectedDifficulty.value}');
+        problems = await _problemService.getProblemsByTopicAndDifficulty(
+          selectedTopic.value,
+          selectedDifficulty.value,
+        );
+      }
 
-    currentProblems.value = problems;
-    currentIndex.value = 0;
-    userAnswers.clear();
-    answerStatus.clear();
-    showSolution.clear();
-    // 重置 PageController
-    pageController?.dispose();
-    pageController = PageController(initialPage: 0);
+      print('✅ 过滤完成: 获得${problems.length}道题');
+      currentProblems.value = problems;
+      currentIndex.value = 0;
+      userAnswers.clear();
+      answerStatus.clear();
+      showSolution.clear();
+      // 重置 PageController
+      pageController?.dispose();
+      pageController = PageController(initialPage: 0);
+    } catch (e) {
+      print('❌ 过滤题目失败: $e');
+      currentProblems.value = [];
+    }
   }
 
   void setTopic(String topic) {

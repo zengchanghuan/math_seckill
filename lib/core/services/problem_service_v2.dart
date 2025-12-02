@@ -133,10 +133,14 @@ class ProblemServiceV2 extends GetxService {
 
   /// 获取指定主题的题目（自动加载）
   Future<List<Problem>> getProblemsByTopic(String topic) async {
+    print('📖 getProblemsByTopic: $topic');
     if (topic == '全部') {
       // 加载所有主题
+      print('📚 需要加载所有主题，索引中有: ${_index.keys.toList()}');
       await _loadAllTopics();
-      return getAllProblems();
+      final allProblems = getAllProblems();
+      print('📚 所有主题加载完成: ${allProblems.length}道题');
+      return allProblems;
     }
     return await loadTopicProblems(topic);
   }
@@ -144,9 +148,13 @@ class ProblemServiceV2 extends GetxService {
   /// 加载所有主题
   Future<void> _loadAllTopics() async {
     final topics = _index.keys.toList();
+    print('📋 开始加载所有主题: $topics');
     for (var topic in topics) {
       if (!loadedTopics.contains(topic)) {
+        print('  → 加载主题: $topic');
         await loadTopicProblems(topic);
+      } else {
+        print('  ✓ 已加载: $topic');
       }
     }
   }
