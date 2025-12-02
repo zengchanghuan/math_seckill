@@ -187,6 +187,99 @@ class RemoteProblemService {
       rethrow;
     }
   }
+
+  /// 创建训练实例
+  Future<Map<String, dynamic>> createTrainingInstance({
+    String? userId,
+    required String topic,
+    required String difficulty,
+    String? chapter,
+    String? section,
+    int questionCount = 20,
+  }) async {
+    final uri = Uri.parse('${ApiConfig.baseUrl}/api/instance/create');
+    final requestBody = {
+      if (userId != null) 'userId': userId,
+      'topic': topic,
+      'difficulty': difficulty,
+      if (chapter != null) 'chapter': chapter,
+      if (section != null) 'section': section,
+      'questionCount': questionCount,
+    };
+
+    _log('========== 创建训练实例 ==========');
+    _log('URL: $uri');
+    _log('请求体: ${jsonEncode(requestBody)}');
+
+    try {
+      final response = await http
+          .post(
+        uri,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: jsonEncode(requestBody),
+      )
+          .timeout(
+        const Duration(seconds: 15),
+        onTimeout: () {
+          _log('创建实例超时（15秒）');
+          throw Exception('创建实例超时，请检查网络连接');
+        },
+      );
+
+      _log('收到响应:');
+      _log('  状态码: ${response.statusCode}');
+      _log('  响应体长度: ${response.body.length}');
+
+      if (response.statusCode == 200) {
+        final Map<String, dynamic> data = jsonDecode(response.body);
+        _log('创建实例成功: ${data['instance']['instanceId']}');
+        return data;
+      } else {
+        _log('创建实例失败: ${response.statusCode} ${response.reasonPhrase}');
+        throw Exception('创建实例失败: ${response.statusCode}');
+      }
+    } catch (e, stackTrace) {
+      _log('创建实例异常: $e');
+      _log('堆栈跟踪: $stackTrace');
+      rethrow;
+    }
+  }
+
+  /// 获取训练实例
+  Future<Map<String, dynamic>> getTrainingInstance(String instanceId) async {
+    final uri = Uri.parse('${ApiConfig.baseUrl}/api/instance/$instanceId');
+
+    _log('========== 获取训练实例 ==========');
+    _log('URL: $uri');
+
+    try {
+      final response = await http.get(uri).timeout(
+        const Duration(seconds: 10),
+        onTimeout: () {
+          _log('获取实例超时（10秒）');
+          throw Exception('获取实例超时');
+        },
+      );
+
+      _log('收到响应:');
+      _log('  状态码: ${response.statusCode}');
+
+      if (response.statusCode == 200) {
+        final Map<String, dynamic> data = jsonDecode(response.body);
+        _log('获取实例成功');
+        return data;
+      } else {
+        _log('获取实例失败: ${response.statusCode}');
+        throw Exception('获取实例失败: ${response.statusCode}');
+      }
+    } catch (e, stackTrace) {
+      _log('获取实例异常: $e');
+      _log('堆栈跟踪: $stackTrace');
+      rethrow;
+    }
+  }
 }
 
 

@@ -3,6 +3,7 @@ import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../core/models/problem.dart';
+import '../../../core/models/training_instance.dart';
 import '../../../core/services/remote_problem_service.dart';
 import '../../../utils/latex_helper.dart';
 import '../../../core/data/topic_structure.dart';
@@ -18,11 +19,22 @@ class _AnswerPageState extends State<AnswerPage> {
   final _remoteService = RemoteProblemService();
 
   String _topic = '导数基础'; // 从 SharedPreferences 读取
-  final String _difficulty = '基础'; // 固定为"基础"
+  final String _difficulty = 'L1'; // 固定为"L1"
   String? _selectedChapter;
   String? _selectedSection;
 
-  Problem? _problem;
+  // 用户实例层
+  TrainingInstance? _currentInstance;
+  List<Problem> _instanceProblems = [];
+  int _currentQuestionIndex = 0;
+
+  Problem? get _currentProblem {
+    if (_instanceProblems.isEmpty || _currentQuestionIndex >= _instanceProblems.length) {
+      return null;
+    }
+    return _instanceProblems[_currentQuestionIndex];
+  }
+
   bool _isLoading = false;
   String? _error;
   bool _isInitialized = false;
@@ -62,8 +74,8 @@ class _AnswerPageState extends State<AnswerPage> {
             _selectedSection = _currentTopicStructure!.chapters.first.sections.first.name;
           }
         }
-        // 无论是否有章节结构，都自动加载第一道题
-        _loadProblem();
+        // 加载或创建训练实例
+        await _loadOrCreateInstance();
       } else {
         setState(() {
           _isInitialized = true;
@@ -72,35 +84,115 @@ class _AnswerPageState extends State<AnswerPage> {
     } catch (e) {
       setState(() {
         _isInitialized = true;
+        _error = e.toString();
       });
     }
   }
 
-  Future<void> _loadProblem() async {
+  /// 加载或创建训练实例
+  Future<void> _loadOrCreateInstance() async {
     setState(() {
       _isLoading = true;
       _error = null;
     });
+
     try {
-      final p = await _remoteService.fetchProblem(
+      final prefs = await SharedPreferences.getInstance();
+      
+      // 构建实例key（基于主题、章节、节）
+      final instanceKey = 'training_instance_${_topic}_${_selectedChapter ?? 'none'}_${_selectedSection ?? 'none'}';
+      final savedInstanceId = prefs.getString(instanceKey);
+
+      if (savedInstanceId != null) {
+        // 尝试加载已有实例
+        print('🔍 查找已有实例: $savedInstanceId');
+        try {
+          final data = await _remoteService.getTrainingInstance(savedInstanceId);
+          final instance = TrainingInstance.fromJson(data['instance']);
+          final questions = (data['questions'] as List)
+              .map((q) => Problem.fromJson(q))
+              .toList();
+          
+          setState(() {
+            _currentInstance = instance;
+            _instanceProblems = questions;
+            _currentQuestionIndex = 0;
+          });
+          print('✅ 已加载实例：${questions.length}道题');
+          return;
+        } catch (e) {
+          print('⚠️  加载实例失败，将创建新实例: $e');
+          // 加载失败，清除旧ID，创建新实例
+          await prefs.remove(instanceKey);
+        }
+      }
+
+      // 创建新实例
+      print('📝 创建新训练实例...');
+      final data = await _remoteService.createTrainingInstance(
         topic: _topic,
         difficulty: _difficulty,
         chapter: _selectedChapter,
         section: _selectedSection,
+        questionCount: 20,
       );
+
+      final instance = TrainingInstance.fromJson(data['instance']);
+      final questions = (data['questions'] as List)
+          .map((q) => Problem.fromJson(q))
+          .toList();
+
+      // 保存实例ID
+      await prefs.setString(instanceKey, instance.instanceId);
+
       setState(() {
-        _problem = p;
+        _currentInstance = instance;
+        _instanceProblems = questions;
+        _currentQuestionIndex = 0;
       });
+      print('✅ 创建实例成功：${questions.length}道题');
     } catch (e) {
       setState(() {
         _error = e.toString();
       });
+      print('❌ 加载/创建实例失败: $e');
     } finally {
       setState(() {
         _isLoading = false;
       });
     }
   }
+
+  /// 下一题
+  void _nextQuestion() {
+    if (_currentQuestionIndex < _instanceProblems.length - 1) {
+      setState(() {
+        _currentQuestionIndex++;
+      });
+    }
+  }
+
+  /// 上一题
+  void _previousQuestion() {
+    if (_currentQuestionIndex > 0) {
+      setState(() {
+        _currentQuestionIndex--;
+      });
+    }
+  }
+
+  /// 开始新一轮训练（重新生成实例）
+  Future<void> _startNewTraining() async {
+    final prefs = await SharedPreferences.getInstance();
+    final instanceKey = 'training_instance_${_topic}_${_selectedChapter ?? 'none'}_${_selectedSection ?? 'none'}';
+    
+    // 清除旧实例
+    await prefs.remove(instanceKey);
+    
+    // 重新加载
+    await _loadOrCreateInstance();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -140,7 +232,7 @@ class _AnswerPageState extends State<AnswerPage> {
                           _selectedSection = null; // 切换章节时重置节
                         });
                         if (value != null) {
-                          _loadProblem();
+                          _loadOrCreateInstance();
                         }
                       },
                     ),
@@ -167,11 +259,11 @@ class _AnswerPageState extends State<AnswerPage> {
                         onChanged: (value) {
                           setState(() {
                             _selectedSection = value;
-                          });
-                          if (value != null) {
-                            _loadProblem();
-                          }
-                        },
+                    });
+                    if (value != null) {
+                      _loadOrCreateInstance();
+                    }
+                  },
                       ),
                     ],
                     const SizedBox(height: 16),
@@ -180,17 +272,45 @@ class _AnswerPageState extends State<AnswerPage> {
               child: _buildContent(),
             ),
             const SizedBox(height: 8),
+            Row(
+              children: [
+                // 上一题按钮
+                Expanded(
+                  child: ElevatedButton.icon(
+                    onPressed: _currentQuestionIndex > 0 && !_isLoading
+                        ? _previousQuestion
+                        : null,
+                    icon: const Icon(Icons.arrow_back),
+                    label: const Text('上一题'),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                // 下一题按钮
+                Expanded(
+                  flex: 2,
+                  child: ElevatedButton.icon(
+                    onPressed: _currentQuestionIndex < _instanceProblems.length - 1 && !_isLoading
+                        ? _nextQuestion
+                        : null,
+                    icon: const Icon(Icons.arrow_forward),
+                    label: Text(_currentQuestionIndex < _instanceProblems.length - 1
+                        ? '下一题 (${_currentQuestionIndex + 2}/${_instanceProblems.length})'
+                        : '已完成'),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 8),
+            // 开始新一轮训练
             SizedBox(
               width: double.infinity,
-              child: ElevatedButton(
-                onPressed: _isLoading ? null : _loadProblem,
-                child: _isLoading
-                    ? const SizedBox(
-                        height: 20,
-                        width: 20,
-                        child: CircularProgressIndicator(strokeWidth: 2),
-                      )
-                    : const Text('再来一题'),
+              child: OutlinedButton.icon(
+                onPressed: _isLoading ? null : _startNewTraining,
+                icon: const Icon(Icons.refresh),
+                label: const Text('开始新一轮训练'),
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: Colors.orange,
+                ),
               ),
             ),
           ],
@@ -200,22 +320,33 @@ class _AnswerPageState extends State<AnswerPage> {
   }
 
   Widget _buildContent() {
-    if (_isLoading && _problem == null && _error == null) {
+    if (_isLoading && _currentInstance == null && _error == null) {
       return const Center(child: CircularProgressIndicator());
     }
     if (_error != null) {
       return Center(
-        child: Text(
-          _error!,
-          style: const TextStyle(color: Colors.red),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.error_outline, size: 64, color: Colors.red),
+            const SizedBox(height: 16),
+            Text(
+              _error!,
+              style: const TextStyle(color: Colors.red),
+              textAlign: TextAlign.center,
+            ),
+          ],
         ),
       );
     }
-    if (_problem == null) {
+    if (_currentProblem == null) {
       return const Center(child: Text('暂无题目'));
     }
 
-    final p = _problem!;
+    final p = _currentProblem!;
+    final progress = _currentInstance != null
+        ? '${_currentQuestionIndex + 1}/${_instanceProblems.length}'
+        : '';
 
     return SingleChildScrollView(
       child: Card(
@@ -225,10 +356,30 @@ class _AnswerPageState extends State<AnswerPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // 显示主题和难度
-              Text(
-                '${p.topic} · ${p.difficulty}',
-                style: Theme.of(context).textTheme.titleMedium,
+              // 显示进度和难度
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    '${p.topic} · ${p.difficulty}',
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  if (progress.isNotEmpty)
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: Colors.blue.shade100,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Text(
+                        progress,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue.shade900,
+                        ),
+                      ),
+                    ),
+                ],
               ),
               // 如果有章节和节，显示它们
               if (p.chapter != null || p.section != null) ...[

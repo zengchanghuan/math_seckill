@@ -17,7 +17,8 @@ class DrillController extends GetxController {
   final RxString selectedTopic = '全部'.obs;
   final RxString selectedDifficulty = '全部'.obs;
   final RxMap<String, String> userAnswers = <String, String>{}.obs;
-  final RxMap<String, bool> answerStatus = <String, bool>{}.obs; // true = correct, false = wrong, null = not checked
+  final RxMap<String, bool> answerStatus =
+      <String, bool>{}.obs; // true = correct, false = wrong, null = not checked
   final RxMap<String, bool> showSolution = <String, bool>{}.obs;
   final RxList<String> wrongProblemIds = <String>[].obs;
 
@@ -44,7 +45,8 @@ class DrillController extends GetxController {
     if (selectedTopic.value == '全部' && selectedDifficulty.value == '全部') {
       problems = _problemService.getAllProblems();
     } else if (selectedTopic.value == '全部') {
-      problems = _problemService.getProblemsByDifficulty(selectedDifficulty.value);
+      problems =
+          _problemService.getProblemsByDifficulty(selectedDifficulty.value);
     } else if (selectedDifficulty.value == '全部') {
       problems = _problemService.getProblemsByTopic(selectedTopic.value);
     } else {
@@ -302,7 +304,8 @@ class DrillController extends GetxController {
   Future<void> saveUserStats() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      await prefs.setString('user_stats', json.encode(userStats.value.toJson()));
+      await prefs.setString(
+          'user_stats', json.encode(userStats.value.toJson()));
     } catch (e) {
       print('Error saving user stats: $e');
     }
@@ -331,4 +334,3 @@ class DrillController extends GetxController {
 
   int get totalProblems => currentProblems.length;
 }
-

@@ -48,28 +48,28 @@ class DrillDrawer extends StatelessWidget {
             title: const Text('主题选择'),
             children: [
               Obx(() => RadioListTile<String>(
-                title: const Text('全部主题'),
-                value: '全部',
-                groupValue: controller.selectedTopic.value,
-                onChanged: (value) {
-                  if (value != null) {
-                    controller.setTopic(value);
-                    Navigator.pop(context);
-                  }
-                },
-              )),
+                    title: const Text('全部主题'),
+                    value: '全部',
+                    groupValue: controller.selectedTopic.value,
+                    onChanged: (value) {
+                      if (value != null) {
+                        controller.setTopic(value);
+                        Navigator.pop(context);
+                      }
+                    },
+                  )),
               ...problemService.getAllTopics().map((topic) {
                 return Obx(() => RadioListTile<String>(
-                  title: Text(topic),
-                  value: topic,
-                  groupValue: controller.selectedTopic.value,
-                  onChanged: (value) {
-                    if (value != null) {
-                      controller.setTopic(value);
-                      Navigator.pop(context);
-                    }
-                  },
-                ));
+                      title: Text(topic),
+                      value: topic,
+                      groupValue: controller.selectedTopic.value,
+                      onChanged: (value) {
+                        if (value != null) {
+                          controller.setTopic(value);
+                          Navigator.pop(context);
+                        }
+                      },
+                    ));
               }),
             ],
           ),
@@ -80,72 +80,72 @@ class DrillDrawer extends StatelessWidget {
             title: const Text('难度选择'),
             children: [
               Obx(() => RadioListTile<String>(
-                title: const Text('全部难度'),
-                value: '全部',
-                groupValue: controller.selectedDifficulty.value,
-                onChanged: (value) {
-                  if (value != null) {
-                    controller.setDifficulty(value);
-                    Navigator.pop(context);
-                  }
-                },
-              )),
+                    title: const Text('全部难度'),
+                    value: '全部',
+                    groupValue: controller.selectedDifficulty.value,
+                    onChanged: (value) {
+                      if (value != null) {
+                        controller.setDifficulty(value);
+                        Navigator.pop(context);
+                      }
+                    },
+                  )),
               Obx(() => RadioListTile<String>(
-                title: const Text('L1 基础题'),
-                value: 'L1',
-                groupValue: controller.selectedDifficulty.value,
-                onChanged: (value) {
-                  if (value != null) {
-                    controller.setDifficulty(value);
-                    Navigator.pop(context);
-                  }
-                },
-              )),
+                    title: const Text('L1 基础题'),
+                    value: 'L1',
+                    groupValue: controller.selectedDifficulty.value,
+                    onChanged: (value) {
+                      if (value != null) {
+                        controller.setDifficulty(value);
+                        Navigator.pop(context);
+                      }
+                    },
+                  )),
               Obx(() => RadioListTile<String>(
-                title: const Text('L2 提升题'),
-                value: 'L2',
-                groupValue: controller.selectedDifficulty.value,
-                onChanged: (value) {
-                  if (value != null) {
-                    controller.setDifficulty(value);
-                    Navigator.pop(context);
-                  }
-                },
-              )),
+                    title: const Text('L2 提升题'),
+                    value: 'L2',
+                    groupValue: controller.selectedDifficulty.value,
+                    onChanged: (value) {
+                      if (value != null) {
+                        controller.setDifficulty(value);
+                        Navigator.pop(context);
+                      }
+                    },
+                  )),
               Obx(() => RadioListTile<String>(
-                title: const Text('L3 挑战题'),
-                value: 'L3',
-                groupValue: controller.selectedDifficulty.value,
-                onChanged: (value) {
-                  if (value != null) {
-                    controller.setDifficulty(value);
-                    Navigator.pop(context);
-                  }
-                },
-              )),
+                    title: const Text('L3 挑战题'),
+                    value: 'L3',
+                    groupValue: controller.selectedDifficulty.value,
+                    onChanged: (value) {
+                      if (value != null) {
+                        controller.setDifficulty(value);
+                        Navigator.pop(context);
+                      }
+                    },
+                  )),
               // 保留旧格式兼容
               Obx(() => RadioListTile<String>(
-                title: const Text('基础 (旧)'),
-                value: '基础',
-                groupValue: controller.selectedDifficulty.value,
-                onChanged: (value) {
-                  if (value != null) {
-                    controller.setDifficulty(value);
-                    Navigator.pop(context);
-                  }
-                },
-              )),
+                    title: const Text('基础 (旧)'),
+                    value: '基础',
+                    groupValue: controller.selectedDifficulty.value,
+                    onChanged: (value) {
+                      if (value != null) {
+                        controller.setDifficulty(value);
+                        Navigator.pop(context);
+                      }
+                    },
+                  )),
               Obx(() => RadioListTile<String>(
-                title: const Text('进阶 (旧)'),
-                value: '进阶',
-                groupValue: controller.selectedDifficulty.value,
-                onChanged: (value) {
-                  if (value != null) {
-                    controller.setDifficulty(value);
-                    Navigator.pop(context);
-                  }
-                },
-              )),
+                    title: const Text('进阶 (旧)'),
+                    value: '进阶',
+                    groupValue: controller.selectedDifficulty.value,
+                    onChanged: (value) {
+                      if (value != null) {
+                        controller.setDifficulty(value);
+                        Navigator.pop(context);
+                      }
+                    },
+                  )),
             ],
           ),
 
@@ -273,7 +273,8 @@ class DrillDrawer extends StatelessWidget {
                         }
                         Get.back();
                       },
-                      child: const Text('确定', style: TextStyle(color: Colors.red)),
+                      child:
+                          const Text('确定', style: TextStyle(color: Colors.red)),
                     ),
                   ],
                 ),
@@ -285,4 +286,3 @@ class DrillDrawer extends StatelessWidget {
     );
   }
 }
-

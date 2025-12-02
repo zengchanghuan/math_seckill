@@ -75,7 +75,9 @@ class ProblemCard extends StatelessWidget {
                 const SizedBox(height: 24),
 
                 // 根据题型显示不同的答题区域
-                if (problem.type == 'choice' && options.isNotEmpty && options.length >= 4) ...[
+                if (problem.type == 'choice' &&
+                    options.isNotEmpty &&
+                    options.length >= 4) ...[
                   // 选择题：选项区域
                   Text(
                     '请选择答案：',
@@ -227,7 +229,9 @@ class ProblemCard extends StatelessWidget {
                                 : Icons.cancel),
                         color: answerStatus == null
                             ? Colors.grey
-                            : (answerStatus == true ? Colors.green : Colors.red),
+                            : (answerStatus == true
+                                ? Colors.green
+                                : Colors.red),
                       ),
                     ),
                     style: const TextStyle(fontSize: 18),
