@@ -6,9 +6,11 @@ import 'dart:convert';
 import '../../../core/models/problem.dart';
 import '../../../core/models/user_stats.dart';
 import '../../../core/services/problem_service.dart';
+import '../../../core/services/remote_problem_service.dart';
 
 class DrillController extends GetxController {
   final ProblemService _problemService = Get.find<ProblemService>();
+  final RemoteProblemService _remoteService = RemoteProblemService();
 
   final RxList<Problem> currentProblems = <Problem>[].obs;
   final RxInt currentIndex = 0.obs;
@@ -126,6 +128,128 @@ class DrillController extends GetxController {
     }
 
     updateUserStats(isCorrect, problem.topic);
+  }
+
+  /// 检查填空题答案（调用后端判分）
+  Future<void> checkFillAnswer(String problemId) async {
+    final problem = currentProblems.firstWhere((p) => p.id == problemId);
+    final userAnswer = userAnswers[problemId]?.trim() ?? '';
+
+    if (userAnswer.isEmpty) {
+      Get.snackbar(
+        '提示',
+        '请输入答案',
+        snackPosition: SnackPosition.BOTTOM,
+        duration: const Duration(seconds: 2),
+      );
+      return;
+    }
+
+    try {
+      // 调用后端判分接口
+      final result = await _remoteService.gradeAnswer(
+        problemId: problemId,
+        userAnswer: userAnswer,
+        problemType: 'fill',
+        correctAnswer: problem.answer,
+        answerType: problem.answerType,
+        correctAnswerExpr: problem.answerExpr,
+      );
+
+      final isCorrect = result['isCorrect'] as bool;
+      answerStatus[problemId] = isCorrect;
+
+      if (!isCorrect) {
+        if (!wrongProblemIds.contains(problemId)) {
+          wrongProblemIds.add(problemId);
+          saveWrongProblems();
+        }
+      }
+
+      updateUserStats(isCorrect, problem.topic);
+
+      // 如果答案正确，延迟后自动滑动到下一题
+      if (isCorrect && pageController != null) {
+        Timer(const Duration(milliseconds: 1500), () {
+          if (currentIndex.value < currentProblems.length - 1) {
+            currentIndex.value++;
+            pageController!.nextPage(
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeInOut,
+            );
+          }
+        });
+      }
+    } catch (e) {
+      Get.snackbar(
+        '错误',
+        '判分失败：$e',
+        snackPosition: SnackPosition.BOTTOM,
+        duration: const Duration(seconds: 3),
+        backgroundColor: Colors.red.shade100,
+      );
+    }
+  }
+
+  /// 检查解答题答案（调用后端判分）
+  Future<void> checkSolutionAnswer(String problemId) async {
+    final problem = currentProblems.firstWhere((p) => p.id == problemId);
+    final userAnswer = userAnswers[problemId]?.trim() ?? '';
+
+    if (userAnswer.isEmpty) {
+      Get.snackbar(
+        '提示',
+        '请输入最终答案',
+        snackPosition: SnackPosition.BOTTOM,
+        duration: const Duration(seconds: 2),
+      );
+      return;
+    }
+
+    try {
+      // 调用后端判分接口
+      final result = await _remoteService.gradeAnswer(
+        problemId: problemId,
+        userAnswer: userAnswer,
+        problemType: 'solution',
+        correctAnswer: problem.answer,
+        answerType: problem.answerType,
+        correctAnswerExpr: problem.answerExpr,
+      );
+
+      final isCorrect = result['isCorrect'] as bool;
+      answerStatus[problemId] = isCorrect;
+
+      if (!isCorrect) {
+        if (!wrongProblemIds.contains(problemId)) {
+          wrongProblemIds.add(problemId);
+          saveWrongProblems();
+        }
+      }
+
+      updateUserStats(isCorrect, problem.topic);
+
+      // 如果答案正确，延迟后自动滑动到下一题
+      if (isCorrect && pageController != null) {
+        Timer(const Duration(milliseconds: 1500), () {
+          if (currentIndex.value < currentProblems.length - 1) {
+            currentIndex.value++;
+            pageController!.nextPage(
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeInOut,
+            );
+          }
+        });
+      }
+    } catch (e) {
+      Get.snackbar(
+        '错误',
+        '判分失败：$e',
+        snackPosition: SnackPosition.BOTTOM,
+        duration: const Duration(seconds: 3),
+        backgroundColor: Colors.red.shade100,
+      );
+    }
   }
 
   void toggleSolution(String problemId) {

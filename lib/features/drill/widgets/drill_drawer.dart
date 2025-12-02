@@ -91,7 +91,41 @@ class DrillDrawer extends StatelessWidget {
                 },
               )),
               Obx(() => RadioListTile<String>(
-                title: const Text('基础'),
+                title: const Text('L1 基础题'),
+                value: 'L1',
+                groupValue: controller.selectedDifficulty.value,
+                onChanged: (value) {
+                  if (value != null) {
+                    controller.setDifficulty(value);
+                    Navigator.pop(context);
+                  }
+                },
+              )),
+              Obx(() => RadioListTile<String>(
+                title: const Text('L2 提升题'),
+                value: 'L2',
+                groupValue: controller.selectedDifficulty.value,
+                onChanged: (value) {
+                  if (value != null) {
+                    controller.setDifficulty(value);
+                    Navigator.pop(context);
+                  }
+                },
+              )),
+              Obx(() => RadioListTile<String>(
+                title: const Text('L3 挑战题'),
+                value: 'L3',
+                groupValue: controller.selectedDifficulty.value,
+                onChanged: (value) {
+                  if (value != null) {
+                    controller.setDifficulty(value);
+                    Navigator.pop(context);
+                  }
+                },
+              )),
+              // 保留旧格式兼容
+              Obx(() => RadioListTile<String>(
+                title: const Text('基础 (旧)'),
                 value: '基础',
                 groupValue: controller.selectedDifficulty.value,
                 onChanged: (value) {
@@ -102,7 +136,7 @@ class DrillDrawer extends StatelessWidget {
                 },
               )),
               Obx(() => RadioListTile<String>(
-                title: const Text('进阶'),
+                title: const Text('进阶 (旧)'),
                 value: '进阶',
                 groupValue: controller.selectedDifficulty.value,
                 onChanged: (value) {

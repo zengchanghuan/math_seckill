@@ -38,8 +38,12 @@ class TopicSelector extends StatelessWidget {
                   isExpanded: true,
                   items: const [
                     DropdownMenuItem(value: '全部', child: Text('全部难度')),
-                    DropdownMenuItem(value: '基础', child: Text('基础')),
-                    DropdownMenuItem(value: '进阶', child: Text('进阶')),
+                    DropdownMenuItem(value: 'L1', child: Text('L1 基础题')),
+                    DropdownMenuItem(value: 'L2', child: Text('L2 提升题')),
+                    DropdownMenuItem(value: 'L3', child: Text('L3 挑战题')),
+                    // 保留旧格式兼容
+                    DropdownMenuItem(value: '基础', child: Text('基础 (旧)')),
+                    DropdownMenuItem(value: '进阶', child: Text('进阶 (旧)')),
                   ],
                   onChanged: (value) {
                     if (value != null) {

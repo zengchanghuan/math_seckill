@@ -74,8 +74,9 @@ class ProblemCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 24),
 
-                // 选项区域
-                if (options.isNotEmpty && options.length >= 4) ...[
+                // 根据题型显示不同的答题区域
+                if (problem.type == 'choice' && options.isNotEmpty && options.length >= 4) ...[
+                  // 选择题：选项区域
                   Text(
                     '请选择答案：',
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -196,6 +197,110 @@ class ProblemCard extends StatelessWidget {
                       ),
                     );
                   }),
+                ] else if (problem.type == 'fill') ...[
+                  // 填空题：文本输入框
+                  Text(
+                    '请输入答案：',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                  const SizedBox(height: 12),
+                  TextField(
+                    enabled: answerStatus == null,
+                    decoration: InputDecoration(
+                      hintText: '请输入数值或表达式',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      filled: true,
+                      fillColor: answerStatus == null
+                          ? Colors.white
+                          : (answerStatus == true
+                              ? Colors.green.shade50
+                              : Colors.red.shade50),
+                      prefixIcon: Icon(
+                        answerStatus == null
+                            ? Icons.edit
+                            : (answerStatus == true
+                                ? Icons.check_circle
+                                : Icons.cancel),
+                        color: answerStatus == null
+                            ? Colors.grey
+                            : (answerStatus == true ? Colors.green : Colors.red),
+                      ),
+                    ),
+                    style: const TextStyle(fontSize: 18),
+                    onChanged: (value) {
+                      controller.setAnswer(problem.id, value);
+                    },
+                    onSubmitted: (value) {
+                      if (answerStatus == null) {
+                        controller.checkFillAnswer(problem.id);
+                      }
+                    },
+                  ),
+                  const SizedBox(height: 12),
+                  if (answerStatus == null)
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        controller.checkFillAnswer(problem.id);
+                      },
+                      icon: const Icon(Icons.check),
+                      label: const Text('提交答案'),
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(double.infinity, 50),
+                      ),
+                    ),
+                ] else if (problem.type == 'solution') ...[
+                  // 解答题：多行文本输入框
+                  Text(
+                    '请输入最终答案：',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    '提示：解答题只判最终答案，请在最后写出明确的答案',
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: Colors.grey.shade600,
+                        ),
+                  ),
+                  const SizedBox(height: 12),
+                  TextField(
+                    enabled: answerStatus == null,
+                    maxLines: 5,
+                    decoration: InputDecoration(
+                      hintText: '请输入最终答案（数值或表达式）',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      filled: true,
+                      fillColor: answerStatus == null
+                          ? Colors.white
+                          : (answerStatus == true
+                              ? Colors.green.shade50
+                              : Colors.red.shade50),
+                      alignLabelWithHint: true,
+                    ),
+                    style: const TextStyle(fontSize: 18),
+                    onChanged: (value) {
+                      controller.setAnswer(problem.id, value);
+                    },
+                  ),
+                  const SizedBox(height: 12),
+                  if (answerStatus == null)
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        controller.checkSolutionAnswer(problem.id);
+                      },
+                      icon: const Icon(Icons.check),
+                      label: const Text('提交答案'),
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(double.infinity, 50),
+                      ),
+                    ),
                 ],
 
                 const SizedBox(height: 16),
@@ -224,7 +329,9 @@ class ProblemCard extends StatelessWidget {
                               ),
                               const SizedBox(width: 12),
                               Text(
-                                '正确答案是：选项 ${problem.answer}',
+                                problem.type == 'choice'
+                                    ? '正确答案是：选项 ${problem.answer}'
+                                    : '正确答案是：${problem.answer}',
                                 style: Theme.of(context)
                                     .textTheme
                                     .titleMedium
