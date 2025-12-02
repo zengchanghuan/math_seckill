@@ -32,9 +32,31 @@ class DrillController extends GetxController {
     print('🎯 DrillController.onInit() 被调用');
     loadUserStats();
     loadWrongProblems();
-    // 立即过滤题目（异步执行）
-    print('🎯 即将调用 filterProblems()');
-    filterProblems();
+    // 等待ProblemServiceV2初始化完成后再过滤
+    _waitForServiceAndFilter();
+  }
+
+  Future<void> _waitForServiceAndFilter() async {
+    print('⏳ 等待ProblemServiceV2初始化...');
+    // 等待一小段时间，确保onInit执行完成
+    await Future.delayed(const Duration(milliseconds: 100));
+    
+    // 检查索引是否加载
+    int retries = 0;
+    while (_problemService.getAllTopics().isEmpty && retries < 20) {
+      print('⏳ 索引未就绪，等待中... ($retries)');
+      await Future.delayed(const Duration(milliseconds: 100));
+      retries++;
+    }
+    
+    if (_problemService.getAllTopics().isEmpty) {
+      print('❌ ProblemServiceV2初始化超时，索引仍为空');
+    } else {
+      print('✅ ProblemServiceV2初始化完成，索引有${_problemService.getAllTopics().length}个主题');
+    }
+    
+    print('🎯 开始调用 filterProblems()');
+    await filterProblems();
   }
 
   @override
