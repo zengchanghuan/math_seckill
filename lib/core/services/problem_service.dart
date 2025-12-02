@@ -2,17 +2,18 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import '../models/problem.dart';
+import 'problem_cache_service.dart';
 
 class ProblemService extends GetxService {
   List<Problem> _allProblems = [];
   final RxBool isLoading = true.obs; // 初始为true
   bool _isLoaded = false;
+  final _cacheService = ProblemCacheService();
 
   @override
   void onInit() {
     super.onInit();
-    // 延迟加载，避免阻塞启动
-    Future.delayed(Duration.zero, loadProblems);
+    // 不在启动时加载，改为按需加载
   }
 
   Future<void> loadProblems() async {
@@ -20,24 +21,9 @@ class ProblemService extends GetxService {
     
     try {
       isLoading.value = true;
-      print('📚 开始加载题库...');
-      final stopwatch = Stopwatch()..start();
       
-      // 使用compute进行后台解析，避免阻塞UI线程
-      final String jsonString =
-          await rootBundle.loadString('assets/data/problems.json');
-      
-      stopwatch.stop();
-      print('  - JSON加载耗时：${stopwatch.elapsedMilliseconds}ms');
-      
-      stopwatch.reset();
-      stopwatch.start();
-      
-      final List<dynamic> jsonData = json.decode(jsonString);
-      _allProblems = jsonData.map((json) => Problem.fromJson(json)).toList();
-      
-      stopwatch.stop();
-      print('✅ 题库解析完成：${_allProblems.length}道题，解析耗时${stopwatch.elapsedMilliseconds}ms');
+      // 使用缓存服务加载（性能优化）
+      _allProblems = await _cacheService.loadProblems();
       _isLoaded = true;
     } catch (e) {
       print('❌ 加载题库失败: $e');
@@ -45,6 +31,13 @@ class ProblemService extends GetxService {
     } finally {
       isLoading.value = false;
     }
+  }
+
+  /// 清除缓存（题库更新后使用）
+  Future<void> clearCache() async {
+    await _cacheService.clearCache();
+    _isLoaded = false;
+    await loadProblems();
   }
 
   /// 确保题库已加载

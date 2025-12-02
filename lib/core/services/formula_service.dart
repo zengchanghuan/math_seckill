@@ -11,8 +11,7 @@ class FormulaService extends GetxService {
   @override
   void onInit() {
     super.onInit();
-    // 延迟加载，避免阻塞启动
-    Future.delayed(Duration.zero, loadFormulas);
+    // 不在启动时加载，改为按需加载
   }
 
   Future<void> loadFormulas() async {
