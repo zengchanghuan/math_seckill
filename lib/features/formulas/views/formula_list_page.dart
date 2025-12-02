@@ -5,8 +5,21 @@ import '../widgets/search_bar.dart';
 import '../widgets/formula_card.dart';
 import '../../../core/services/formula_service.dart';
 
-class FormulaListPage extends StatelessWidget {
+class FormulaListPage extends StatefulWidget {
   const FormulaListPage({super.key});
+
+  @override
+  State<FormulaListPage> createState() => _FormulaListPageState();
+}
+
+class _FormulaListPageState extends State<FormulaListPage> {
+  @override
+  void initState() {
+    super.initState();
+    // 页面打开时触发公式库加载
+    final formulaService = Get.find<FormulaService>();
+    formulaService.loadFormulas();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +36,16 @@ class FormulaListPage extends StatelessWidget {
       ),
       body: Obx(() {
         if (formulaService.isLoading.value) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircularProgressIndicator(),
+                SizedBox(height: 16),
+                Text('正在加载公式库...'),
+              ],
+            ),
+          );
         }
 
         if (controller.filteredFormulas.isEmpty) {
