@@ -131,9 +131,3 @@ class _FormulaListPageState extends State<FormulaListPage> {
     });
   }
 }
-
-
-
-
-
-

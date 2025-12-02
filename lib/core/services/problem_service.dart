@@ -4,7 +4,7 @@ import 'problem_cache_service.dart';
 
 class ProblemService extends GetxService {
   List<Problem> _allProblems = [];
-  final RxBool isLoading = true.obs; // 初始为true
+  final RxBool isLoading = false.obs; // 初始为false，等待触发加载
   bool _isLoaded = false;
   final _cacheService = ProblemCacheService();
 

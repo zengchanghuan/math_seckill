@@ -19,9 +19,7 @@ class _DrillPageState extends State<DrillPage> {
     super.initState();
     // 页面打开时触发题库加载
     final problemService = Get.find<ProblemService>();
-    if (!problemService.isLoading.value) {
-      problemService.loadProblems();
-    }
+    problemService.loadProblems();
   }
 
   @override
@@ -62,15 +60,15 @@ class _DrillPageState extends State<DrillPage> {
                 Text(
                   '暂无题目',
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: Colors.grey.shade600,
-                  ),
+                        color: Colors.grey.shade600,
+                      ),
                 ),
                 const SizedBox(height: 8),
                 Text(
                   '请选择其他主题或难度',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Colors.grey.shade500,
-                  ),
+                        color: Colors.grey.shade500,
+                      ),
                 ),
               ],
             ),
@@ -107,4 +105,3 @@ class _DrillPageState extends State<DrillPage> {
     );
   }
 }
-

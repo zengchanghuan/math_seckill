@@ -5,7 +5,7 @@ import '../models/formula.dart';
 
 class FormulaService extends GetxService {
   List<Formula> _allFormulas = [];
-  final RxBool isLoading = true.obs; // 初始为true
+  final RxBool isLoading = false.obs; // 初始为false，等待触发加载
   bool _isLoaded = false;
 
   @override
