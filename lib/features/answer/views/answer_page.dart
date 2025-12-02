@@ -62,11 +62,11 @@ class _AnswerPageState extends State<AnswerPage> {
     try {
       final prefs = await SharedPreferences.getInstance();
       final selectedTheme = prefs.getString('selected_theme');
-      
+
       setState(() {
         _isInitialized = true;
       });
-      
+
       if (selectedTheme != null) {
         setState(() {
           _topic = selectedTheme;
@@ -79,7 +79,7 @@ class _AnswerPageState extends State<AnswerPage> {
           }
         }
         // 延迟加载训练实例，不阻塞UI显示
-        Future.delayed(const Duration(milliseconds: 300), () {
+        Future.delayed(const Duration(milliseconds: 100), () {
           if (mounted) {
             _loadOrCreateInstance();
           }

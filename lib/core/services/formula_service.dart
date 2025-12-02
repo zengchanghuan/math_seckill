@@ -17,19 +17,20 @@ class FormulaService extends GetxService {
 
   Future<void> loadFormulas() async {
     if (_isLoaded) return; // 避免重复加载
-    
+
     try {
       isLoading.value = true;
       print('📐 开始加载公式库...');
       final stopwatch = Stopwatch()..start();
-      
+
       final String jsonString =
           await rootBundle.loadString('assets/data/formulas.json');
       final List<dynamic> jsonData = json.decode(jsonString);
       _allFormulas = jsonData.map((json) => Formula.fromJson(json)).toList();
-      
+
       stopwatch.stop();
-      print('✅ 公式库加载完成：${_allFormulas.length}条公式，耗时${stopwatch.elapsedMilliseconds}ms');
+      print(
+          '✅ 公式库加载完成：${_allFormulas.length}条公式，耗时${stopwatch.elapsedMilliseconds}ms');
       _isLoaded = true;
     } catch (e) {
       print('❌ 加载公式库失败: $e');
@@ -81,9 +82,3 @@ class FormulaService extends GetxService {
     }
   }
 }
-
-
-
-
-
-

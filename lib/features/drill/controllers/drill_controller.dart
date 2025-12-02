@@ -36,9 +36,11 @@ class DrillController extends GetxController {
   }
 
   Future<void> _initProblems() async {
-    // 确保题库已加载
-    await _problemService.ensureLoaded();
-    filterProblems();
+    // 确保题库已加载（不阻塞，显示加载中状态）
+    _problemService.ensureLoaded().then((_) {
+      if (!Get.isRegistered<DrillController>()) return;
+      filterProblems();
+    });
   }
 
   @override

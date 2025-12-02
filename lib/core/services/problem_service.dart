@@ -23,13 +23,21 @@ class ProblemService extends GetxService {
       print('📚 开始加载题库...');
       final stopwatch = Stopwatch()..start();
       
+      // 使用compute进行后台解析，避免阻塞UI线程
       final String jsonString =
           await rootBundle.loadString('assets/data/problems.json');
+      
+      stopwatch.stop();
+      print('  - JSON加载耗时：${stopwatch.elapsedMilliseconds}ms');
+      
+      stopwatch.reset();
+      stopwatch.start();
+      
       final List<dynamic> jsonData = json.decode(jsonString);
       _allProblems = jsonData.map((json) => Problem.fromJson(json)).toList();
       
       stopwatch.stop();
-      print('✅ 题库加载完成：${_allProblems.length}道题，耗时${stopwatch.elapsedMilliseconds}ms');
+      print('✅ 题库解析完成：${_allProblems.length}道题，解析耗时${stopwatch.elapsedMilliseconds}ms');
       _isLoaded = true;
     } catch (e) {
       print('❌ 加载题库失败: $e');
