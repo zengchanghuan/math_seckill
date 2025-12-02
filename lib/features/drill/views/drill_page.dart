@@ -4,28 +4,15 @@ import '../controllers/drill_controller.dart';
 import '../widgets/problem_card.dart';
 import '../widgets/progress_bar.dart';
 import '../widgets/drill_drawer.dart';
-import '../../../core/services/problem_service.dart';
+import '../../../core/services/problem_service_v2.dart';
 
-class DrillPage extends StatefulWidget {
+class DrillPage extends StatelessWidget {
   const DrillPage({super.key});
-
-  @override
-  State<DrillPage> createState() => _DrillPageState();
-}
-
-class _DrillPageState extends State<DrillPage> {
-  @override
-  void initState() {
-    super.initState();
-    // 页面打开时触发题库加载
-    final problemService = Get.find<ProblemService>();
-    problemService.loadProblems();
-  }
 
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(DrillController());
-    final problemService = Get.find<ProblemService>();
+    final problemService = Get.find<ProblemServiceV2>();
 
     return Scaffold(
       drawer: const DrillDrawer(),

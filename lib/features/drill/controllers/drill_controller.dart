@@ -5,11 +5,11 @@ import 'dart:async';
 import 'dart:convert';
 import '../../../core/models/problem.dart';
 import '../../../core/models/user_stats.dart';
-import '../../../core/services/problem_service.dart';
+import '../../../core/services/problem_service_v2.dart';
 import '../../../core/services/remote_problem_service.dart';
 
 class DrillController extends GetxController {
-  final ProblemService _problemService = Get.find<ProblemService>();
+  final ProblemServiceV2 _problemService = Get.find<ProblemServiceV2>();
   final RemoteProblemService _remoteService = RemoteProblemService();
 
   final RxList<Problem> currentProblems = <Problem>[].obs;
@@ -36,11 +36,8 @@ class DrillController extends GetxController {
   }
 
   Future<void> _initProblems() async {
-    // 确保题库已加载（不阻塞，显示加载中状态）
-    _problemService.ensureLoaded().then((_) {
-      if (!Get.isRegistered<DrillController>()) return;
-      filterProblems();
-    });
+    // 异步过滤题目
+    await filterProblems();
   }
 
   @override
@@ -49,21 +46,25 @@ class DrillController extends GetxController {
     super.onClose();
   }
 
-  void filterProblems() {
+  Future<void> filterProblems() async {
     List<Problem> problems;
+    
+    // 异步加载题目
     if (selectedTopic.value == '全部' && selectedDifficulty.value == '全部') {
+      // 加载所有主题（按需）
+      await _problemService.getProblemsByTopic('全部');
       problems = _problemService.getAllProblems();
     } else if (selectedTopic.value == '全部') {
-      problems =
-          _problemService.getProblemsByDifficulty(selectedDifficulty.value);
+      problems = await _problemService.getProblemsByDifficulty(selectedDifficulty.value);
     } else if (selectedDifficulty.value == '全部') {
-      problems = _problemService.getProblemsByTopic(selectedTopic.value);
+      problems = await _problemService.getProblemsByTopic(selectedTopic.value);
     } else {
-      problems = _problemService.getProblemsByTopicAndDifficulty(
+      problems = await _problemService.getProblemsByTopicAndDifficulty(
         selectedTopic.value,
         selectedDifficulty.value,
       );
     }
+    
     currentProblems.value = problems;
     currentIndex.value = 0;
     userAnswers.clear();
