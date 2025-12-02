@@ -20,8 +20,10 @@ class ProblemServiceV2 extends GetxService {
   @override
   Future<void> onInit() async {
     super.onInit();
+    print('🔧 ProblemServiceV2.onInit() 开始');
     await _initCache();
     await _loadIndex();
+    print('🔧 ProblemServiceV2.onInit() 完成');
   }
 
   /// 初始化Hive缓存

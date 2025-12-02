@@ -29,14 +29,12 @@ class DrillController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+    print('🎯 DrillController.onInit() 被调用');
     loadUserStats();
     loadWrongProblems();
-    // 延迟过滤题目，等待ProblemService加载完成
-    Future.delayed(const Duration(milliseconds: 500), () {
-      if (Get.isRegistered<DrillController>()) {
-        filterProblems();
-      }
-    });
+    // 立即过滤题目（异步执行）
+    print('🎯 即将调用 filterProblems()');
+    filterProblems();
   }
 
   @override
@@ -46,7 +44,8 @@ class DrillController extends GetxController {
   }
 
   Future<void> filterProblems() async {
-    print('🔍 开始过滤题目: 主题=${selectedTopic.value}, 难度=${selectedDifficulty.value}');
+    print(
+        '🔍 开始过滤题目: 主题=${selectedTopic.value}, 难度=${selectedDifficulty.value}');
     List<Problem> problems;
 
     try {
@@ -61,7 +60,8 @@ class DrillController extends GetxController {
             .getProblemsByDifficulty(selectedDifficulty.value);
       } else if (selectedDifficulty.value == '全部') {
         print('📚 加载主题: ${selectedTopic.value}');
-        problems = await _problemService.getProblemsByTopic(selectedTopic.value);
+        problems =
+            await _problemService.getProblemsByTopic(selectedTopic.value);
       } else {
         print('📚 加载主题+难度: ${selectedTopic.value} ${selectedDifficulty.value}');
         problems = await _problemService.getProblemsByTopicAndDifficulty(
