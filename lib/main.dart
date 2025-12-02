@@ -75,8 +75,8 @@ class _MainPageState extends State<MainPage> {
 
   final List<Widget> _pages = const [
     DrillPage(),
-    FormulaListPage(),
     AnswerPage(),
+    FormulaListPage(),
     ProfilePage(),
   ];
 

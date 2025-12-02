@@ -22,12 +22,12 @@ class BottomNavBar extends StatelessWidget {
           label: '刷题',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.functions),
-          label: '公式',
-        ),
-        BottomNavigationBarItem(
           icon: Icon(Icons.menu_book),
           label: '解答',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.functions),
+          label: '公式',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
