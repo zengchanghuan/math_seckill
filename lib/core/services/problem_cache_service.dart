@@ -15,7 +15,7 @@ class ProblemCacheService {
   /// 初始化Hive
   Future<void> init() async {
     if (_isInitialized) return;
-    
+
     try {
       await Hive.initFlutter();
       _box = await Hive.openBox(_boxName);
@@ -29,7 +29,7 @@ class ProblemCacheService {
   /// 加载题库（带缓存）
   Future<List<Problem>> loadProblems() async {
     final stopwatch = Stopwatch()..start();
-    
+
     try {
       // 确保Hive已初始化
       if (!_isInitialized) {
@@ -47,7 +47,7 @@ class ProblemCacheService {
         final problems = cachedData
             .map((json) => Problem.fromJson(Map<String, dynamic>.from(json)))
             .toList();
-        
+
         stopwatch.stop();
         print('✅ 缓存加载完成：${problems.length}道题，耗时${stopwatch.elapsedMilliseconds}ms');
         return problems;
@@ -62,7 +62,7 @@ class ProblemCacheService {
         // 保存到缓存
         await _box?.put('problems', jsonData);
         await _box?.put(_versionKey, _currentVersion);
-        
+
         stopwatch.stop();
         print('✅ 题库加载并缓存完成：${problems.length}道题，耗时${stopwatch.elapsedMilliseconds}ms');
         return problems;

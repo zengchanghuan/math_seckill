@@ -16,10 +16,10 @@ class ProblemService extends GetxService {
 
   Future<void> loadProblems() async {
     if (_isLoaded) return; // 避免重复加载
-    
+
     try {
       isLoading.value = true;
-      
+
       // 使用缓存服务加载（性能优化）
       _allProblems = await _cacheService.loadProblems();
       _isLoaded = true;

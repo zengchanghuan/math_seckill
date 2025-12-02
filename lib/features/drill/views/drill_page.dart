@@ -6,8 +6,23 @@ import '../widgets/progress_bar.dart';
 import '../widgets/drill_drawer.dart';
 import '../../../core/services/problem_service.dart';
 
-class DrillPage extends StatelessWidget {
+class DrillPage extends StatefulWidget {
   const DrillPage({super.key});
+
+  @override
+  State<DrillPage> createState() => _DrillPageState();
+}
+
+class _DrillPageState extends State<DrillPage> {
+  @override
+  void initState() {
+    super.initState();
+    // 页面打开时触发题库加载
+    final problemService = Get.find<ProblemService>();
+    if (!problemService.isLoading.value) {
+      problemService.loadProblems();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +36,16 @@ class DrillPage extends StatelessWidget {
       ),
       body: Obx(() {
         if (problemService.isLoading.value) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircularProgressIndicator(),
+                SizedBox(height: 16),
+                Text('正在加载题库...'),
+              ],
+            ),
+          );
         }
 
         if (controller.currentProblems.isEmpty) {
