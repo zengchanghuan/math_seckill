@@ -55,6 +55,26 @@ class TrainingInstance {
         answerStatus = answerStatus ?? {};
 
   factory TrainingInstance.fromJson(Map<String, dynamic> json) {
+    // 安全解析userAnswers
+    Map<String, String> userAnswers = {};
+    if (json['userAnswers'] != null && json['userAnswers'] is Map) {
+      (json['userAnswers'] as Map).forEach((key, value) {
+        if (key != null && value != null) {
+          userAnswers[key.toString()] = value.toString();
+        }
+      });
+    }
+    
+    // 安全解析answerStatus
+    Map<String, bool> answerStatus = {};
+    if (json['answerStatus'] != null && json['answerStatus'] is Map) {
+      (json['answerStatus'] as Map).forEach((key, value) {
+        if (key != null && value != null && value is bool) {
+          answerStatus[key.toString()] = value;
+        }
+      });
+    }
+    
     return TrainingInstance(
       instanceId: json['instanceId'] as String,
       userId: json['userId'] as String?,
@@ -68,8 +88,8 @@ class TrainingInstance {
       totalQuestions: json['totalQuestions'] as int,
       createdAt: json['createdAt'] as String,
       completedAt: json['completedAt'] as String?,
-      userAnswers: Map<String, String>.from(json['userAnswers'] ?? {}),
-      answerStatus: Map<String, bool>.from(json['answerStatus'] ?? {}),
+      userAnswers: userAnswers,
+      answerStatus: answerStatus,
     );
   }
 
