@@ -128,6 +128,65 @@ class RemoteProblemService {
       rethrow;
     }
   }
+
+  /// 判分接口
+  Future<Map<String, dynamic>> gradeAnswer({
+    required String problemId,
+    required String userAnswer,
+    required String problemType,
+    required String correctAnswer,
+    String? answerType,
+    String? correctAnswerExpr,
+  }) async {
+    final uri = Uri.parse('${ApiConfig.baseUrl}/api/grade');
+    final requestBody = {
+      'problemId': problemId,
+      'userAnswer': userAnswer,
+      'problemType': problemType,
+      'correctAnswer': correctAnswer,
+      if (answerType != null) 'answerType': answerType,
+      if (correctAnswerExpr != null) 'correctAnswerExpr': correctAnswerExpr,
+    };
+
+    _log('========== 判分请求 ==========');
+    _log('URL: $uri');
+    _log('请求体: ${jsonEncode(requestBody)}');
+
+    try {
+      final response = await http
+          .post(
+        uri,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: jsonEncode(requestBody),
+      )
+          .timeout(
+        const Duration(seconds: 10),
+        onTimeout: () {
+          _log('判分超时（10秒）');
+          throw Exception('判分超时，请检查网络连接');
+        },
+      );
+
+      _log('收到判分响应:');
+      _log('  状态码: ${response.statusCode}');
+      _log('  响应体: ${response.body}');
+
+      if (response.statusCode == 200) {
+        final Map<String, dynamic> data = jsonDecode(response.body);
+        _log('判分成功: ${data['isCorrect']}');
+        return data;
+      } else {
+        _log('判分失败: ${response.statusCode} ${response.reasonPhrase}');
+        throw Exception('判分失败: ${response.statusCode} ${response.reasonPhrase}');
+      }
+    } catch (e, stackTrace) {
+      _log('判分异常: $e');
+      _log('堆栈跟踪: $stackTrace');
+      rethrow;
+    }
+  }
 }
 
 

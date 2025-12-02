@@ -2,7 +2,7 @@
   {
     "id": "p1",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = x^2 + 3x + 2$ 的导数。",
     "answer": "A",
     "options": [
@@ -15,12 +15,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p2",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = \\sin(x)$ 的导数。",
     "answer": "B",
     "options": [
@@ -33,12 +36,15 @@
     "tags": [
       "导数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p3",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "使用链式法则求 $f(x) = \\sin(x^2)$ 的导数。",
     "answer": "C",
     "options": [
@@ -51,12 +57,15 @@
     "tags": [
       "导数",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p4",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限：$\\lim_{x \\to 0} \\frac{\\sin(x)}{x}$",
     "answer": "A",
     "options": [
@@ -69,12 +78,15 @@
     "tags": [
       "极限",
       "重要极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p5",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "求极限：$\\lim_{x \\to \\infty} \\frac{x^2 + 3x + 2}{2x^2 - x + 1}$",
     "answer": "B",
     "options": [
@@ -87,12 +99,15 @@
     "tags": [
       "极限",
       "无穷大"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p6",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求不定积分：$\\int x^2 dx$",
     "answer": "C",
     "options": [
@@ -105,12 +120,15 @@
     "tags": [
       "积分",
       "不定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p7",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "使用分部积分法求：$\\int x e^x dx$",
     "answer": "D",
     "options": [
@@ -123,12 +141,15 @@
     "tags": [
       "积分",
       "分部积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p8",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "求函数 $f(x) = \\frac{x^2 + 1}{x}$ 的导数。",
     "answer": "A",
     "options": [
@@ -141,12 +162,15 @@
     "tags": [
       "导数",
       "商法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p9",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求定积分：$\\int_0^1 x dx$",
     "answer": "B",
     "options": [
@@ -159,12 +183,15 @@
     "tags": [
       "积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p10",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限：$\\lim_{x \\to 2} (x^2 + 3x - 2)$",
     "answer": "C",
     "options": [
@@ -177,12 +204,15 @@
     "tags": [
       "极限",
       "连续函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p11",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = e^x$ 的导数。",
     "answer": "A",
     "options": [
@@ -195,12 +225,15 @@
     "tags": [
       "导数",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p12",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = \\cos(x)$ 的导数。",
     "answer": "B",
     "options": [
@@ -213,12 +246,15 @@
     "tags": [
       "导数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p13",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = \\ln(x)$ 的导数。",
     "answer": "C",
     "options": [
@@ -231,12 +267,15 @@
     "tags": [
       "导数",
       "对数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p14",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "使用乘积法则求 $f(x) = x \\sin(x)$ 的导数。",
     "answer": "D",
     "options": [
@@ -249,12 +288,15 @@
     "tags": [
       "导数",
       "乘积法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p15",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "求函数 $f(x) = e^{2x}$ 的导数。",
     "answer": "A",
     "options": [
@@ -268,12 +310,15 @@
       "导数",
       "链式法则",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p16",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "求函数 $f(x) = \\ln(x^2 + 1)$ 的导数。",
     "answer": "B",
     "options": [
@@ -287,12 +332,15 @@
       "导数",
       "链式法则",
       "对数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p17",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限：$\\lim_{x \\to 0} \\frac{e^x - 1}{x}$",
     "answer": "A",
     "options": [
@@ -306,12 +354,15 @@
       "极限",
       "重要极限",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p18",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限：$\\lim_{x \\to 1} \\frac{x^2 - 1}{x - 1}$",
     "answer": "B",
     "options": [
@@ -324,12 +375,15 @@
     "tags": [
       "极限",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p19",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限：$\\lim_{x \\to 0} \\frac{1 - \\cos(x)}{x^2}$",
     "answer": "C",
     "options": [
@@ -342,12 +396,15 @@
     "tags": [
       "极限",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p20",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "求极限：$\\lim_{x \\to 0} \\frac{\\ln(1 + x)}{x}$",
     "answer": "A",
     "options": [
@@ -361,12 +418,15 @@
       "极限",
       "重要极限",
       "对数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p21",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "求极限：$\\lim_{x \\to \\infty} \\left(1 + \\frac{1}{x}\\right)^x$",
     "answer": "B",
     "options": [
@@ -380,12 +440,15 @@
       "极限",
       "重要极限",
       "自然常数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p22",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "求极限：$\\lim_{x \\to 0} \\frac{\\sin(3x)}{\\sin(2x)}$",
     "answer": "C",
     "options": [
@@ -399,12 +462,15 @@
       "极限",
       "重要极限",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p23",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求不定积分：$\\int e^x dx$",
     "answer": "A",
     "options": [
@@ -418,12 +484,15 @@
       "积分",
       "不定积分",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p24",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求不定积分：$\\int \\frac{1}{x} dx$",
     "answer": "B",
     "options": [
@@ -437,12 +506,15 @@
       "积分",
       "不定积分",
       "对数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p25",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求不定积分：$\\int \\sin(x) dx$",
     "answer": "C",
     "options": [
@@ -456,12 +528,15 @@
       "积分",
       "不定积分",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p26",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求定积分：$\\int_0^{\\pi} \\sin(x) dx$",
     "answer": "D",
     "options": [
@@ -475,12 +550,15 @@
       "积分",
       "定积分",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p27",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "使用换元法求：$\\int x e^{x^2} dx$",
     "answer": "A",
     "options": [
@@ -494,12 +572,15 @@
       "积分",
       "换元法",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p28",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "使用分部积分法求：$\\int x \\cos(x) dx$",
     "answer": "B",
     "options": [
@@ -513,12 +594,15 @@
       "积分",
       "分部积分",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p29",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "求定积分：$\\int_0^1 x^2 dx$",
     "answer": "C",
     "options": [
@@ -531,12 +615,15 @@
     "tags": [
       "积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p30",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "使用换元法求：$\\int \\frac{x}{x^2 + 1} dx$",
     "answer": "D",
     "options": [
@@ -550,12 +637,15 @@
       "积分",
       "换元法",
       "对数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p31",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = x^3 - 2x^2 + 5x - 1$ 的导数。",
     "answer": "A",
     "options": [
@@ -568,12 +658,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p32",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = \\tan(x)$ 的导数。",
     "answer": "B",
     "options": [
@@ -586,12 +679,15 @@
     "tags": [
       "导数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p33",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = x^4$ 的导数。",
     "answer": "C",
     "options": [
@@ -604,12 +700,15 @@
     "tags": [
       "导数",
       "幂函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p34",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = \\sqrt{x}$ 的导数。",
     "answer": "D",
     "options": [
@@ -622,12 +721,15 @@
     "tags": [
       "导数",
       "根式函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p35",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "求函数 $f(x) = x^2 e^x$ 的导数。",
     "answer": "A",
     "options": [
@@ -641,12 +743,15 @@
       "导数",
       "乘积法则",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p36",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "求函数 $f(x) = \\frac{e^x}{x}$ 的导数。",
     "answer": "B",
     "options": [
@@ -660,12 +765,15 @@
       "导数",
       "商法则",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p37",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限：$\\lim_{x \\to 3} (2x + 5)$",
     "answer": "C",
     "options": [
@@ -678,12 +786,15 @@
     "tags": [
       "极限",
       "连续函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p38",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限：$\\lim_{x \\to 0} \\frac{x^2}{x}$",
     "answer": "D",
     "options": [
@@ -696,12 +807,15 @@
     "tags": [
       "极限",
       "约分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p39",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限：$\\lim_{x \\to \\infty} \\frac{3x + 1}{x + 2}$",
     "answer": "A",
     "options": [
@@ -714,12 +828,15 @@
     "tags": [
       "极限",
       "无穷大"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p40",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "求极限：$\\lim_{x \\to 0} \\frac{\\tan(x)}{x}$",
     "answer": "B",
     "options": [
@@ -733,12 +850,15 @@
       "极限",
       "重要极限",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p41",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求不定积分：$\\int \\cos(x) dx$",
     "answer": "C",
     "options": [
@@ -752,12 +872,15 @@
       "积分",
       "不定积分",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p42",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求不定积分：$\\int 3x^2 dx$",
     "answer": "D",
     "options": [
@@ -770,12 +893,15 @@
     "tags": [
       "积分",
       "不定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p43",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求定积分：$\\int_0^{\\pi/2} \\cos(x) dx$",
     "answer": "A",
     "options": [
@@ -789,12 +915,15 @@
       "积分",
       "定积分",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p44",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "使用分部积分法求：$\\int x^2 e^x dx$",
     "answer": "B",
     "options": [
@@ -808,12 +937,15 @@
       "积分",
       "分部积分",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p45",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "使用换元法求：$\\int \\sin(2x) dx$",
     "answer": "C",
     "options": [
@@ -827,12 +959,15 @@
       "积分",
       "换元法",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p46",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = 3x^4 - 2x^2 + 5$ 的导数。",
     "answer": "A",
     "options": [
@@ -845,12 +980,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p47",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = 4x^3 - 2x^2 + 5$ 的导数。",
     "answer": "A",
     "options": [
@@ -863,12 +1001,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p48",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\sqrt{x}$，则 $f'(x)$ 等于多少？",
     "answer": "A",
     "options": [
@@ -881,12 +1022,15 @@
     "tags": [
       "导数",
       "幂函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p49",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x^2}$ 的导数是：",
     "answer": "A",
     "options": [
@@ -899,12 +1043,15 @@
     "tags": [
       "导数",
       "负指数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p50",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "已知 $f(x) = 5x^4$，求 $f'(1)$ 的值。",
     "answer": "A",
     "options": [
@@ -917,12 +1064,15 @@
     "tags": [
       "导数",
       "求值"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p51",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = 3x^2 - 6x + 1$ 在 $x = 2$ 处的切线斜率是多少？",
     "answer": "A",
     "options": [
@@ -935,12 +1085,15 @@
     "tags": [
       "导数",
       "几何意义"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p52",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = x^3 + 2x$，则 $f'(x)$ 是：",
     "answer": "A",
     "options": [
@@ -953,12 +1106,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p53",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = 7$（常数函数）的导数是：",
     "answer": "A",
     "options": [
@@ -971,12 +1127,15 @@
     "tags": [
       "导数",
       "常数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p54",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = x^{-1} + x$，则 $f'(x)$ 为：",
     "answer": "A",
     "options": [
@@ -989,12 +1148,15 @@
     "tags": [
       "导数",
       "负指数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p55",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = 2x^5 - x^4$ 的导数是：",
     "answer": "A",
     "options": [
@@ -1007,12 +1169,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p56",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\frac{3}{x}$，则 $f'(x)$ 是：",
     "answer": "A",
     "options": [
@@ -1025,12 +1190,15 @@
     "tags": [
       "导数",
       "负指数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p57",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若函数 $ f(x) = \\sin(x^2) $，则 $ f'(\\sqrt{\\pi}) $ 的值为多少？",
     "answer": "A",
     "options": [
@@ -1044,12 +1212,15 @@
       "导数",
       "链式法则",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p58",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = e^{x \\ln x} $，其中 $ x > 0 $，则 $ f'(x) $ 等于？",
     "answer": "A",
     "options": [
@@ -1063,12 +1234,15 @@
       "导数",
       "指数函数",
       "对数微分法"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p59",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "已知函数 $ y = \\ln(\\sin^{-1}(x)) $，则 $ \\frac{dy}{dx} $ 为？",
     "answer": "A",
     "options": [
@@ -1082,12 +1256,15 @@
       "导数",
       "反三角函数",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p60",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = x^{\\sqrt{x}} $，其中 $ x > 0 $，则 $ f'(x) $ 为？",
     "answer": "A",
     "options": [
@@ -1101,12 +1278,15 @@
       "导数",
       "对数微分法",
       "幂指函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p61",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $ f(x) = \\tan^{-1}\\left( \\frac{2x}{1 - x^2} \\right) $，其中 $ |x| < 1 $，则 $ f'(x) $ 为？",
     "answer": "A",
     "options": [
@@ -1120,12 +1300,15 @@
       "导数",
       "反三角函数",
       "恒等式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p62",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = (x^2 + 1)^{\\sin x} $，则 $ f'(x) $ 在 $ x = 0 $ 处的值为？",
     "answer": "A",
     "options": [
@@ -1139,12 +1322,15 @@
       "导数",
       "对数微分法",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p63",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设函数 $f(x) = \\begin{cases} \\frac{\\sin(3x)}{x}, & x \\neq 0 \\\\ a, & x = 0 \\end{cases}$，若 $f(x)$ 在 $x=0$ 处连续，则常数 $a$ 的值为：",
     "answer": "A",
     "options": [
@@ -1158,12 +1344,15 @@
       "极限",
       "连续",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p64",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $\\lim_{x \\to \\infty} \\left(\\sqrt{x^2 + 4x} - \\sqrt{x^2 - 2x}\\right)$ 的值为：",
     "answer": "A",
     "options": [
@@ -1177,12 +1366,15 @@
       "极限",
       "无穷极限",
       "有理化"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p65",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $f(x) = \\frac{x^3 - 8}{x - 2}$，定义 $f(2)$ 使得 $f(x)$ 在 $x=2$ 处连续，则 $f(2)$ 应取何值？",
     "answer": "A",
     "options": [
@@ -1196,12 +1388,15 @@
       "极限",
       "连续",
       "可去间断点"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p66",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $\\lim_{x \\to 0} \\frac{e^{2x} - 1 - 2x}{x^2}$ 的值为：",
     "answer": "A",
     "options": [
@@ -1215,12 +1410,15 @@
       "极限",
       "洛必达法则",
       "泰勒展开"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p67",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "函数 $f(x) = \\frac{\\ln(1 + x) - x}{x^2}$ 在 $x=0$ 处的极限为：",
     "answer": "A",
     "options": [
@@ -1234,12 +1432,15 @@
       "极限",
       "泰勒展开",
       "对数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p68",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $f(x)$ 是定义在 $\\mathbb{R}$ 上的函数，且满足 $|f(x)| \\leq x^2$ 对所有 $x$ 成立。则下列说法正确的是：",
     "answer": "A",
     "options": [
@@ -1254,12 +1455,15 @@
       "连续",
       "可导",
       "夹逼定理"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p69",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $\\lim_{x \\to 0^+} x^{\\sin x}$ 的值为：",
     "answer": "A",
     "options": [
@@ -1273,12 +1477,15 @@
       "极限",
       "指数函数",
       "对数变换"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p70",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "函数 $f(x) = \\frac{1}{1 + e^{1/x}}$ 在 $x=0$ 处的左右极限分别为：",
     "answer": "A",
     "options": [
@@ -1292,12 +1499,15 @@
       "极限",
       "单侧极限",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p71",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $\\lim_{x \\to 0} \\frac{f(x)}{x} = 1$，且 $f(0) = 0$，则下列哪项一定成立？",
     "answer": "A",
     "options": [
@@ -1311,12 +1521,15 @@
       "极限",
       "导数",
       "连续"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p72",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $\\lim_{n \\to \\infty} \\left(\\frac{n!}{n^n}\\right)^{1/n}$ 的值为：",
     "answer": "A",
     "options": [
@@ -1330,12 +1543,15 @@
       "极限",
       "数列极限",
       "斯特林公式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p73",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算定积分 $\\int_0^{\\pi} x \\sin(x) \\, dx$ 的值。",
     "answer": "A",
     "options": [
@@ -1349,12 +1565,15 @@
       "分部积分",
       "定积分",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p74",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $F(x) = \\int_1^{x^2} \\ln(t) \\, dt$，求 $F'(x)$。",
     "answer": "A",
     "options": [
@@ -1368,12 +1587,15 @@
       "微积分基本定理",
       "链式法则",
       "导数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p75",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算积分 $\\int \\frac{x^3}{\\sqrt{1 - x^2}} \\, dx$。",
     "answer": "A",
     "options": [
@@ -1386,12 +1608,15 @@
     "tags": [
       "三角代换",
       "不定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p76",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算广义积分 $\\int_0^\\infty \\frac{1}{(1 + x^2)^2} \\, dx$ 的值。",
     "answer": "A",
     "options": [
@@ -1404,12 +1629,15 @@
     "tags": [
       "广义积分",
       "三角代换"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p77",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $I = \\int_{-1}^1 \\frac{x^2}{1 + e^x} \\, dx$，则 $I$ 的值为：",
     "answer": "A",
     "options": [
@@ -1423,12 +1651,15 @@
       "对称性",
       "指数函数",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p78",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算 $\\int_0^1 \\frac{\\ln(1 + x)}{1 + x^2} \\, dx$。",
     "answer": "A",
     "options": [
@@ -1442,12 +1673,15 @@
       "对称性",
       "三角代换",
       "对数积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p79",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $f(x) = \\int_x^{x^2} e^{-t^2} \\, dt$，求 $f'(x)$。",
     "answer": "A",
     "options": [
@@ -1460,12 +1694,15 @@
     "tags": [
       "微积分基本定理",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p80",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算 $\\int_0^{\\pi/2} \\frac{\\sin^3 x}{\\sin^3 x + \\cos^3 x} \\, dx$。",
     "answer": "A",
     "options": [
@@ -1479,12 +1716,15 @@
       "对称性",
       "三角函数",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p81",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "求 $\\int \\frac{1}{x + \\sqrt{x^2 + 1}} \\, dx$。",
     "answer": "A",
     "options": [
@@ -1498,12 +1738,15 @@
       "有理化",
       "平方根",
       "不定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p82",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算 $\\int_0^1 \\frac{x^{\\alpha} - 1}{\\ln x} \\, dx$ for $\\alpha > -1$。",
     "answer": "A",
     "options": [
@@ -1517,12 +1760,15 @@
       "参数微分",
       "对数积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p83",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = 4x^3 - 2x^2 + 5$ 的导数。",
     "answer": "A",
     "options": [
@@ -1535,12 +1781,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p84",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\sqrt{x}$，则 $f'(x)$ 等于多少？",
     "answer": "A",
     "options": [
@@ -1553,12 +1802,15 @@
     "tags": [
       "导数",
       "根号函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p85",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x^2}$ 的导数是：",
     "answer": "A",
     "options": [
@@ -1571,12 +1823,15 @@
     "tags": [
       "导数",
       "负指数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p86",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "设 $f(x) = 5x^4$，则 $f'(1)$ 的值为：",
     "answer": "A",
     "options": [
@@ -1589,12 +1844,15 @@
     "tags": [
       "导数",
       "求导后求值"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p87",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = 3x^2 - 7x + 4$ 在 $x=2$ 处的导数值为：",
     "answer": "A",
     "options": [
@@ -1607,12 +1865,15 @@
     "tags": [
       "导数",
       "求导后求值"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p88",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "下列哪个函数的导数是常数？",
     "answer": "A",
     "options": [
@@ -1625,12 +1886,15 @@
     "tags": [
       "导数",
       "常数导数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p89",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = x^3 + 2x$，则 $f''(x)$（二阶导数）为：",
     "answer": "A",
     "options": [
@@ -1643,12 +1907,15 @@
     "tags": [
       "导数",
       "高阶导数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p90",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = (x+1)(x-1)$ 的导数是：",
     "answer": "A",
     "options": [
@@ -1661,12 +1928,15 @@
     "tags": [
       "导数",
       "乘法展开"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p91",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = 2x^5 - 3x^2$，则 $f'(x)$ 为：",
     "answer": "A",
     "options": [
@@ -1679,12 +1949,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p92",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = 6$（常数函数）的导数是：",
     "answer": "A",
     "options": [
@@ -1697,12 +1970,15 @@
     "tags": [
       "导数",
       "常数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p93",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = 3x^4$ 的导数。",
     "answer": "A",
     "options": [
@@ -1715,12 +1991,15 @@
     "tags": [
       "导数",
       "幂函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p94",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = 5$ 的导数是？",
     "answer": "A",
     "options": [
@@ -1733,12 +2012,15 @@
     "tags": [
       "导数",
       "常数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p95",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = x^3 - 2x^2 + 4$ 的导数。",
     "answer": "A",
     "options": [
@@ -1751,12 +2033,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p96",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\sqrt{x}$ 的导数是？",
     "answer": "A",
     "options": [
@@ -1769,12 +2054,15 @@
     "tags": [
       "导数",
       "根号函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p97",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x}$ 的导数是？",
     "answer": "A",
     "options": [
@@ -1787,12 +2075,15 @@
     "tags": [
       "导数",
       "有理函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p98",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "已知 $f(x) = 2x^3 + 4x$，求 $f'(1)$。",
     "answer": "A",
     "options": [
@@ -1805,12 +2096,15 @@
     "tags": [
       "导数",
       "求值"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p99",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = x^2 \\cdot e^x$ 的导数需要用到什么法则？",
     "answer": "A",
     "options": [
@@ -1823,12 +2117,15 @@
     "tags": [
       "导数",
       "求导法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p100",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = (2x + 1)^2$，则 $f'(x)$ 为？",
     "answer": "A",
     "options": [
@@ -1841,12 +2138,15 @@
     "tags": [
       "导数",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p101",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\sin x$ 在 $x = 0$ 处的导数值是？",
     "answer": "A",
     "options": [
@@ -1859,12 +2159,15 @@
     "tags": [
       "导数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p102",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\ln x$，则 $f'(x)$ 为？",
     "answer": "A",
     "options": [
@@ -1877,12 +2180,15 @@
     "tags": [
       "导数",
       "对数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p103",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = 3x^4$ 的导数。",
     "answer": "A",
     "options": [
@@ -1895,12 +2201,15 @@
     "tags": [
       "导数",
       "幂函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p104",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = 5x^3 - 2x + 7$ 的导数是？",
     "answer": "A",
     "options": [
@@ -1913,12 +2222,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p105",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\sqrt{x}$，则 $f'(x)$ 等于？",
     "answer": "A",
     "options": [
@@ -1931,12 +2243,15 @@
     "tags": [
       "导数",
       "根号函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p106",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x^2}$ 的导数是？",
     "answer": "A",
     "options": [
@@ -1949,12 +2264,15 @@
     "tags": [
       "导数",
       "负指数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p107",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = 4x^2 + 3x$，则 $f'(1)$ 的值为？",
     "answer": "A",
     "options": [
@@ -1967,12 +2285,15 @@
     "tags": [
       "导数",
       "求导后代入"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p108",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = e^x$ 的导数是？",
     "answer": "A",
     "options": [
@@ -1985,12 +2306,15 @@
     "tags": [
       "导数",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p109",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\sin x$，则 $f'(x)$ 是？",
     "answer": "A",
     "options": [
@@ -2003,12 +2327,15 @@
     "tags": [
       "导数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p110",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\ln x$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2021,12 +2348,15 @@
     "tags": [
       "导数",
       "对数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p111",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = 2\\sin x + 3\\cos x$，则 $f'(x)$ 是？",
     "answer": "A",
     "options": [
@@ -2039,12 +2369,15 @@
     "tags": [
       "导数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p112",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = x^3 \\cdot x^2$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2058,12 +2391,15 @@
       "导数",
       "幂函数",
       "化简"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p113",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = 3x^4$ 的导数。",
     "answer": "A",
     "options": [
@@ -2076,12 +2412,15 @@
     "tags": [
       "导数",
       "幂函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p114",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\sqrt{x}$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2094,12 +2433,15 @@
     "tags": [
       "导数",
       "根号函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p115",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x^2}$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2112,12 +2454,15 @@
     "tags": [
       "导数",
       "负指数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p116",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = 5x^3 - 2x + 7$，则 $f'(x)$ 为？",
     "answer": "A",
     "options": [
@@ -2130,12 +2475,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p117",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = 4x^{-1} + 3x$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2148,12 +2496,15 @@
     "tags": [
       "导数",
       "负指数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p118",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "已知 $f(x) = x^2 \\cdot \\sin x$，使用乘积法则求 $f'(x)$，结果的第一项是？",
     "answer": "A",
     "options": [
@@ -2166,12 +2517,15 @@
     "tags": [
       "导数",
       "乘积法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p119",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\ln x$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2184,12 +2538,15 @@
     "tags": [
       "导数",
       "对数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p120",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = e^x$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2202,12 +2559,15 @@
     "tags": [
       "导数",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p121",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\sin x$，则 $f'(x)$ 为？",
     "answer": "A",
     "options": [
@@ -2220,12 +2580,15 @@
     "tags": [
       "导数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p122",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\tan x$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2238,12 +2601,15 @@
     "tags": [
       "导数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p123",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = 4x^3 - 2x^2 + 5$ 的导数。",
     "answer": "A",
     "options": [
@@ -2256,12 +2622,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p124",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\sqrt{x}$，则 $f'(x)$ 等于？",
     "answer": "A",
     "options": [
@@ -2274,12 +2643,15 @@
     "tags": [
       "导数",
       "根号函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p125",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x^2}$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2292,12 +2664,15 @@
     "tags": [
       "导数",
       "负指数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p126",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = 3x^4 - 7x + 9$，求 $f'(1)$。",
     "answer": "A",
     "options": [
@@ -2310,12 +2685,15 @@
     "tags": [
       "导数",
       "求值"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p127",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "已知 $f(x) = 5x^{-1} + 2x$，则 $f'(x)$ 为？",
     "answer": "A",
     "options": [
@@ -2328,12 +2706,15 @@
     "tags": [
       "导数",
       "负指数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p128",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "曲线 $y = x^2$ 在点 $(2, 4)$ 处的切线斜率是？",
     "answer": "A",
     "options": [
@@ -2346,12 +2727,15 @@
     "tags": [
       "导数",
       "几何意义"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p129",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = 6x^{2.5}$，则 $f'(x)$ 为？",
     "answer": "A",
     "options": [
@@ -2364,12 +2748,15 @@
     "tags": [
       "导数",
       "分数指数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p130",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = (x+1)(x-1)$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2382,12 +2769,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p131",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\frac{3}{x} + 4x^2$，则 $f'(x)$ 为？",
     "answer": "A",
     "options": [
@@ -2400,12 +2790,15 @@
     "tags": [
       "导数",
       "负指数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p132",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = 0$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2418,12 +2811,15 @@
     "tags": [
       "导数",
       "常数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p133",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = 4x^3 - 2x^2 + 5$ 的导数。",
     "answer": "A",
     "options": [
@@ -2436,12 +2832,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p134",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\sqrt{x}$，则 $f'(x)$ 等于多少？",
     "answer": "A",
     "options": [
@@ -2454,12 +2853,15 @@
     "tags": [
       "导数",
       "根号函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p135",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x^2}$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2472,12 +2874,15 @@
     "tags": [
       "导数",
       "负指数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p136",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "设 $f(x) = 3x^4 - 7x + 1$，求 $f'(1)$。",
     "answer": "A",
     "options": [
@@ -2490,12 +2895,15 @@
     "tags": [
       "导数",
       "求导后代入"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p137",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = 5$（常数函数），则 $f'(x)$ 是多少？",
     "answer": "A",
     "options": [
@@ -2508,12 +2916,15 @@
     "tags": [
       "导数",
       "常数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p138",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = x^2 \\cdot e^x$ 的导数需要用到什么法则？",
     "answer": "A",
     "options": [
@@ -2526,12 +2937,15 @@
     "tags": [
       "导数",
       "求导法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p139",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = (2x + 1)^3$，则 $f'(x)$ 为？",
     "answer": "A",
     "options": [
@@ -2544,12 +2958,15 @@
     "tags": [
       "导数",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p140",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\sin x + \\cos x$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2562,12 +2979,15 @@
     "tags": [
       "导数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p141",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\frac{x^2 + 1}{x}$，则 $f'(x)$ 为？",
     "answer": "A",
     "options": [
@@ -2580,12 +3000,15 @@
     "tags": [
       "导数",
       "有理函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p142",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "已知 $f(x) = \\ln x$，则 $f'(x)$ 为？",
     "answer": "A",
     "options": [
@@ -2598,12 +3021,15 @@
     "tags": [
       "导数",
       "对数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p143",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求函数 $f(x) = 3x^4 - 2x^3 + x - 5$ 的导数。",
     "answer": "A",
     "options": [
@@ -2616,12 +3042,15 @@
     "tags": [
       "导数",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p144",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\sqrt{x}$，则 $f'(x)$ 等于多少？",
     "answer": "A",
     "options": [
@@ -2634,12 +3063,15 @@
     "tags": [
       "导数",
       "幂函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p145",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x^2}$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2652,12 +3084,15 @@
     "tags": [
       "导数",
       "幂函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p146",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "已知 $f(x) = 5x^3 - 4\\ln x$，求 $f'(x)$。",
     "answer": "A",
     "options": [
@@ -2670,12 +3105,15 @@
     "tags": [
       "导数",
       "对数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p147",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = e^x + 2x$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2688,12 +3126,15 @@
     "tags": [
       "导数",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p148",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "设 $f(x) = \\sin x + \\cos x$，则 $f'(x)$ 为？",
     "answer": "A",
     "options": [
@@ -2706,12 +3147,15 @@
     "tags": [
       "导数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p149",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = 2x^2 \\cdot \\sin x$，求 $f'(x)$（只需求出表达式）。",
     "answer": "A",
     "options": [
@@ -2724,12 +3168,15 @@
     "tags": [
       "导数",
       "乘积法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p150",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{x^2 + 1}{x}$ 的导数是？",
     "answer": "A",
     "options": [
@@ -2742,12 +3189,15 @@
     "tags": [
       "导数",
       "代数化简"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p151",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = (x^3 + 2)^2$，则 $f'(x)$ 为？",
     "answer": "A",
     "options": [
@@ -2760,12 +3210,15 @@
     "tags": [
       "导数",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p152",
     "topic": "导数基础",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\tan x$ 在 $x = \\frac{\\pi}{4}$ 处的导数值是多少？",
     "answer": "A",
     "options": [
@@ -2778,12 +3231,15 @@
     "tags": [
       "导数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p153",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若函数 $ f(x) = \\sin(x^2) \\cdot e^{3x} $，则 $ f'(x) $ 等于：",
     "answer": "A",
     "options": [
@@ -2797,12 +3253,15 @@
       "导数",
       "链式法则",
       "乘积法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p154",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ y = \\ln(\\sqrt{x^2 + 1}) $，则 $ \\frac{dy}{dx} $ 为：",
     "answer": "A",
     "options": [
@@ -2816,12 +3275,15 @@
       "导数",
       "对数函数",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p155",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "已知 $ f(x) = x^{\\ln x} $，求 $ f'(x) $ 在 $ x = e $ 处的值。",
     "answer": "A",
     "options": [
@@ -2835,12 +3297,15 @@
       "导数",
       "对数微分法",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p156",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "函数 $ f(x) = \\arctan(\\sqrt{x}) $ 的导数 $ f'(x) $ 是：",
     "answer": "A",
     "options": [
@@ -2854,12 +3319,15 @@
       "导数",
       "反三角函数",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p157",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = \\frac{\\tan^{-1}(2x)}{\\sqrt{1 - 4x^2}} $，则 $ f'(0) $ 的值为：",
     "answer": "A",
     "options": [
@@ -2873,12 +3341,15 @@
       "导数",
       "反三角函数",
       "商法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p158",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $ f(x) = (x^2 + 1)^{x} $，则 $ f'(1) $ 的值为：",
     "answer": "A",
     "options": [
@@ -2892,12 +3363,15 @@
       "导数",
       "对数微分法",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p159",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = \\int_0^{x^2} \\sin(t^2) \\, dt $，则 $ f'(x) $ 为：",
     "answer": "A",
     "options": [
@@ -2911,12 +3385,15 @@
       "导数",
       "微积分基本定理",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p160",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $ y = x^{\\sqrt{x}} $，则 $ \\frac{dy}{dx} $ 在 $ x = 4 $ 处的值为：",
     "answer": "A",
     "options": [
@@ -2930,12 +3407,15 @@
       "导数",
       "对数微分法",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p161",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = \\frac{d}{dx} \\left( \\int_{x}^{2x} \\frac{1}{1 + t^2} \\, dt \\right) $，则 $ f(1) $ 的值为：",
     "answer": "A",
     "options": [
@@ -2949,12 +3429,15 @@
       "导数",
       "微积分基本定理",
       "积分上限函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p162",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "函数 $ f(x) = |x|^x $ 在 $ x = -1 $ 处的右导数为：",
     "answer": "A",
     "options": [
@@ -2968,12 +3451,15 @@
       "导数",
       "绝对值函数",
       "对数微分法"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p163",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若函数 $f(x) = \\sin(x^2)$，则 $f'(\\sqrt{\\pi})$ 的值为多少？",
     "answer": "A",
     "options": [
@@ -2987,12 +3473,15 @@
       "导数",
       "链式法则",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p164",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $f(x) = \\ln(\\cos x)$，求 $f''(0)$。",
     "answer": "A",
     "options": [
@@ -3006,12 +3495,15 @@
       "高阶导数",
       "对数函数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p165",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $y = x^{\\ln x}$，求 $\\frac{dy}{dx}$ 在 $x = e$ 处的值。",
     "answer": "A",
     "options": [
@@ -3025,12 +3517,15 @@
       "隐函数求导",
       "对数微分法",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p166",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "已知 $f(x) = \\frac{x^2 + 1}{x - 1}$，求 $f'(2)$。",
     "answer": "A",
     "options": [
@@ -3044,12 +3539,15 @@
       "导数",
       "商法则",
       "有理函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p167",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $f(x) = e^{x} \\sin x$，则 $f^{(4)}(0)$ 的值是多少？",
     "answer": "A",
     "options": [
@@ -3064,12 +3562,15 @@
       "乘积法则",
       "指数函数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p168",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若函数 $f(x)$ 满足 $f(x+y) = f(x)f(y)$ 且 $f'(0) = 2$，则 $f'(0)$ 与 $f(0)$ 的关系是？",
     "answer": "A",
     "options": [
@@ -3083,12 +3584,15 @@
       "导数",
       "函数方程",
       "指数型函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p169",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $y = \\tan^{-1}\\left(\\frac{2x}{1 - x^2}\\right)$，求 $\\frac{dy}{dx}$ 在 $x = \\frac{1}{2}$ 处的值。",
     "answer": "A",
     "options": [
@@ -3102,12 +3606,15 @@
       "反三角函数",
       "导数",
       "恒等变换"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p170",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $f(x) = |x|^3$，则 $f''(0)$ 的值为？",
     "answer": "A",
     "options": [
@@ -3121,12 +3628,15 @@
       "绝对值函数",
       "高阶导数",
       "分段函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p171",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $f(x) = x^x$，求 $\\frac{df}{dx}$ 在 $x = 1$ 处的值。",
     "answer": "A",
     "options": [
@@ -3140,12 +3650,15 @@
       "指数函数",
       "对数微分法",
       "导数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p172",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $f(x) = \\int_0^{x^2} \\sin(t^2) dt$，则 $f'(1)$ 的值为？",
     "answer": "A",
     "options": [
@@ -3159,12 +3672,15 @@
       "导数",
       "积分上限函数",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p173",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设函数 $ f(x) = \\ln(\\sin x) $，则 $ f'(\\frac{\\pi}{4}) $ 的值为多少？",
     "answer": "A",
     "options": [
@@ -3179,12 +3695,15 @@
       "对数函数",
       "三角函数",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p174",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "已知函数 $ f(x) = e^{x^2} \\cdot \\sin x $，求 $ f'(0) $。",
     "answer": "A",
     "options": [
@@ -3199,12 +3718,15 @@
       "指数函数",
       "三角函数",
       "乘积法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p175",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若函数 $ y = \\tan^{-1}(\\ln x) $，则 $ \\frac{dy}{dx} $ 在 $ x = 1 $ 处的值为？",
     "answer": "A",
     "options": [
@@ -3219,12 +3741,15 @@
       "反三角函数",
       "对数函数",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p176",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若函数 $ f(x) = \\sin(x^2) $，则 $ f'(\\sqrt{\\pi}) $ 的值为多少？",
     "answer": "A",
     "options": [
@@ -3238,12 +3763,15 @@
       "导数",
       "链式法则",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p177",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = \\frac{x^3 - 1}{x^2 + 1} $，则 $ f'(1) $ 等于多少？",
     "answer": "A",
     "options": [
@@ -3257,12 +3785,15 @@
       "导数",
       "商法则",
       "有理函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p178",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "已知 $ y = e^{\\tan^{-1}(x)} $，则 $ \\frac{dy}{dx} $ 在 $ x = 1 $ 处的值为多少？",
     "answer": "A",
     "options": [
@@ -3277,12 +3808,15 @@
       "指数函数",
       "反三角函数",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p179",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $ f(x) = \\ln(\\sin(3x)) $，则 $ f'(\\pi/9) $ 的值是多少？",
     "answer": "A",
     "options": [
@@ -3297,12 +3831,15 @@
       "对数函数",
       "三角函数",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p180",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = x^{\\sqrt{x}} $，其中 $ x > 0 $，则 $ f'(x) $ 为？",
     "answer": "A",
     "options": [
@@ -3316,12 +3853,15 @@
       "导数",
       "对数微分法",
       "幂指函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p181",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "函数 $ f(x) = |x^2 - 4| $ 在 $ x = 2 $ 处的导数是否存在？若存在，其值为？",
     "answer": "A",
     "options": [
@@ -3336,12 +3876,15 @@
       "绝对值函数",
       "分段函数",
       "可导性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p182",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $ f(x) = x^3 g(x) $，且 $ g(2) = 1 $，$ g'(2) = 3 $，则 $ f'(2) $ 的值为？",
     "answer": "A",
     "options": [
@@ -3355,12 +3898,15 @@
       "导数",
       "乘积法则",
       "函数组合"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p183",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = \\sin(2x + \\cos(3x)) $，则 $ f'(0) $ 的值为？",
     "answer": "A",
     "options": [
@@ -3374,12 +3920,15 @@
       "导数",
       "链式法则",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p184",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "函数 $ f(x) = \\sqrt{x + \\sqrt{x + \\sqrt{x}}} $，则 $ f'(1) $ 的值约为？",
     "answer": "A",
     "options": [
@@ -3393,12 +3942,15 @@
       "导数",
       "链式法则",
       "根号函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p185",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $ f(x) = \\frac{d}{dx} \\left[ \\int_0^{x^2} \\sin(t^2) dt \\right] $，则 $ f(1) $ 的值为？",
     "answer": "A",
     "options": [
@@ -3413,12 +3965,15 @@
       "微积分基本定理",
       "链式法则",
       "积分上限函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p186",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设函数 $f(x) = \\frac{\\sin(2x)}{x^2 + 1}$，则 $f'(0)$ 的值为多少？",
     "answer": "A",
     "options": [
@@ -3432,12 +3987,15 @@
       "导数",
       "三角函数",
       "商法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p187",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $y = \\ln(\\sqrt{x^2 + 1})$，则 $\\frac{dy}{dx}$ 等于？",
     "answer": "A",
     "options": [
@@ -3451,12 +4009,15 @@
       "导数",
       "对数函数",
       "链式法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p188",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "已知函数 $f(x) = e^{x} \\cdot \\cos(x)$，则 $f''(0)$ 的值为？",
     "answer": "A",
     "options": [
@@ -3471,12 +4032,15 @@
       "指数函数",
       "三角函数",
       "乘积法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p189",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $f(x) = x^{\\ln x}$，其中 $x > 0$，则 $f'(x)$ 为？",
     "answer": "A",
     "options": [
@@ -3490,12 +4054,15 @@
       "对数微分法",
       "指数函数",
       "复合函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p190",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若函数 $f(x) = \\arctan\\left(\\frac{1 + x}{1 - x}\\right)$，则 $f'(x)$ 等于？",
     "answer": "A",
     "options": [
@@ -3509,12 +4076,15 @@
       "反三角函数",
       "链式法则",
       "导数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p191",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $f(x)$ 可导，且满足 $f(x + y) = f(x)f(y)$ 对所有实数 $x, y$ 成立，并且 $f(0) = 1$, $f'(0) = 2$。则 $f'(1)$ 的值为？",
     "answer": "A",
     "options": [
@@ -3529,12 +4099,15 @@
       "导数",
       "微分方程",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p192",
     "topic": "导数基础",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $y = x^{x^2}$，其中 $x > 0$，则 $\\frac{dy}{dx}$ 在 $x = 1$ 处的值为？",
     "answer": "A",
     "options": [
@@ -3548,12 +4121,15 @@
       "对数微分法",
       "幂指函数",
       "导数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p193",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 2} (3x - 4)$。",
     "answer": "A",
     "options": [
@@ -3566,12 +4142,15 @@
     "tags": [
       "极限",
       "连续"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p194",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\frac{\\sin x}{x}$。",
     "answer": "A",
     "options": [
@@ -3584,12 +4163,15 @@
     "tags": [
       "极限",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p195",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{x^2 - 1}{x - 1}$ 在 $x=1$ 处的极限是？",
     "answer": "A",
     "options": [
@@ -3602,12 +4184,15 @@
     "tags": [
       "极限",
       "化简"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p196",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\begin{cases} x^2, & x < 1 \\\\ 2x - 1, & x \\geq 1 \\end{cases}$，则 $\\lim_{x \\to 1^-} f(x)$ 等于？",
     "answer": "A",
     "options": [
@@ -3620,12 +4205,15 @@
     "tags": [
       "分段函数",
       "单侧极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p197",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x - 3}$ 在 $x=3$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -3638,12 +4226,15 @@
     "tags": [
       "连续性",
       "定义域"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p198",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to \\infty} \\frac{2x^2 + 3x}{x^2 - 5}$。",
     "answer": "A",
     "options": [
@@ -3656,12 +4247,15 @@
     "tags": [
       "极限",
       "无穷"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p199",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x)$ 在 $x=a$ 处连续的充分必要条件是？",
     "answer": "A",
     "options": [
@@ -3674,12 +4268,15 @@
     "tags": [
       "连续性",
       "定义"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p200",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\frac{e^x - 1}{x}$。",
     "answer": "A",
     "options": [
@@ -3692,12 +4289,15 @@
     "tags": [
       "极限",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p201",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = |x|$ 在 $x=0$ 处是否可导？",
     "answer": "A",
     "options": [
@@ -3710,12 +4310,15 @@
     "tags": [
       "连续",
       "可导"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p202",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 3} \\frac{x^2 - 9}{x - 3}$。",
     "answer": "A",
     "options": [
@@ -3728,12 +4331,15 @@
     "tags": [
       "极限",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p203",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 2} (3x - 4)$。",
     "answer": "A",
     "options": [
@@ -3746,12 +4352,15 @@
     "tags": [
       "极限",
       "代入法"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p204",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$。",
     "answer": "A",
     "options": [
@@ -3764,12 +4373,15 @@
     "tags": [
       "三角函数极限",
       "重要极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p205",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{x^2 - 9}{x - 3}$ 在 $x = 3$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -3782,12 +4394,15 @@
     "tags": [
       "连续性",
       "可去间断点"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p206",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to \\infty} \\frac{2x^2 + 3x + 1}{x^2 + 5}$。",
     "answer": "A",
     "options": [
@@ -3800,12 +4415,15 @@
     "tags": [
       "无穷极限",
       "有理函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p207",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 1} \\frac{x^2 - 1}{x - 1}$。",
     "answer": "A",
     "options": [
@@ -3818,12 +4436,15 @@
     "tags": [
       "极限",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p208",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\begin{cases} x^2, & x < 2 \\\\ 3x - 2, & x \\geq 2 \\end{cases}$，则 $\\lim_{x \\to 2^-} f(x)$ 是多少？",
     "answer": "A",
     "options": [
@@ -3836,12 +4457,15 @@
     "tags": [
       "分段函数",
       "单侧极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p209",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = |x|$ 在 $x = 0$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -3854,12 +4478,15 @@
     "tags": [
       "绝对值函数",
       "连续性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p210",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 3} \\frac{1}{x - 3}$。",
     "answer": "A",
     "options": [
@@ -3872,12 +4499,15 @@
     "tags": [
       "无穷极限",
       "不存在"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p211",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x^2}$ 在 $x = 0$ 处的极限是？",
     "answer": "A",
     "options": [
@@ -3890,12 +4520,15 @@
     "tags": [
       "无穷极限",
       "垂直渐近线"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p212",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\lim_{x \\to a} f(x) = L$ 且 $\\lim_{x \\to a} g(x) = M$，则 $\\lim_{x \\to a} [f(x) + g(x)]$ 等于？",
     "answer": "A",
     "options": [
@@ -3908,12 +4541,15 @@
     "tags": [
       "极限运算法则",
       "加法"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p213",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 2} (3x - 4)$。",
     "answer": "A",
     "options": [
@@ -3926,12 +4562,15 @@
     "tags": [
       "极限",
       "代入法"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p214",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$。",
     "answer": "A",
     "options": [
@@ -3944,12 +4583,15 @@
     "tags": [
       "极限",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p215",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{x^2 - 9}{x - 3}$ 在 $x = 3$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -3962,12 +4604,15 @@
     "tags": [
       "连续性",
       "可去间断点"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p216",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to \\infty} \\frac{2x^2 + 3x + 1}{x^2 - 5}$。",
     "answer": "A",
     "options": [
@@ -3980,12 +4625,15 @@
     "tags": [
       "极限",
       "无穷"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p217",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\begin{cases} x^2, & x < 1 \\\\ 2x - 1, & x \\geq 1 \\end{cases}$，则 $\\lim_{x \\to 1^-} f(x)$ 是多少？",
     "answer": "A",
     "options": [
@@ -3998,12 +4646,15 @@
     "tags": [
       "分段函数",
       "单侧极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p218",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = |x|$ 在 $x = 0$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -4016,12 +4667,15 @@
     "tags": [
       "绝对值函数",
       "连续性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p219",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 3} \\frac{x^2 - 9}{x - 3}$。",
     "answer": "A",
     "options": [
@@ -4034,12 +4688,15 @@
     "tags": [
       "极限",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p220",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\lim_{x \\to a} f(x) = L$ 且 $\\lim_{x \\to a} g(x) = M$，则 $\\lim_{x \\to a} [f(x) + g(x)]$ 等于什么？",
     "answer": "A",
     "options": [
@@ -4052,12 +4709,15 @@
     "tags": [
       "极限法则",
       "基础性质"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p221",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x-2}$ 在 $x = 2$ 处的间断类型是什么？",
     "answer": "A",
     "options": [
@@ -4070,12 +4730,15 @@
     "tags": [
       "间断点",
       "无穷间断"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p222",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\frac{1 - \\cos x}{x}$。",
     "answer": "A",
     "options": [
@@ -4088,12 +4751,15 @@
     "tags": [
       "三角函数",
       "极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p223",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 2} (3x - 4)$。",
     "answer": "A",
     "options": [
@@ -4106,12 +4772,15 @@
     "tags": [
       "极限",
       "连续"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p224",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$。",
     "answer": "A",
     "options": [
@@ -4124,12 +4793,15 @@
     "tags": [
       "极限",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p225",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{x^2 - 9}{x - 3}$ 在 $x = 3$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -4142,12 +4814,15 @@
     "tags": [
       "连续",
       "可去间断点"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p226",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to \\infty} \\frac{2x^2 + 3x + 1}{x^2 + 4}$。",
     "answer": "A",
     "options": [
@@ -4160,12 +4835,15 @@
     "tags": [
       "极限",
       "无穷极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p227",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\lim_{x \\to a} f(x) = L$ 且 $\\lim_{x \\to a} g(x) = M$，则下列哪项一定成立？",
     "answer": "A",
     "options": [
@@ -4178,12 +4856,15 @@
     "tags": [
       "极限",
       "极限法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p228",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = |x|$ 在 $x = 0$ 处的极限是否存在？",
     "answer": "A",
     "options": [
@@ -4196,12 +4877,15 @@
     "tags": [
       "极限",
       "绝对值函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p229",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 1} \\frac{x^3 - 1}{x - 1}$。",
     "answer": "A",
     "options": [
@@ -4214,12 +4898,15 @@
     "tags": [
       "极限",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p230",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x}$ 在 $x = 0$ 处的极限是？",
     "answer": "A",
     "options": [
@@ -4232,12 +4919,15 @@
     "tags": [
       "极限",
       "无穷间断"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p231",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\begin{cases} x^2, & x < 2 \\\\ 3x - 2, & x \\geq 2 \\end{cases}$，则 $\\lim_{x \\to 2^-} f(x)$ 等于？",
     "answer": "A",
     "options": [
@@ -4250,12 +4940,15 @@
     "tags": [
       "极限",
       "分段函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p232",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\sqrt{x}$ 在 $x = 0$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -4268,12 +4961,15 @@
     "tags": [
       "连续",
       "根号函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p233",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 2} (3x - 4)$。",
     "answer": "A",
     "options": [
@@ -4286,12 +4982,15 @@
     "tags": [
       "极限",
       "连续"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p234",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$。",
     "answer": "A",
     "options": [
@@ -4304,12 +5003,15 @@
     "tags": [
       "极限",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p235",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{x^2 - 9}{x - 3}$ 在 $x=3$ 处的极限是？",
     "answer": "A",
     "options": [
@@ -4322,12 +5024,15 @@
     "tags": [
       "极限",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p236",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\begin{cases} x^2, & x < 1 \\\\ 2x - 1, & x \\geq 1 \\end{cases}$，则 $\\lim_{x \\to 1^-} f(x)$ 是多少？",
     "answer": "A",
     "options": [
@@ -4340,12 +5045,15 @@
     "tags": [
       "极限",
       "分段函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p237",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x-2}$ 在 $x=2$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -4358,12 +5066,15 @@
     "tags": [
       "连续",
       "间断点"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p238",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to \\infty} \\frac{2x^2 + 3x + 1}{x^2 - 4}$。",
     "answer": "A",
     "options": [
@@ -4376,12 +5087,15 @@
     "tags": [
       "极限",
       "无穷"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p239",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = |x|$ 在 $x=0$ 处的极限是否存在？",
     "answer": "A",
     "options": [
@@ -4394,12 +5108,15 @@
     "tags": [
       "极限",
       "绝对值"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p240",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\lim_{x \\to a} f(x) = L$，且 $\\lim_{x \\to a} g(x) = M$，则 $\\lim_{x \\to a} [f(x) + g(x)]$ 等于？",
     "answer": "A",
     "options": [
@@ -4412,12 +5129,15 @@
     "tags": [
       "极限",
       "运算法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p241",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\sqrt{x}$ 在 $x=0$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -4430,12 +5150,15 @@
     "tags": [
       "连续",
       "根号函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p242",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 1} \\frac{x^3 - 1}{x - 1}$。",
     "answer": "A",
     "options": [
@@ -4448,12 +5171,15 @@
     "tags": [
       "极限",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p243",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 2} (3x - 4)$。",
     "answer": "A",
     "options": [
@@ -4466,12 +5192,15 @@
     "tags": [
       "极限",
       "直接代入"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p244",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$。",
     "answer": "A",
     "options": [
@@ -4484,12 +5213,15 @@
     "tags": [
       "极限",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p245",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{x^2 - 9}{x - 3}$ 在 $x=3$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -4502,12 +5234,15 @@
     "tags": [
       "连续性",
       "可去间断点"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p246",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to \\infty} \\frac{2x^2 + 3x + 1}{x^2 - 4}$。",
     "answer": "A",
     "options": [
@@ -4520,12 +5255,15 @@
     "tags": [
       "极限",
       "无穷大"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p247",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = |x|$ 在 $x=0$ 处的极限是否存在？",
     "answer": "A",
     "options": [
@@ -4538,12 +5276,15 @@
     "tags": [
       "极限",
       "绝对值函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p248",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\lim_{x \\to a} f(x) = L$ 且 $\\lim_{x \\to a} g(x) = M$，则 $\\lim_{x \\to a} [f(x) + g(x)]$ 等于什么？",
     "answer": "A",
     "options": [
@@ -4556,12 +5297,15 @@
     "tags": [
       "极限",
       "运算法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p249",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 1} \\frac{x^2 - 1}{x - 1}$。",
     "answer": "A",
     "options": [
@@ -4574,12 +5318,15 @@
     "tags": [
       "极限",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p250",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\begin{cases} x^2, & x < 2 \\\\ 3x - 2, & x \\geq 2 \\end{cases}$ 在 $x=2$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -4592,12 +5339,15 @@
     "tags": [
       "连续性",
       "分段函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p251",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\frac{1}{x^2}$。",
     "answer": "A",
     "options": [
@@ -4610,12 +5360,15 @@
     "tags": [
       "极限",
       "无穷极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p252",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x-1}$ 在 $x=1$ 处的间断类型是什么？",
     "answer": "A",
     "options": [
@@ -4628,12 +5381,15 @@
     "tags": [
       "连续性",
       "间断点类型"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p253",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 2} (3x - 4)$。",
     "answer": "A",
     "options": [
@@ -4646,12 +5402,15 @@
     "tags": [
       "极限",
       "代入法"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p254",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$。",
     "answer": "A",
     "options": [
@@ -4664,12 +5423,15 @@
     "tags": [
       "三角函数极限",
       "重要极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p255",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{x^2 - 9}{x - 3}$ 在 $x=3$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -4682,12 +5444,15 @@
     "tags": [
       "连续性",
       "可去间断点"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p256",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to \\infty} \\frac{2x^2 + 3x - 1}{x^2 + 4}$。",
     "answer": "A",
     "options": [
@@ -4700,12 +5465,15 @@
     "tags": [
       "无穷极限",
       "有理函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p257",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\begin{cases} x^2, & x < 1 \\\\ 2x - 1, & x \\geq 1 \\end{cases}$，则 $\\lim_{x \\to 1^-} f(x)$ 等于多少？",
     "answer": "A",
     "options": [
@@ -4718,12 +5486,15 @@
     "tags": [
       "分段函数",
       "单侧极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p258",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = |x|$ 在 $x=0$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -4736,12 +5507,15 @@
     "tags": [
       "绝对值函数",
       "连续性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p259",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 3} \\frac{x^2 - 5x + 6}{x - 3}$。",
     "answer": "A",
     "options": [
@@ -4754,12 +5528,15 @@
     "tags": [
       "极限",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p260",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "下列哪个函数在 $x=0$ 处连续？",
     "answer": "A",
     "options": [
@@ -4772,12 +5549,15 @@
     "tags": [
       "连续性",
       "特殊函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p261",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\left( \\frac{1}{x+2} - \\frac{1}{2} \\right) / x$。",
     "answer": "A",
     "options": [
@@ -4790,12 +5570,15 @@
     "tags": [
       "极限",
       "代数化简"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p262",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x^2}$ 当 $x \\to 0$ 时的极限是？",
     "answer": "A",
     "options": [
@@ -4808,12 +5591,15 @@
     "tags": [
       "无穷极限",
       "渐近行为"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p263",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 2} (3x - 4)$。",
     "answer": "A",
     "options": [
@@ -4826,12 +5612,15 @@
     "tags": [
       "极限",
       "连续"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p264",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$。",
     "answer": "A",
     "options": [
@@ -4844,12 +5633,15 @@
     "tags": [
       "极限",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p265",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{x^2 - 9}{x - 3}$ 在 $x = 3$ 处的极限是多少？",
     "answer": "A",
     "options": [
@@ -4862,12 +5654,15 @@
     "tags": [
       "极限",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p266",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\begin{cases} x^2, & x < 1 \\\\ 2x - 1, & x \\geq 1 \\end{cases}$，则 $\\lim_{x \\to 1^-} f(x)$ 是多少？",
     "answer": "A",
     "options": [
@@ -4880,12 +5675,15 @@
     "tags": [
       "分段函数",
       "单侧极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p267",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x - 2}$ 在 $x = 2$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -4898,12 +5696,15 @@
     "tags": [
       "连续性",
       "无穷间断"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p268",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to \\infty} \\frac{3x^2 + 2x + 1}{x^2 + 4}$。",
     "answer": "A",
     "options": [
@@ -4916,12 +5717,15 @@
     "tags": [
       "极限",
       "无穷极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p269",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\lim_{x \\to a} f(x) = L$ 且 $\\lim_{x \\to a} g(x) = M$，则 $\\lim_{x \\to a} [f(x) + g(x)]$ 等于什么？",
     "answer": "A",
     "options": [
@@ -4934,12 +5738,15 @@
     "tags": [
       "极限",
       "极限运算法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p270",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = |x|$ 在 $x = 0$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -4952,12 +5759,15 @@
     "tags": [
       "连续性",
       "绝对值函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p271",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 3} \\frac{x^2 - 5x + 6}{x - 3}$。",
     "answer": "A",
     "options": [
@@ -4970,12 +5780,15 @@
     "tags": [
       "极限",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p272",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x)$ 在 $x = a$ 处连续，则下列哪项一定成立？",
     "answer": "A",
     "options": [
@@ -4988,12 +5801,15 @@
     "tags": [
       "连续性",
       "定义"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p273",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 2} (3x - 4)$。",
     "answer": "A",
     "options": [
@@ -5006,12 +5822,15 @@
     "tags": [
       "极限",
       "直接代入"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p274",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$。",
     "answer": "A",
     "options": [
@@ -5024,12 +5843,15 @@
     "tags": [
       "三角函数极限",
       "重要极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p275",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{x^2 - 9}{x - 3}$ 在 $x = 3$ 处是否连续？如果不连续，属于哪类间断点？",
     "answer": "A",
     "options": [
@@ -5042,12 +5864,15 @@
     "tags": [
       "连续性",
       "间断点"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p276",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to \\infty} \\frac{2x^2 + 3x + 1}{x^2 + 5}$。",
     "answer": "A",
     "options": [
@@ -5060,12 +5885,15 @@
     "tags": [
       "无穷极限",
       "有理函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p277",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\begin{cases} x^2, & x < 1 \\\\ 2x - 1, & x \\geq 1 \\end{cases}$，则 $\\lim_{x \\to 1^-} f(x)$ 等于多少？",
     "answer": "A",
     "options": [
@@ -5078,12 +5906,15 @@
     "tags": [
       "分段函数",
       "单侧极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p278",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 1} \\frac{x^2 - 1}{x - 1}$。",
     "answer": "A",
     "options": [
@@ -5096,12 +5927,15 @@
     "tags": [
       "极限",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p279",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = |x|$ 在 $x = 0$ 处是否连续？",
     "answer": "A",
     "options": [
@@ -5114,12 +5948,15 @@
     "tags": [
       "绝对值函数",
       "连续性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p280",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2}$。",
     "answer": "A",
     "options": [
@@ -5132,12 +5969,15 @@
     "tags": [
       "三角函数极限",
       "重要极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p281",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{1}{x - 2}$ 在 $x = 2$ 处的极限是否存在？",
     "answer": "A",
     "options": [
@@ -5150,12 +5990,15 @@
     "tags": [
       "无穷极限",
       "间断点"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p282",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\lim_{x \\to a} f(x) = L$，且 $\\lim_{x \\to a} g(x) = M$，则下列哪个一定成立？",
     "answer": "A",
     "options": [
@@ -5168,12 +6011,15 @@
     "tags": [
       "极限运算法则",
       "基本性质"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p283",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求极限 $\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$。",
     "answer": "A",
     "options": [
@@ -5186,12 +6032,15 @@
     "tags": [
       "极限",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p284",
     "topic": "极限与连续",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = \\frac{x^2 - 1}{x - 1}$ 在 $x = 1$ 处是否连续？若不连续，属于何种类型？",
     "answer": "A",
     "options": [
@@ -5205,12 +6054,15 @@
       "连续性",
       "间断点",
       "极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p285",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设函数 $ f(x) = \\begin{cases} x^2 \\sin\\left(\\frac{1}{x}\\right), & x \\neq 0 \\\\ 0, & x = 0 \\end{cases} $。则下列说法正确的是：",
     "answer": "A",
     "options": [
@@ -5225,12 +6077,15 @@
       "连续",
       "可导性",
       "夹逼定理"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p286",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to 0} \\frac{\\ln(1 + \\sin x) - \\ln(1 + x)}{x^3} $ 的值是：",
     "answer": "A",
     "options": [
@@ -5245,12 +6100,15 @@
       "泰勒展开",
       "对数函数",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p287",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $ f(x) = \\lim_{n \\to \\infty} \\frac{x^{2n} - 1}{x^{2n} + 1} $，则 $ f(x) $ 的连续点个数为：",
     "answer": "A",
     "options": [
@@ -5265,12 +6123,15 @@
       "逐点收敛",
       "连续性",
       "分段函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p288",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to 0^+} \\left( \\frac{1}{\\ln x} \\int_0^{x} \\frac{dt}{\\ln(1 + t)} \\right) $ 的值是：",
     "answer": "A",
     "options": [
@@ -5285,12 +6146,15 @@
       "积分",
       "洛必达法则",
       "渐近分析"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p289",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ a_1 = \\sqrt{2} $，$ a_{n+1} = \\sqrt{2 + a_n} $，则 $ \\lim_{n \\to \\infty} a_n $ 为：",
     "answer": "A",
     "options": [
@@ -5304,12 +6168,15 @@
       "数列极限",
       "递推数列",
       "单调有界定理"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p290",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to 0} \\frac{\\cos(\\sin x) - \\cos x}{x^4} $ 的值是：",
     "answer": "A",
     "options": [
@@ -5323,12 +6190,15 @@
       "极限",
       "泰勒展开",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p291",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "函数 $ f(x) = \\lim_{n \\to \\infty} \\frac{n^x - n^{-x}}{n^x + n^{-x}} $ 的不连续点是：",
     "answer": "A",
     "options": [
@@ -5342,12 +6212,15 @@
       "极限函数",
       "连续性",
       "分段函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p292",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = \\begin{cases} e^{-1/x^2}, & x \\neq 0 \\\\ 0, & x = 0 \\end{cases} $，则 $ f^{(n)}(0) $ 对所有 $ n $ 的值是：",
     "answer": "A",
     "options": [
@@ -5362,12 +6235,15 @@
       "极限",
       "光滑函数",
       "连续性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p293",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{n \\to \\infty} \\left( \\frac{1}{n+1} + \\frac{1}{n+2} + \\cdots + \\frac{1}{2n} \\right) $ 等于：",
     "answer": "A",
     "options": [
@@ -5382,12 +6258,15 @@
       "黎曼和",
       "积分",
       "调和级数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p294",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = x^2 \\sin\\left( \\frac{1}{x} \\right) $ for $ x \\neq 0 $，且 $ f(0) = 0 $。则 $ f'(x) $ 在 $ x=0 $ 处：",
     "answer": "A",
     "options": [
@@ -5402,12 +6281,15 @@
       "极限",
       "连续性",
       "振荡"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p295",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设函数 $ f(x) = \\begin{cases} \\frac{\\sin(3x)}{x}, & x \\neq 0 \\\\ a, & x = 0 \\end{cases} $。若 $ f(x) $ 在 $ x = 0 $ 处连续，则常数 $ a $ 的值为：",
     "answer": "A",
     "options": [
@@ -5420,12 +6302,15 @@
     "tags": [
       "连续",
       "三角函数极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p296",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to \\infty} \\left( \\sqrt{x^2 + 4x} - x \\right) $ 的值为：",
     "answer": "A",
     "options": [
@@ -5438,12 +6323,15 @@
     "tags": [
       "无穷极限",
       "有理化"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p297",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = \\frac{x^3 - 8}{x - 2} $，则 $ \\lim_{x \\to 2} f(x) $ 的值为：",
     "answer": "A",
     "options": [
@@ -5456,12 +6344,15 @@
     "tags": [
       "因式分解",
       "可去间断点"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p298",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to 0} \\frac{e^{2x} - 1 - 2x}{x^2} $ 的值为：",
     "answer": "A",
     "options": [
@@ -5474,12 +6365,15 @@
     "tags": [
       "指数函数极限",
       "泰勒展开"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p299",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "函数 $ f(x) = \\frac{\\ln(1 + \\sin x)}{\\sin x} $ 在 $ x \\to 0 $ 时的极限为：",
     "answer": "A",
     "options": [
@@ -5492,12 +6386,15 @@
     "tags": [
       "对数函数极限",
       "等价无穷小"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p300",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to 0} \\left( \\frac{1}{x} - \\frac{1}{\\ln(1 + x)} \\right) $ 的值为：",
     "answer": "A",
     "options": [
@@ -5510,12 +6407,15 @@
     "tags": [
       "对数函数",
       "泰勒展开"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p301",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = x^{\\frac{1}{x}} $，则 $ \\lim_{x \\to \\infty} f(x) $ 的值为：",
     "answer": "A",
     "options": [
@@ -5528,12 +6428,15 @@
     "tags": [
       "指数函数极限",
       "对数法"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p302",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to 0} \\frac{\\tan x - \\sin x}{x^3} $ 的值为：",
     "answer": "A",
     "options": [
@@ -5546,12 +6449,15 @@
     "tags": [
       "三角函数极限",
       "标准极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p303",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "函数 $ f(x) = \\frac{|x|^x - 1}{x \\ln |x|} $ 在 $ x \\to 0 $ 时的极限为：",
     "answer": "A",
     "options": [
@@ -5564,12 +6470,15 @@
     "tags": [
       "绝对值函数",
       "指数极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p304",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) $ 是定义在 $ \\mathbb{R} $ 上的连续函数，且满足 $ f(x) = f(x^2) $ 对所有 $ x \\in \\mathbb{R} $ 成立。则 $ f(x) $ 必为：",
     "answer": "A",
     "options": [
@@ -5582,12 +6491,15 @@
     "tags": [
       "函数方程",
       "连续性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p305",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设函数 $ f(x) = \\begin{cases} x^2 \\sin\\left(\\frac{1}{x}\\right), & x \\neq 0 \\\\ 0, & x = 0 \\end{cases} $，则下列说法正确的是：",
     "answer": "A",
     "options": [
@@ -5602,12 +6514,15 @@
       "连续",
       "可导性",
       "夹逼定理"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p306",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to 0} \\left( \\frac{\\tan x}{x} \\right)^{1/x^2} $ 的值是：",
     "answer": "A",
     "options": [
@@ -5622,12 +6537,15 @@
       "洛必达法则",
       "泰勒展开",
       "指数型极限"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p307",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $ \\lim_{x \\to \\infty} \\left( \\sqrt{x^2 + 2x + 3} - ax - b \\right) = 0 $，则常数 $ a, b $ 分别为：",
     "answer": "A",
     "options": [
@@ -5641,12 +6559,15 @@
       "极限",
       "无穷远渐近分析",
       "有理化"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p308",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "函数 $ f(x) = \\frac{x^3 - 3x + 2}{x^2 - 1} $ 在哪些点不连续？",
     "answer": "A",
     "options": [
@@ -5660,12 +6581,15 @@
       "连续",
       "间断点分类",
       "因式分解"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p309",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to 0} \\frac{e^{x} - e^{-\\sin x}}{x - \\sin x} $ 的值是：",
     "answer": "A",
     "options": [
@@ -5679,12 +6603,15 @@
       "极限",
       "泰勒展开",
       "洛必达法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p310",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "函数 $ f(x) = \\lim_{n \\to \\infty} \\frac{x^{2n}}{1 + x^{2n}} $ 的连续区间是：",
     "answer": "A",
     "options": [
@@ -5699,12 +6626,15 @@
       "逐点收敛",
       "连续性",
       "分段函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p311",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to 0} \\frac{\\ln(1 + \\sin x) - \\ln(1 + x)}{x^3} $ 的值是：",
     "answer": "A",
     "options": [
@@ -5718,12 +6648,15 @@
       "极限",
       "泰勒展开",
       "对数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p312",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = x^2 \\cos\\left(\\frac{1}{x}\\right) $ 对 $ x \\neq 0 $，且 $ f(0) = 0 $。则 $ f'(0) $ 等于：",
     "answer": "A",
     "options": [
@@ -5737,12 +6670,15 @@
       "导数",
       "夹逼定理",
       "振荡函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p313",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to 0^+} \\left( \\frac{1}{\\ln x} \\int_1^{e^x} \\frac{dt}{t + \\ln t} \\right) $ 的值是：",
     "answer": "A",
     "options": [
@@ -5757,12 +6693,15 @@
       "积分",
       "洛必达法则",
       "变量替换"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p314",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = \\sum_{n=1}^{\\infty} \\frac{\\sin(nx)}{n^2} $，则 $ f(x) $ 在 $ x=0 $ 处的导数 $ f'(0) $ 为：",
     "answer": "A",
     "options": [
@@ -5777,12 +6716,15 @@
       "一致收敛",
       "逐项求导",
       "傅里叶级数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p315",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to \\infty} x^2 \\left( \\cos\\left(\\frac{1}{x}\\right) - \\cos\\left(\\frac{1}{x+1}\\right) \\right) $ 的值是：",
     "answer": "A",
     "options": [
@@ -5796,12 +6738,15 @@
       "极限",
       "泰勒展开",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p316",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设函数 $ f(x) = \\begin{cases} x^2 \\sin\\left(\\frac{1}{x}\\right), & x \\neq 0 \\\\ 0, & x = 0 \\end{cases} $，则 $ f'(0) $ 的值为：",
     "answer": "A",
     "options": [
@@ -5815,12 +6760,15 @@
       "极限",
       "导数",
       "连续"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p317",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to 0} \\frac{\\ln(1 + \\sin x) - \\ln(1 + x)}{x^3} $ 的值为：",
     "answer": "A",
     "options": [
@@ -5834,12 +6782,15 @@
       "极限",
       "泰勒展开",
       "对数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p318",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若函数 $ f(x) $ 在 $ x = a $ 处可导，且 $ \\lim_{x \\to a} \\frac{f(x) - f(a)}{(x - a)^2} = L $ 存在，则下列哪项一定成立？",
     "answer": "A",
     "options": [
@@ -5853,12 +6804,15 @@
       "极限",
       "导数",
       "连续"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p319",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{n \\to \\infty} \\left( \\cos\\left( \\frac{x}{\\sqrt{n}} \\right) \\right)^n $ 的值为：",
     "answer": "A",
     "options": [
@@ -5872,12 +6826,15 @@
       "极限",
       "三角函数",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p320",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = \\lim_{n \\to \\infty} \\frac{x^{2n} - 1}{x^{2n} + 1} $，则 $ f(x) $ 在哪些点不连续？",
     "answer": "A",
     "options": [
@@ -5891,12 +6848,15 @@
       "极限",
       "分段函数",
       "连续性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p321",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to 0} \\left( \\frac{\\tan x}{x} \\right)^{1/x^2} $ 的值为：",
     "answer": "A",
     "options": [
@@ -5910,12 +6870,15 @@
       "极限",
       "三角函数",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p322",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "函数 $ f(x) = \\sum_{n=1}^{\\infty} \\frac{\\sin(nx)}{n^2} $ 在 $ \\mathbb{R} $ 上是否一致连续？",
     "answer": "A",
     "options": [
@@ -5929,12 +6892,15 @@
       "极限",
       "一致连续",
       "函数项级数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p323",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to \\infty} x \\left( \\arctan\\left(\\frac{x+1}{x+2}\\right) - \\arctan\\left(\\frac{x}{x+1}\\right) \\right) $ 的值为：",
     "answer": "A",
     "options": [
@@ -5948,12 +6914,15 @@
       "极限",
       "反三角函数",
       "中值定理"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p324",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $ f(x) = \\lim_{n \\to \\infty} \\frac{n^x}{n^x + n^{-x}} $，则 $ f(x) $ 在 $ x = 0 $ 处是否连续？",
     "answer": "A",
     "options": [
@@ -5967,12 +6936,15 @@
       "极限",
       "连续性",
       "分段函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p325",
     "topic": "极限与连续",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "极限 $ \\lim_{x \\to 0^+} \\left( \\frac{1}{x} - \\frac{1}{\\ln(1 + x)} \\right) $ 的值为：",
     "answer": "A",
     "options": [
@@ -5986,12 +6958,15 @@
       "极限",
       "对数函数",
       "洛必达法则"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p326",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算不定积分 $\\int (3x^2 + 2x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6004,12 +6979,15 @@
     "tags": [
       "不定积分",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p327",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算定积分 $\\int_0^1 (2x - 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6022,12 +7000,15 @@
     "tags": [
       "定积分",
       "线性函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p328",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\int_0^x (t^2 + 1) \\, dt$，求 $f'(x)$。",
     "answer": "A",
     "options": [
@@ -6040,12 +7021,15 @@
     "tags": [
       "微积分基本定理",
       "导数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p329",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int \\sin x \\, dx$。",
     "answer": "A",
     "options": [
@@ -6058,12 +7042,15 @@
     "tags": [
       "三角函数积分",
       "基本积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p330",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_1^e \\frac{1}{x} \\, dx$。",
     "answer": "A",
     "options": [
@@ -6076,12 +7063,15 @@
     "tags": [
       "对数积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p331",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int (4x^3) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6094,12 +7084,15 @@
     "tags": [
       "幂函数积分",
       "不定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p332",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_0^{\\pi} \\cos x \\, dx$。",
     "answer": "A",
     "options": [
@@ -6112,12 +7105,15 @@
     "tags": [
       "三角函数积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p333",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\int f(x) \\, dx = x^2 + \\sin x + C$，则 $f(x)$ 是什么？",
     "answer": "A",
     "options": [
@@ -6130,12 +7126,15 @@
     "tags": [
       "导数",
       "原函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p334",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int (e^x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6148,12 +7147,15 @@
     "tags": [
       "指数积分",
       "线性积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p335",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_{-1}^1 x^3 \\, dx$。",
     "answer": "A",
     "options": [
@@ -6166,12 +7168,15 @@
     "tags": [
       "奇函数积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p336",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算不定积分 $\\int (3x^2 + 2x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6184,12 +7189,15 @@
     "tags": [
       "不定积分",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p337",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求定积分 $\\int_0^1 (2x - 1) \\, dx$ 的值。",
     "answer": "A",
     "options": [
@@ -6202,12 +7210,15 @@
     "tags": [
       "定积分",
       "线性函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p338",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int \\sin x \\, dx$。",
     "answer": "A",
     "options": [
@@ -6220,12 +7231,15 @@
     "tags": [
       "三角函数积分",
       "基本积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p339",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求 $\\int_1^2 \\frac{1}{x} \\, dx$ 的值。",
     "answer": "A",
     "options": [
@@ -6238,12 +7252,15 @@
     "tags": [
       "对数积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p340",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $F(x)$ 是 $f(x) = e^x + x$ 的一个原函数，且 $F(0) = 1$，则 $F(1)$ 等于多少？",
     "answer": "A",
     "options": [
@@ -6256,12 +7273,15 @@
     "tags": [
       "原函数",
       "初值条件"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p341",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int x \\cdot e^{x^2} \\, dx$。",
     "answer": "A",
     "options": [
@@ -6274,12 +7294,15 @@
     "tags": [
       "换元积分法",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p342",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求 $\\int_0^{\\pi} \\cos x \\, dx$ 的值。",
     "answer": "A",
     "options": [
@@ -6292,12 +7315,15 @@
     "tags": [
       "三角函数积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p343",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int (4x^3 - 6x^2 + 2) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6310,12 +7336,15 @@
     "tags": [
       "不定积分",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p344",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\int_a^b f(x) \\, dx = 5$，则 $\\int_a^b 3f(x) \\, dx$ 等于多少？",
     "answer": "A",
     "options": [
@@ -6328,12 +7357,15 @@
     "tags": [
       "积分性质",
       "线性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p345",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int \\frac{1}{\\sqrt{x}} \\, dx$。",
     "answer": "A",
     "options": [
@@ -6346,12 +7378,15 @@
     "tags": [
       "幂函数积分",
       "根号函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p346",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算不定积分 $\\int (3x^2 + 2x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6364,12 +7399,15 @@
     "tags": [
       "不定积分",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p347",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算定积分 $\\int_0^1 (2x - 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6382,12 +7420,15 @@
     "tags": [
       "定积分",
       "线性函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p348",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\sin x$，则 $\\int f'(x) \\, dx$ 等于？",
     "answer": "A",
     "options": [
@@ -6400,12 +7441,15 @@
     "tags": [
       "基本积分",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p349",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int \\frac{1}{x} \\, dx$，其中 $x > 0$。",
     "answer": "A",
     "options": [
@@ -6418,12 +7462,15 @@
     "tags": [
       "对数积分",
       "基本积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p350",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_0^{\\pi} \\cos x \\, dx$。",
     "answer": "A",
     "options": [
@@ -6436,12 +7483,15 @@
     "tags": [
       "定积分",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p351",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\int_a^b f(x) \\, dx = 5$ 且 $\\int_b^c f(x) \\, dx = -2$，则 $\\int_a^c f(x) \\, dx$ 等于？",
     "answer": "A",
     "options": [
@@ -6454,12 +7504,15 @@
     "tags": [
       "定积分性质",
       "区间叠加"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p352",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int (e^x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6472,12 +7525,15 @@
     "tags": [
       "指数积分",
       "基本积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p353",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求 $\\int_{-1}^1 x^3 \\, dx$ 的值。",
     "answer": "A",
     "options": [
@@ -6490,12 +7546,15 @@
     "tags": [
       "奇函数积分",
       "对称区间"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p354",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "已知 $F(x) = \\int_0^x (t^2 + 1) \\, dt$，求 $F'(x)$。",
     "answer": "A",
     "options": [
@@ -6508,12 +7567,15 @@
     "tags": [
       "微积分基本定理",
       "导数与积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p355",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int 4x(x^2 + 1)^3 \\, dx$。",
     "answer": "A",
     "options": [
@@ -6526,12 +7588,15 @@
     "tags": [
       "换元积分",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p356",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算不定积分 $\\int (3x^2 + 2x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6544,12 +7609,15 @@
     "tags": [
       "不定积分",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p357",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算定积分 $\\int_0^1 (2x - 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6562,12 +7630,15 @@
     "tags": [
       "定积分",
       "线性函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p358",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求 $\\int \\sin(x) \\, dx$ 的结果是？",
     "answer": "A",
     "options": [
@@ -6580,12 +7651,15 @@
     "tags": [
       "三角函数",
       "基本积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p359",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f'(x) = 4x^3$，且 $f(0) = 2$，则 $f(x)$ 等于？",
     "answer": "A",
     "options": [
@@ -6598,12 +7672,15 @@
     "tags": [
       "初值问题",
       "不定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p360",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_1^2 \\frac{1}{x} \\, dx$。",
     "answer": "A",
     "options": [
@@ -6616,12 +7693,15 @@
     "tags": [
       "对数积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p361",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求 $\\int (e^x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6634,12 +7714,15 @@
     "tags": [
       "指数函数",
       "不定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p362",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_{-1}^1 x^3 \\, dx$。",
     "answer": "A",
     "options": [
@@ -6652,12 +7735,15 @@
     "tags": [
       "奇函数积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p363",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\int f(x) \\, dx = \\tan(x) + C$，则 $f(x)$ 是？",
     "answer": "A",
     "options": [
@@ -6670,12 +7756,15 @@
     "tags": [
       "微分与积分关系",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p364",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int 6x(x^2 + 1)^2 \\, dx$。",
     "answer": "A",
     "options": [
@@ -6688,12 +7777,15 @@
     "tags": [
       "换元法",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p365",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求 $\\int_0^{\\pi} \\cos(x) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6706,12 +7798,15 @@
     "tags": [
       "三角函数",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p366",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算不定积分 $\\int (3x^2 + 2x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6724,12 +7819,15 @@
     "tags": [
       "不定积分",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p367",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算定积分 $\\int_0^1 (2x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6742,12 +7840,15 @@
     "tags": [
       "定积分",
       "线性函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p368",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\int_0^x (t^2 + 1) \\, dt$，求 $f'(x)$。",
     "answer": "A",
     "options": [
@@ -6760,12 +7861,15 @@
     "tags": [
       "微积分基本定理",
       "导数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p369",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int \\sin x \\, dx$。",
     "answer": "A",
     "options": [
@@ -6778,12 +7882,15 @@
     "tags": [
       "三角函数积分",
       "基本积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p370",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_1^e \\frac{1}{x} \\, dx$。",
     "answer": "A",
     "options": [
@@ -6796,12 +7903,15 @@
     "tags": [
       "对数积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p371",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int (4x^3 - 2x) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6814,12 +7924,15 @@
     "tags": [
       "不定积分",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p372",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_0^{\\pi/2} \\cos x \\, dx$。",
     "answer": "A",
     "options": [
@@ -6832,12 +7945,15 @@
     "tags": [
       "三角函数积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p373",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\int f(x) \\, dx = x^3 + C$，则 $f(x) =$",
     "answer": "A",
     "options": [
@@ -6850,12 +7966,15 @@
     "tags": [
       "导数与积分关系",
       "反导数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p374",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int e^x \\, dx$。",
     "answer": "A",
     "options": [
@@ -6868,12 +7987,15 @@
     "tags": [
       "指数函数积分",
       "基本积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p375",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int (x + 1)^2 \\, dx$。",
     "answer": "A",
     "options": [
@@ -6886,12 +8008,15 @@
     "tags": [
       "换元积分",
       "二次函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p376",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算不定积分 $\\int (3x^2 + 2x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6904,12 +8029,15 @@
     "tags": [
       "不定积分",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p377",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算定积分 $\\int_0^1 (2x - 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6922,12 +8050,15 @@
     "tags": [
       "定积分",
       "线性函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p378",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求 $\\int \\cos(x) \\, dx$ 的结果是？",
     "answer": "A",
     "options": [
@@ -6940,12 +8071,15 @@
     "tags": [
       "三角函数",
       "不定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p379",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_1^2 \\frac{1}{x} \\, dx$。",
     "answer": "A",
     "options": [
@@ -6958,12 +8092,15 @@
     "tags": [
       "对数函数",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p380",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f'(x) = 4x^3$，且 $f(0) = 2$，则 $f(x)$ 等于？",
     "answer": "A",
     "options": [
@@ -6976,12 +8113,15 @@
     "tags": [
       "初值问题",
       "不定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p381",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int (e^x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -6994,12 +8134,15 @@
     "tags": [
       "指数函数",
       "不定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p382",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求 $\\int_{-1}^1 x^3 \\, dx$ 的值。",
     "answer": "A",
     "options": [
@@ -7012,12 +8155,15 @@
     "tags": [
       "奇函数",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p383",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int 6x(x^2 + 1)^2 \\, dx$ 使用换元法时，最合适的代换是？",
     "answer": "A",
     "options": [
@@ -7030,12 +8176,15 @@
     "tags": [
       "换元法",
       "不定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p384",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $F(x) = \\int_0^x t^2 \\, dt$，求 $F'(x)$。",
     "answer": "A",
     "options": [
@@ -7048,12 +8197,15 @@
     "tags": [
       "微积分基本定理",
       "导数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p385",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_0^{\\pi} \\sin(x) \\, dx$。",
     "answer": "A",
     "options": [
@@ -7066,12 +8218,15 @@
     "tags": [
       "三角函数",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p386",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求不定积分 $\\int (3x^2 + 2x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -7084,12 +8239,15 @@
     "tags": [
       "不定积分",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p387",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算定积分 $\\int_0^1 (2x - 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -7102,12 +8260,15 @@
     "tags": [
       "定积分",
       "线性函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p388",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求 $\\int e^x \\, dx$ 的结果是？",
     "answer": "A",
     "options": [
@@ -7120,12 +8281,15 @@
     "tags": [
       "指数函数",
       "基本积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p389",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_1^2 \\frac{1}{x} \\, dx$。",
     "answer": "A",
     "options": [
@@ -7138,12 +8302,15 @@
     "tags": [
       "对数函数",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p390",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f(x) = \\int_0^x (t^2 + 1) \\, dt$，求 $f'(x)$。",
     "answer": "A",
     "options": [
@@ -7156,12 +8323,15 @@
     "tags": [
       "微积分基本定理",
       "导数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p391",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求 $\\int \\sin x \\, dx$ 的结果是？",
     "answer": "A",
     "options": [
@@ -7174,12 +8344,15 @@
     "tags": [
       "三角函数",
       "基本积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p392",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_{-1}^1 x^3 \\, dx$。",
     "answer": "A",
     "options": [
@@ -7192,12 +8365,15 @@
     "tags": [
       "奇函数",
       "对称积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p393",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "求 $\\int (4x^3) \\, dx$。",
     "answer": "A",
     "options": [
@@ -7210,12 +8386,15 @@
     "tags": [
       "幂函数",
       "不定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p394",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\int f(x) \\, dx = \\frac{2}{3}x^{3/2} + C$，则 $f(x)$ 等于？",
     "answer": "A",
     "options": [
@@ -7228,12 +8407,15 @@
     "tags": [
       "反向积分",
       "导数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p395",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_0^{\\pi} \\cos x \\, dx$。",
     "answer": "A",
     "options": [
@@ -7246,12 +8428,15 @@
     "tags": [
       "三角函数",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p396",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算不定积分 $\\int (3x^2 + 2x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -7264,12 +8449,15 @@
     "tags": [
       "不定积分",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p397",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算定积分 $\\int_0^1 x^3 \\, dx$。",
     "answer": "A",
     "options": [
@@ -7282,12 +8470,15 @@
     "tags": [
       "定积分",
       "幂函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p398",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f'(x) = 2x$，且 $f(0) = 3$，则 $f(x)$ 等于？",
     "answer": "A",
     "options": [
@@ -7300,12 +8491,15 @@
     "tags": [
       "初值问题",
       "不定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p399",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int \\sin x \\, dx$。",
     "answer": "A",
     "options": [
@@ -7318,12 +8512,15 @@
     "tags": [
       "三角函数积分",
       "基本积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p400",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_1^e \\frac{1}{x} \\, dx$。",
     "answer": "A",
     "options": [
@@ -7336,12 +8533,15 @@
     "tags": [
       "对数积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p401",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int (4x - 5)^2 \\, dx$。",
     "answer": "A",
     "options": [
@@ -7354,12 +8554,15 @@
     "tags": [
       "换元法",
       "多项式积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p402",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "函数 $f(x) = e^{2x}$ 的一个原函数是？",
     "answer": "A",
     "options": [
@@ -7372,12 +8575,15 @@
     "tags": [
       "指数函数积分",
       "换元法"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p403",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_0^{\\pi} \\cos x \\, dx$。",
     "answer": "A",
     "options": [
@@ -7390,12 +8596,15 @@
     "tags": [
       "三角函数积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p404",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $\\int_a^b f(x) \\, dx = 5$，则 $\\int_a^b 3f(x) \\, dx$ 等于？",
     "answer": "A",
     "options": [
@@ -7408,12 +8617,15 @@
     "tags": [
       "积分性质",
       "线性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p405",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int x e^{x^2} \\, dx$。",
     "answer": "A",
     "options": [
@@ -7426,12 +8638,15 @@
     "tags": [
       "换元法",
       "指数函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p406",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算不定积分 $\\int (3x^2 + 2x + 1) \\, dx$。",
     "answer": "A",
     "options": [
@@ -7444,12 +8659,15 @@
     "tags": [
       "不定积分",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p407",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算定积分 $\\int_0^1 x^3 \\, dx$。",
     "answer": "A",
     "options": [
@@ -7462,12 +8680,15 @@
     "tags": [
       "定积分",
       "幂函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p408",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "若 $f'(x) = 2x$，且 $f(0) = 3$，则 $f(x)$ 等于？",
     "answer": "A",
     "options": [
@@ -7480,12 +8701,15 @@
     "tags": [
       "初值问题",
       "积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p409",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int \\sin x \\, dx$。",
     "answer": "A",
     "options": [
@@ -7498,12 +8722,15 @@
     "tags": [
       "三角函数积分",
       "基本积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p410",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int e^x \\, dx$。",
     "answer": "A",
     "options": [
@@ -7516,12 +8743,15 @@
     "tags": [
       "指数函数积分",
       "基本积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p411",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int \\frac{1}{x} \\, dx$，其中 $x > 0$。",
     "answer": "A",
     "options": [
@@ -7534,12 +8764,15 @@
     "tags": [
       "对数积分",
       "基本积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p412",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算定积分 $\\int_{-1}^1 x^3 \\, dx$。",
     "answer": "A",
     "options": [
@@ -7552,12 +8785,15 @@
     "tags": [
       "定积分",
       "奇函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p413",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int (4x + 5)^2 \\, dx$。",
     "answer": "A",
     "options": [
@@ -7570,12 +8806,15 @@
     "tags": [
       "换元积分法",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p414",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "已知 $\\frac{d}{dx} F(x) = 6x^2$，则 $F(x)$ 可能是下列哪个函数？",
     "answer": "A",
     "options": [
@@ -7588,12 +8827,15 @@
     "tags": [
       "原函数",
       "积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p415",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算 $\\int_0^{\\pi} \\cos x \\, dx$。",
     "answer": "A",
     "options": [
@@ -7606,12 +8848,15 @@
     "tags": [
       "定积分",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p416",
     "topic": "积分",
-    "difficulty": "基础",
+    "difficulty": "L1",
     "question": "计算定积分 $\\int_0^1 (3x^2 + 2x) \\, dx$ 的值。",
     "answer": "A",
     "options": [
@@ -7625,12 +8870,15 @@
       "积分",
       "定积分",
       "多项式"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p417",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算定积分 $\\int_0^{\\pi} x \\sin^3 x \\, dx$ 的值为：",
     "answer": "A",
     "options": [
@@ -7644,12 +8892,15 @@
       "三角函数积分",
       "分部积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p418",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $I = \\int_0^1 \\frac{\\ln(1+x)}{1+x^2} \\, dx$，则 $I$ 的值为：",
     "answer": "A",
     "options": [
@@ -7663,12 +8914,15 @@
       "对数积分",
       "三角替换",
       "对称性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p419",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $f(x) = \\int_0^x e^{-t^2} \\, dt$，则 $\\int_0^1 f(x) \\, dx$ 的值为：",
     "answer": "A",
     "options": [
@@ -7682,12 +8936,15 @@
       "积分交换",
       "高斯积分",
       "分部积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p420",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算 $\\int_0^{\\infty} \\frac{\\arctan(\\pi x) - \\arctan(x)}{x} \\, dx$ 的值为：",
     "answer": "A",
     "options": [
@@ -7701,12 +8958,15 @@
       "反常积分",
       "弗鲁利尼积分",
       "反正切"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p421",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $I = \\int_0^{\\pi/2} \\ln(\\sin x) \\, dx$，则 $I$ 的值为：",
     "answer": "A",
     "options": [
@@ -7720,12 +8980,15 @@
       "对数积分",
       "三角函数",
       "对称性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p422",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算 $\\int_0^1 \\frac{x^3}{\\sqrt{1 - x^4}} \\, dx$ 的值为：",
     "answer": "A",
     "options": [
@@ -7738,12 +9001,15 @@
     "tags": [
       "代换积分",
       "根号积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p423",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $f(x) = \\int_x^{x^2} e^{-t^2} \\, dt$，则 $f'(x)$ 为：",
     "answer": "A",
     "options": [
@@ -7756,12 +9022,15 @@
     "tags": [
       "微积分基本定理",
       "变限积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p424",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算 $\\int_0^{\\pi} \\frac{x \\sin x}{1 + \\cos^2 x} \\, dx$ 的值为：",
     "answer": "A",
     "options": [
@@ -7775,12 +9044,15 @@
       "对称性",
       "三角替换",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p425",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算 $\\int_0^1 \\frac{\\ln x}{1 + x} \\, dx$ 的值为：",
     "answer": "A",
     "options": [
@@ -7794,12 +9066,15 @@
       "对数积分",
       "幂级数",
       "黎曼zeta"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p426",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算 $\\int_{-\\infty}^{\\infty} \\frac{\\cos x}{1 + x^2} \\, dx$ 的值为：",
     "answer": "A",
     "options": [
@@ -7813,12 +9088,15 @@
       "复积分",
       "留数定理",
       "傅里叶变换"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p427",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算定积分 $\\int_0^{\\pi} x \\sin^2 x \\, dx$ 的值为：",
     "answer": "A",
     "options": [
@@ -7832,12 +9110,15 @@
       "三角函数积分",
       "分部积分",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p428",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $I = \\int_0^1 \\frac{\\ln(1+x)}{1+x^2} \\, dx$，则 $I$ 的值为：",
     "answer": "A",
     "options": [
@@ -7851,12 +9132,15 @@
       "对数积分",
       "三角替换",
       "对称性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p429",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "若 $f(x) = \\int_x^{x^2} e^{-t^2} \\, dt$，则 $f'(x)$ 等于：",
     "answer": "A",
     "options": [
@@ -7870,12 +9154,15 @@
       "微积分基本定理",
       "变限积分",
       "导数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p430",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算积分 $\\int_0^{\\infty} \\frac{x^2}{(1+x^2)^3} \\, dx$ 的值为：",
     "answer": "A",
     "options": [
@@ -7889,12 +9176,15 @@
       "广义积分",
       "三角替换",
       "对称性"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p431",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $I_n = \\int_0^{\\pi/2} \\sin^n x \\, dx$，则 $I_6$ 的值为：",
     "answer": "A",
     "options": [
@@ -7908,12 +9198,15 @@
       "递推积分",
       "Wallis公式",
       "三角函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p432",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算积分 $\\int_{-1}^1 \\frac{x^2}{1 + e^x} \\, dx$ 的值为：",
     "answer": "A",
     "options": [
@@ -7927,12 +9220,15 @@
       "对称性",
       "指数函数",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p433",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算积分 $\\int_0^1 \\frac{\\arctan x}{x} \\, dx$ 的值为：",
     "answer": "A",
     "options": [
@@ -7946,12 +9242,15 @@
       "反正切积分",
       "级数",
       "Catalan常数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p434",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算 $\\int_0^{\\infty} e^{-x^2} \\cos(2x) \\, dx$ 的值为：",
     "answer": "A",
     "options": [
@@ -7965,12 +9264,15 @@
       "高斯积分",
       "复分析",
       "傅里叶变换"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p435",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "设 $I = \\int_0^1 \\int_0^1 \\frac{1}{1 - xy} \\, dx \\, dy$，则 $I$ 的值为：",
     "answer": "A",
     "options": [
@@ -7984,12 +9286,15 @@
       "二重积分",
       "级数展开",
       "黎曼 zeta 函数"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   },
   {
     "id": "p436",
     "topic": "积分",
-    "difficulty": "进阶",
+    "difficulty": "L2",
     "question": "计算 $\\int_0^{\\pi} \\frac{x \\sin x}{1 + \\cos^2 x} \\, dx$ 的值为：",
     "answer": "A",
     "options": [
@@ -8003,6 +9308,9 @@
       "对称性",
       "三角函数",
       "定积分"
-    ]
+    ],
+    "type": "choice",
+    "answerType": null,
+    "answerExpr": null
   }
 ]
