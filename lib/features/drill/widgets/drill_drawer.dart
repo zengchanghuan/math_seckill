@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/drill_controller.dart';
-import '../../../core/services/problem_service.dart';
+import '../../../core/services/problem_service_v2.dart';
 
 class DrillDrawer extends StatelessWidget {
   const DrillDrawer({super.key});
@@ -9,7 +9,7 @@ class DrillDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.find<DrillController>();
-    final problemService = Get.find<ProblemService>();
+    final problemService = Get.find<ProblemServiceV2>();
 
     return Drawer(
       child: ListView(

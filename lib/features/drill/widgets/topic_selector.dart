@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/drill_controller.dart';
-import '../../../core/services/problem_service.dart';
+import '../../../core/services/problem_service_v2.dart';
 
 class TopicSelector extends StatelessWidget {
   const TopicSelector({super.key});
@@ -9,7 +9,7 @@ class TopicSelector extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.find<DrillController>();
-    final problemService = Get.find<ProblemService>();
+    final problemService = Get.find<ProblemServiceV2>();
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
