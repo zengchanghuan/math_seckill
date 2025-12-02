@@ -62,10 +62,14 @@ class _AnswerPageState extends State<AnswerPage> {
     try {
       final prefs = await SharedPreferences.getInstance();
       final selectedTheme = prefs.getString('selected_theme');
+      
+      setState(() {
+        _isInitialized = true;
+      });
+      
       if (selectedTheme != null) {
         setState(() {
           _topic = selectedTheme;
-          _isInitialized = true;
         });
         // 如果主题有章节结构，自动选择第一章和第一节
         if (_currentTopicStructure != null && _currentTopicStructure!.chapters.isNotEmpty) {
@@ -74,11 +78,11 @@ class _AnswerPageState extends State<AnswerPage> {
             _selectedSection = _currentTopicStructure!.chapters.first.sections.first.name;
           }
         }
-        // 加载或创建训练实例
-        await _loadOrCreateInstance();
-      } else {
-        setState(() {
-          _isInitialized = true;
+        // 延迟加载训练实例，不阻塞UI显示
+        Future.delayed(const Duration(milliseconds: 300), () {
+          if (mounted) {
+            _loadOrCreateInstance();
+          }
         });
       }
     } catch (e) {
@@ -98,7 +102,7 @@ class _AnswerPageState extends State<AnswerPage> {
 
     try {
       final prefs = await SharedPreferences.getInstance();
-      
+
       // 构建实例key（基于主题、章节、节）
       final instanceKey = 'training_instance_${_topic}_${_selectedChapter ?? 'none'}_${_selectedSection ?? 'none'}';
       final savedInstanceId = prefs.getString(instanceKey);
@@ -112,7 +116,7 @@ class _AnswerPageState extends State<AnswerPage> {
           final questions = (data['questions'] as List)
               .map((q) => Problem.fromJson(q))
               .toList();
-          
+
           setState(() {
             _currentInstance = instance;
             _instanceProblems = questions;
@@ -185,10 +189,10 @@ class _AnswerPageState extends State<AnswerPage> {
   Future<void> _startNewTraining() async {
     final prefs = await SharedPreferences.getInstance();
     final instanceKey = 'training_instance_${_topic}_${_selectedChapter ?? 'none'}_${_selectedSection ?? 'none'}';
-    
+
     // 清除旧实例
     await prefs.remove(instanceKey);
-    
+
     // 重新加载
     await _loadOrCreateInstance();
   }

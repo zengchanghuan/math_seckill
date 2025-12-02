@@ -13,19 +13,20 @@ import 'widgets/bottom_nav_bar.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // 初始化服务
-  Get.put(ProblemService(), permanent: true);
-  Get.put(FormulaService(), permanent: true);
-
-  // 加载设置
+  // 加载设置（快速，不阻塞）
   final prefs = await SharedPreferences.getInstance();
   final isDarkMode = prefs.getBool('is_dark_mode') ?? false;
   final themeSelected = prefs.getBool('theme_selected') ?? false;
 
+  // 先启动应用，服务延迟初始化
   runApp(MyApp(
     isDarkMode: isDarkMode,
     showThemeSelection: !themeSelected,
   ));
+
+  // 在后台初始化服务（不阻塞UI）
+  Get.put(ProblemService(), permanent: true);
+  Get.put(FormulaService(), permanent: true);
 }
 
 class MyApp extends StatelessWidget {

@@ -5,26 +5,48 @@ import '../models/formula.dart';
 
 class FormulaService extends GetxService {
   List<Formula> _allFormulas = [];
-  final RxBool isLoading = false.obs;
+  final RxBool isLoading = true.obs; // 初始为true
+  bool _isLoaded = false;
 
   @override
   void onInit() {
     super.onInit();
-    loadFormulas();
+    // 延迟加载，避免阻塞启动
+    Future.delayed(Duration.zero, loadFormulas);
   }
 
   Future<void> loadFormulas() async {
+    if (_isLoaded) return; // 避免重复加载
+    
     try {
       isLoading.value = true;
+      print('📐 开始加载公式库...');
+      final stopwatch = Stopwatch()..start();
+      
       final String jsonString =
           await rootBundle.loadString('assets/data/formulas.json');
       final List<dynamic> jsonData = json.decode(jsonString);
       _allFormulas = jsonData.map((json) => Formula.fromJson(json)).toList();
+      
+      stopwatch.stop();
+      print('✅ 公式库加载完成：${_allFormulas.length}条公式，耗时${stopwatch.elapsedMilliseconds}ms');
+      _isLoaded = true;
     } catch (e) {
-      print('Error loading formulas: $e');
+      print('❌ 加载公式库失败: $e');
       _allFormulas = [];
     } finally {
       isLoading.value = false;
+    }
+  }
+
+  /// 确保公式库已加载
+  Future<void> ensureLoaded() async {
+    if (!_isLoaded && !isLoading.value) {
+      await loadFormulas();
+    }
+    // 等待加载完成
+    while (isLoading.value) {
+      await Future.delayed(const Duration(milliseconds: 100));
     }
   }
 

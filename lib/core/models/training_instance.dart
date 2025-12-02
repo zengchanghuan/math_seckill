@@ -64,7 +64,7 @@ class TrainingInstance {
         }
       });
     }
-    
+
     // 安全解析answerStatus
     Map<String, bool> answerStatus = {};
     if (json['answerStatus'] != null && json['answerStatus'] is Map) {
@@ -74,7 +74,7 @@ class TrainingInstance {
         }
       });
     }
-    
+
     return TrainingInstance(
       instanceId: json['instanceId'] as String,
       userId: json['userId'] as String?,

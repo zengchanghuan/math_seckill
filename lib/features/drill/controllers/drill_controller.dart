@@ -31,6 +31,13 @@ class DrillController extends GetxController {
     super.onInit();
     loadUserStats();
     loadWrongProblems();
+    // 延迟过滤题目，等待ProblemService加载完成
+    _initProblems();
+  }
+
+  Future<void> _initProblems() async {
+    // 确保题库已加载
+    await _problemService.ensureLoaded();
     filterProblems();
   }
 

@@ -5,26 +5,48 @@ import '../models/problem.dart';
 
 class ProblemService extends GetxService {
   List<Problem> _allProblems = [];
-  final RxBool isLoading = false.obs;
+  final RxBool isLoading = true.obs; // 初始为true
+  bool _isLoaded = false;
 
   @override
   void onInit() {
     super.onInit();
-    loadProblems();
+    // 延迟加载，避免阻塞启动
+    Future.delayed(Duration.zero, loadProblems);
   }
 
   Future<void> loadProblems() async {
+    if (_isLoaded) return; // 避免重复加载
+    
     try {
       isLoading.value = true;
+      print('📚 开始加载题库...');
+      final stopwatch = Stopwatch()..start();
+      
       final String jsonString =
           await rootBundle.loadString('assets/data/problems.json');
       final List<dynamic> jsonData = json.decode(jsonString);
       _allProblems = jsonData.map((json) => Problem.fromJson(json)).toList();
+      
+      stopwatch.stop();
+      print('✅ 题库加载完成：${_allProblems.length}道题，耗时${stopwatch.elapsedMilliseconds}ms');
+      _isLoaded = true;
     } catch (e) {
-      print('Error loading problems: $e');
+      print('❌ 加载题库失败: $e');
       _allProblems = [];
     } finally {
       isLoading.value = false;
+    }
+  }
+
+  /// 确保题库已加载
+  Future<void> ensureLoaded() async {
+    if (!_isLoaded && !isLoading.value) {
+      await loadProblems();
+    }
+    // 等待加载完成
+    while (isLoading.value) {
+      await Future.delayed(const Duration(milliseconds: 100));
     }
   }
 
