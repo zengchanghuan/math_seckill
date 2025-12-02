@@ -44,6 +44,9 @@ dependencies:
   # Local storage
   shared_preferences: ^2.2.2
 
+  # HTTP client
+  http: ^1.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

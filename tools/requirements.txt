@@ -3,8 +3,8 @@
 # 智谱AI (推荐，国内可用)
 zhipuai>=2.0.0
 
-# 通义千问
-dashscope>=1.10.0
+# 通义千问 (使用 OpenAI 兼容模式，不需要单独安装 dashscope)
+# 通义千问使用 openai 库即可
 
 # 文心一言
 requests>=2.31.0

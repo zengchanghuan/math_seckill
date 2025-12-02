@@ -9,7 +9,15 @@ class LatexHelper {
     // 移除换行符标记（\n 在 JSON 中可能是 \\n）
     cleaned = cleaned.replaceAll(r'\n', ' ');
 
-    return cleaned.trim();
+    // 移除或替换不支持的 LaTeX 命令
+    // 处理 \\[6pt] 这样的垂直间距命令（在分段处理时已处理，这里作为备用）
+    cleaned = cleaned.replaceAll(RegExp(r'\\\\\[.*?\]'), ' ');
+    cleaned = cleaned.replaceAll(RegExp(r'\\\[.*?\]'), ' ');
+
+    // 移除多余的空白
+    cleaned = cleaned.replaceAll(RegExp(r'\s+'), ' ').trim();
+
+    return cleaned;
   }
 
   /// 检查字符串是否包含 LaTeX 数学表达式
@@ -17,6 +25,3 @@ class LatexHelper {
     return text.contains(RegExp(r'[\\$]|\\[a-zA-Z]+|\\[^a-zA-Z]'));
   }
 }
-
-
-

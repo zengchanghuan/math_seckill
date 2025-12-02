@@ -104,15 +104,23 @@ def generate_with_zhipu(prompt: str) -> Optional[str]:
 
 
 def generate_with_qwen(prompt: str) -> Optional[str]:
-    """使用通义千问 API"""
+    """使用通义千问 API (OpenAI 兼容模式)"""
     try:
-        from dashscope import Generation
-        import dashscope
+        from openai import OpenAI
 
-        dashscope.api_key = os.getenv("DASHSCOPE_API_KEY")
+        api_key = os.getenv("DASHSCOPE_API_KEY")
+        if not api_key:
+            print("错误: 请设置环境变量 DASHSCOPE_API_KEY")
+            return None
 
-        response = Generation.call(
-            model="qwen-turbo",
+        client = OpenAI(
+            api_key=api_key,
+            # 北京地域 base_url
+            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+        )
+
+        response = client.chat.completions.create(
+            model="qwen-plus",  # 或使用 qwen-turbo, qwen-max 等
             messages=[
                 {"role": "system", "content": "你是一个专业的微积分教师，擅长出题和解答。"},
                 {"role": "user", "content": prompt}
@@ -120,13 +128,9 @@ def generate_with_qwen(prompt: str) -> Optional[str]:
             temperature=0.7,
         )
 
-        if response.status_code == 200:
-            return response.output.choices[0].message.content.strip()
-        else:
-            print(f"通义千问 API 错误: {response.message}")
-            return None
+        return response.choices[0].message.content.strip()
     except ImportError:
-        print("错误: 请安装 dashscope 库: pip install dashscope")
+        print("错误: 请安装 openai 库: pip install openai")
         return None
     except Exception as e:
         print(f"通义千问 API 错误: {e}")

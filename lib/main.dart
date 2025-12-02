@@ -6,6 +6,7 @@ import 'core/services/formula_service.dart';
 import 'features/drill/views/drill_page.dart';
 import 'features/formulas/views/formula_list_page.dart';
 import 'features/profile/views/profile_page.dart';
+import 'features/answer/views/answer_page.dart';
 import 'features/onboarding/views/theme_selection_page.dart';
 import 'widgets/bottom_nav_bar.dart';
 
@@ -75,6 +76,7 @@ class _MainPageState extends State<MainPage> {
   final List<Widget> _pages = const [
     DrillPage(),
     FormulaListPage(),
+    AnswerPage(),
     ProfilePage(),
   ];
 

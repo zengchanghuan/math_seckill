@@ -7,6 +7,8 @@ class Problem {
   final String solution; // LaTeX string
   final List<String> options; // 选项列表，格式: ["选项A内容", "选项B内容", "选项C内容", "选项D内容"]
   final List<String> tags;
+  final String? chapter; // 章节，例如 "第1章 三角函数"
+  final String? section; // 节，例如 "§1.1 三角函数的概念"
 
   Problem({
     required this.id,
@@ -17,6 +19,8 @@ class Problem {
     required this.solution,
     List<String>? options,
     this.tags = const [],
+    this.chapter,
+    this.section,
   }) : options = options ?? [];
 
   factory Problem.fromJson(Map<String, dynamic> json) {
@@ -35,7 +39,11 @@ class Problem {
       answer: json['answer'] as String,
       solution: json['solution'] as String,
       options: options,
-      tags: (json['tags'] as List<dynamic>?)?.map((e) => e.toString()).toList() ?? [],
+      tags:
+          (json['tags'] as List<dynamic>?)?.map((e) => e.toString()).toList() ??
+              [],
+      chapter: json['chapter'] as String?,
+      section: json['section'] as String?,
     );
   }
 
@@ -49,7 +57,8 @@ class Problem {
       'solution': solution,
       'options': options,
       'tags': tags,
+      if (chapter != null) 'chapter': chapter,
+      if (section != null) 'section': section,
     };
   }
 }
-

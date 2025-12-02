@@ -4,9 +4,43 @@ import '../controllers/profile_controller.dart';
 import '../widgets/stats_card.dart';
 import '../widgets/wrong_problems_page.dart';
 import '../widgets/favorites_page.dart';
+import '../../../core/services/remote_problem_service.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
+
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  final _remoteService = RemoteProblemService();
+  Map<String, dynamic>? _connectionTestResult;
+  bool _isTestingConnection = false;
+
+  Future<void> _testConnection() async {
+    setState(() {
+      _isTestingConnection = true;
+      _connectionTestResult = null;
+    });
+    try {
+      final result = await _remoteService.testConnection();
+      setState(() {
+        _connectionTestResult = result;
+      });
+    } catch (e) {
+      setState(() {
+        _connectionTestResult = {
+          'success': false,
+          'message': '测试失败: $e',
+        };
+      });
+    } finally {
+      setState(() {
+        _isTestingConnection = false;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +63,77 @@ class ProfilePage extends StatelessWidget {
           children: [
             const StatsCard(),
             const SizedBox(height: 8),
+            _buildConnectionTestCard(),
+            const SizedBox(height: 8),
             _buildFunctionList(context, controller),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildConnectionTestCard() {
+    return Card(
+      margin: const EdgeInsets.symmetric(horizontal: 16),
+      color: _connectionTestResult == null
+          ? null
+          : (_connectionTestResult!['success'] == true
+              ? Colors.green.shade50
+              : Colors.red.shade50),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                const Icon(Icons.wifi_protected_setup),
+                const SizedBox(width: 8),
+                const Text(
+                  '后端连接测试',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
+            if (_connectionTestResult != null)
+              Text(
+                _connectionTestResult!['message'] ?? '',
+                style: TextStyle(
+                  color: _connectionTestResult!['success'] == true
+                      ? Colors.green.shade700
+                      : Colors.red.shade700,
+                  fontSize: 14,
+                ),
+              )
+            else
+              const Text(
+                '点击测试按钮检查后端连接状态',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 14,
+                ),
+              ),
+            const SizedBox(height: 12),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                onPressed: _isTestingConnection ? null : _testConnection,
+                icon: _isTestingConnection
+                    ? const SizedBox(
+                        width: 16,
+                        height: 16,
+                        child: CircularProgressIndicator(
+                          strokeWidth: 2,
+                        ),
+                      )
+                    : const Icon(Icons.wifi_protected_setup),
+                label: const Text('测试连接'),
+              ),
+            ),
           ],
         ),
       ),
@@ -174,5 +278,4 @@ class ProfilePage extends StatelessWidget {
       ),
     );
   }
-
 }

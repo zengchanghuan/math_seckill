@@ -26,6 +26,10 @@ class BottomNavBar extends StatelessWidget {
           label: '公式',
         ),
         BottomNavigationBarItem(
+          icon: Icon(Icons.menu_book),
+          label: '解答',
+        ),
+        BottomNavigationBarItem(
           icon: Icon(Icons.person),
           label: '我',
         ),

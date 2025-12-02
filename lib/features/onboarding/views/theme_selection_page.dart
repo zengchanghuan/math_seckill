@@ -18,6 +18,7 @@ class _ThemeSelectionPageState extends State<ThemeSelectionPage> {
     '考研数学一',
     '考研数学二',
     '考研数学三',
+    '高中衔接大学数学基础',
   ];
 
   @override
@@ -50,15 +51,15 @@ class _ThemeSelectionPageState extends State<ThemeSelectionPage> {
                 Text(
                   '选择学习主题',
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+                        fontWeight: FontWeight.bold,
+                      ),
                 ),
                 const SizedBox(height: 8),
                 Text(
                   '请选择您的学习目标，我们将为您推荐相应的题目',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Colors.grey.shade600,
-                  ),
+                        color: Colors.grey.shade600,
+                      ),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 48),
@@ -102,23 +103,22 @@ class _ThemeSelectionPageState extends State<ThemeSelectionPage> {
                                           .textTheme
                                           .titleLarge
                                           ?.copyWith(
-                                        fontWeight: isSelected
-                                            ? FontWeight.bold
-                                            : FontWeight.normal,
-                                        color: isSelected
-                                            ? Theme.of(context)
-                                                .colorScheme
-                                                .primary
-                                            : null,
-                                      ),
+                                            fontWeight: isSelected
+                                                ? FontWeight.bold
+                                                : FontWeight.normal,
+                                            color: isSelected
+                                                ? Theme.of(context)
+                                                    .colorScheme
+                                                    .primary
+                                                : null,
+                                          ),
                                     ),
                                   ),
                                   if (isSelected)
                                     Icon(
                                       Icons.check_circle,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .primary,
+                                      color:
+                                          Theme.of(context).colorScheme.primary,
                                     ),
                                 ],
                               ),
@@ -150,9 +150,9 @@ class _ThemeSelectionPageState extends State<ThemeSelectionPage> {
                     child: Text(
                       '开始学习',
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                     ),
                   ),
                 ),
@@ -178,4 +178,3 @@ class _ThemeSelectionPageState extends State<ThemeSelectionPage> {
     }
   }
 }
-
