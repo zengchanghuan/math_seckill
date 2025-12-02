@@ -48,14 +48,15 @@ class DrillController extends GetxController {
 
   Future<void> filterProblems() async {
     List<Problem> problems;
-    
+
     // 异步加载题目
     if (selectedTopic.value == '全部' && selectedDifficulty.value == '全部') {
       // 加载所有主题（按需）
       await _problemService.getProblemsByTopic('全部');
       problems = _problemService.getAllProblems();
     } else if (selectedTopic.value == '全部') {
-      problems = await _problemService.getProblemsByDifficulty(selectedDifficulty.value);
+      problems = await _problemService
+          .getProblemsByDifficulty(selectedDifficulty.value);
     } else if (selectedDifficulty.value == '全部') {
       problems = await _problemService.getProblemsByTopic(selectedTopic.value);
     } else {
@@ -64,7 +65,7 @@ class DrillController extends GetxController {
         selectedDifficulty.value,
       );
     }
-    
+
     currentProblems.value = problems;
     currentIndex.value = 0;
     userAnswers.clear();

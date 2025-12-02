@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'core/services/problem_service_v2.dart';
-import 'core/services/formula_service.dart';
 import 'features/drill/views/drill_page.dart';
 import 'features/formulas/views/formula_list_page.dart';
 import 'features/profile/views/profile_page.dart';

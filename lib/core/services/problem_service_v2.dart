@@ -8,12 +8,12 @@ import '../models/problem.dart';
 class ProblemServiceV2 extends GetxService {
   static const String _cacheBoxName = 'problems_cache_v2';
   static const String _cacheVersion = '2.0';
-  
+
   final Map<String, List<Problem>> _problemsByTopic = {};
   final RxBool isLoading = false.obs;
   final RxString loadingTopic = ''.obs;
   final RxSet<String> loadedTopics = <String>{}.obs;
-  
+
   Box? _cacheBox;
   Map<String, dynamic> _index = {};
 
@@ -63,7 +63,7 @@ class ProblemServiceV2 extends GetxService {
       // 检查缓存
       final cacheKey = 'topic_$topic';
       final cachedVersion = _cacheBox?.get('${cacheKey}_version');
-      
+
       if (cachedVersion == _cacheVersion && _cacheBox?.containsKey(cacheKey) == true) {
         // 从缓存读取
         print('📦 从缓存读取主题 [$topic]');
@@ -71,10 +71,10 @@ class ProblemServiceV2 extends GetxService {
         final problems = cachedData
             .map((json) => Problem.fromJson(Map<String, dynamic>.from(json)))
             .toList();
-        
+
         _problemsByTopic[topic] = problems;
         loadedTopics.add(topic);
-        
+
         stopwatch.stop();
         print('✅ [$topic] 缓存加载：${problems.length}道题，耗时${stopwatch.elapsedMilliseconds}ms');
         return problems;
@@ -89,7 +89,7 @@ class ProblemServiceV2 extends GetxService {
 
       final filePath = 'assets/data/${topicInfo['file']}';
       print('📂 从assets加载主题 [$topic]: $filePath');
-      
+
       final String jsonString = await rootBundle.loadString(filePath);
       final List<dynamic> jsonData = json.decode(jsonString);
       final problems = jsonData.map((json) => Problem.fromJson(json)).toList();
