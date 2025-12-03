@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:math_keyboard/math_keyboard.dart';
 import '../controllers/drill_controller.dart';
 import '../../../widgets/math_text.dart';
 import '../widgets/drill_drawer.dart';
@@ -221,7 +222,10 @@ class DrillPage extends GetView<DrillController> {
                                   ),
                                 ),
                                 if (!controller.isCorrect.value)
-                                  Text('正确答案：${question.answer}'),
+                                  MathText(
+                                    '正确答案：\$${question.answer}\$',
+                                    textStyle: const TextStyle(fontSize: 14),
+                                  ),
                               ],
                             ),
                           ),
@@ -383,15 +387,27 @@ class DrillPage extends GetView<DrillController> {
     });
   }
 
-  /// 构建答案输入框（填空题/解答题）
+  /// 构建答案输入框（填空题/解答题） - 使用数学键盘
   Widget _buildAnswerInput() {
-    return TextField(
-      decoration: const InputDecoration(
-        labelText: '请输入答案',
-        border: OutlineInputBorder(),
-      ),
-      onChanged: controller.selectAnswer,
-      enabled: !controller.isSubmitted.value,
+    return Column(
+      children: [
+        MathField(
+          keyboardType: MathKeyboardType.expression,
+          variables: const ['x', 'y', 'z', 'n'],
+          decoration: const InputDecoration(
+            labelText: '请输入答案（支持数学符号）',
+            border: OutlineInputBorder(),
+            helperText: '可输入：分数、根号、π、次方等',
+          ),
+          onChanged: (value) {
+            // 将MathExpression转换为字符串
+            controller.selectAnswer(value);
+          },
+          onSubmitted: (value) {
+            controller.submitAnswer();
+          },
+        ),
+      ],
     );
   }
 

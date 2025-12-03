@@ -196,7 +196,7 @@ class ApiService extends GetxService {
   }
 
   // ==================== 题目统计 ====================
-  
+
   /// 获取题目统计信息
   Future<QuestionStats?> getQuestionStats(String questionId) async {
     try {
@@ -204,7 +204,7 @@ class ApiService extends GetxService {
         Uri.parse('${serverUrl.value}/api/admin/question/$questionId/stats'),
         headers: headers,
       );
-      
+
       if (response.statusCode == 200) {
         final data = json.decode(utf8.decode(response.bodyBytes));
         return QuestionStats.fromJson(data);
@@ -215,9 +215,9 @@ class ApiService extends GetxService {
       return null;
     }
   }
-  
+
   // ==================== 知识点讲解 ====================
-  
+
   /// 获取所有讲解内容
   Future<TutorialsResponse?> getAllTutorials() async {
     try {
@@ -225,7 +225,7 @@ class ApiService extends GetxService {
         Uri.parse('${serverUrl.value}/api/tutorials'),
         headers: headers,
       );
-      
+
       if (response.statusCode == 200) {
         final data = json.decode(utf8.decode(response.bodyBytes));
         return TutorialsResponse.fromJson(data);
@@ -236,18 +236,18 @@ class ApiService extends GetxService {
       return null;
     }
   }
-  
+
   /// 获取指定章节的讲解内容
   Future<TutorialChapter?> getChapterTutorial(String themeName, String chapterName) async {
     try {
       final encodedTheme = Uri.encodeComponent(themeName);
       final encodedChapter = Uri.encodeComponent(chapterName);
-      
+
       final response = await http.get(
         Uri.parse('${serverUrl.value}/api/tutorials/chapter/$encodedTheme/$encodedChapter'),
         headers: headers,
       );
-      
+
       if (response.statusCode == 200) {
         final data = json.decode(utf8.decode(response.bodyBytes));
         return TutorialChapter.fromJson(data);

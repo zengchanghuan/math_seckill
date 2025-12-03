@@ -53,6 +53,9 @@ dependencies:
   # 数学可视化
   fl_chart: ^0.65.0
 
+  # 数学键盘
+  math_keyboard: ^0.3.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

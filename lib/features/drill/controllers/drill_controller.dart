@@ -244,10 +244,14 @@ class DrillController extends GetxController {
     isCorrect.value = false;
   }
 
-  /// 选择答案
+  /// 选择答案（选择后自动提交）
   void selectAnswer(String answer) {
     if (!isSubmitted.value) {
       userAnswer.value = answer;
+      // 自动提交答案
+      Future.delayed(const Duration(milliseconds: 300), () {
+        submitAnswer();
+      });
     }
   }
 
@@ -307,9 +311,19 @@ class DrillController extends GetxController {
         }
       }
 
-      // 显示解析
-      if (_storageService.isShowSolution()) {
-        showSolution.value = true;
+      // 如果答对，自动下一题；如果答错，显示解析
+      if (correct) {
+        // 答对了，延迟1.5秒后自动跳转下一题
+        Future.delayed(const Duration(milliseconds: 1500), () {
+          if (isSubmitted.value) {
+            nextQuestion();
+          }
+        });
+      } else {
+        // 答错了，自动显示解析
+        if (_storageService.isShowSolution()) {
+          showSolution.value = true;
+        }
       }
     } catch (e) {
       print('Error submitting answer: $e');

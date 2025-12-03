@@ -234,3 +234,4 @@ class ParametricCurvePainter extends CustomPainter {
   bool shouldRepaint(ParametricCurvePainter oldDelegate) => true;
 }
 
+
