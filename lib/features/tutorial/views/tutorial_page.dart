@@ -5,6 +5,9 @@ import '../../drill/widgets/chapter_selector_tabs.dart';
 import '../../../core/services/api_service.dart';
 import '../../../core/models/tutorial.dart';
 import '../../../widgets/math_text.dart';
+import '../widgets/trig_unit_circle_viz.dart';
+import '../widgets/complex_plane_viz.dart';
+import '../widgets/parametric_curve_viz.dart';
 
 /// 讲解页面 - 展示当前章节的知识点讲解（记忆卡片）
 class TutorialPage extends GetView<DrillController> {
@@ -60,6 +63,9 @@ class TutorialPage extends GetView<DrillController> {
         // 章节标题
         _buildChapterHeader(chapter.chapterName),
         const SizedBox(height: 16),
+
+        // 动态可视化（根据章节显示）
+        _buildVisualization(chapter.chapterName),
 
         // 按小节展示知识卡片
         ...chapter.sections.map((section) {
@@ -286,5 +292,35 @@ class TutorialPage extends GetView<DrillController> {
         ),
       ),
     );
+  }
+
+  /// 构建可视化组件（根据章节内容）
+  Widget _buildVisualization(String chapterName) {
+    // 根据章节名称显示对应的可视化
+    if (chapterName.contains('三角函数')) {
+      return const Column(
+        children: [
+          TrigUnitCircleViz(),
+          SizedBox(height: 16),
+        ],
+      );
+    } else if (chapterName.contains('复数')) {
+      return const Column(
+        children: [
+          ComplexPlaneViz(),
+          SizedBox(height: 16),
+        ],
+      );
+    } else if (chapterName.contains('参数方程')) {
+      return const Column(
+        children: [
+          ParametricCurveViz(),
+          SizedBox(height: 16),
+        ],
+      );
+    }
+
+    // 其他章节不显示可视化
+    return const SizedBox();
   }
 }
