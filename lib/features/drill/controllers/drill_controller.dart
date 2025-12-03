@@ -45,6 +45,9 @@ class DrillController extends GetxController {
   final RxString selectedTheme = '高中衔接大学数学基础'.obs;
   final RxString selectedChapter = '第1章 三角函数'.obs; // 默认第一章
 
+  // 当前填空题显示模式（针对当前题目）
+  final RxBool currentFillAsChoice = false.obs; // false=填空输入, true=选择题模式
+
   // 加载状态
   final RxBool isLoading = false.obs;
 
@@ -243,6 +246,7 @@ class DrillController extends GetxController {
     isSubmitted.value = false;
     showSolution.value = false;
     isCorrect.value = false;
+    currentFillAsChoice.value = false; // 重置为输入模式
   }
 
   /// 选择答案（选择后自动提交）
@@ -377,5 +381,10 @@ class DrillController extends GetxController {
   /// 切换解析显示
   void toggleSolution() {
     showSolution.value = !showSolution.value;
+  }
+
+  /// 切换当前填空题的显示模式
+  void toggleCurrentFillMode() {
+    currentFillAsChoice.value = !currentFillAsChoice.value;
   }
 }

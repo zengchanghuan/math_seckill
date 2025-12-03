@@ -18,17 +18,17 @@ class DrillPage extends GetView<DrillController> {
         actions: [
           // 统计信息
           Obx(() => Center(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Text(
-                    '${controller.correctCount.value}/${controller.totalAnswered.value}',
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Text(
+                '${controller.correctCount.value}/${controller.totalAnswered.value}',
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
                 ),
-              )),
+              ),
+            ),
+          )),
           // 重置按钮
           IconButton(
             icon: const Icon(Icons.refresh),
@@ -172,12 +172,42 @@ class DrillPage extends GetView<DrillController> {
             ),
             const SizedBox(height: 16),
 
-            // 选项（如果是选择题）
+            // 选择题 - 直接显示选项
             if (question.type == 'choice' && question.options != null)
               ..._buildOptions(question.options!),
 
-            // 填空题或解答题输入框
-            if (question.type != 'choice') _buildAnswerInput(),
+            // 填空题 - 根据用户选择显示
+            if (question.type == 'fill') ...[
+              // 选择模式
+              if (controller.currentFillAsChoice.value && question.options != null) ...[
+                ..._buildOptions(question.options!),
+                const SizedBox(height: 12),
+                // 切换回输入按钮
+                OutlinedButton.icon(
+                  onPressed: controller.toggleCurrentFillMode,
+                  icon: const Icon(Icons.edit, size: 18),
+                  label: const Text('切换为手动输入'),
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: Colors.blue,
+                  ),
+                ),
+              ]
+              // 输入模式
+              else ...[
+                _buildAnswerInput(),
+                const SizedBox(height: 12),
+                // 切换为选择题按钮（只在有选项时显示）
+                if (question.options != null)
+                  OutlinedButton.icon(
+                    onPressed: controller.toggleCurrentFillMode,
+                    icon: const Icon(Icons.list, size: 18),
+                    label: const Text('显示为选择题（点击更方便）'),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: Colors.green,
+                    ),
+                  ),
+              ],
+            ],
 
             const SizedBox(height: 16),
 
@@ -372,7 +402,10 @@ class DrillPage extends GetView<DrillController> {
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: MathText(
-                        option,
+                        // 确保LaTeX公式被$包围
+                        option.contains('\\') && !option.startsWith('\$')
+                            ? '\$$option\$'
+                            : option,
                         textStyle: const TextStyle(
                           fontSize: 16,
                           color: Colors.black87,

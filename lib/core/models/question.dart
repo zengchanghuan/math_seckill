@@ -4,6 +4,7 @@ class Question {
   final String topic;
   final String difficulty; // "L1", "L2", "L3"
   final String type; // "choice", "fill", "solution"
+  final String? answerMode; // "choice", "fill", "drag", "template" - 答题模式
   final String question;
   final String answer;
   final List<String>? options;
@@ -12,7 +13,8 @@ class Question {
 
   // 后端 v2.0 新增字段
   final List<String> knowledgePoints; // 知识点标签
-  final List<String> abilityTags; // 能力要求标签 ["memory", "understand", "apply", "analyze", "synthesize", "model"]
+  final List<String>
+      abilityTags; // 能力要求标签 ["memory", "understand", "apply", "analyze", "synthesize", "model"]
   final String? templateId; // 题型模板ID
   final String source; // "generated", "real_exam", "manual"
   final bool isRealExam; // 是否真题
@@ -52,6 +54,7 @@ class Question {
     this.reviewStatus = 'pending',
     this.answerType,
     this.answerExpr,
+    this.answerMode,
   });
 
   factory Question.fromJson(Map<String, dynamic> json) {
@@ -66,9 +69,7 @@ class Question {
           ? List<String>.from(json['options'] as List)
           : null,
       solution: json['solution'] as String,
-      tags: json['tags'] != null
-          ? List<String>.from(json['tags'] as List)
-          : [],
+      tags: json['tags'] != null ? List<String>.from(json['tags'] as List) : [],
       knowledgePoints: json['knowledgePoints'] != null
           ? List<String>.from(json['knowledgePoints'] as List)
           : [],
@@ -80,11 +81,13 @@ class Question {
       isRealExam: json['isRealExam'] as bool? ?? false,
       totalAttempts: json['totalAttempts'] as int? ?? 0,
       correctRate: (json['correctRate'] as num?)?.toDouble() ?? 0.0,
-      discriminationIndex: (json['discriminationIndex'] as num?)?.toDouble() ?? 0.0,
+      discriminationIndex:
+          (json['discriminationIndex'] as num?)?.toDouble() ?? 0.0,
       avgTimeSeconds: (json['avgTimeSeconds'] as num?)?.toDouble() ?? 0.0,
       reviewStatus: json['reviewStatus'] as String? ?? 'pending',
       answerType: json['answerType'] as String?,
       answerExpr: json['answerExpr'] as String?,
+      answerMode: json['answerMode'] as String?,
     );
   }
 
@@ -111,6 +114,7 @@ class Question {
       'reviewStatus': reviewStatus,
       'answerType': answerType,
       'answerExpr': answerExpr,
+      'answerMode': answerMode,
     };
   }
 
@@ -123,5 +127,3 @@ class Question {
   /// 判断题目是否已审核通过
   bool get isApproved => reviewStatus == 'approved';
 }
-
-
