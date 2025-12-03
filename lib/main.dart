@@ -1,103 +1,80 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'core/services/problem_service_v2.dart';
-import 'features/drill/views/drill_page.dart';
-import 'features/formulas/views/formula_list_page.dart';
-import 'features/profile/views/profile_page.dart';
-import 'features/answer/views/answer_page.dart';
-import 'features/onboarding/views/theme_selection_page.dart';
-import 'widgets/bottom_nav_bar.dart';
+import 'core/services/api_service.dart';
+import 'core/services/problem_service.dart';
+import 'core/services/storage_service.dart';
+import 'core/services/config_service.dart';
+import 'features/drill/controllers/drill_controller.dart';
+import 'features/profile/controllers/profile_controller.dart';
+import 'features/recommendation/controllers/recommend_controller.dart';
+import 'features/home/views/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // 加载设置（快速，不阻塞）
-  final prefs = await SharedPreferences.getInstance();
-  final isDarkMode = prefs.getBool('is_dark_mode') ?? false;
-  final themeSelected = prefs.getBool('theme_selected') ?? false;
+  // 初始化服务
+  await initServices();
 
-  // 先启动应用，服务延迟初始化
-  runApp(MyApp(
-    isDarkMode: isDarkMode,
-    showThemeSelection: !themeSelected,
-  ));
+  runApp(const MyApp());
+}
 
-  // 在后台初始化服务（不阻塞UI）
-  Get.put(ProblemServiceV2(), permanent: true);
-  // FormulaService暂时不需要（公式库待开发）
-  // Get.put(FormulaService(), permanent: true);
+/// 初始化所有服务
+Future<void> initServices() async {
+  // 初始化存储服务
+  await Get.putAsync(() => StorageService().init());
+
+  // 初始化其他服务
+  Get.put(ApiService());
+  Get.put(ProblemService());
+
+  // 初始化配置服务（会自动从服务器同步配置）
+  Get.put(ConfigService());
+
+  // 初始化控制器
+  Get.put(DrillController());
+  Get.put(ProfileController());
+  Get.put(RecommendController());
+
+  // 从存储中恢复设置
+  final storage = Get.find<StorageService>();
+  final api = Get.find<ApiService>();
+
+  final savedStudentId = storage.getStudentId();
+  if (savedStudentId != null) {
+    api.setStudentId(savedStudentId);
+  }
+
+  final savedServerUrl = storage.getServerUrl();
+  api.setServerUrl(savedServerUrl);
 }
 
 class MyApp extends StatelessWidget {
-  final bool isDarkMode;
-  final bool showThemeSelection;
-
-  const MyApp({
-    super.key,
-    required this.isDarkMode,
-    this.showThemeSelection = false,
-  });
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: '微积分刷题',
-      debugShowCheckedModeBanner: false,
+      title: '数学秒杀',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blue,
-          brightness: Brightness.light,
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+          elevation: 0,
+        ),
       ),
-      darkTheme: ThemeData(
+      darkTheme: ThemeData.dark().copyWith(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.blue,
           brightness: Brightness.dark,
         ),
         useMaterial3: true,
       ),
-      themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
-      home: showThemeSelection ? const ThemeSelectionPage() : const MainPage(),
-    );
-  }
-}
-
-class MainPage extends StatefulWidget {
-  const MainPage({super.key});
-
-  @override
-  State<MainPage> createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
-  int _currentIndex = 0;
-
-  final List<Widget> _pages = const [
-    DrillPage(),
-    AnswerPage(),
-    FormulaListPage(),
-    ProfilePage(),
-  ];
-
-  void _onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _pages,
-      ),
-      bottomNavigationBar: BottomNavBar(
-        currentIndex: _currentIndex,
-        onTap: _onTabTapped,
-      ),
+      themeMode: Get.find<StorageService>().isDarkMode()
+          ? ThemeMode.dark
+          : ThemeMode.light,
+      home: const HomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

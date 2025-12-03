@@ -341,16 +341,16 @@ def calculate_discrimination(question_id, records):
     student_rates = {}
     for record in all_records:
         student_rates[student_id] = correct / total
-    
+
     # 2. 排序并取前27%和后27%
     sorted_students = sorted(student_rates.items(), key=lambda x: x[1], reverse=True)
     top_27 = sorted_students[:int(len * 0.27)]
     low_27 = sorted_students[-int(len * 0.27):]
-    
+
     # 3. 计算该题在两组的正确率
     top_correct_rate = ...
     low_correct_rate = ...
-    
+
     # 4. 区分度 = 差值
     discrimination = top_correct_rate - low_correct_rate
     return discrimination
@@ -361,7 +361,7 @@ def calculate_discrimination(question_id, records):
 ```python
 def calculate_student_profile(student_id):
     records = get_student_records(student_id)
-    
+
     # 按知识点统计
     for record in records:
         question = get_question(record.questionId)
@@ -369,23 +369,23 @@ def calculate_student_profile(student_id):
             kp_stats[kp]["total"] += 1
             if record.isCorrect:
                 kp_stats[kp]["correct"] += 1
-    
+
     # 计算掌握度
     knowledge_mastery = {
         kp: stats["correct"] / stats["total"]
         for kp, stats in kp_stats.items()
     }
-    
+
     # 找出薄弱点（正确率<0.6）
     weak_points = [kp for kp, rate in knowledge_mastery.items() if rate < 0.6]
-    
+
     # 预测分数
     predicted_score = (
         difficulty_accuracy["L1"] * 50 +
         difficulty_accuracy["L2"] * 35 +
         difficulty_accuracy["L3"] * 15
     )
-    
+
     return profile
 ```
 
@@ -395,22 +395,22 @@ def calculate_student_profile(student_id):
 def recommend_for_weak_points(student_id, count=20):
     profile = calculate_student_profile(student_id)
     problems = []
-    
+
     # 70%：薄弱知识点
     for kp in profile.weakPoints:
         l1_questions = query(knowledgePoints=[kp], difficulty="L1")
         l2_questions = query(knowledgePoints=[kp], difficulty="L2")
         problems.extend(sample(l1_questions + l2_questions, per_kp_count))
-    
+
     # 20%：已掌握知识点
     strong_kp = random.choice([kp for kp, rate in profile.knowledgeMastery.items() if rate >= 0.75])
     l2_l3_questions = query(knowledgePoints=[strong_kp], difficulty=["L2", "L3"])
     problems.extend(sample(l2_l3_questions, consolidate_count))
-    
+
     # 10%：随机新题
     unseen = [q for q in all_approved if q.questionId not in done_ids]
     problems.extend(sample(unseen, new_count))
-    
+
     return problems[:count]
 ```
 

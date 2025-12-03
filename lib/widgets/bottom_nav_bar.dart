@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// 底部导航栏
 class BottomNavBar extends StatelessWidget {
   final int currentIndex;
   final Function(int) onTap;
@@ -16,6 +17,8 @@ class BottomNavBar extends StatelessWidget {
       currentIndex: currentIndex,
       onTap: onTap,
       type: BottomNavigationBarType.fixed,
+      selectedItemColor: Colors.blue,
+      unselectedItemColor: Colors.grey,
       items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.quiz),
@@ -23,15 +26,19 @@ class BottomNavBar extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.menu_book),
-          label: '解答',
+          label: '讲解',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.functions),
-          label: '公式',
+          icon: Icon(Icons.lightbulb),
+          label: '智能推荐',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.person),
-          label: '我',
+          icon: Icon(Icons.analytics),
+          label: '学习画像',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.settings),
+          label: '设置',
         ),
       ],
     );

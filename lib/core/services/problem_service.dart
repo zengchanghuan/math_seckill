@@ -1,67 +1,47 @@
+import 'dart:convert';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import '../models/problem.dart';
-import 'problem_cache_service.dart';
+import '../models/question.dart';
 
+/// 题目服务 - 负责从本地加载题目数据（离线模式）
 class ProblemService extends GetxService {
-  List<Problem> _allProblems = [];
-  final RxBool isLoading = false.obs; // 初始为false，等待触发加载
-  bool _isLoaded = false;
-  final _cacheService = ProblemCacheService();
+  List<Question> _allProblems = [];
+  final RxBool isLoading = false.obs;
 
   @override
   void onInit() {
     super.onInit();
-    // 不在启动时加载，改为按需加载
+    loadProblems();
   }
 
   Future<void> loadProblems() async {
-    if (_isLoaded) return; // 避免重复加载
-
     try {
       isLoading.value = true;
-
-      // 使用缓存服务加载（性能优化）
-      _allProblems = await _cacheService.loadProblems();
-      _isLoaded = true;
+      final String jsonString =
+          await rootBundle.loadString('assets/data/problems.json');
+      final List<dynamic> jsonData = json.decode(jsonString);
+      _allProblems = jsonData.map((json) => Question.fromJson(json)).toList();
     } catch (e) {
-      print('❌ 加载题库失败: $e');
+      print('Error loading problems: $e');
       _allProblems = [];
     } finally {
       isLoading.value = false;
     }
   }
 
-  /// 清除缓存（题库更新后使用）
-  Future<void> clearCache() async {
-    await _cacheService.clearCache();
-    _isLoaded = false;
-    await loadProblems();
-  }
-
-  /// 确保题库已加载
-  Future<void> ensureLoaded() async {
-    if (!_isLoaded && !isLoading.value) {
-      await loadProblems();
-    }
-    // 等待加载完成
-    while (isLoading.value) {
-      await Future.delayed(const Duration(milliseconds: 100));
-    }
-  }
-
-  List<Problem> getAllProblems() {
+  List<Question> getAllProblems() {
     return List.unmodifiable(_allProblems);
   }
 
-  List<Problem> getProblemsByTopic(String topic) {
+  List<Question> getProblemsByTopic(String topic) {
     return _allProblems.where((p) => p.topic == topic).toList();
   }
 
-  List<Problem> getProblemsByDifficulty(String difficulty) {
+  List<Question> getProblemsByDifficulty(String difficulty) {
     return _allProblems.where((p) => p.difficulty == difficulty).toList();
   }
 
-  List<Problem> getProblemsByTopicAndDifficulty(
+  List<Question> getProblemsByTopicAndDifficulty(
       String topic, String difficulty) {
     return _allProblems
         .where((p) => p.topic == topic && p.difficulty == difficulty)
@@ -76,9 +56,9 @@ class ProblemService extends GetxService {
     return _allProblems.map((p) => p.difficulty).toSet().toList()..sort();
   }
 
-  Problem? getProblemById(String id) {
+  Question? getProblemById(String id) {
     try {
-      return _allProblems.firstWhere((p) => p.id == id);
+      return _allProblems.firstWhere((p) => p.questionId == id);
     } catch (e) {
       return null;
     }

@@ -1,379 +1,364 @@
 import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter/material.dart';
-import 'dart:async';
-import 'dart:convert';
-import '../../../core/models/problem.dart';
-import '../../../core/models/user_stats.dart';
-import '../../../core/services/problem_service_v2.dart';
-import '../../../core/services/remote_problem_service.dart';
+import '../../../core/models/question.dart';
+import '../../../core/models/answer_record.dart';
+import '../../../core/services/api_service.dart';
+import '../../../core/services/problem_service.dart';
+import '../../../core/services/storage_service.dart';
+import '../../../core/services/config_service.dart';
+import '../../../core/config/theme_config.dart';
 
+/// 刷题控制器 - 管理刷题流程和状态
 class DrillController extends GetxController {
-  final ProblemServiceV2 _problemService = Get.find<ProblemServiceV2>();
-  final RemoteProblemService _remoteService = RemoteProblemService();
+  final ApiService _apiService = Get.find<ApiService>();
+  final ProblemService _problemService = Get.find<ProblemService>();
+  final StorageService _storageService = Get.find<StorageService>();
+  final ConfigService _configService = Get.find<ConfigService>();
 
-  final RxList<Problem> currentProblems = <Problem>[].obs;
+  // 当前题目列表
+  final RxList<Question> questions = <Question>[].obs;
+
+  // 当前题目索引
   final RxInt currentIndex = 0.obs;
-  final RxString selectedTopic = '全部'.obs;
-  final RxString selectedDifficulty = '全部'.obs;
-  final RxMap<String, String> userAnswers = <String, String>{}.obs;
-  final RxMap<String, bool> answerStatus =
-      <String, bool>{}.obs; // true = correct, false = wrong, null = not checked
-  final RxMap<String, bool> showSolution = <String, bool>{}.obs;
-  final RxList<String> wrongProblemIds = <String>[].obs;
 
-  final Rx<UserStats> userStats = UserStats().obs;
+  // 用户答案
+  final RxString userAnswer = ''.obs;
 
-  PageController? pageController;
+  // 是否已提交答案
+  final RxBool isSubmitted = false.obs;
+
+  // 是否显示解析
+  final RxBool showSolution = false.obs;
+
+  // 是否正确
+  final RxBool isCorrect = false.obs;
+
+  // 答题开始时间
+  DateTime? _startTime;
+
+  // 统计数据
+  final RxInt totalAnswered = 0.obs;
+  final RxInt correctCount = 0.obs;
+  final RxInt wrongCount = 0.obs;
+
+  // 主题和章节（主题在侧边栏切换，章节在主页面切换）
+  final RxString selectedTheme = '高中衔接大学数学基础'.obs;
+  final RxString selectedChapter = '第1章 三角函数'.obs; // 默认第一章
+
+  // 加载状态
+  final RxBool isLoading = false.obs;
+
+  // 是否离线模式
+  bool get isOfflineMode => _storageService.isOfflineMode();
+
+  // 当前题目
+  Question? get currentQuestion {
+    if (currentIndex.value >= 0 && currentIndex.value < questions.length) {
+      return questions[currentIndex.value];
+    }
+    return null;
+  }
+
+  // 正确率
+  double get accuracy {
+    if (totalAnswered.value == 0) return 0.0;
+    return correctCount.value / totalAnswered.value;
+  }
 
   @override
   void onInit() {
     super.onInit();
-    print('🎯 DrillController.onInit() 被调用');
-    loadUserStats();
-    loadWrongProblems();
-    // 等待ProblemServiceV2初始化完成后再过滤
-    _waitForServiceAndFilter();
-  }
+    // 等待 ProblemService 加载完成后再加载题目
+    ever(_problemService.isLoading, (loading) {
+      if (!loading && questions.isEmpty) {
+        loadQuestions();
+      }
+    });
 
-  Future<void> _waitForServiceAndFilter() async {
-    print('⏳ 等待ProblemServiceV2初始化...');
-    // 等待一小段时间，确保onInit执行完成
-    await Future.delayed(const Duration(milliseconds: 100));
-
-    // 检查索引是否加载
-    int retries = 0;
-    while (_problemService.getAllTopics().isEmpty && retries < 20) {
-      print('⏳ 索引未就绪，等待中... ($retries)');
-      await Future.delayed(const Duration(milliseconds: 100));
-      retries++;
+    // 如果已经加载完成，直接加载题目
+    if (!_problemService.isLoading.value) {
+      loadQuestions();
     }
-
-    if (_problemService.getAllTopics().isEmpty) {
-      print('❌ ProblemServiceV2初始化超时，索引仍为空');
-    } else {
-      print(
-          '✅ ProblemServiceV2初始化完成，索引有${_problemService.getAllTopics().length}个主题');
-    }
-
-    print('🎯 开始调用 filterProblems()');
-    await filterProblems();
   }
 
-  @override
-  void onClose() {
-    pageController?.dispose();
-    super.onClose();
-  }
-
-  Future<void> filterProblems() async {
-    print(
-        '🔍 开始过滤题目: 主题=${selectedTopic.value}, 难度=${selectedDifficulty.value}');
-    List<Problem> problems;
-
+  /// 加载题目
+  Future<void> loadQuestions() async {
     try {
-      // 异步加载题目
-      if (selectedTopic.value == '全部' && selectedDifficulty.value == '全部') {
-        // 加载所有主题（按需）
-        print('📚 加载所有主题...');
-        problems = await _problemService.getProblemsByTopic('全部');
-      } else if (selectedTopic.value == '全部') {
-        print('📚 按难度加载: ${selectedDifficulty.value}');
-        problems = await _problemService
-            .getProblemsByDifficulty(selectedDifficulty.value);
-      } else if (selectedDifficulty.value == '全部') {
-        print('📚 加载主题: ${selectedTopic.value}');
-        problems =
-            await _problemService.getProblemsByTopic(selectedTopic.value);
+      isLoading.value = true;
+
+      // 从本地加载题目（离线模式或作为备用）
+      final allProblems = _problemService.getAllProblems();
+
+      print('📚 [加载题目] 总题目数：${allProblems.length}');
+      print('🎯 [加载题目] 当前主题：${selectedTheme.value}');
+      print('📖 [加载题目] 当前章节：${selectedChapter.value}');
+
+      // 如果题目还在加载中，等待
+      if (allProblems.isEmpty && _problemService.isLoading.value) {
+        print('⏳ [等待] 题目正在加载中...');
+        isLoading.value = false;
+        return;
+      }
+
+      // 应用筛选 - 创建新列表以避免修改不可变列表
+      List<Question> filtered = List.from(allProblems);
+
+      // 根据章节筛选（如果选择了具体章节）
+      if (selectedChapter.value != '全部') {
+        // 提取关键词
+        final chapterKeyword = selectedChapter.value.contains('章')
+            ? selectedChapter.value.split(' ').last
+            : selectedChapter.value;
+
+        print('🔍 [筛选] 章节关键词：$chapterKeyword');
+
+        // 精确匹配
+        filtered = filtered.where((q) {
+          final topicMatch = q.topic.contains(chapterKeyword);
+          final tagsMatch = q.tags.any((tag) => tag.contains(chapterKeyword));
+          return topicMatch || tagsMatch;
+        }).toList();
+
+        print('✅ [筛选] 精确匹配结果：${filtered.length}题');
+
+        // 如果没有结果，尝试模糊匹配
+        if (filtered.isEmpty && chapterKeyword.length > 1) {
+          print('⚠️ [筛选] 精确匹配无结果，尝试模糊匹配...');
+
+          // 拆分关键词（例如："极限与连续" -> ["极限", "连续"]）
+          final keywords = chapterKeyword
+              .split('与')
+              .expand((part) => part.split('和'))
+              .where((k) => k.isNotEmpty)
+              .toList();
+
+          filtered = allProblems.where((q) {
+            for (final kw in keywords) {
+              if (q.topic.contains(kw) ||
+                  q.tags.any((tag) => tag.contains(kw))) {
+                return true;
+              }
+            }
+            return false;
+          }).toList();
+
+          print('✅ [筛选] 模糊匹配结果：${filtered.length}题');
+        }
       } else {
-        print('📚 加载主题+难度: ${selectedTopic.value} ${selectedDifficulty.value}');
-        problems = await _problemService.getProblemsByTopicAndDifficulty(
-          selectedTopic.value,
-          selectedDifficulty.value,
-        );
+        print('📋 [筛选] 加载全部章节题目');
       }
 
-      print('✅ 过滤完成: 获得${problems.length}道题');
-      currentProblems.value = problems;
+      // 打乱顺序
+      filtered.shuffle();
+
+      questions.value = filtered;
       currentIndex.value = 0;
-      userAnswers.clear();
-      answerStatus.clear();
-      showSolution.clear();
-      // 重置 PageController
-      pageController?.dispose();
-      pageController = PageController(initialPage: 0);
+
+      // 重置答题状态
+      if (filtered.isNotEmpty) {
+        startQuestion();
+      }
+
+      // 提示信息
+      if (filtered.isEmpty) {
+        print('❌ [结果] 当前筛选条件下没有题目');
+        Get.snackbar(
+          '提示',
+          '当前章节「${selectedChapter.value}」暂无题目\n\n可能原因：\n1. 题目数据暂未添加\n2. 请选择其他章节',
+          duration: const Duration(seconds: 3),
+        );
+      } else {
+        print('🎉 [结果] 成功加载 ${filtered.length} 道题目');
+      }
     } catch (e) {
-      print('❌ 过滤题目失败: $e');
-      currentProblems.value = [];
+      print('❌ [错误] 加载题目失败: $e');
+    } finally {
+      isLoading.value = false;
     }
   }
 
-  void setTopic(String topic) {
-    selectedTopic.value = topic;
-    filterProblems();
-  }
+  /// 切换学习主题（从侧边栏调用）
+  void setTheme(String theme) {
+    selectedTheme.value = theme;
 
-  void setDifficulty(String difficulty) {
-    selectedDifficulty.value = difficulty;
-    filterProblems();
-  }
-
-  void setAnswer(String problemId, String answer) {
-    userAnswers[problemId] = answer;
-  }
-
-  void selectAnswer(String problemId, String selectedOption) {
-    // 保存用户选择的答案
-    userAnswers[problemId] = selectedOption;
-
-    // 检查答案
-    final problem = currentProblems.firstWhere((p) => p.id == problemId);
-    final correctAnswer = problem.answer.trim().toUpperCase();
-    final isCorrect = selectedOption.toUpperCase() == correctAnswer;
-
-    // 更新答案状态
-    answerStatus[problemId] = isCorrect;
-
-    // 更新统计和错题本
-    if (!isCorrect) {
-      if (!wrongProblemIds.contains(problemId)) {
-        wrongProblemIds.add(problemId);
-        saveWrongProblems();
-      }
-    }
-    updateUserStats(isCorrect, problem.topic);
-
-    // 如果答案正确，延迟后自动滑动到下一题
-    if (isCorrect && pageController != null) {
-      Timer(const Duration(milliseconds: 800), () {
-        if (currentIndex.value < currentProblems.length - 1) {
-          currentIndex.value++;
-          pageController!.nextPage(
-            duration: const Duration(milliseconds: 300),
-            curve: Curves.easeInOut,
-          );
-        }
-      });
-    }
-  }
-
-  void checkAnswer(String problemId) {
-    final problem = currentProblems.firstWhere((p) => p.id == problemId);
-    final userAnswer = userAnswers[problemId]?.trim() ?? '';
-    final correctAnswer = problem.answer.trim();
-
-    final isCorrect = userAnswer.toLowerCase() == correctAnswer.toLowerCase();
-    answerStatus[problemId] = isCorrect;
-
-    if (!isCorrect) {
-      if (!wrongProblemIds.contains(problemId)) {
-        wrongProblemIds.add(problemId);
-        saveWrongProblems();
-      }
+    // 自动选择第一章
+    final chapters = getChaptersForCurrentTheme();
+    if (chapters.isNotEmpty) {
+      selectedChapter.value = chapters.first;
     }
 
-    updateUserStats(isCorrect, problem.topic);
+    loadQuestions();
   }
 
-  /// 检查填空题答案（调用后端判分）
-  Future<void> checkFillAnswer(String problemId) async {
-    final problem = currentProblems.firstWhere((p) => p.id == problemId);
-    final userAnswer = userAnswers[problemId]?.trim() ?? '';
+  /// 切换章节（从主页面调用）
+  void setChapter(String chapter) {
+    selectedChapter.value = chapter;
+    loadQuestions();
+  }
 
-    if (userAnswer.isEmpty) {
-      Get.snackbar(
-        '提示',
-        '请输入答案',
-        snackPosition: SnackPosition.BOTTOM,
-        duration: const Duration(seconds: 2),
+  /// 获取当前主题的章节列表（不包含"全部"选项）
+  List<String> getChaptersForCurrentTheme() {
+    // 优先从 ConfigService 获取（服务器配置）
+    final config = _configService.getThemeConfig(selectedTheme.value);
+    if (config == null) return [];
+
+    return config.chapters.map((c) => c.chapterName).toList();
+  }
+
+  /// 获取当前主题的配置
+  ThemeConfig? getCurrentThemeConfig() {
+    return _configService.getThemeConfig(selectedTheme.value);
+  }
+
+  /// 获取当前章节的配置
+  ChapterConfig? getCurrentChapterConfig() {
+    final config = getCurrentThemeConfig();
+    if (config == null || selectedChapter.value == '全部') return null;
+
+    try {
+      return config.chapters.firstWhere(
+        (c) => c.chapterName == selectedChapter.value,
       );
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /// 获取当前章节的建议题量
+  String getChapterInfo() {
+    final chapterConfig = getCurrentChapterConfig();
+    if (chapterConfig == null) {
+      return '全部章节';
+    }
+
+    return '${chapterConfig.chapterName} · '
+        '建议${chapterConfig.suggestedQuestions}题 · '
+        '重要性：${chapterConfig.importance}';
+  }
+
+  /// 开始答题
+  void startQuestion() {
+    _startTime = DateTime.now();
+    userAnswer.value = '';
+    isSubmitted.value = false;
+    showSolution.value = false;
+    isCorrect.value = false;
+  }
+
+  /// 选择答案
+  void selectAnswer(String answer) {
+    if (!isSubmitted.value) {
+      userAnswer.value = answer;
+    }
+  }
+
+  /// 提交答案
+  Future<void> submitAnswer() async {
+    if (userAnswer.value.isEmpty || currentQuestion == null) {
+      Get.snackbar('提示', '请先选择答案');
+      return;
+    }
+
+    if (isSubmitted.value) {
       return;
     }
 
     try {
-      // 调用后端判分接口
-      final result = await _remoteService.gradeAnswer(
-        problemId: problemId,
-        userAnswer: userAnswer,
-        problemType: 'fill',
-        correctAnswer: problem.answer,
-        answerType: problem.answerType,
-        correctAnswerExpr: problem.answerExpr,
-      );
+      isLoading.value = true;
 
-      final isCorrect = result['isCorrect'] as bool;
-      answerStatus[problemId] = isCorrect;
+      // 计算耗时
+      final timeSpent = _startTime != null
+          ? DateTime.now().difference(_startTime!).inSeconds.toDouble()
+          : 0.0;
 
-      if (!isCorrect) {
-        if (!wrongProblemIds.contains(problemId)) {
-          wrongProblemIds.add(problemId);
-          saveWrongProblems();
+      final question = currentQuestion!;
+
+      // 检查答案是否正确
+      final correct =
+          userAnswer.value.toUpperCase() == question.answer.toUpperCase();
+      isCorrect.value = correct;
+      isSubmitted.value = true;
+
+      // 更新统计
+      totalAnswered.value++;
+      if (correct) {
+        correctCount.value++;
+      } else {
+        wrongCount.value++;
+      }
+
+      // 如果不是离线模式，提交到后端
+      if (!isOfflineMode) {
+        final studentId = _storageService.getStudentId() ??
+            _apiService.currentStudentId.value;
+
+        final request = SubmitAnswerRequest(
+          studentId: studentId,
+          questionId: question.questionId,
+          studentAnswer: userAnswer.value,
+          timeSpentSeconds: timeSpent,
+        );
+
+        final response = await _apiService.submitAnswer(request);
+
+        if (response != null) {
+          print('Answer submitted successfully');
+        } else {
+          print('Failed to submit answer to server');
         }
       }
 
-      updateUserStats(isCorrect, problem.topic);
-
-      // 如果答案正确，延迟后自动滑动到下一题
-      if (isCorrect && pageController != null) {
-        Timer(const Duration(milliseconds: 1500), () {
-          if (currentIndex.value < currentProblems.length - 1) {
-            currentIndex.value++;
-            pageController!.nextPage(
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.easeInOut,
-            );
-          }
-        });
+      // 显示解析
+      if (_storageService.isShowSolution()) {
+        showSolution.value = true;
       }
     } catch (e) {
-      Get.snackbar(
-        '错误',
-        '判分失败：$e',
-        snackPosition: SnackPosition.BOTTOM,
-        duration: const Duration(seconds: 3),
-        backgroundColor: Colors.red.shade100,
-      );
+      print('Error submitting answer: $e');
+      Get.snackbar('错误', '提交答案失败：$e');
+    } finally {
+      isLoading.value = false;
     }
   }
 
-  /// 检查解答题答案（调用后端判分）
-  Future<void> checkSolutionAnswer(String problemId) async {
-    final problem = currentProblems.firstWhere((p) => p.id == problemId);
-    final userAnswer = userAnswers[problemId]?.trim() ?? '';
-
-    if (userAnswer.isEmpty) {
-      Get.snackbar(
-        '提示',
-        '请输入最终答案',
-        snackPosition: SnackPosition.BOTTOM,
-        duration: const Duration(seconds: 2),
-      );
-      return;
-    }
-
-    try {
-      // 调用后端判分接口
-      final result = await _remoteService.gradeAnswer(
-        problemId: problemId,
-        userAnswer: userAnswer,
-        problemType: 'solution',
-        correctAnswer: problem.answer,
-        answerType: problem.answerType,
-        correctAnswerExpr: problem.answerExpr,
-      );
-
-      final isCorrect = result['isCorrect'] as bool;
-      answerStatus[problemId] = isCorrect;
-
-      if (!isCorrect) {
-        if (!wrongProblemIds.contains(problemId)) {
-          wrongProblemIds.add(problemId);
-          saveWrongProblems();
-        }
-      }
-
-      updateUserStats(isCorrect, problem.topic);
-
-      // 如果答案正确，延迟后自动滑动到下一题
-      if (isCorrect && pageController != null) {
-        Timer(const Duration(milliseconds: 1500), () {
-          if (currentIndex.value < currentProblems.length - 1) {
-            currentIndex.value++;
-            pageController!.nextPage(
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.easeInOut,
-            );
-          }
-        });
-      }
-    } catch (e) {
-      Get.snackbar(
-        '错误',
-        '判分失败：$e',
-        snackPosition: SnackPosition.BOTTOM,
-        duration: const Duration(seconds: 3),
-        backgroundColor: Colors.red.shade100,
-      );
-    }
-  }
-
-  void toggleSolution(String problemId) {
-    showSolution[problemId] = !(showSolution[problemId] ?? false);
-  }
-
-  void nextProblem() {
-    if (currentIndex.value < currentProblems.length - 1) {
+  /// 下一题
+  void nextQuestion() {
+    if (currentIndex.value < questions.length - 1) {
       currentIndex.value++;
+      startQuestion();
+    } else {
+      // 已完成所有题目
+      Get.snackbar(
+        '完成',
+        '恭喜！已完成所有题目\n正确率：${(accuracy * 100).toStringAsFixed(1)}%',
+        duration: const Duration(seconds: 3),
+      );
     }
   }
 
-  void previousProblem() {
+  /// 上一题
+  void previousQuestion() {
     if (currentIndex.value > 0) {
       currentIndex.value--;
+      startQuestion();
     }
   }
 
-  void updateUserStats(bool isCorrect, String topic) {
-    userStats.value.totalProblems++;
-    if (isCorrect) {
-      userStats.value.correctCount++;
-    } else {
-      userStats.value.wrongCount++;
-    }
-
-    if (!userStats.value.topicStats.containsKey(topic)) {
-      userStats.value.topicStats[topic] = TopicStats();
-    }
-    userStats.value.topicStats[topic]!.total++;
-    if (isCorrect) {
-      userStats.value.topicStats[topic]!.correct++;
-    }
-
-    saveUserStats();
-  }
-
-  Future<void> loadUserStats() async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final statsJson = prefs.getString('user_stats');
-      if (statsJson != null) {
-        userStats.value = UserStats.fromJson(json.decode(statsJson));
-      }
-    } catch (e) {
-      print('Error loading user stats: $e');
+  /// 跳转到指定题目
+  void jumpToQuestion(int index) {
+    if (index >= 0 && index < questions.length) {
+      currentIndex.value = index;
+      startQuestion();
     }
   }
 
-  Future<void> saveUserStats() async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setString(
-          'user_stats', json.encode(userStats.value.toJson()));
-    } catch (e) {
-      print('Error saving user stats: $e');
-    }
+  /// 重置统计
+  void resetStats() {
+    totalAnswered.value = 0;
+    correctCount.value = 0;
+    wrongCount.value = 0;
   }
 
-  Future<void> loadWrongProblems() async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final wrongIds = prefs.getStringList('wrong_problems') ?? [];
-      wrongProblemIds.value = wrongIds;
-    } catch (e) {
-      print('Error loading wrong problems: $e');
-    }
+  /// 切换解析显示
+  void toggleSolution() {
+    showSolution.value = !showSolution.value;
   }
-
-  Future<void> saveWrongProblems() async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setStringList('wrong_problems', wrongProblemIds.toList());
-    } catch (e) {
-      print('Error saving wrong problems: $e');
-    }
-  }
-
-  int get progress => answerStatus.length;
-
-  int get totalProblems => currentProblems.length;
 }

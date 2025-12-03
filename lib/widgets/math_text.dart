@@ -1,66 +1,72 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_math_fork/flutter_math.dart';
 
-/// Simple LaTeX text display widget for Flutter 3.10 compatibility
-/// This is a temporary solution until Flutter SDK is upgraded
+/// 数学公式渲染组件
 class MathText extends StatelessWidget {
   final String text;
   final TextStyle? textStyle;
-  final TextAlign? textAlign;
+  final double? mathFontSize;
 
   const MathText(
     this.text, {
     super.key,
     this.textStyle,
-    this.textAlign,
+    this.mathFontSize,
   });
 
   @override
   Widget build(BuildContext context) {
-    // Simple text display - LaTeX syntax is shown as-is
-    // For better rendering, upgrade Flutter SDK and use flutter_math_fork
-    return SelectableText(
-      _cleanLatex(text),
-      style: textStyle ?? Theme.of(context).textTheme.bodyLarge,
-      textAlign: textAlign ?? TextAlign.left,
+    final defaultTextStyle = DefaultTextStyle.of(context).style;
+    final style = textStyle ?? defaultTextStyle;
+    final fontSize = mathFontSize ?? style.fontSize ?? 16;
+
+    // 解析文本中的LaTeX公式
+    final List<InlineSpan> spans = [];
+    final RegExp mathRegExp = RegExp(r'\$([^\$]+)\$');
+    int lastMatchEnd = 0;
+
+    for (final match in mathRegExp.allMatches(text)) {
+      // 添加普通文本
+      if (match.start > lastMatchEnd) {
+        spans.add(TextSpan(
+          text: text.substring(lastMatchEnd, match.start),
+          style: style,
+        ));
+      }
+
+      // 添加数学公式
+      final latex = match.group(1)!;
+      try {
+        spans.add(WidgetSpan(
+          alignment: PlaceholderAlignment.middle,
+          child: Math.tex(
+            latex,
+            textStyle: style.copyWith(fontSize: fontSize),
+            mathStyle: MathStyle.text,
+          ),
+        ));
+      } catch (e) {
+        // 如果解析失败，显示原文
+        spans.add(TextSpan(
+          text: '\$${latex}\$',
+          style: style.copyWith(color: Colors.red),
+        ));
+      }
+
+      lastMatchEnd = match.end;
+    }
+
+    // 添加剩余的普通文本
+    if (lastMatchEnd < text.length) {
+      spans.add(TextSpan(
+        text: text.substring(lastMatchEnd),
+        style: style,
+      ));
+    }
+
+    return RichText(
+      text: TextSpan(children: spans),
     );
   }
-
-  String _cleanLatex(String latex) {
-    // Remove LaTeX delimiters for better readability
-    String cleaned = latex
-        .replaceAll(r'\$', '') // Remove $ delimiters
-        .replaceAll(r'\frac{', '') // Simplify fractions
-        .replaceAll(r'}{', '/')
-        .replaceAll(r'}', '')
-        .replaceAll(r'{', '')
-        .replaceAll(r'\sin', 'sin')
-        .replaceAll(r'\cos', 'cos')
-        .replaceAll(r'\tan', 'tan')
-        .replaceAll(r'\ln', 'ln')
-        .replaceAll(r'\log', 'log')
-        .replaceAll(r'\lim', 'lim')
-        .replaceAll(r'\to', '→')
-        .replaceAll(r'\infty', '∞')
-        .replaceAll(r'\cdot', '·')
-        .replaceAll(r'\times', '×')
-        .replaceAll(r'\div', '÷')
-        .replaceAll(r'\sqrt', '√')
-        .replaceAll(r'\sum', 'Σ')
-        .replaceAll(r'\int', '∫')
-        .replaceAll(r'\partial', '∂')
-        .replaceAll(r'\alpha', 'α')
-        .replaceAll(r'\beta', 'β')
-        .replaceAll(r'\gamma', 'γ')
-        .replaceAll(r'\pi', 'π')
-        .replaceAll(r'\theta', 'θ')
-        .replaceAll(r'\lambda', 'λ')
-        .replaceAll(r'\mu', 'μ')
-        .replaceAll(r'\sigma', 'σ')
-        .replaceAll(r'\Delta', 'Δ')
-        .replaceAll(r'\nabla', '∇')
-        .replaceAll(r'^', '^') // Keep superscript notation
-        .replaceAll(r'_', '_'); // Keep subscript notation
-
-    return cleaned;
-  }
 }
+
