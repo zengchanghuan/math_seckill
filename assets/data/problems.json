@@ -127,8 +127,8 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\sin(180^\\circ) = ?$",
-    "answer": "0.0",
-    "solution": "$\\sin(180^\\circ) = 0 \\approx 0.0000$",
+    "answer": "0",
+    "solution": "$\\sin(180^\\circ) = 0 \\approx 0000$",
     "options": [],
     "tags": [
       "三角函数",
@@ -146,8 +146,8 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\cos(120^\\circ) = ?$",
-    "answer": "-0.5",
-    "solution": "$\\cos(120^\\circ) = - \\frac{1}{2} \\approx -0.5000$",
+    "answer": "-\\frac{1}{2}",
+    "solution": "$\\cos(120^\\circ) = - \\frac{1}{2} \\approx -\\frac{1}{2}000$",
     "options": [],
     "tags": [
       "三角函数",
@@ -165,7 +165,7 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\cos(150^\\circ) = ?$",
-    "answer": "-0.8660254037844386",
+    "answer": "-\\frac{\\sqrt{3}}{2}",
     "solution": "$\\cos(150^\\circ) = - \\frac{\\sqrt{3}}{2} \\approx -0.8660$",
     "options": [],
     "tags": [
@@ -184,7 +184,7 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\cos(135^\\circ) = ?$",
-    "answer": "-0.7071067811865476",
+    "answer": "-\\frac{\\sqrt{2}}{2}",
     "solution": "$\\cos(135^\\circ) = - \\frac{\\sqrt{2}}{2} \\approx -0.7071$",
     "options": [],
     "tags": [
@@ -203,8 +203,8 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\sin(30^\\circ) = ?$",
-    "answer": "0.5",
-    "solution": "$\\sin(30^\\circ) = \\frac{1}{2} \\approx 0.5000$",
+    "answer": "\\frac{1}{2}",
+    "solution": "$\\sin(30^\\circ) = \\frac{1}{2} \\approx \\frac{1}{2}000$",
     "options": [],
     "tags": [
       "三角函数",
@@ -222,8 +222,8 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\sin(90^\\circ) = ?$",
-    "answer": "1.0",
-    "solution": "$\\sin(90^\\circ) = 1 \\approx 1.0000$",
+    "answer": "1",
+    "solution": "$\\sin(90^\\circ) = 1 \\approx 1000$",
     "options": [],
     "tags": [
       "三角函数",
@@ -313,7 +313,7 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\cos(45^\\circ) = ?$",
-    "answer": "0.7071067811865476",
+    "answer": "\\frac{\\sqrt{2}}{2}",
     "solution": "$\\cos(45^\\circ) = \\frac{\\sqrt{2}}{2} \\approx 0.7071$",
     "options": [],
     "tags": [
@@ -332,8 +332,8 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\sin(0^\\circ) = ?$",
-    "answer": "0.0",
-    "solution": "$\\sin(0^\\circ) = 0 \\approx 0.0000$",
+    "answer": "0",
+    "solution": "$\\sin(0^\\circ) = 0 \\approx 0000$",
     "options": [],
     "tags": [
       "三角函数",
@@ -351,7 +351,7 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\sin(60^\\circ) = ?$",
-    "answer": "0.8660254037844386",
+    "answer": "\\frac{\\sqrt{3}}{2}",
     "solution": "$\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2} \\approx 0.8660$",
     "options": [],
     "tags": [
@@ -370,8 +370,8 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\tan(45^\\circ) = ?$",
-    "answer": "1.0",
-    "solution": "$\\tan(45^\\circ) = 1 \\approx 1.0000$",
+    "answer": "1",
+    "solution": "$\\tan(45^\\circ) = 1 \\approx 1000$",
     "options": [],
     "tags": [
       "三角函数",
@@ -413,8 +413,8 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\tan(0^\\circ) = ?$",
-    "answer": "0.0",
-    "solution": "$\\tan(0^\\circ) = 0 \\approx 0.0000$",
+    "answer": "0",
+    "solution": "$\\tan(0^\\circ) = 0 \\approx 0000$",
     "options": [],
     "tags": [
       "三角函数",
@@ -432,7 +432,7 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\tan(120^\\circ) = ?$",
-    "answer": "-1.7320508075688772",
+    "answer": "-\\sqrt{3}",
     "solution": "$\\tan(120^\\circ) = - \\sqrt{3} \\approx -1.7321$",
     "options": [],
     "tags": [
@@ -451,8 +451,8 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\tan(180^\\circ) = ?$",
-    "answer": "0.0",
-    "solution": "$\\tan(180^\\circ) = 0 \\approx 0.0000$",
+    "answer": "0",
+    "solution": "$\\tan(180^\\circ) = 0 \\approx 0000$",
     "options": [],
     "tags": [
       "三角函数",
@@ -470,7 +470,7 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\sin(135^\\circ) = ?$",
-    "answer": "0.7071067811865476",
+    "answer": "\\frac{\\sqrt{2}}{2}",
     "solution": "$\\sin(135^\\circ) = \\frac{\\sqrt{2}}{2} \\approx 0.7071$",
     "options": [],
     "tags": [
@@ -489,8 +489,8 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\tan(135^\\circ) = ?$",
-    "answer": "-1.0",
-    "solution": "$\\tan(135^\\circ) = -1 \\approx -1.0000$",
+    "answer": "-1",
+    "solution": "$\\tan(135^\\circ) = -1 \\approx -1000$",
     "options": [],
     "tags": [
       "三角函数",
@@ -508,8 +508,8 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\cos(90^\\circ) = ?$",
-    "answer": "0.0",
-    "solution": "$\\cos(90^\\circ) = 0 \\approx 0.0000$",
+    "answer": "0",
+    "solution": "$\\cos(90^\\circ) = 0 \\approx 0000$",
     "options": [],
     "tags": [
       "三角函数",
@@ -527,8 +527,8 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\cos(0^\\circ) = ?$",
-    "answer": "1.0",
-    "solution": "$\\cos(0^\\circ) = 1 \\approx 1.0000$",
+    "answer": "1",
+    "solution": "$\\cos(0^\\circ) = 1 \\approx 1000$",
     "options": [],
     "tags": [
       "三角函数",
@@ -546,7 +546,7 @@
     "chapter": null,
     "section": null,
     "question": "计算：$\\sin(120^\\circ) = ?$",
-    "answer": "0.8660254037844386",
+    "answer": "\\frac{\\sqrt{3}}{2}",
     "solution": "$\\sin(120^\\circ) = \\frac{\\sqrt{3}}{2} \\approx 0.8660$",
     "options": [],
     "tags": [
@@ -2120,7 +2120,7 @@
       "42"
     ],
     "answer": "A",
-    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 6 \\times 7 = 21.0$",
+    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 6 \\times 7 = 21$",
     "tags": [
       "几何",
       "三角形",
@@ -2213,7 +2213,7 @@
       "20.0"
     ],
     "answer": "B",
-    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 10 \\times 8 = 40.0$",
+    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 10 \\times 8 = 40$",
     "tags": [
       "几何",
       "三角形",
@@ -2337,7 +2337,7 @@
       "6.5"
     ],
     "answer": "A",
-    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 8 \\times 5 = 20.0$",
+    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 8 \\times 5 = 20$",
     "tags": [
       "几何",
       "三角形",
@@ -2430,7 +2430,7 @@
       "20.0"
     ],
     "answer": "A",
-    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 8 \\times 10 = 40.0$",
+    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 8 \\times 10 = 40$",
     "tags": [
       "几何",
       "三角形",
@@ -2740,7 +2740,7 @@
       "21.0"
     ],
     "answer": "D",
-    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 7 \\times 6 = 21.0$",
+    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 7 \\times 6 = 21$",
     "tags": [
       "几何",
       "三角形",
@@ -6888,7 +6888,7 @@
       "10.5"
     ],
     "answer": "D",
-    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 7 \\times 3 = 10.5$",
+    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 7 \\times 3 = 1\\frac{1}{2}$",
     "tags": [
       "几何",
       "三角形",
@@ -6950,7 +6950,7 @@
       "60"
     ],
     "answer": "B",
-    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 6 \\times 10 = 30.0$",
+    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 6 \\times 10 = 30$",
     "tags": [
       "几何",
       "三角形",
@@ -8717,7 +8717,7 @@
       "10.0"
     ],
     "answer": "D",
-    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 5 \\times 4 = 10.0$",
+    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 5 \\times 4 = 10$",
     "tags": [
       "几何",
       "三角形",
@@ -8748,7 +8748,7 @@
       "20"
     ],
     "answer": "B",
-    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 4 \\times 5 = 10.0$",
+    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 4 \\times 5 = 10$",
     "tags": [
       "几何",
       "三角形",
@@ -8810,7 +8810,7 @@
       "9.0"
     ],
     "answer": "B",
-    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 9 \\times 9 = 40.5$",
+    "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 9 \\times 9 = 4\\frac{1}{2}$",
     "tags": [
       "几何",
       "三角形",
@@ -8901,7 +8901,7 @@
       "$\\frac{\\pi}{4}$"
     ],
     "answer": "D",
-    "solution": "根据反三角函数的定义，$\\arcsin(0.7071067811865476) = \\frac{\\pi}{4}$",
+    "solution": "根据反三角函数的定义，$\\arcsin(\\frac{\\sqrt{2}}{2}) = \\frac{\\pi}{4}$",
     "tags": [
       "反三角函数",
       "arcsin"
@@ -8988,7 +8988,7 @@
       "$0$"
     ],
     "answer": "B",
-    "solution": "根据反三角函数的定义，$\\arcsin(-0.5) = -\\frac{\\pi}{6}$",
+    "solution": "根据反三角函数的定义，$\\arcsin(-\\frac{1}{2}) = -\\frac{\\pi}{6}$",
     "tags": [
       "反三角函数",
       "arcsin"
@@ -9017,7 +9017,7 @@
       "$0$"
     ],
     "answer": "C",
-    "solution": "根据反三角函数的定义，$\\arcsin(-0.7071067811865476) = 0$",
+    "solution": "根据反三角函数的定义，$\\arcsin(-\\frac{\\sqrt{2}}{2}) = 0$",
     "tags": [
       "反三角函数",
       "arcsin"
@@ -9046,7 +9046,7 @@
       "$\\frac{\\pi}{2}$"
     ],
     "answer": "C",
-    "solution": "根据反三角函数的定义，$\\arcsin(0.5) = \\frac{\\pi}{6}$",
+    "solution": "根据反三角函数的定义，$\\arcsin(\\frac{1}{2}) = \\frac{\\pi}{6}$",
     "tags": [
       "反三角函数",
       "arcsin"

@@ -222,9 +222,15 @@ class DrillPage extends GetView<DrillController> {
                                   ),
                                 ),
                                 if (!controller.isCorrect.value)
-                                  MathText(
-                                    '正确答案：\$${question.answer}\$',
-                                    textStyle: const TextStyle(fontSize: 14),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 4),
+                                    child: MathText(
+                                      '正确答案：\$${question.answer}\$',
+                                      textStyle: const TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
                                   ),
                               ],
                             ),

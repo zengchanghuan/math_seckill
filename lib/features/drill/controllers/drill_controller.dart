@@ -6,6 +6,7 @@ import '../../../core/services/problem_service.dart';
 import '../../../core/services/storage_service.dart';
 import '../../../core/services/config_service.dart';
 import '../../../core/config/theme_config.dart';
+import '../../../core/utils/answer_formatter.dart';
 
 /// 刷题控制器 - 管理刷题流程和状态
 class DrillController extends GetxController {
@@ -276,9 +277,11 @@ class DrillController extends GetxController {
 
       final question = currentQuestion!;
 
-      // 检查答案是否正确
-      final correct =
-          userAnswer.value.toUpperCase() == question.answer.toUpperCase();
+      // 检查答案是否正确（使用智能比对）
+      final correct = AnswerFormatter.isEquivalent(
+        userAnswer.value,
+        question.answer,
+      );
       isCorrect.value = correct;
       isSubmitted.value = true;
 
