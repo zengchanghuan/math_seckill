@@ -1,671 +1,5 @@
 [
   {
-    "questionId": "trig_L1_c_001",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "choice",
-    "chapter": null,
-    "section": null,
-    "question": "函数 $f(x) = \\tan(x)$ 的定义域是？",
-    "answer": "D",
-    "solution": "根据三角函数的基本性质，答案是 $x \\neq \\frac{\\pi}{2} + k\\pi (k \\in \\mathbb{Z})$",
-    "options": [
-      "$x > 0$",
-      "$所有实数$",
-      "$x \\neq k\\pi (k \\in \\mathbb{Z})$",
-      "$x \\neq \\frac{\\pi}{2} + k\\pi (k \\in \\mathbb{Z})$"
-    ],
-    "tags": [
-      "三角函数",
-      "基础概念"
-    ],
-    "answerType": null,
-    "answerExpr": null,
-    "createdAt": "2025-12-02T17:14:00.337435"
-  },
-  {
-    "questionId": "trig_L1_c_002",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "choice",
-    "chapter": null,
-    "section": null,
-    "question": "函数 $f(x) = \\cos(x)$ 的值域是？",
-    "answer": "B",
-    "solution": "根据三角函数的基本性质，答案是 $[-1, 1]$",
-    "options": [
-      "$[0, 1]$",
-      "$[-1, 1]$",
-      "$[-2, 2]$",
-      "$所有实数$"
-    ],
-    "tags": [
-      "三角函数",
-      "基础概念"
-    ],
-    "answerType": null,
-    "answerExpr": null,
-    "createdAt": "2025-12-02T17:14:00.339515"
-  },
-  {
-    "questionId": "trig_L1_c_003",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "choice",
-    "chapter": null,
-    "section": null,
-    "question": "函数 $f(x) = \\sin(x)$ 的定义域是？",
-    "answer": "B",
-    "solution": "根据三角函数的基本性质，答案是 $所有实数$",
-    "options": [
-      "$x \\neq k\\pi (k \\in \\mathbb{Z})$",
-      "$所有实数$",
-      "$x > 0$",
-      "$x \\neq 0$"
-    ],
-    "tags": [
-      "三角函数",
-      "基础概念"
-    ],
-    "answerType": null,
-    "answerExpr": null,
-    "createdAt": "2025-12-02T17:14:00.339793"
-  },
-  {
-    "questionId": "trig_L1_c_007",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "choice",
-    "chapter": null,
-    "section": null,
-    "question": "函数 $f(x) = \\tan(x)$ 的值域是？",
-    "answer": "A",
-    "solution": "根据三角函数的基本性质，答案是 $所有实数$",
-    "options": [
-      "$所有实数$",
-      "$所有实数$",
-      "$[0, 1]$",
-      "$[-2, 2]$"
-    ],
-    "tags": [
-      "三角函数",
-      "基础概念"
-    ],
-    "answerType": null,
-    "answerExpr": null,
-    "createdAt": "2025-12-02T17:14:00.340480"
-  },
-  {
-    "questionId": "trig_L1_c_010",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "choice",
-    "chapter": null,
-    "section": null,
-    "question": "函数 $f(x) = \\tan(x)$ 的最小正周期是？",
-    "answer": "A",
-    "solution": "根据三角函数的基本性质，答案是 $\\pi$",
-    "options": [
-      "$\\pi$",
-      "$\\frac{\\pi}{2}$",
-      "$\\pi$",
-      "$4\\pi$"
-    ],
-    "tags": [
-      "三角函数",
-      "基础概念"
-    ],
-    "answerType": null,
-    "answerExpr": null,
-    "createdAt": "2025-12-02T17:14:00.341057"
-  },
-  {
-    "questionId": "trig_L1_f_001",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\sin(180^\\circ) = ?$",
-    "answer": "B",
-    "solution": "$\\sin(180^\\circ) = 0 \\approx 0000$",
-    "options": [
-      "-2",
-      "0",
-      "0",
-      "9"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "0",
-    "createdAt": "2025-12-02T17:14:00.346498",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_002",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\cos(120^\\circ) = ?$",
-    "answer": "A",
-    "solution": "$\\cos(120^\\circ) = - \\frac{1}{2} \\approx -\\frac{1}{2}000$",
-    "options": [
-      "-\\frac{1}{2}",
-      "\\frac{\\sqrt{3}}{2}",
-      "\\frac{1}{2}",
-      "1"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "- \\frac{1}{2}",
-    "createdAt": "2025-12-02T17:14:00.370473",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_003",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\cos(150^\\circ) = ?$",
-    "answer": "D",
-    "solution": "$\\cos(150^\\circ) = - \\frac{\\sqrt{3}}{2} \\approx -0.8660$",
-    "options": [
-      "\\frac{\\sqrt{3}}{2}",
-      "\\frac{1}{2}",
-      "1",
-      "-\\frac{\\sqrt{3}}{2}"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "- \\frac{\\sqrt{3}}{2}",
-    "createdAt": "2025-12-02T17:14:00.464858",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_004",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\cos(135^\\circ) = ?$",
-    "answer": "C",
-    "solution": "$\\cos(135^\\circ) = - \\frac{\\sqrt{2}}{2} \\approx -0.7071$",
-    "options": [
-      "\\frac{1}{2}",
-      "1",
-      "-\\frac{\\sqrt{2}}{2}",
-      "\\frac{\\sqrt{3}}{2}"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "- \\frac{\\sqrt{2}}{2}",
-    "createdAt": "2025-12-02T17:14:00.468935",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_005",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\sin(30^\\circ) = ?$",
-    "answer": "B",
-    "solution": "$\\sin(30^\\circ) = \\frac{1}{2} \\approx \\frac{1}{2}000$",
-    "options": [
-      "\\frac{\\sqrt{2}}{2}",
-      "\\frac{1}{2}",
-      "\\frac{\\sqrt{3}}{2}",
-      "1"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "\\frac{1}{2}",
-    "createdAt": "2025-12-02T17:14:00.469900",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_006",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\sin(90^\\circ) = ?$",
-    "answer": "A",
-    "solution": "$\\sin(90^\\circ) = 1 \\approx 1000$",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "-1"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "1",
-    "createdAt": "2025-12-02T17:14:00.470976",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_c_015",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "choice",
-    "chapter": null,
-    "section": null,
-    "question": "函数 $f(x) = \\cos(x)$ 的最小正周期是？",
-    "answer": "C",
-    "solution": "根据三角函数的基本性质，答案是 $2\\pi$",
-    "options": [
-      "$\\frac{\\pi}{2}$",
-      "$\\pi$",
-      "$2\\pi$",
-      "$4\\pi$"
-    ],
-    "tags": [
-      "三角函数",
-      "基础概念"
-    ],
-    "answerType": null,
-    "answerExpr": null,
-    "createdAt": "2025-12-02T17:18:32.977331"
-  },
-  {
-    "questionId": "trig_L1_c_020",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "choice",
-    "chapter": null,
-    "section": null,
-    "question": "函数 $f(x) = \\sin(x)$ 的最小正周期是？",
-    "answer": "B",
-    "solution": "根据三角函数的基本性质，答案是 $2\\pi$",
-    "options": [
-      "$\\pi$",
-      "$2\\pi$",
-      "$\\frac{\\pi}{2}$",
-      "$4\\pi$"
-    ],
-    "tags": [
-      "三角函数",
-      "基础概念"
-    ],
-    "answerType": null,
-    "answerExpr": null,
-    "createdAt": "2025-12-02T17:18:32.983308"
-  },
-  {
-    "questionId": "trig_L1_c_025",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "choice",
-    "chapter": null,
-    "section": null,
-    "question": "函数 $f(x) = \\sin(x)$ 的值域是？",
-    "answer": "D",
-    "solution": "根据三角函数的基本性质，答案是 $[-1, 1]$",
-    "options": [
-      "$[-2, 2]$",
-      "$[0, 1]$",
-      "$所有实数$",
-      "$[-1, 1]$"
-    ],
-    "tags": [
-      "三角函数",
-      "基础概念"
-    ],
-    "answerType": null,
-    "answerExpr": null,
-    "createdAt": "2025-12-02T17:18:32.987261"
-  },
-  {
-    "questionId": "trig_L1_f_008",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\cos(45^\\circ) = ?$",
-    "answer": "C",
-    "solution": "$\\cos(45^\\circ) = \\frac{\\sqrt{2}}{2} \\approx 0.7071$",
-    "options": [
-      "\\frac{1}{2}",
-      "1",
-      "\\frac{\\sqrt{2}}{2}",
-      "\\frac{\\sqrt{3}}{2}"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "\\frac{\\sqrt{2}}{2}",
-    "createdAt": "2025-12-02T17:18:33.137080",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_009",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\sin(0^\\circ) = ?$",
-    "answer": "A",
-    "solution": "$\\sin(0^\\circ) = 0 \\approx 0000$",
-    "options": [
-      "0",
-      "-4",
-      "2",
-      "-6"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "0",
-    "createdAt": "2025-12-02T17:18:33.137716",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_010",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\sin(60^\\circ) = ?$",
-    "answer": "D",
-    "solution": "$\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2} \\approx 0.8660$",
-    "options": [
-      "\\frac{\\sqrt{2}}{2}",
-      "1",
-      "\\frac{1}{2}",
-      "\\frac{\\sqrt{3}}{2}"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "\\frac{\\sqrt{3}}{2}",
-    "createdAt": "2025-12-02T17:18:33.139990",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_012",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\tan(45^\\circ) = ?$",
-    "answer": "A",
-    "solution": "$\\tan(45^\\circ) = 1 \\approx 1000$",
-    "options": [
-      "1",
-      "3",
-      "2",
-      "-7"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "1",
-    "createdAt": "2025-12-02T17:18:33.141992",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_c_028",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "choice",
-    "chapter": null,
-    "section": null,
-    "question": "函数 $f(x) = \\cos(x)$ 的定义域是？",
-    "answer": "D",
-    "solution": "根据三角函数的基本性质，答案是 $所有实数$",
-    "options": [
-      "$x > 0$",
-      "$x \\neq 0$",
-      "$x \\neq k\\pi (k \\in \\mathbb{Z})$",
-      "$所有实数$"
-    ],
-    "tags": [
-      "三角函数",
-      "基础概念"
-    ],
-    "answerType": null,
-    "answerExpr": null,
-    "createdAt": "2025-12-02T17:18:33.143071"
-  },
-  {
-    "questionId": "trig_L1_f_013",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\tan(0^\\circ) = ?$",
-    "answer": "B",
-    "solution": "$\\tan(0^\\circ) = 0 \\approx 0000$",
-    "options": [
-      "-5",
-      "0",
-      "-1",
-      "8"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "0",
-    "createdAt": "2025-12-02T17:21:01.742303",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_014",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\tan(120^\\circ) = ?$",
-    "answer": "D",
-    "solution": "$\\tan(120^\\circ) = - \\sqrt{3} \\approx -1.7321$",
-    "options": [
-      "\\sqrt{2}",
-      "\\sqrt{3}",
-      "1",
-      "-\\sqrt{3}"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "- \\sqrt{3}",
-    "createdAt": "2025-12-02T17:21:01.750796",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_015",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\tan(180^\\circ) = ?$",
-    "answer": "C",
-    "solution": "$\\tan(180^\\circ) = 0 \\approx 0000$",
-    "options": [
-      "-10",
-      "2",
-      "0",
-      "-2"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "0",
-    "createdAt": "2025-12-02T17:21:01.752447",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_018",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\sin(135^\\circ) = ?$",
-    "answer": "C",
-    "solution": "$\\sin(135^\\circ) = \\frac{\\sqrt{2}}{2} \\approx 0.7071$",
-    "options": [
-      "1",
-      "\\frac{1}{2}",
-      "\\frac{\\sqrt{2}}{2}",
-      "\\frac{\\sqrt{3}}{2}"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "\\frac{\\sqrt{2}}{2}",
-    "createdAt": "2025-12-02T17:21:01.759797",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_020",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\tan(135^\\circ) = ?$",
-    "answer": "B",
-    "solution": "$\\tan(135^\\circ) = -1 \\approx -1000$",
-    "options": [
-      "-3",
-      "-1",
-      "0",
-      "-2"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "-1",
-    "createdAt": "2025-12-02T17:22:05.878620",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_021",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\cos(90^\\circ) = ?$",
-    "answer": "C",
-    "solution": "$\\cos(90^\\circ) = 0 \\approx 0000$",
-    "options": [
-      "-6",
-      "-2",
-      "0",
-      "4"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "0",
-    "createdAt": "2025-12-02T17:22:05.879720",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_026",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\cos(0^\\circ) = ?$",
-    "answer": "A",
-    "solution": "$\\cos(0^\\circ) = 1 \\approx 1000$",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "-3"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "1",
-    "createdAt": "2025-12-02T17:24:07.982034",
-    "answerMode": "choice"
-  },
-  {
-    "questionId": "trig_L1_f_030",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "fill",
-    "chapter": null,
-    "section": null,
-    "question": "计算：$\\sin(120^\\circ) = ?$",
-    "answer": "A",
-    "solution": "$\\sin(120^\\circ) = \\frac{\\sqrt{3}}{2} \\approx 0.8660$",
-    "options": [
-      "\\frac{\\sqrt{3}}{2}",
-      "1",
-      "\\frac{1}{2}",
-      "\\frac{\\sqrt{2}}{2}"
-    ],
-    "tags": [
-      "三角函数",
-      "基础计算"
-    ],
-    "answerType": "float",
-    "answerExpr": "\\frac{\\sqrt{3}}{2}",
-    "createdAt": "2025-12-02T17:24:07.994487",
-    "answerMode": "choice"
-  },
-  {
     "questionId": "algebra_5309",
     "topic": "代数与方程",
     "difficulty": "L1",
@@ -827,12 +161,12 @@
     "type": "choice",
     "question": "方程 $x^{2} - 5 = 0$ 的判别式 $\\Delta$ 是？",
     "options": [
-      "20",
-      "10",
+      "40",
+      "19",
       "20",
       "-20"
     ],
-    "answer": "A",
+    "answer": "C",
     "solution": "判别式 $\\Delta = b^2 - 4ac = 0^2 - 4 \\times 1 \\times -5 = 20$",
     "tags": [
       "代数",
@@ -1137,12 +471,12 @@
     "type": "choice",
     "question": "方程 $2 x^{2} - 6 x = 0$ 的判别式 $\\Delta$ 是？",
     "options": [
-      "36",
-      "36",
-      "72",
+      "18",
+      "-36",
+      "37",
       "36"
     ],
-    "answer": "A",
+    "answer": "D",
     "solution": "判别式 $\\Delta = b^2 - 4ac = -6^2 - 4 \\times 2 \\times 0 = 36$",
     "tags": [
       "代数",
@@ -1540,12 +874,12 @@
     "type": "choice",
     "question": "方程 $4 x^{2} - 2 x = 0$ 的判别式 $\\Delta$ 是？",
     "options": [
+      "2",
       "4",
       "8",
-      "4",
-      "4"
+      "5"
     ],
-    "answer": "A",
+    "answer": "B",
     "solution": "判别式 $\\Delta = b^2 - 4ac = -2^2 - 4 \\times 4 \\times 0 = 4$",
     "tags": [
       "代数",
@@ -1943,12 +1277,12 @@
     "type": "choice",
     "question": "方程 $4 x^{2} - 8 x + 2 = 0$ 的判别式 $\\Delta$ 是？",
     "options": [
-      "96",
-      "48",
-      "96",
-      "32"
+      "32",
+      "16",
+      "-32",
+      "64"
     ],
-    "answer": "D",
+    "answer": "A",
     "solution": "判别式 $\\Delta = b^2 - 4ac = -8^2 - 4 \\times 4 \\times 2 = 32$",
     "tags": [
       "代数",
@@ -1974,12 +1308,12 @@
     "type": "choice",
     "question": "方程 $2 x^{2} - 5 x = 0$ 的判别式 $\\Delta$ 是？",
     "options": [
+      "12",
+      "26",
       "25",
-      "25",
-      "50",
-      "25"
+      "-25"
     ],
-    "answer": "A",
+    "answer": "C",
     "solution": "判别式 $\\Delta = b^2 - 4ac = -5^2 - 4 \\times 2 \\times 0 = 25$",
     "tags": [
       "代数",
@@ -2005,12 +1339,12 @@
     "type": "choice",
     "question": "方程 $5 x^{2} + 2 = 0$ 的判别式 $\\Delta$ 是？",
     "options": [
-      "40",
-      "-20",
+      "20",
       "-40",
-      "-40"
+      "-41",
+      "-39"
     ],
-    "answer": "C",
+    "answer": "B",
     "solution": "判别式 $\\Delta = b^2 - 4ac = 0^2 - 4 \\times 5 \\times 2 = -40$",
     "tags": [
       "代数",
@@ -2161,11 +1495,11 @@
     "question": "方程 $x^{2} + 1 = 0$ 的判别式 $\\Delta$ 是？",
     "options": [
       "4",
+      "-3",
       "-4",
-      "-2",
-      "-4"
+      "-8"
     ],
-    "answer": "B",
+    "answer": "C",
     "solution": "判别式 $\\Delta = b^2 - 4ac = 0^2 - 4 \\times 1 \\times 1 = -4$",
     "tags": [
       "代数",
@@ -2997,12 +2331,12 @@
     "type": "choice",
     "question": "从 $5$ 个不同元素中取出 $2$ 个元素进行排列，有多少种排列方式？",
     "options": [
-      "10",
-      "120",
-      "10",
-      "20"
+      "-20",
+      "20",
+      "40",
+      "10"
     ],
-    "answer": "D",
+    "answer": "B",
     "solution": "排列数 $A_{5}^{2} = \\frac{5!}{(5-2)!} = 20$",
     "tags": [
       "排列",
@@ -3462,12 +2796,12 @@
     "type": "choice",
     "question": "从 $5$ 个不同元素中取出 $4$ 个元素进行排列，有多少种排列方式？",
     "options": [
-      "120",
-      "20",
-      "120",
-      "5"
+      "60",
+      "-120",
+      "240",
+      "120"
     ],
-    "answer": "A",
+    "answer": "D",
     "solution": "排列数 $A_{5}^{4} = \\frac{5!}{(5-4)!} = 120$",
     "tags": [
       "排列",
@@ -3555,9 +2889,9 @@
     "question": "计算 $(-3 + 1i) + (0 + 3i)$ = ?",
     "options": [
       "$-3 + 4i$",
-      "$-3 + 4i$",
-      "$-3 + 1i$",
-      "$-3 + -2i$"
+      "\\sqrt{2}",
+      "1",
+      "2"
     ],
     "answer": "A",
     "solution": "实部相加，虚部相加：$(-3+0) + (1+3)i = -3 + 4i$",
@@ -3974,12 +3308,12 @@
     "type": "choice",
     "question": "计算 $(0 + 1i) + (0 + 3i)$ = ?",
     "options": [
-      "$0 + 4i$",
-      "$0 + 4i$",
-      "$0 + 1i$",
-      "$0 + -2i$"
+      "0",
+      "2",
+      "-1",
+      "$0 + 4i$"
     ],
-    "answer": "A",
+    "answer": "D",
     "solution": "实部相加，虚部相加：$(0+0) + (1+3)i = 0 + 4i$",
     "tags": [
       "复数",
@@ -4184,12 +3518,12 @@
     "type": "choice",
     "question": "计算 $(2 + 3i) + (0 + 4i)$ = ?",
     "options": [
+      "1",
+      "0",
       "$2 + 7i$",
-      "$2 + -1i$",
-      "$2 + 3i$",
-      "$2 + 7i$"
+      "2"
     ],
-    "answer": "A",
+    "answer": "C",
     "solution": "实部相加，虚部相加：$(2+0) + (3+4)i = 2 + 7i$",
     "tags": [
       "复数",
@@ -4514,12 +3848,12 @@
     "type": "choice",
     "question": "计算 $(-4 + 1i) + (0 + 3i)$ = ?",
     "options": [
-      "$-4 + 1i$",
-      "$-4 + -2i$",
-      "$-4 + 4i$",
+      "1",
+      "-1",
+      "\\sqrt{2}",
       "$-4 + 4i$"
     ],
-    "answer": "C",
+    "answer": "D",
     "solution": "实部相加，虚部相加：$(-4+0) + (1+3)i = -4 + 4i$",
     "tags": [
       "复数",
@@ -4694,12 +4028,12 @@
     "type": "choice",
     "question": "计算 $(3 + 5i) + (0 + 2i)$ = ?",
     "options": [
-      "$3 + 3i$",
-      "$3 + 7i$",
-      "$3 + 5i$",
+      "2",
+      "\\sqrt{2}",
+      "-1",
       "$3 + 7i$"
     ],
-    "answer": "B",
+    "answer": "D",
     "solution": "实部相加，虚部相加：$(3+0) + (5+2)i = 3 + 7i$",
     "tags": [
       "复数",
@@ -4874,12 +4208,12 @@
     "type": "choice",
     "question": "计算 $(4 + 3i) + (0 + 5i)$ = ?",
     "options": [
+      "0",
+      "\\frac{1}{2}",
       "$4 + 8i$",
-      "$4 + -2i$",
-      "$4 + 8i$",
-      "$4 + 3i$"
+      "2"
     ],
-    "answer": "A",
+    "answer": "C",
     "solution": "实部相加，虚部相加：$(4+0) + (3+5)i = 4 + 8i$",
     "tags": [
       "复数",
@@ -5054,12 +4388,12 @@
     "type": "choice",
     "question": "计算 $(5 + 5i) + (0 + 3i)$ = ?",
     "options": [
+      "2",
+      "\\sqrt{2}",
       "$5 + 8i$",
-      "$5 + 2i$",
-      "$5 + 8i$",
-      "$5 + 5i$"
+      "-1"
     ],
-    "answer": "A",
+    "answer": "C",
     "solution": "实部相加，虚部相加：$(5+0) + (5+3)i = 5 + 8i$",
     "tags": [
       "复数",
@@ -5084,12 +4418,12 @@
     "type": "choice",
     "question": "计算 $(1 + 3i) + (0 + 4i)$ = ?",
     "options": [
+      "1",
       "$1 + 7i$",
-      "$1 + -1i$",
-      "$1 + 7i$",
-      "$1 + 3i$"
+      "-1",
+      "\\frac{1}{2}"
     ],
-    "answer": "A",
+    "answer": "B",
     "solution": "实部相加，虚部相加：$(1+0) + (3+4)i = 1 + 7i$",
     "tags": [
       "复数",
@@ -5144,12 +4478,12 @@
     "type": "choice",
     "question": "计算 $(1 + 5i) + (0 + 2i)$ = ?",
     "options": [
-      "$1 + 5i$",
-      "$1 + 3i$",
+      "-1",
       "$1 + 7i$",
-      "$1 + 7i$"
+      "1",
+      "2"
     ],
-    "answer": "C",
+    "answer": "B",
     "solution": "实部相加，虚部相加：$(1+0) + (5+2)i = 1 + 7i$",
     "tags": [
       "复数",
@@ -5174,12 +4508,12 @@
     "type": "choice",
     "question": "计算 $(0 + 2i) + (0 + 2i)$ = ?",
     "options": [
+      "\\frac{1}{2}",
       "$0 + 4i$",
-      "$0 + 0i$",
-      "$0 + 4i$",
-      "$0 + 2i$"
+      "1",
+      "\\sqrt{2}"
     ],
-    "answer": "A",
+    "answer": "B",
     "solution": "实部相加，虚部相加：$(0+0) + (2+2)i = 0 + 4i$",
     "tags": [
       "复数",
@@ -6556,12 +5890,12 @@
     "type": "choice",
     "question": "方程 $2 x^{2} - 4 x = 0$ 的判别式 $\\Delta$ 是？",
     "options": [
-      "16",
       "32",
-      "16",
+      "-16",
+      "17",
       "16"
     ],
-    "answer": "A",
+    "answer": "D",
     "solution": "判别式 $\\Delta = b^2 - 4ac = -4^2 - 4 \\times 2 \\times 0 = 16$",
     "tags": [
       "代数",
@@ -6866,12 +6200,12 @@
     "type": "choice",
     "question": "方程 $4 x^{2} + 6 x = 0$ 的判别式 $\\Delta$ 是？",
     "options": [
-      "36",
-      "36",
+      "35",
+      "-36",
       "72",
       "36"
     ],
-    "answer": "A",
+    "answer": "D",
     "solution": "判别式 $\\Delta = b^2 - 4ac = 6^2 - 4 \\times 4 \\times 0 = 36$",
     "tags": [
       "代数",
@@ -6897,12 +6231,12 @@
     "type": "choice",
     "question": "底边为 $4$，高为 $4$ 的三角形面积是？",
     "options": [
-      "4.0",
-      "8.0",
-      "16",
-      "4.0"
+      "\\frac{1}{2}",
+      "\\frac{\\sqrt{3}}{3}",
+      "-\\frac{1}{2}",
+      "8.0"
     ],
-    "answer": "B",
+    "answer": "D",
     "solution": "三角形面积 = $\\frac{1}{2} \\times$ 底 $\\times$ 高 = $\\frac{1}{2} \\times 4 \\times 4 = 8.0$",
     "tags": [
       "几何",
@@ -7269,9 +6603,9 @@
     "type": "choice",
     "question": "方程 $x^{2} + 10 = 0$ 的判别式 $\\Delta$ 是？",
     "options": [
-      "-20",
+      "-80",
       "-40",
-      "-40",
+      "-39",
       "40"
     ],
     "answer": "B",
@@ -7331,12 +6665,12 @@
     "type": "choice",
     "question": "方程 $x^{2} + 7 x = 0$ 的判别式 $\\Delta$ 是？",
     "options": [
-      "49",
-      "49",
+      "48",
+      "-49",
       "49",
       "98"
     ],
-    "answer": "A",
+    "answer": "C",
     "solution": "判别式 $\\Delta = b^2 - 4ac = 7^2 - 4 \\times 1 \\times 0 = 49$",
     "tags": [
       "代数",
@@ -8200,11 +7534,11 @@
     "question": "方程 $4 x^{2} + 5 = 0$ 的判别式 $\\Delta$ 是？",
     "options": [
       "80",
-      "-80",
-      "-80",
-      "-40"
+      "-81",
+      "-160",
+      "-80"
     ],
-    "answer": "B",
+    "answer": "D",
     "solution": "判别式 $\\Delta = b^2 - 4ac = 0^2 - 4 \\times 4 \\times 5 = -80$",
     "tags": [
       "代数",
@@ -8540,10 +7874,10 @@
     "type": "choice",
     "question": "方程 $2 x^{2} + 9 x = 0$ 的判别式 $\\Delta$ 是？",
     "options": [
-      "162",
+      "82",
       "81",
-      "81",
-      "81"
+      "40",
+      "162"
     ],
     "answer": "B",
     "solution": "判别式 $\\Delta = b^2 - 4ac = 9^2 - 4 \\times 2 \\times 0 = 81$",
@@ -8968,235 +8302,2533 @@
     "createdAt": "2025-12-03T14:31:51.847938"
   },
   {
-    "questionId": "inverse_trig_9795",
+    "questionId": "trig_e6f9d5da",
     "topic": "三角函数",
     "difficulty": "L1",
     "type": "choice",
-    "question": "$\\arcsin(1)$ 的值是？",
-    "options": [
-      "$\\frac{\\pi}{2}$",
-      "$0$",
-      "$\\frac{\\pi}{2}$",
-      "$\\frac{\\pi}{3}$"
-    ],
+    "question": "计算: $cos(90^\\circ) = ?$",
     "answer": "A",
-    "solution": "根据反三角函数的定义，$\\arcsin(1) = \\frac{\\pi}{2}$",
+    "options": [
+      "0",
+      "\\sqrt{3}",
+      "-\\frac{\\sqrt{2}}{2}",
+      "\\frac{1}{2}"
+    ],
+    "solution": "$cos(90^\\circ) = 0$",
     "tags": [
-      "反三角函数",
-      "arcsin"
+      "三角函数",
+      "特殊值"
     ],
     "knowledgePoints": [
-      "反三角函数"
+      "三角函数特殊值"
     ],
     "abilityTags": [
-      "memory",
-      "apply"
-    ],
-    "source": "generated",
-    "reviewStatus": "pending",
-    "createdAt": "2025-12-03T14:31:51.906874"
+      "计算"
+    ]
   },
   {
-    "questionId": "inverse_trig_4557",
+    "questionId": "trig_dae4cd88",
     "topic": "三角函数",
     "difficulty": "L1",
     "type": "choice",
-    "question": "$\\arcsin(0.7071067811865476)$ 的值是？",
-    "options": [
-      "$\\frac{\\pi}{3}$",
-      "$\\frac{\\pi}{2}$",
-      "$0$",
-      "$\\frac{\\pi}{4}$"
-    ],
+    "question": "计算: $sin(0^\\circ) = ?$",
     "answer": "D",
-    "solution": "根据反三角函数的定义，$\\arcsin(\\frac{\\sqrt{2}}{2}) = \\frac{\\pi}{4}$",
+    "options": [
+      "-\\frac{\\sqrt{3}}{2}",
+      "\\frac{1}{2}",
+      "\\frac{\\sqrt{3}}{3}",
+      "0"
+    ],
+    "solution": "$sin(0^\\circ) = 0$",
     "tags": [
-      "反三角函数",
-      "arcsin"
+      "三角函数",
+      "特殊值"
     ],
     "knowledgePoints": [
-      "反三角函数"
+      "三角函数特殊值"
     ],
     "abilityTags": [
-      "memory",
-      "apply"
-    ],
-    "source": "generated",
-    "reviewStatus": "pending",
-    "createdAt": "2025-12-03T14:31:51.907108"
+      "计算"
+    ]
   },
   {
-    "questionId": "inverse_trig_6904",
+    "questionId": "trig_fee138fe",
     "topic": "三角函数",
     "difficulty": "L1",
     "type": "choice",
-    "question": "$\\arcsin(0)$ 的值是？",
-    "options": [
-      "$\\frac{\\pi}{3}$",
-      "$\\frac{\\pi}{2}$",
-      "$0$",
-      "$0$"
-    ],
-    "answer": "C",
-    "solution": "根据反三角函数的定义，$\\arcsin(0) = 0$",
-    "tags": [
-      "反三角函数",
-      "arcsin"
-    ],
-    "knowledgePoints": [
-      "反三角函数"
-    ],
-    "abilityTags": [
-      "memory",
-      "apply"
-    ],
-    "source": "generated",
-    "reviewStatus": "pending",
-    "createdAt": "2025-12-03T14:31:51.907342"
-  },
-  {
-    "questionId": "inverse_trig_6940",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "choice",
-    "question": "$\\arcsin(-1)$ 的值是？",
-    "options": [
-      "$\\frac{\\pi}{3}$",
-      "$\\frac{\\pi}{2}$",
-      "$-\\frac{\\pi}{2}$",
-      "$0$"
-    ],
-    "answer": "C",
-    "solution": "根据反三角函数的定义，$\\arcsin(-1) = -\\frac{\\pi}{2}$",
-    "tags": [
-      "反三角函数",
-      "arcsin"
-    ],
-    "knowledgePoints": [
-      "反三角函数"
-    ],
-    "abilityTags": [
-      "memory",
-      "apply"
-    ],
-    "source": "generated",
-    "reviewStatus": "pending",
-    "createdAt": "2025-12-03T14:31:51.907576"
-  },
-  {
-    "questionId": "inverse_trig_5720",
-    "topic": "三角函数",
-    "difficulty": "L1",
-    "type": "choice",
-    "question": "$\\arcsin(-0.5)$ 的值是？",
-    "options": [
-      "$\\frac{\\pi}{3}$",
-      "$-\\frac{\\pi}{6}$",
-      "$\\frac{\\pi}{2}$",
-      "$0$"
-    ],
+    "question": "计算: $tan(300^\\circ) = ?$",
     "answer": "B",
-    "solution": "根据反三角函数的定义，$\\arcsin(-\\frac{1}{2}) = -\\frac{\\pi}{6}$",
-    "tags": [
-      "反三角函数",
-      "arcsin"
-    ],
-    "knowledgePoints": [
-      "反三角函数"
-    ],
-    "abilityTags": [
-      "memory",
-      "apply"
-    ],
-    "source": "generated",
-    "reviewStatus": "pending",
-    "createdAt": "2025-12-03T14:31:51.908513"
-  },
-  {
-    "questionId": "inverse_trig_4324",
-    "topic": "三角函数",
-    "difficulty": "L2",
-    "type": "choice",
-    "question": "$\\arcsin(-0.7071067811865476)$ 的值是？",
     "options": [
-      "$\\frac{\\pi}{2}$",
-      "$\\frac{\\pi}{3}$",
-      "$0$",
-      "$0$"
+      "0",
+      "-\\sqrt{3}",
+      "\\frac{1}{2}",
+      "-\\frac{\\sqrt{2}}{2}"
     ],
-    "answer": "C",
-    "solution": "根据反三角函数的定义，$\\arcsin(-\\frac{\\sqrt{2}}{2}) = 0$",
+    "solution": "$tan(300^\\circ) = -\\sqrt{3}$",
     "tags": [
-      "反三角函数",
-      "arcsin"
+      "三角函数",
+      "特殊值"
     ],
     "knowledgePoints": [
-      "反三角函数"
+      "三角函数特殊值"
     ],
     "abilityTags": [
-      "memory",
-      "apply"
-    ],
-    "source": "generated",
-    "reviewStatus": "pending",
-    "createdAt": "2025-12-03T14:31:51.911386"
+      "计算"
+    ]
   },
   {
-    "questionId": "inverse_trig_9460",
+    "questionId": "trig_bb9d4511",
     "topic": "三角函数",
-    "difficulty": "L2",
-    "type": "choice",
-    "question": "$\\arcsin(0.5)$ 的值是？",
-    "options": [
-      "$\\frac{\\pi}{3}$",
-      "$0$",
-      "$\\frac{\\pi}{6}$",
-      "$\\frac{\\pi}{2}$"
-    ],
-    "answer": "C",
-    "solution": "根据反三角函数的定义，$\\arcsin(\\frac{1}{2}) = \\frac{\\pi}{6}$",
-    "tags": [
-      "反三角函数",
-      "arcsin"
-    ],
-    "knowledgePoints": [
-      "反三角函数"
-    ],
-    "abilityTags": [
-      "memory",
-      "apply"
-    ],
-    "source": "generated",
-    "reviewStatus": "pending",
-    "createdAt": "2025-12-03T14:31:51.913825"
-  },
-  {
-    "questionId": "inverse_trig_2021",
-    "topic": "反三角函数",
     "difficulty": "L1",
     "type": "choice",
-    "question": "$\\arcsin(\\frac{\\sqrt{2}}{2})$ 的值是？",
-    "options": [
-      "$0$",
-      "$\\frac{\\pi}{2}$",
-      "$\\frac{\\pi}{4}$",
-      "$\\frac{\\pi}{3}$"
-    ],
+    "question": "计算: $sin(240^\\circ) = ?$",
     "answer": "C",
-    "solution": "根据反三角函数的定义，$\\arcsin(\\frac{\\sqrt{2}}{2}) = \\frac{\\pi}{4}$",
+    "options": [
+      "\\sqrt{3}",
+      "-\\frac{\\sqrt{2}}{2}",
+      "-\\frac{\\sqrt{3}}{2}",
+      "\\frac{\\sqrt{3}}{2}"
+    ],
+    "solution": "$sin(240^\\circ) = -\\frac{\\sqrt{3}}{2}$",
     "tags": [
-      "反三角函数",
-      "arcsin"
+      "三角函数",
+      "特殊值"
     ],
     "knowledgePoints": [
-      "反三角函数"
+      "三角函数特殊值"
     ],
     "abilityTags": [
-      "memory",
-      "apply"
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_099e7e68",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $tan(60^\\circ) = ?$",
+    "answer": "A",
+    "options": [
+      "\\sqrt{3}",
+      "\\frac{\\sqrt{3}}{2}",
+      "\\frac{\\sqrt{3}}{3}",
+      "1"
     ],
-    "source": "generated",
-    "reviewStatus": "pending",
-    "createdAt": "2025-12-03T14:31:51.941562"
+    "solution": "$tan(60^\\circ) = \\sqrt{3}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_ab8f1bc1",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(270^\\circ) = ?$",
+    "answer": "B",
+    "options": [
+      "\\frac{\\sqrt{3}}{3}",
+      "-1",
+      "-\\sqrt{3}",
+      "1"
+    ],
+    "solution": "$sin(270^\\circ) = -1$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_dae4cd88_1",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(0^\\circ) = ?$",
+    "answer": "B",
+    "options": [
+      "-\\frac{\\sqrt{3}}{3}",
+      "0",
+      "\\frac{\\sqrt{3}}{3}",
+      "-1"
+    ],
+    "solution": "$sin(0^\\circ) = 0$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_c274e76c",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(45^\\circ) = ?$",
+    "answer": "B",
+    "options": [
+      "\\frac{1}{2}",
+      "\\frac{\\sqrt{2}}{2}",
+      "\\frac{\\sqrt{3}}{3}",
+      "1"
+    ],
+    "solution": "$cos(45^\\circ) = \\frac{\\sqrt{2}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_0bf42e7a",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(150^\\circ) = ?$",
+    "answer": "B",
+    "options": [
+      "-\\sqrt{3}",
+      "\\frac{1}{2}",
+      "\\frac{\\sqrt{3}}{2}",
+      "-\\frac{1}{2}"
+    ],
+    "solution": "$sin(150^\\circ) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_d8279e57",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(240^\\circ) = ?$",
+    "answer": "B",
+    "options": [
+      "-1",
+      "-\\frac{1}{2}",
+      "-\\frac{\\sqrt{3}}{2}",
+      "-\\frac{\\sqrt{2}}{2}"
+    ],
+    "solution": "$cos(240^\\circ) = -\\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_6f3e59e6",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(315^\\circ) = ?$",
+    "answer": "A",
+    "options": [
+      "-\\frac{\\sqrt{2}}{2}",
+      "-\\sqrt{3}",
+      "0",
+      "\\sqrt{3}"
+    ],
+    "solution": "$sin(315^\\circ) = -\\frac{\\sqrt{2}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_c274e76c_1",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(45^\\circ) = ?$",
+    "answer": "B",
+    "options": [
+      "-\\sqrt{3}",
+      "\\frac{\\sqrt{2}}{2}",
+      "\\frac{\\sqrt{3}}{3}",
+      "0"
+    ],
+    "solution": "$cos(45^\\circ) = \\frac{\\sqrt{2}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_1ebd42e2",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $tan(120^\\circ) = ?$",
+    "answer": "C",
+    "options": [
+      "-\\frac{\\sqrt{3}}{2}",
+      "-\\frac{\\sqrt{2}}{2}",
+      "-\\sqrt{3}",
+      "\\sqrt{3}"
+    ],
+    "solution": "$tan(120^\\circ) = -\\sqrt{3}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_f64a2e11",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $tan(30^\\circ) = ?$",
+    "answer": "C",
+    "options": [
+      "\\frac{1}{2}",
+      "\\frac{\\sqrt{2}}{2}",
+      "\\frac{\\sqrt{3}}{3}",
+      "\\sqrt{3}"
+    ],
+    "solution": "$tan(30^\\circ) = \\frac{\\sqrt{3}}{3}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_5c2dff7a",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(300^\\circ) = ?$",
+    "answer": "A",
+    "options": [
+      "\\frac{1}{2}",
+      "\\frac{\\sqrt{3}}{2}",
+      "-1",
+      "0"
+    ],
+    "solution": "$cos(300^\\circ) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_738083ed",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(60^\\circ) = ?$",
+    "answer": "B",
+    "options": [
+      "-\\frac{1}{2}",
+      "\\frac{1}{2}",
+      "-\\frac{\\sqrt{3}}{3}",
+      "-\\sqrt{3}"
+    ],
+    "solution": "$cos(60^\\circ) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_932f7134",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $tan(330^\\circ) = ?$",
+    "answer": "C",
+    "options": [
+      "\\sqrt{3}",
+      "-\\frac{1}{2}",
+      "-\\frac{\\sqrt{3}}{3}",
+      "\\frac{\\sqrt{3}}{2}"
+    ],
+    "solution": "$tan(330^\\circ) = -\\frac{\\sqrt{3}}{3}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_0bf42e7a_1",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(150^\\circ) = ?$",
+    "answer": "D",
+    "options": [
+      "\\frac{\\sqrt{3}}{3}",
+      "\\frac{\\sqrt{2}}{2}",
+      "\\sqrt{3}",
+      "\\frac{1}{2}"
+    ],
+    "solution": "$sin(150^\\circ) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_738083ed_1",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(60^\\circ) = ?$",
+    "answer": "A",
+    "options": [
+      "\\frac{1}{2}",
+      "-\\frac{1}{2}",
+      "-1",
+      "\\frac{\\sqrt{2}}{2}"
+    ],
+    "solution": "$cos(60^\\circ) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_47458cd0",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(270^\\circ) = ?$",
+    "answer": "C",
+    "options": [
+      "\\frac{1}{2}",
+      "\\frac{\\sqrt{3}}{2}",
+      "0",
+      "1"
+    ],
+    "solution": "$cos(270^\\circ) = 0$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_f26040cd",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(330^\\circ) = ?$",
+    "answer": "C",
+    "options": [
+      "-\\frac{\\sqrt{2}}{2}",
+      "-\\sqrt{3}",
+      "\\frac{\\sqrt{3}}{2}",
+      "-1"
+    ],
+    "solution": "$cos(330^\\circ) = \\frac{\\sqrt{3}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_e43f549b",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(330^\\circ) = ?$",
+    "answer": "A",
+    "options": [
+      "-\\frac{1}{2}",
+      "-\\frac{\\sqrt{3}}{3}",
+      "\\sqrt{3}",
+      "\\frac{\\sqrt{3}}{3}"
+    ],
+    "solution": "$sin(330^\\circ) = -\\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_abc830a8",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(210^\\circ) = ?$",
+    "answer": "D",
+    "options": [
+      "\\frac{\\sqrt{2}}{2}",
+      "0",
+      "-1",
+      "-\\frac{\\sqrt{3}}{2}"
+    ],
+    "solution": "$cos(210^\\circ) = -\\frac{\\sqrt{3}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_bb9d4511_1",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(240^\\circ) = ?$",
+    "answer": "C",
+    "options": [
+      "\\frac{\\sqrt{3}}{2}",
+      "1",
+      "-\\frac{\\sqrt{3}}{2}",
+      "\\frac{\\sqrt{2}}{2}"
+    ],
+    "solution": "$sin(240^\\circ) = -\\frac{\\sqrt{3}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_a778810a",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(120^\\circ) = ?$",
+    "answer": "B",
+    "options": [
+      "-\\frac{\\sqrt{3}}{2}",
+      "\\frac{\\sqrt{3}}{2}",
+      "\\frac{\\sqrt{3}}{3}",
+      "-\\frac{\\sqrt{2}}{2}"
+    ],
+    "solution": "$sin(120^\\circ) = \\frac{\\sqrt{3}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_e43f549b_1",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(330^\\circ) = ?$",
+    "answer": "D",
+    "options": [
+      "\\frac{\\sqrt{3}}{3}",
+      "\\frac{\\sqrt{3}}{2}",
+      "-\\frac{\\sqrt{3}}{2}",
+      "-\\frac{1}{2}"
+    ],
+    "solution": "$sin(330^\\circ) = -\\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_6f3e59e6_1",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(315^\\circ) = ?$",
+    "answer": "C",
+    "options": [
+      "\\sqrt{3}",
+      "-\\frac{1}{2}",
+      "-\\frac{\\sqrt{2}}{2}",
+      "\\frac{\\sqrt{3}}{2}"
+    ],
+    "solution": "$sin(315^\\circ) = -\\frac{\\sqrt{2}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_a778810a_1",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(120^\\circ) = ?$",
+    "answer": "D",
+    "options": [
+      "-\\frac{\\sqrt{2}}{2}",
+      "-\\frac{1}{2}",
+      "-1",
+      "\\frac{\\sqrt{3}}{2}"
+    ],
+    "solution": "$sin(120^\\circ) = \\frac{\\sqrt{3}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_ab142997",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(135^\\circ) = ?$",
+    "answer": "A",
+    "options": [
+      "-\\frac{\\sqrt{2}}{2}",
+      "\\frac{\\sqrt{2}}{2}",
+      "-\\frac{\\sqrt{3}}{2}",
+      "\\frac{1}{2}"
+    ],
+    "solution": "$cos(135^\\circ) = -\\frac{\\sqrt{2}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_0bf42e7a_2",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(150^\\circ) = ?$",
+    "answer": "D",
+    "options": [
+      "-\\frac{1}{2}",
+      "\\frac{\\sqrt{3}}{2}",
+      "\\frac{\\sqrt{2}}{2}",
+      "\\frac{1}{2}"
+    ],
+    "solution": "$sin(150^\\circ) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_a13bdd24",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $tan(\\frac{4\\pi}{3}) = ?$",
+    "answer": "D",
+    "options": [
+      "\\frac{1}{2}",
+      "-\\frac{\\sqrt{3}}{2}",
+      "0",
+      "\\sqrt{3}"
+    ],
+    "solution": "$tan(\\frac{4\\pi}{3}) = \\sqrt{3}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_2103f879",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(\\frac{\\pi}{2}) = ?$",
+    "answer": "B",
+    "options": [
+      "1",
+      "0",
+      "-\\sqrt{3}",
+      "\\frac{\\sqrt{3}}{3}"
+    ],
+    "solution": "$cos(\\frac{\\pi}{2}) = 0$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_3af43237",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(\\frac{5\\pi}{3}) = ?$",
+    "answer": "C",
+    "options": [
+      "1",
+      "\\frac{\\sqrt{3}}{2}",
+      "\\frac{1}{2}",
+      "-1"
+    ],
+    "solution": "$cos(\\frac{5\\pi}{3}) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_b7381b11",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(\\frac{5\\pi}{4}) = ?$",
+    "answer": "A",
+    "options": [
+      "-\\frac{\\sqrt{2}}{2}",
+      "\\frac{1}{2}",
+      "-\\frac{\\sqrt{3}}{2}",
+      "1"
+    ],
+    "solution": "$cos(\\frac{5\\pi}{4}) = -\\frac{\\sqrt{2}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_c6c3b363",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(\\frac{\\pi}{3}) = ?$",
+    "answer": "A",
+    "options": [
+      "\\frac{\\sqrt{3}}{2}",
+      "\\frac{1}{2}",
+      "-\\frac{1}{2}",
+      "-\\frac{\\sqrt{2}}{2}"
+    ],
+    "solution": "$sin(\\frac{\\pi}{3}) = \\frac{\\sqrt{3}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_57a20f17",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(\\frac{5\\pi}{6}) = ?$",
+    "answer": "D",
+    "options": [
+      "-\\sqrt{3}",
+      "-\\frac{\\sqrt{2}}{2}",
+      "-1",
+      "\\frac{1}{2}"
+    ],
+    "solution": "$sin(\\frac{5\\pi}{6}) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_5d76fc6f",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $tan(\\frac{7\\pi}{4}) = ?$",
+    "answer": "D",
+    "options": [
+      "-\\frac{\\sqrt{2}}{2}",
+      "\\frac{1}{2}",
+      "\\frac{\\sqrt{3}}{3}",
+      "-1"
+    ],
+    "solution": "$tan(\\frac{7\\pi}{4}) = -1$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_109356d5",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $tan(2\\pi) = ?$",
+    "answer": "D",
+    "options": [
+      "\\sqrt{3}",
+      "-\\sqrt{3}",
+      "\\frac{\\sqrt{3}}{3}",
+      "0"
+    ],
+    "solution": "$tan(2\\pi) = 0$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_380d46f1",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(\\frac{3\\pi}{4}) = ?$",
+    "answer": "D",
+    "options": [
+      "\\sqrt{3}",
+      "-\\frac{1}{2}",
+      "\\frac{\\sqrt{3}}{3}",
+      "-\\frac{\\sqrt{2}}{2}"
+    ],
+    "solution": "$cos(\\frac{3\\pi}{4}) = -\\frac{\\sqrt{2}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_280f1351",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(\\frac{11\\pi}{6}) = ?$",
+    "answer": "D",
+    "options": [
+      "-\\frac{\\sqrt{3}}{2}",
+      "-\\frac{\\sqrt{3}}{3}",
+      "\\frac{\\sqrt{3}}{3}",
+      "\\frac{\\sqrt{3}}{2}"
+    ],
+    "solution": "$cos(\\frac{11\\pi}{6}) = \\frac{\\sqrt{3}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_1cd426af",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $tan(\\frac{5\\pi}{4}) = ?$",
+    "answer": "B",
+    "options": [
+      "0",
+      "1",
+      "-\\frac{\\sqrt{3}}{2}",
+      "-1"
+    ],
+    "solution": "$tan(\\frac{5\\pi}{4}) = 1$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_55529e96",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(\\frac{\\pi}{6}) = ?$",
+    "answer": "D",
+    "options": [
+      "\\frac{1}{2}",
+      "0",
+      "-\\frac{\\sqrt{2}}{2}",
+      "\\frac{\\sqrt{3}}{2}"
+    ],
+    "solution": "$cos(\\frac{\\pi}{6}) = \\frac{\\sqrt{3}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_f269489a",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $tan(\\frac{3\\pi}{4}) = ?$",
+    "answer": "B",
+    "options": [
+      "\\sqrt{3}",
+      "-1",
+      "1",
+      "\\frac{\\sqrt{3}}{2}"
+    ],
+    "solution": "$tan(\\frac{3\\pi}{4}) = -1$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_aa5fc7df",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $tan(\\frac{2\\pi}{3}) = ?$",
+    "answer": "D",
+    "options": [
+      "0",
+      "-\\frac{1}{2}",
+      "\\frac{1}{2}",
+      "-\\sqrt{3}"
+    ],
+    "solution": "$tan(\\frac{2\\pi}{3}) = -\\sqrt{3}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_5b1773ba",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(\\frac{\\pi}{6}) = ?$",
+    "answer": "A",
+    "options": [
+      "\\frac{1}{2}",
+      "-\\frac{1}{2}",
+      "\\frac{\\sqrt{2}}{2}",
+      "-\\frac{\\sqrt{2}}{2}"
+    ],
+    "solution": "$sin(\\frac{\\pi}{6}) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_19bf1123",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(\\frac{\\pi}{4}) = ?$",
+    "answer": "B",
+    "options": [
+      "-\\frac{\\sqrt{2}}{2}",
+      "\\frac{\\sqrt{2}}{2}",
+      "-\\sqrt{3}",
+      "-\\frac{\\sqrt{3}}{3}"
+    ],
+    "solution": "$cos(\\frac{\\pi}{4}) = \\frac{\\sqrt{2}}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_1caac840",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $tan(\\pi) = ?$",
+    "answer": "B",
+    "options": [
+      "-\\sqrt{3}",
+      "0",
+      "1",
+      "\\frac{\\sqrt{3}}{3}"
+    ],
+    "solution": "$tan(\\pi) = 0$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_57a20f17_1",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $sin(\\frac{5\\pi}{6}) = ?$",
+    "answer": "C",
+    "options": [
+      "\\frac{\\sqrt{3}}{2}",
+      "0",
+      "\\frac{1}{2}",
+      "-\\frac{\\sqrt{3}}{3}"
+    ],
+    "solution": "$sin(\\frac{5\\pi}{6}) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_f0e85472",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $tan(0) = ?$",
+    "answer": "A",
+    "options": [
+      "0",
+      "\\frac{\\sqrt{3}}{3}",
+      "-\\frac{1}{2}",
+      "-\\frac{\\sqrt{3}}{3}"
+    ],
+    "solution": "$tan(0) = 0$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_2dc9f3fe",
+    "topic": "三角函数",
+    "difficulty": "L1",
+    "type": "choice",
+    "question": "计算: $cos(\\frac{3\\pi}{2}) = ?$",
+    "answer": "D",
+    "options": [
+      "-\\frac{\\sqrt{3}}{3}",
+      "\\frac{1}{2}",
+      "1",
+      "0"
+    ],
+    "solution": "$cos(\\frac{3\\pi}{2}) = 0$",
+    "tags": [
+      "三角函数",
+      "特殊值"
+    ],
+    "knowledgePoints": [
+      "三角函数特殊值"
+    ],
+    "abilityTags": [
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_86a9884a",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = \\frac{1}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "A",
+    "options": [
+      "60^\\circ",
+      "300^\\circ",
+      "45^\\circ",
+      "315^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(60^\\circ) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_87b72ecf",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = 1$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "C",
+    "options": [
+      "120^\\circ",
+      "315^\\circ",
+      "90^\\circ",
+      "300^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(90^\\circ) = 1$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_1706c48b",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = \\frac{\\sqrt{2}}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "D",
+    "options": [
+      "360^\\circ",
+      "150^\\circ",
+      "180^\\circ",
+      "45^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(45^\\circ) = \\frac{\\sqrt{2}}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_a0c82136",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = \\frac{\\sqrt{3}}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "D",
+    "options": [
+      "180^\\circ",
+      "240^\\circ",
+      "60^\\circ",
+      "30^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(30^\\circ) = \\frac{\\sqrt{3}}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_76c0cc67",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = 1$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "C",
+    "options": [
+      "240^\\circ",
+      "60^\\circ",
+      "0^\\circ",
+      "360^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(0^\\circ) = 1$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_86a9884a_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = \\frac{1}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "D",
+    "options": [
+      "210^\\circ",
+      "180^\\circ",
+      "315^\\circ",
+      "60^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(60^\\circ) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_76c0cc67_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = 1$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "B",
+    "options": [
+      "315^\\circ",
+      "0^\\circ",
+      "150^\\circ",
+      "45^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(0^\\circ) = 1$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_8f44b932",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = 0$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "D",
+    "options": [
+      "120^\\circ",
+      "60^\\circ",
+      "240^\\circ",
+      "90^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(90^\\circ) = 0$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_a0c82136_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = \\frac{\\sqrt{3}}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "D",
+    "options": [
+      "330^\\circ",
+      "60^\\circ",
+      "45^\\circ",
+      "30^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(30^\\circ) = \\frac{\\sqrt{3}}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_00c63a1c",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = \\frac{\\sqrt{2}}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "B",
+    "options": [
+      "330^\\circ",
+      "45^\\circ",
+      "30^\\circ",
+      "300^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(45^\\circ) = \\frac{\\sqrt{2}}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_8f44b932_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = 0$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "C",
+    "options": [
+      "60^\\circ",
+      "30^\\circ",
+      "90^\\circ",
+      "240^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(90^\\circ) = 0$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_a5ca9269",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = 0$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "A",
+    "options": [
+      "0^\\circ",
+      "315^\\circ",
+      "270^\\circ",
+      "225^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(0^\\circ) = 0$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_45dcceca",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = \\frac{1}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "C",
+    "options": [
+      "45^\\circ",
+      "225^\\circ",
+      "30^\\circ",
+      "180^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(30^\\circ) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_45dcceca_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = \\frac{1}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "B",
+    "options": [
+      "300^\\circ",
+      "30^\\circ",
+      "150^\\circ",
+      "120^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(30^\\circ) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_87b72ecf_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = 1$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "B",
+    "options": [
+      "30^\\circ",
+      "90^\\circ",
+      "270^\\circ",
+      "180^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(90^\\circ) = 1$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_86a9884a_2",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = \\frac{1}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "C",
+    "options": [
+      "270^\\circ",
+      "210^\\circ",
+      "60^\\circ",
+      "120^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(60^\\circ) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_1706c48b_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = \\frac{\\sqrt{2}}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "A",
+    "options": [
+      "45^\\circ",
+      "180^\\circ",
+      "150^\\circ",
+      "90^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(45^\\circ) = \\frac{\\sqrt{2}}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_8f44b932_2",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = 0$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "C",
+    "options": [
+      "360^\\circ",
+      "135^\\circ",
+      "90^\\circ",
+      "225^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(90^\\circ) = 0$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_76c0cc67_2",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = 1$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "C",
+    "options": [
+      "90^\\circ",
+      "300^\\circ",
+      "0^\\circ",
+      "210^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(0^\\circ) = 1$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_8f44b932_3",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = 0$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "B",
+    "options": [
+      "135^\\circ",
+      "90^\\circ",
+      "180^\\circ",
+      "60^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(90^\\circ) = 0$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_1706c48b_2",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = \\frac{\\sqrt{2}}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "C",
+    "options": [
+      "90^\\circ",
+      "120^\\circ",
+      "45^\\circ",
+      "270^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(45^\\circ) = \\frac{\\sqrt{2}}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_5afeaf45",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = \\frac{\\sqrt{3}}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "C",
+    "options": [
+      "225^\\circ",
+      "45^\\circ",
+      "60^\\circ",
+      "135^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_a0c82136_2",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = \\frac{\\sqrt{3}}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "C",
+    "options": [
+      "180^\\circ",
+      "60^\\circ",
+      "30^\\circ",
+      "300^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(30^\\circ) = \\frac{\\sqrt{3}}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_45dcceca_2",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = \\frac{1}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "B",
+    "options": [
+      "45^\\circ",
+      "30^\\circ",
+      "300^\\circ",
+      "60^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(30^\\circ) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_45dcceca_3",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = \\frac{1}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "C",
+    "options": [
+      "360^\\circ",
+      "120^\\circ",
+      "30^\\circ",
+      "210^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(30^\\circ) = \\frac{1}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_1706c48b_3",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = \\frac{\\sqrt{2}}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "C",
+    "options": [
+      "90^\\circ",
+      "330^\\circ",
+      "45^\\circ",
+      "300^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(45^\\circ) = \\frac{\\sqrt{2}}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_5afeaf45_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = \\frac{\\sqrt{3}}{2}$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "C",
+    "options": [
+      "30^\\circ",
+      "150^\\circ",
+      "60^\\circ",
+      "90^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_8f44b932_4",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = 0$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "B",
+    "options": [
+      "315^\\circ",
+      "90^\\circ",
+      "120^\\circ",
+      "60^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(90^\\circ) = 0$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_87b72ecf_2",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $sin(x) = 1$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "A",
+    "options": [
+      "90^\\circ",
+      "240^\\circ",
+      "120^\\circ",
+      "210^\\circ"
+    ],
+    "solution": "根据三角函数定义，$sin(90^\\circ) = 1$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_8f44b932_5",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "若 $cos(x) = 0$，且 $0 \\leq x \\leq 360^\\circ$，则 $x$ 可能等于？",
+    "answer": "B",
+    "options": [
+      "330^\\circ",
+      "90^\\circ",
+      "315^\\circ",
+      "300^\\circ"
+    ],
+    "solution": "根据三角函数定义，$cos(90^\\circ) = 0$",
+    "tags": [
+      "三角函数",
+      "三角方程"
+    ],
+    "knowledgePoints": [
+      "三角方程"
+    ],
+    "abilityTags": [
+      "分析",
+      "计算"
+    ]
+  },
+  {
+    "questionId": "trig_fbbb5fb8",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\sin(2x)$ 的最小正周期是？",
+    "answer": "D",
+    "options": [
+      "\\frac{\\pi}{4}",
+      "\\frac{\\pi}{2}",
+      "4\\pi",
+      "\\pi"
+    ],
+    "solution": "三角函数 $\\sin(x)$ 的周期为 $2\\pi$，因此 $\\sin(2x)$ 的周期为 $\\frac{2\\pi}{2} = \\pi$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_b14b8a91",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\tan(x)$ 的最小正周期是？",
+    "answer": "A",
+    "options": [
+      "\\pi",
+      "\\frac{\\pi}{2}",
+      "\\frac{\\pi}{3}",
+      "2\\pi"
+    ],
+    "solution": "三角函数 $\\tan(x)$ 的周期为 $\\pi$，因此 $\\tan(1x)$ 的周期为 $\\frac{\\pi}{1} = \\pi$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_df8febad",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\tan(3x)$ 的最小正周期是？",
+    "answer": "D",
+    "options": [
+      "\\pi",
+      "4\\pi",
+      "\\frac{2\\pi}{3}",
+      "\\frac{\\pi}{3}"
+    ],
+    "solution": "三角函数 $\\tan(x)$ 的周期为 $\\pi$，因此 $\\tan(3x)$ 的周期为 $\\frac{\\pi}{3} = \\frac{\\pi}{3}$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_fbbb5fb8_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\sin(2x)$ 的最小正周期是？",
+    "answer": "D",
+    "options": [
+      "\\frac{\\pi}{3}",
+      "\\frac{\\pi}{2}",
+      "\\frac{\\pi}{4}",
+      "\\pi"
+    ],
+    "solution": "三角函数 $\\sin(x)$ 的周期为 $2\\pi$，因此 $\\sin(2x)$ 的周期为 $\\frac{2\\pi}{2} = \\pi$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_e4851315",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\cos(4x)$ 的最小正周期是？",
+    "answer": "C",
+    "options": [
+      "\\frac{2\\pi}{3}",
+      "\\frac{\\pi}{3}",
+      "\\frac{\\pi}{2}",
+      "2\\pi"
+    ],
+    "solution": "三角函数 $\\cos(x)$ 的周期为 $2\\pi$，因此 $\\cos(4x)$ 的周期为 $\\frac{2\\pi}{4} = \\frac{\\pi}{2}$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_e4851315_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\cos(4x)$ 的最小正周期是？",
+    "answer": "D",
+    "options": [
+      "4\\pi",
+      "\\frac{\\pi}{4}",
+      "2\\pi",
+      "\\frac{\\pi}{2}"
+    ],
+    "solution": "三角函数 $\\cos(x)$ 的周期为 $2\\pi$，因此 $\\cos(4x)$ 的周期为 $\\frac{2\\pi}{4} = \\frac{\\pi}{2}$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_b14b8a91_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\tan(x)$ 的最小正周期是？",
+    "answer": "B",
+    "options": [
+      "2\\pi",
+      "\\pi",
+      "\\frac{\\pi}{2}",
+      "4\\pi"
+    ],
+    "solution": "三角函数 $\\tan(x)$ 的周期为 $\\pi$，因此 $\\tan(1x)$ 的周期为 $\\frac{\\pi}{1} = \\pi$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_e308eefd",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\cos(x)$ 的最小正周期是？",
+    "answer": "D",
+    "options": [
+      "\\frac{\\pi}{3}",
+      "\\pi",
+      "\\frac{2\\pi}{3}",
+      "2\\pi"
+    ],
+    "solution": "三角函数 $\\cos(x)$ 的周期为 $2\\pi$，因此 $\\cos(1x)$ 的周期为 $\\frac{2\\pi}{1} = 2\\pi$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_c20821ee",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\sin(4x)$ 的最小正周期是？",
+    "answer": "B",
+    "options": [
+      "\\pi",
+      "\\frac{\\pi}{2}",
+      "\\frac{2\\pi}{3}",
+      "\\frac{\\pi}{4}"
+    ],
+    "solution": "三角函数 $\\sin(x)$ 的周期为 $2\\pi$，因此 $\\sin(4x)$ 的周期为 $\\frac{2\\pi}{4} = \\frac{\\pi}{2}$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_9123f4ba",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\cos(3x)$ 的最小正周期是？",
+    "answer": "C",
+    "options": [
+      "\\frac{\\pi}{4}",
+      "\\frac{\\pi}{3}",
+      "\\frac{2\\pi}{3}",
+      "\\pi"
+    ],
+    "solution": "三角函数 $\\cos(x)$ 的周期为 $2\\pi$，因此 $\\cos(3x)$ 的周期为 $\\frac{2\\pi}{3} = \\frac{2\\pi}{3}$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_9123f4ba_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\cos(3x)$ 的最小正周期是？",
+    "answer": "A",
+    "options": [
+      "\\frac{2\\pi}{3}",
+      "\\pi",
+      "2\\pi",
+      "\\frac{\\pi}{2}"
+    ],
+    "solution": "三角函数 $\\cos(x)$ 的周期为 $2\\pi$，因此 $\\cos(3x)$ 的周期为 $\\frac{2\\pi}{3} = \\frac{2\\pi}{3}$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_5d21bf14",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\tan(4x)$ 的最小正周期是？",
+    "answer": "C",
+    "options": [
+      "4\\pi",
+      "2\\pi",
+      "\\frac{\\pi}{4}",
+      "\\frac{\\pi}{2}"
+    ],
+    "solution": "三角函数 $\\tan(x)$ 的周期为 $\\pi$，因此 $\\tan(4x)$ 的周期为 $\\frac{\\pi}{4} = \\frac{\\pi}{4}$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_5d21bf14_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\tan(4x)$ 的最小正周期是？",
+    "answer": "B",
+    "options": [
+      "\\frac{2\\pi}{3}",
+      "\\frac{\\pi}{4}",
+      "\\pi",
+      "2\\pi"
+    ],
+    "solution": "三角函数 $\\tan(x)$ 的周期为 $\\pi$，因此 $\\tan(4x)$ 的周期为 $\\frac{\\pi}{4} = \\frac{\\pi}{4}$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_9123f4ba_2",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\cos(3x)$ 的最小正周期是？",
+    "answer": "C",
+    "options": [
+      "\\frac{\\pi}{3}",
+      "2\\pi",
+      "\\frac{2\\pi}{3}",
+      "\\pi"
+    ],
+    "solution": "三角函数 $\\cos(x)$ 的周期为 $2\\pi$，因此 $\\cos(3x)$ 的周期为 $\\frac{2\\pi}{3} = \\frac{2\\pi}{3}$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_b5a20b7c",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\cos(2x)$ 的最小正周期是？",
+    "answer": "B",
+    "options": [
+      "\\frac{\\pi}{2}",
+      "\\pi",
+      "2\\pi",
+      "4\\pi"
+    ],
+    "solution": "三角函数 $\\cos(x)$ 的周期为 $2\\pi$，因此 $\\cos(2x)$ 的周期为 $\\frac{2\\pi}{2} = \\pi$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_c20821ee_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\sin(4x)$ 的最小正周期是？",
+    "answer": "C",
+    "options": [
+      "\\frac{\\pi}{3}",
+      "\\pi",
+      "\\frac{\\pi}{2}",
+      "\\frac{2\\pi}{3}"
+    ],
+    "solution": "三角函数 $\\sin(x)$ 的周期为 $2\\pi$，因此 $\\sin(4x)$ 的周期为 $\\frac{2\\pi}{4} = \\frac{\\pi}{2}$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_e308eefd_1",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\cos(x)$ 的最小正周期是？",
+    "answer": "A",
+    "options": [
+      "2\\pi",
+      "4\\pi",
+      "\\frac{\\pi}{2}",
+      "\\frac{2\\pi}{3}"
+    ],
+    "solution": "三角函数 $\\cos(x)$ 的周期为 $2\\pi$，因此 $\\cos(1x)$ 的周期为 $\\frac{2\\pi}{1} = 2\\pi$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_b14b8a91_2",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\tan(x)$ 的最小正周期是？",
+    "answer": "A",
+    "options": [
+      "\\pi",
+      "2\\pi",
+      "\\frac{\\pi}{4}",
+      "\\frac{\\pi}{3}"
+    ],
+    "solution": "三角函数 $\\tan(x)$ 的周期为 $\\pi$，因此 $\\tan(1x)$ 的周期为 $\\frac{\\pi}{1} = \\pi$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_c20821ee_2",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\sin(4x)$ 的最小正周期是？",
+    "answer": "D",
+    "options": [
+      "4\\pi",
+      "\\pi",
+      "\\frac{\\pi}{3}",
+      "\\frac{\\pi}{2}"
+    ],
+    "solution": "三角函数 $\\sin(x)$ 的周期为 $2\\pi$，因此 $\\sin(4x)$ 的周期为 $\\frac{2\\pi}{4} = \\frac{\\pi}{2}$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
+  },
+  {
+    "questionId": "trig_c20821ee_3",
+    "topic": "三角函数",
+    "difficulty": "L2",
+    "type": "choice",
+    "question": "函数 $f(x) = \\sin(4x)$ 的最小正周期是？",
+    "answer": "D",
+    "options": [
+      "4\\pi",
+      "2\\pi",
+      "\\frac{2\\pi}{3}",
+      "\\frac{\\pi}{2}"
+    ],
+    "solution": "三角函数 $\\sin(x)$ 的周期为 $2\\pi$，因此 $\\sin(4x)$ 的周期为 $\\frac{2\\pi}{4} = \\frac{\\pi}{2}$",
+    "tags": [
+      "三角函数",
+      "周期"
+    ],
+    "knowledgePoints": [
+      "三角函数周期"
+    ],
+    "abilityTags": [
+      "分析"
+    ]
   }
 ]
