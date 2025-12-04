@@ -258,5 +258,25 @@ class ApiService extends GetxService {
       return null;
     }
   }
+
+  // ==================== 反馈管理 ====================
+
+  /// 提交题目纠错反馈
+  Future<void> submitFeedback(Map<String, dynamic> feedback) async {
+    try {
+      final response = await http.post(
+        Uri.parse('${serverUrl.value}/api/feedback'),
+        headers: headers,
+        body: json.encode(feedback),
+      );
+
+      if (response.statusCode != 200) {
+        throw Exception('Failed to submit feedback');
+      }
+    } catch (e) {
+      print('Error submitting feedback: $e');
+      rethrow;
+    }
+  }
 }
 

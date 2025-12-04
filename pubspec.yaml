@@ -56,9 +56,6 @@ dependencies:
   # 数学键盘
   math_keyboard: ^0.3.3
 
-  # 打开邮件/URL
-  url_launcher: ^6.2.2
-
 dev_dependencies:
   flutter_test:
     sdk: flutter

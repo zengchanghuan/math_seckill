@@ -1,139 +1,122 @@
-import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../models/question.dart';
+import './api_service.dart';
 
 /// 错误反馈服务
 class ErrorReportService {
-  static const String _feedbackEmail = '3681577712@qq.com';
-
-  /// 发送题目纠错邮件
+  /// 显示纠错对话框
   static Future<void> reportQuestionError({
     required Question question,
     required String themeName,
     required String chapterName,
   }) async {
+    final TextEditingController descController = TextEditingController();
+    
+    await Get.dialog(
+      AlertDialog(
+        title: const Row(
+          children: [
+            Icon(Icons.flag, color: Colors.orange),
+            SizedBox(width: 8),
+            Text('题目纠错'),
+          ],
+        ),
+        content: SizedBox(
+          width: 300,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '题目：${question.question.substring(0, question.question.length > 30 ? 30 : question.question.length)}...',
+                style: const TextStyle(fontSize: 12, color: Colors.grey),
+              ),
+              const SizedBox(height: 16),
+              TextField(
+                controller: descController,
+                decoration: const InputDecoration(
+                  labelText: '问题描述',
+                  hintText: '请描述您发现的问题...',
+                  border: OutlineInputBorder(),
+                ),
+                maxLines: 3,
+                autofocus: true,
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Get.back(),
+            child: const Text('取消'),
+          ),
+          ElevatedButton(
+            onPressed: () async {
+              final description = descController.text.trim();
+              if (description.isEmpty) {
+                Get.snackbar('提示', '请填写问题描述');
+                return;
+              }
+              
+              Get.back();
+              await _submitFeedback(
+                question: question,
+                themeName: themeName,
+                chapterName: chapterName,
+                description: description,
+              );
+            },
+            child: const Text('提交'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// 提交反馈到后端
+  static Future<void> _submitFeedback({
+    required Question question,
+    required String themeName,
+    required String chapterName,
+    required String description,
+  }) async {
     try {
-      // 构建邮件主题
-      final subject = '[数学秒杀-题目纠错] ${themeName} - ${chapterName}';
+      final apiService = Get.find<ApiService>();
+      
+      await apiService.submitFeedback({
+        'questionId': question.questionId,
+        'themeName': themeName,
+        'chapterName': chapterName,
+        'difficulty': question.difficulty,
+        'type': question.type,
+        'question': question.question,
+        'options': question.options,
+        'answer': question.answer,
+        'solution': question.solution,
+        'description': description,
+        'timestamp': DateTime.now().toIso8601String(),
+      });
 
-      // 构建邮件正文
-      final body = _buildEmailBody(
-        question: question,
-        themeName: themeName,
-        chapterName: chapterName,
+      Get.snackbar(
+        '提交成功',
+        '感谢您的反馈！我们会尽快处理',
+        snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Colors.green,
+        colorText: Colors.white,
+        duration: const Duration(seconds: 2),
       );
-
-      // 创建mailto链接
-      final uri = Uri(
-        scheme: 'mailto',
-        path: _feedbackEmail,
-        query: _encodeQueryParameters({
-          'subject': subject,
-          'body': body,
-        }),
-      );
-
-      // 尝试打开邮件客户端
-      if (await canLaunchUrl(uri)) {
-        await launchUrl(uri);
-        Get.snackbar(
-          '纠错功能',
-          '已打开邮件客户端，请发送反馈',
-          snackPosition: SnackPosition.BOTTOM,
-          duration: const Duration(seconds: 2),
-        );
-      } else {
-        // 如果无法打开邮件客户端，显示错误信息
-        Get.snackbar(
-          '提示',
-          '无法打开邮件客户端\n请手动发送邮件至：$_feedbackEmail',
-          snackPosition: SnackPosition.BOTTOM,
-          duration: const Duration(seconds: 4),
-        );
-      }
     } catch (e) {
       Get.snackbar(
-        '错误',
-        '无法发送反馈：$e',
+        '提交失败',
+        '请稍后重试：$e',
         snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Colors.red,
+        colorText: Colors.white,
         duration: const Duration(seconds: 3),
       );
     }
   }
 
-  /// 构建邮件正文
-  static String _buildEmailBody({
-    required Question question,
-    required String themeName,
-    required String chapterName,
-  }) {
-    final buffer = StringBuffer();
-
-    buffer.writeln('尊敬的开发者：');
-    buffer.writeln();
-    buffer.writeln('我在使用数学秒杀APP时发现以下题目存在问题：');
-    buffer.writeln();
-    buffer.writeln('【题目信息】');
-    buffer.writeln('题目ID：${question.questionId}');
-    buffer.writeln('所属主题：$themeName');
-    buffer.writeln('所属章节：$chapterName');
-    buffer.writeln('难度：${question.difficulty}');
-    buffer.writeln('题型：${_getQuestionTypeName(question.type)}');
-    buffer.writeln();
-    buffer.writeln('【题目内容】');
-    buffer.writeln(question.question);
-    buffer.writeln();
-
-    final options = question.options;
-    if (options != null && options.isNotEmpty) {
-      buffer.writeln('【选项】');
-      for (int i = 0; i < options.length; i++) {
-        buffer.writeln('${String.fromCharCode(65 + i)}. ${options[i]}');
-      }
-      buffer.writeln();
-    }
-
-    buffer.writeln('【正确答案】');
-    buffer.writeln(question.answer);
-    buffer.writeln();
-
-    final solution = question.solution;
-    if (solution != null && solution.isNotEmpty) {
-      buffer.writeln('【解析】');
-      buffer.writeln(solution);
-      buffer.writeln();
-    }
-
-    buffer.writeln('【问题描述】');
-    buffer.writeln('（请在此处描述您发现的问题，如：题目错误、答案错误、解析不清楚等）');
-    buffer.writeln();
-    buffer.writeln();
-    buffer.writeln('---');
-    buffer.writeln('感谢您的反馈！');
-
-    return buffer.toString();
-  }
-
-  /// 获取题型名称
-  static String _getQuestionTypeName(String type) {
-    switch (type) {
-      case 'choice':
-        return '选择题';
-      case 'fill':
-        return '填空题';
-      case 'solve':
-        return '解答题';
-      default:
-        return type;
-    }
-  }
-
-  /// 编码URL查询参数
-  static String _encodeQueryParameters(Map<String, String> params) {
-    return params.entries
-        .map((e) =>
-            '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
-        .join('&');
-  }
 }
 
