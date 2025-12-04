@@ -84,10 +84,11 @@ class ErrorReportService {
     buffer.writeln(question.question);
     buffer.writeln();
 
-    if (question.options != null && question.options.isNotEmpty) {
+    final options = question.options;
+    if (options != null && options.isNotEmpty) {
       buffer.writeln('【选项】');
-      for (int i = 0; i < question.options.length; i++) {
-        buffer.writeln('${String.fromCharCode(65 + i)}. ${question.options[i]}');
+      for (int i = 0; i < options.length; i++) {
+        buffer.writeln('${String.fromCharCode(65 + i)}. ${options[i]}');
       }
       buffer.writeln();
     }
@@ -96,9 +97,10 @@ class ErrorReportService {
     buffer.writeln(question.answer);
     buffer.writeln();
 
-    if (question.solution != null && question.solution.isNotEmpty) {
+    final solution = question.solution;
+    if (solution != null && solution.isNotEmpty) {
       buffer.writeln('【解析】');
-      buffer.writeln(question.solution);
+      buffer.writeln(solution);
       buffer.writeln();
     }
 

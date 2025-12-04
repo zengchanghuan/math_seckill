@@ -20,17 +20,17 @@ class DrillPage extends GetView<DrillController> {
         actions: [
           // 统计信息
           Obx(() => Center(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text(
-                '${controller.correctCount.value}/${controller.totalAnswered.value}',
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    '${controller.correctCount.value}/${controller.totalAnswered.value}',
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
-              ),
-            ),
-          )),
+              )),
           // 重置按钮
           IconButton(
             icon: const Icon(Icons.refresh),
@@ -181,7 +181,8 @@ class DrillPage extends GetView<DrillController> {
             // 填空题 - 根据用户选择显示
             if (question.type == 'fill') ...[
               // 选择模式
-              if (controller.currentFillAsChoice.value && question.options != null) ...[
+              if (controller.currentFillAsChoice.value &&
+                  question.options != null) ...[
                 ..._buildOptions(question.options!),
                 const SizedBox(height: 12),
                 // 切换回输入按钮
