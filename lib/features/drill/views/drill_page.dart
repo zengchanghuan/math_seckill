@@ -5,6 +5,8 @@ import '../controllers/drill_controller.dart';
 import '../../../widgets/math_text.dart';
 import '../widgets/drill_drawer.dart';
 import '../widgets/chapter_selector_tabs.dart';
+import '../../../core/services/error_report_service.dart';
+import '../../../core/models/question.dart';
 
 /// 刷题页面
 class DrillPage extends GetView<DrillController> {
@@ -347,7 +349,29 @@ class DrillPage extends GetView<DrillController> {
         ),
         const SizedBox(width: 8),
         Chip(label: Text(question.topic)),
+        const Spacer(),
+        // 一键纠错按钮
+        OutlinedButton.icon(
+          onPressed: () => _reportError(question),
+          icon: const Icon(Icons.flag_outlined, size: 16),
+          label: const Text('纠错', style: TextStyle(fontSize: 12)),
+          style: OutlinedButton.styleFrom(
+            foregroundColor: Colors.orange,
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            minimumSize: Size.zero,
+            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          ),
+        ),
       ],
+    );
+  }
+
+  /// 提交题目纠错
+  void _reportError(Question question) {
+    ErrorReportService.reportQuestionError(
+      question: question,
+      themeName: controller.selectedTheme.value,
+      chapterName: controller.selectedChapter.value,
     );
   }
 
