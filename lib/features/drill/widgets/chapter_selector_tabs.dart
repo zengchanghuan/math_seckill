@@ -38,7 +38,8 @@ class ChapterSelectorTabs extends GetView<DrillController> {
                 onTap: () => controller.setChapter(chapter),
                 borderRadius: BorderRadius.circular(8),
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(
                     color: isSelected ? Colors.blue : Colors.transparent,
                     borderRadius: BorderRadius.circular(8),
@@ -52,7 +53,8 @@ class ChapterSelectorTabs extends GetView<DrillController> {
                       chapter,
                       style: TextStyle(
                         fontSize: 14,
-                        fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                        fontWeight:
+                            isSelected ? FontWeight.bold : FontWeight.normal,
                         color: isSelected ? Colors.white : Colors.black87,
                       ),
                     ),
@@ -66,5 +68,8 @@ class ChapterSelectorTabs extends GetView<DrillController> {
     });
   }
 }
+
+
+
 
 

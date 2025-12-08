@@ -40,10 +40,12 @@ class ConfigService extends GetxService {
   /// 从服务器同步配置
   Future<bool> syncFromServer() async {
     try {
-      final response = await http.get(
-        Uri.parse('${_apiService.serverUrl.value}/api/config/themes'),
-        headers: _apiService.headers,
-      ).timeout(const Duration(seconds: 5));
+      final response = await http
+          .get(
+            Uri.parse('${_apiService.serverUrl.value}/api/config/themes'),
+            headers: _apiService.headers,
+          )
+          .timeout(const Duration(seconds: 5));
 
       if (response.statusCode == 200) {
         final data = json.decode(utf8.decode(response.bodyBytes));
@@ -84,7 +86,8 @@ class ConfigService extends GetxService {
     try {
       final configJson = json.encode(config);
       await _storageService.setCachedConfig(configJson);
-      await _storageService.setCachedConfigTime(DateTime.now().toIso8601String());
+      await _storageService
+          .setCachedConfigTime(DateTime.now().toIso8601String());
     } catch (e) {
       print('保存配置缓存失败：$e');
     }
@@ -155,4 +158,3 @@ class ConfigService extends GetxService {
     }
   }
 }
-

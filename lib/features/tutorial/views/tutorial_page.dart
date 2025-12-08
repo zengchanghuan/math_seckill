@@ -34,7 +34,8 @@ class TutorialPage extends GetView<DrillController> {
               final chapterName = controller.selectedChapter.value;
 
               return FutureBuilder<TutorialChapter?>(
-                future: Get.find<ApiService>().getChapterTutorial(themeName, chapterName),
+                future: Get.find<ApiService>()
+                    .getChapterTutorial(themeName, chapterName),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const Center(child: CircularProgressIndicator());
@@ -245,7 +246,8 @@ class TutorialPage extends GetView<DrillController> {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(Icons.functions, color: Colors.amber.shade700, size: 20),
+                    Icon(Icons.functions,
+                        color: Colors.amber.shade700, size: 20),
                     const SizedBox(width: 8),
                     Expanded(
                       child: MathText(

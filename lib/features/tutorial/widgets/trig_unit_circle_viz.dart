@@ -265,7 +265,8 @@ class UnitCirclePainter extends CustomPainter {
     // cos标签
     textPainter.text = TextSpan(
       text: 'cos',
-      style: TextStyle(color: Colors.green.shade700, fontWeight: FontWeight.bold),
+      style:
+          TextStyle(color: Colors.green.shade700, fontWeight: FontWeight.bold),
     );
     textPainter.layout();
     textPainter.paint(canvas, Offset((x + center.dx) / 2 - 15, center.dy + 10));
@@ -276,5 +277,8 @@ class UnitCirclePainter extends CustomPainter {
     return oldDelegate.angle != angle;
   }
 }
+
+
+
 
 

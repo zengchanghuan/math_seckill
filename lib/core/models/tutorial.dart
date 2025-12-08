@@ -68,7 +68,8 @@ class TutorialChapter {
     return TutorialChapter(
       chapterName: json['chapterName'] as String,
       sections: (json['sections'] as List)
-          .map((section) => TutorialSection.fromJson(section as Map<String, dynamic>))
+          .map((section) =>
+              TutorialSection.fromJson(section as Map<String, dynamic>))
           .toList(),
     );
   }
@@ -100,7 +101,8 @@ class TutorialTheme {
     return TutorialTheme(
       themeName: json['themeName'] as String,
       chapters: (json['chapters'] as List)
-          .map((chapter) => TutorialChapter.fromJson(chapter as Map<String, dynamic>))
+          .map((chapter) =>
+              TutorialChapter.fromJson(chapter as Map<String, dynamic>))
           .toList(),
     );
   }
@@ -153,5 +155,8 @@ class TutorialsResponse {
     }
   }
 }
+
+
+
 
 

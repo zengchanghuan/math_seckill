@@ -26,22 +26,22 @@ class ProfilePage extends GetView<ProfileController> {
         final profile = controller.profile.value;
 
         if (profile == null) {
-          return Center(
+          return const Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(
+                Icon(
                   Icons.analytics_outlined,
                   size: 64,
                   color: Colors.grey,
                 ),
-                const SizedBox(height: 16),
-                const Text(
+                SizedBox(height: 16),
+                Text(
                   '暂无学习数据',
                   style: TextStyle(fontSize: 18, color: Colors.grey),
                 ),
-                const SizedBox(height: 8),
-                const Text(
+                SizedBox(height: 8),
+                Text(
                   '开始刷题后，系统将为您生成详细的学习画像',
                   style: TextStyle(color: Colors.grey),
                 ),
@@ -330,7 +330,8 @@ class ProfilePage extends GetView<ProfileController> {
                 return Chip(
                   label: Text(kp),
                   backgroundColor: Colors.red.shade100,
-                  avatar: const Icon(Icons.error_outline, size: 18, color: Colors.red),
+                  avatar: const Icon(Icons.error_outline,
+                      size: 18, color: Colors.red),
                 );
               }).toList(),
             ),
@@ -373,7 +374,8 @@ class ProfilePage extends GetView<ProfileController> {
   }
 
   /// 构建统计项
-  Widget _buildStatItem(String label, String value, IconData icon, Color color) {
+  Widget _buildStatItem(
+      String label, String value, IconData icon, Color color) {
     return Column(
       children: [
         Icon(icon, size: 32, color: color),
@@ -468,4 +470,3 @@ class ProfilePage extends GetView<ProfileController> {
     }
   }
 }
-

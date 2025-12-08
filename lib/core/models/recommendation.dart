@@ -53,7 +53,8 @@ class RecommendationResponse {
   factory RecommendationResponse.fromJson(Map<String, dynamic> json) {
     return RecommendationResponse(
       recommendations: (json['recommendations'] as List)
-          .map((item) => QuestionRecommendation.fromJson(item as Map<String, dynamic>))
+          .map((item) =>
+              QuestionRecommendation.fromJson(item as Map<String, dynamic>))
           .toList(),
       reason: json['reason'] as String,
     );
@@ -80,4 +81,8 @@ class QuestionRecommendation {
     );
   }
 }
+
+
+
+
 

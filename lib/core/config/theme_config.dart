@@ -97,14 +97,14 @@ class ChapterConfig {
 /// 所有学习主题的配置
 class ThemeConfigs {
   // 高中衔接大学数学基础 (490题)
-  static final ThemeConfig highSchoolToCollege = ThemeConfig(
+  static const ThemeConfig highSchoolToCollege = ThemeConfig(
     name: '高中衔接大学数学基础',
     icon: '🏫',
     totalQuestions: 490,
     difficultyDistribution: {
-      'Easy': 0.25,    // 25% ≈ 123题
-      'Medium': 0.55,  // 55% ≈ 270题
-      'Hard': 0.20,    // 20% ≈ 97题
+      'Easy': 0.25, // 25% ≈ 123题
+      'Medium': 0.55, // 55% ≈ 270题
+      'Hard': 0.20, // 20% ≈ 97题
     },
     chapters: [
       ChapterConfig(
@@ -234,7 +234,7 @@ class ThemeConfigs {
   );
 
   // 专升本 (待定义具体章节和分配)
-  static final ThemeConfig collegeDegree = ThemeConfig(
+  static const ThemeConfig collegeDegree = ThemeConfig(
     name: '专升本',
     icon: '📈',
     totalQuestions: 400,
@@ -287,7 +287,7 @@ class ThemeConfigs {
   );
 
   // 高数期末考试
-  static final ThemeConfig calcExam = ThemeConfig(
+  static const ThemeConfig calcExam = ThemeConfig(
     name: '高数期末考试',
     icon: '📋',
     totalQuestions: 300,
@@ -371,4 +371,3 @@ class ThemeConfigs {
     return [highSchoolToCollege, collegeDegree, calcExam];
   }
 }
-

@@ -28,7 +28,8 @@ class QuestionStats {
       correctRate: (json['correctRate'] as num).toDouble(),
       discriminationIndex: (json['discriminationIndex'] as num).toDouble(),
       avgTimeSeconds: (json['avgTimeSeconds'] as num).toDouble(),
-      optionDistribution: Map<String, int>.from(json['optionDistribution'] as Map),
+      optionDistribution:
+          Map<String, int>.from(json['optionDistribution'] as Map),
       qualityStatus: json['qualityStatus'] as String,
     );
   }
@@ -94,5 +95,8 @@ class QuestionBankStats {
     );
   }
 }
+
+
+
 
 

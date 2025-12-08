@@ -68,7 +68,6 @@ class MyApp extends StatelessWidget {
           seedColor: Colors.blue,
           brightness: Brightness.dark,
         ),
-        useMaterial3: true,
       ),
       themeMode: Get.find<StorageService>().isDarkMode()
           ? ThemeMode.dark

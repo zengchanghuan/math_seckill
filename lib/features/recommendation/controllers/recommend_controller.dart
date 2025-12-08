@@ -10,7 +10,8 @@ class RecommendController extends GetxController {
   final StorageService _storageService = Get.find<StorageService>();
 
   // 推荐的题目列表
-  final RxList<QuestionRecommendation> recommendations = <QuestionRecommendation>[].obs;
+  final RxList<QuestionRecommendation> recommendations =
+      <QuestionRecommendation>[].obs;
 
   // 推荐理由
   final RxString recommendReason = ''.obs;
@@ -22,7 +23,8 @@ class RecommendController extends GetxController {
   final RxBool isLoading = false.obs;
 
   // 当前学生ID
-  String get studentId => _storageService.getStudentId() ?? _apiService.currentStudentId.value;
+  String get studentId =>
+      _storageService.getStudentId() ?? _apiService.currentStudentId.value;
 
   @override
   void onInit() {
@@ -63,7 +65,6 @@ class RecommendController extends GetxController {
       } else {
         Get.snackbar('提示', '暂无推荐数据，请先完成一些题目');
       }
-
     } catch (e) {
       print('Error getting recommendations: $e');
       // Get.snackbar('错误', '获取推荐失败：$e');
@@ -105,8 +106,8 @@ class RecommendController extends GetxController {
   }
 
   /// 刷新推荐
+  @override
   Future<void> refresh() async {
     await getRecommendations(mode: currentMode.value);
   }
 }
-

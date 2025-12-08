@@ -85,26 +85,27 @@ class DrillDrawer extends GetView<DrillController> {
           const SizedBox(height: 16),
           // 题目统计
           Obx(() => Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.2),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Icon(Icons.quiz, size: 16, color: Colors.white),
-                const SizedBox(width: 6),
-                Text(
-                  '当前题库：${controller.questions.length} 题',
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 13,
-                  ),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(8),
                 ),
-              ],
-            ),
-          )),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.quiz, size: 16, color: Colors.white),
+                    const SizedBox(width: 6),
+                    Text(
+                      '当前题库：${controller.questions.length} 题',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 13,
+                      ),
+                    ),
+                  ],
+                ),
+              )),
         ],
       ),
     );
@@ -116,92 +117,100 @@ class DrillDrawer extends GetView<DrillController> {
     final themeConfigs = configService.getAllThemes();
 
     return Obx(() => Container(
-      padding: const EdgeInsets.all(16),
-      color: Colors.blue.shade50,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // 主题标题
-          Row(
+          padding: const EdgeInsets.all(16),
+          color: Colors.blue.shade50,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(Icons.category, size: 20, color: Colors.blue.shade700),
-              const SizedBox(width: 8),
-              Text(
-                '学习主题',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue.shade700,
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 12),
-
-          // 主题选择列表（使用配置数据）
-          ...themeConfigs.map((config) {
-            final isSelected = controller.selectedTheme.value == config.name;
-
-            return Container(
-              margin: const EdgeInsets.only(bottom: 8),
-              child: InkWell(
-                onTap: () {
-                  controller.setTheme(config.name);
-                  Get.back(); // 切换主题后关闭侧边栏
-                },
-                borderRadius: BorderRadius.circular(8),
-                child: Container(
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: isSelected ? Colors.blue : Colors.white,
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: isSelected ? Colors.blue : Colors.blue.shade200,
-                      width: isSelected ? 2 : 1,
+              // 主题标题
+              Row(
+                children: [
+                  Icon(Icons.category, size: 20, color: Colors.blue.shade700),
+                  const SizedBox(width: 8),
+                  Text(
+                    '学习主题',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue.shade700,
                     ),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            config.icon,
-                            style: const TextStyle(fontSize: 20),
-                          ),
-                          const SizedBox(width: 12),
-                          Expanded(
-                            child: Text(
-                              config.name,
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
-                                color: isSelected ? Colors.white : Colors.black87,
-                              ),
-                            ),
-                          ),
-                          if (isSelected)
-                            const Icon(Icons.check_circle, color: Colors.white, size: 20),
-                        ],
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        '${config.totalQuestions}题 · ${config.chapters.length}章节',
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: isSelected ? Colors.white70 : Colors.grey.shade600,
+                ],
+              ),
+              const SizedBox(height: 12),
+
+              // 主题选择列表（使用配置数据）
+              ...themeConfigs.map((config) {
+                final isSelected =
+                    controller.selectedTheme.value == config.name;
+
+                return Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  child: InkWell(
+                    onTap: () {
+                      controller.setTheme(config.name);
+                      Get.back(); // 切换主题后关闭侧边栏
+                    },
+                    borderRadius: BorderRadius.circular(8),
+                    child: Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: isSelected ? Colors.blue : Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color:
+                              isSelected ? Colors.blue : Colors.blue.shade200,
+                          width: isSelected ? 2 : 1,
                         ),
                       ),
-                    ],
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                config.icon,
+                                style: const TextStyle(fontSize: 20),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Text(
+                                  config.name,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: isSelected
+                                        ? FontWeight.bold
+                                        : FontWeight.w500,
+                                    color: isSelected
+                                        ? Colors.white
+                                        : Colors.black87,
+                                  ),
+                                ),
+                              ),
+                              if (isSelected)
+                                const Icon(Icons.check_circle,
+                                    color: Colors.white, size: 20),
+                            ],
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            '${config.totalQuestions}题 · ${config.chapters.length}章节',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: isSelected
+                                  ? Colors.white70
+                                  : Colors.grey.shade600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            );
-          }),
-
-        ],
-      ),
-    ));
+                );
+              }),
+            ],
+          ),
+        ));
   }
 
   /// 构建题目列表项
@@ -251,9 +260,8 @@ class DrillDrawer extends GetView<DrillController> {
               const Icon(Icons.check, size: 16, color: Colors.green),
           ],
         ),
-        trailing: isCurrent
-            ? const Icon(Icons.arrow_forward_ios, size: 16)
-            : null,
+        trailing:
+            isCurrent ? const Icon(Icons.arrow_forward_ios, size: 16) : null,
         onTap: () {
           controller.jumpToQuestion(index);
           Get.back(); // 关闭侧边栏
@@ -287,7 +295,8 @@ class DrillDrawer extends GetView<DrillController> {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.info_outline, size: 16, color: Colors.blue.shade700),
+                        Icon(Icons.info_outline,
+                            size: 16, color: Colors.blue.shade700),
                         const SizedBox(width: 8),
                         Expanded(
                           child: Text(
@@ -359,7 +368,8 @@ class DrillDrawer extends GetView<DrillController> {
   }
 
   /// 构建统计项
-  Widget _buildStatItem(IconData icon, String label, String value, Color color) {
+  Widget _buildStatItem(
+      IconData icon, String label, String value, Color color) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -398,4 +408,3 @@ class DrillDrawer extends GetView<DrillController> {
     }
   }
 }
-

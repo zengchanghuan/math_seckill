@@ -119,4 +119,3 @@ class StorageService extends GetxService {
     return _prefs.getString('cached_config_time');
   }
 }
-

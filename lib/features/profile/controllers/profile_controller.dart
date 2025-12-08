@@ -85,6 +85,7 @@ class ProfileController extends GetxController {
   }
 
   /// 刷新数据
+  @override
   Future<void> refresh() async {
     isLoading.value = true;
     try {

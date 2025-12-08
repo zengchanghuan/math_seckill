@@ -56,7 +56,8 @@ class _ComplexPlaneVizState extends State<ComplexPlaneViz>
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 IconButton(
-                  icon: Icon(_controller.isAnimating ? Icons.pause : Icons.refresh),
+                  icon: Icon(
+                      _controller.isAnimating ? Icons.pause : Icons.refresh),
                   onPressed: () {
                     if (_controller.isAnimating) {
                       _controller.stop();
@@ -103,8 +104,10 @@ class _ComplexPlaneVizState extends State<ComplexPlaneViz>
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _buildInfoChip('模', '|z| = ${modulus.toStringAsFixed(2)}', Colors.blue),
-                      _buildInfoChip('辐角', 'θ = ${argument.toStringAsFixed(0)}°', Colors.orange),
+                      _buildInfoChip('模', '|z| = ${modulus.toStringAsFixed(2)}',
+                          Colors.blue),
+                      _buildInfoChip('辐角',
+                          'θ = ${argument.toStringAsFixed(0)}°', Colors.orange),
                     ],
                   ),
                 ],
@@ -187,7 +190,8 @@ class ComplexPlanePainter extends CustomPainter {
     // 绘制坐标轴
     paint.color = Colors.grey.shade400;
     canvas.drawLine(Offset(0, center.dy), Offset(size.width, center.dy), paint);
-    canvas.drawLine(Offset(center.dx, 0), Offset(center.dx, size.height), paint);
+    canvas.drawLine(
+        Offset(center.dx, 0), Offset(center.dx, size.height), paint);
 
     // 绘制网格
     paint.color = Colors.grey.shade200;
@@ -255,7 +259,8 @@ class ComplexPlanePainter extends CustomPainter {
     canvas.drawCircle(point, 6, paint);
 
     // 绘制坐标轴标签
-    _drawText(canvas, 'Re', Offset(size.width - 25, center.dy - 20), Colors.black);
+    _drawText(
+        canvas, 'Re', Offset(size.width - 25, center.dy - 20), Colors.black);
     _drawText(canvas, 'Im', Offset(center.dx + 10, 15), Colors.black);
   }
 
@@ -263,7 +268,8 @@ class ComplexPlanePainter extends CustomPainter {
     final textPainter = TextPainter(
       text: TextSpan(
         text: text,
-        style: TextStyle(color: color, fontWeight: FontWeight.bold, fontSize: 14),
+        style:
+            TextStyle(color: color, fontWeight: FontWeight.bold, fontSize: 14),
       ),
       textDirection: TextDirection.ltr,
     );
@@ -276,5 +282,8 @@ class ComplexPlanePainter extends CustomPainter {
     return oldDelegate.real != real || oldDelegate.imaginary != imaginary;
   }
 }
+
+
+
 
 

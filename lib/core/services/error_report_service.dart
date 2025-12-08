@@ -12,7 +12,7 @@ class ErrorReportService {
     required String chapterName,
   }) async {
     final TextEditingController descController = TextEditingController();
-    
+
     await Get.dialog(
       AlertDialog(
         title: const Row(
@@ -58,7 +58,7 @@ class ErrorReportService {
                 Get.snackbar('提示', '请填写问题描述');
                 return;
               }
-              
+
               Get.back();
               await _submitFeedback(
                 question: question,
@@ -83,7 +83,7 @@ class ErrorReportService {
   }) async {
     try {
       final apiService = Get.find<ApiService>();
-      
+
       await apiService.submitFeedback({
         'questionId': question.questionId,
         'themeName': themeName,

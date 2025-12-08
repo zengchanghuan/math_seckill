@@ -48,7 +48,7 @@ class MathText extends StatelessWidget {
       } catch (e) {
         // 如果解析失败，显示原文
         spans.add(TextSpan(
-          text: '\$${latex}\$',
+          text: '\$$latex\$',
           style: style.copyWith(color: Colors.red),
         ));
       }
@@ -69,5 +69,8 @@ class MathText extends StatelessWidget {
     );
   }
 }
+
+
+
 
 

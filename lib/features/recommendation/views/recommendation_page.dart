@@ -107,31 +107,31 @@ class RecommendationPage extends GetView<RecommendController> {
   /// 构建推荐模式选择器
   Widget _buildModeSelector() {
     return Obx(() => Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: Row(
-        children: [
-          const Text('推荐模式：', style: TextStyle(fontSize: 16)),
-          const SizedBox(width: 8),
-          Expanded(
-            child: SegmentedButton<RecommendationMode>(
-              segments: RecommendationMode.values.map((mode) {
-                return ButtonSegment<RecommendationMode>(
-                  value: mode,
-                  label: Text(
-                    mode.displayName.replaceAll('模式', ''),
-                    style: const TextStyle(fontSize: 12),
-                  ),
-                );
-              }).toList(),
-              selected: {controller.currentMode.value},
-              onSelectionChanged: (Set<RecommendationMode> selected) {
-                controller.changeMode(selected.first);
-              },
-            ),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: Row(
+            children: [
+              const Text('推荐模式：', style: TextStyle(fontSize: 16)),
+              const SizedBox(width: 8),
+              Expanded(
+                child: SegmentedButton<RecommendationMode>(
+                  segments: RecommendationMode.values.map((mode) {
+                    return ButtonSegment<RecommendationMode>(
+                      value: mode,
+                      label: Text(
+                        mode.displayName.replaceAll('模式', ''),
+                        style: const TextStyle(fontSize: 12),
+                      ),
+                    );
+                  }).toList(),
+                  selected: {controller.currentMode.value},
+                  onSelectionChanged: (Set<RecommendationMode> selected) {
+                    controller.changeMode(selected.first);
+                  },
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
-    ));
+        ));
   }
 
   /// 构建题目卡片
@@ -169,7 +169,8 @@ class RecommendationPage extends GetView<RecommendController> {
                           children: [
                             Chip(
                               label: Text(question.difficulty),
-                              backgroundColor: _getDifficultyColor(question.difficulty),
+                              backgroundColor:
+                                  _getDifficultyColor(question.difficulty),
                               padding: EdgeInsets.zero,
                               visualDensity: VisualDensity.compact,
                             ),
@@ -243,5 +244,8 @@ class RecommendationPage extends GetView<RecommendController> {
     }
   }
 }
+
+
+
 
 

@@ -64,9 +64,3 @@ class ProblemService extends GetxService {
     }
   }
 }
-
-
-
-
-
-

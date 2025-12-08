@@ -26,11 +26,11 @@ class ChapterSelectorChips extends GetView<DrillController> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
+            const Row(
               children: [
-                const Icon(Icons.menu_book, size: 20, color: Colors.blue),
-                const SizedBox(width: 8),
-                const Text(
+                Icon(Icons.menu_book, size: 20, color: Colors.blue),
+                SizedBox(width: 8),
+                Text(
                   '选择章节',
                   style: TextStyle(
                     fontSize: 14,
@@ -64,7 +64,8 @@ class ChapterSelectorChips extends GetView<DrillController> {
                   selectedColor: Colors.blue,
                   backgroundColor: Colors.grey.shade100,
                   elevation: isSelected ? 2 : 0,
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 );
               }).toList(),
             ),
@@ -74,5 +75,8 @@ class ChapterSelectorChips extends GetView<DrillController> {
     });
   }
 }
+
+
+
 
 

@@ -75,7 +75,9 @@ class _ParametricCurveVizState extends State<ParametricCurveViz>
                       tooltip: '重置',
                     ),
                     IconButton(
-                      icon: Icon(_controller.isAnimating ? Icons.pause : Icons.play_arrow),
+                      icon: Icon(_controller.isAnimating
+                          ? Icons.pause
+                          : Icons.play_arrow),
                       onPressed: () {
                         if (_controller.isAnimating) {
                           _controller.stop();
@@ -175,7 +177,8 @@ class ParametricCurvePainter extends CustomPainter {
     paint.color = Colors.grey.shade300;
     paint.strokeWidth = 1.5;
     canvas.drawLine(Offset(0, center.dy), Offset(size.width, center.dy), paint);
-    canvas.drawLine(Offset(center.dx, 0), Offset(center.dx, size.height), paint);
+    canvas.drawLine(
+        Offset(center.dx, 0), Offset(center.dx, size.height), paint);
 
     // 绘制轨迹
     if (trail.length > 1) {
@@ -214,7 +217,8 @@ class ParametricCurvePainter extends CustomPainter {
     canvas.drawLine(center, pointPos, paint);
 
     // 绘制坐标轴标签
-    _drawText(canvas, 'x', Offset(size.width - 20, center.dy + 20), Colors.black);
+    _drawText(
+        canvas, 'x', Offset(size.width - 20, center.dy + 20), Colors.black);
     _drawText(canvas, 'y', Offset(center.dx + 10, 15), Colors.black);
   }
 
@@ -222,7 +226,8 @@ class ParametricCurvePainter extends CustomPainter {
     final textPainter = TextPainter(
       text: TextSpan(
         text: text,
-        style: TextStyle(color: color, fontWeight: FontWeight.bold, fontSize: 14),
+        style:
+            TextStyle(color: color, fontWeight: FontWeight.bold, fontSize: 14),
       ),
       textDirection: TextDirection.ltr,
     );
@@ -233,5 +238,8 @@ class ParametricCurvePainter extends CustomPainter {
   @override
   bool shouldRepaint(ParametricCurvePainter oldDelegate) => true;
 }
+
+
+
 
 

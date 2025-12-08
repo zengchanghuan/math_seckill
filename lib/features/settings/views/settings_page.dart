@@ -26,38 +26,36 @@ class SettingsPage extends StatelessWidget {
             enabled: false,
           ),
           Obx(() => ListTile(
-            leading: Icon(
-              configService.usingServerConfig.value
-                  ? Icons.cloud_done
-                  : Icons.cloud_off,
-              color: configService.usingServerConfig.value
-                  ? Colors.green
-                  : Colors.orange,
-            ),
-            title: const Text('配置来源'),
-            subtitle: Text(configService.getConfigInfo()),
-            trailing: IconButton(
-              icon: const Icon(Icons.refresh),
-              onPressed: () async {
-                Get.dialog(
-                  const Center(child: CircularProgressIndicator()),
-                  barrierDismissible: false,
-                );
+                leading: Icon(
+                  configService.usingServerConfig.value
+                      ? Icons.cloud_done
+                      : Icons.cloud_off,
+                  color: configService.usingServerConfig.value
+                      ? Colors.green
+                      : Colors.orange,
+                ),
+                title: const Text('配置来源'),
+                subtitle: Text(configService.getConfigInfo()),
+                trailing: IconButton(
+                  icon: const Icon(Icons.refresh),
+                  onPressed: () async {
+                    Get.dialog(
+                      const Center(child: CircularProgressIndicator()),
+                      barrierDismissible: false,
+                    );
 
-                final success = await configService.refresh();
-                Get.back();
+                    final success = await configService.refresh();
+                    Get.back();
 
-                Get.snackbar(
-                  success ? '成功' : '失败',
-                  success
-                      ? '配置已更新到最新版本'
-                      : '无法连接服务器，使用缓存配置',
-                  backgroundColor: success ? Colors.green : Colors.orange,
-                  colorText: Colors.white,
-                );
-              },
-            ),
-          )),
+                    Get.snackbar(
+                      success ? '成功' : '失败',
+                      success ? '配置已更新到最新版本' : '无法连接服务器，使用缓存配置',
+                      backgroundColor: success ? Colors.green : Colors.orange,
+                      colorText: Colors.white,
+                    );
+                  },
+                ),
+              )),
           const Divider(),
 
           // 用户设置
@@ -188,7 +186,8 @@ class SettingsPage extends StatelessWidget {
     ApiService apiService,
     StorageService storageService,
   ) {
-    final controller = TextEditingController(text: apiService.currentStudentId.value);
+    final controller =
+        TextEditingController(text: apiService.currentStudentId.value);
 
     Get.defaultDialog(
       title: '设置学生ID',
@@ -254,4 +253,3 @@ class SettingsPage extends StatelessWidget {
     );
   }
 }
-

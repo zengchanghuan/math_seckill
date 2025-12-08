@@ -21,12 +21,13 @@ class ApiService extends GetxService {
 
   // API请求头
   Map<String, String> get headers => {
-    'Content-Type': 'application/json; charset=UTF-8',
-  };
+        'Content-Type': 'application/json; charset=UTF-8',
+      };
 
   /// 设置服务器地址
   void setServerUrl(String url) {
-    serverUrl.value = url.endsWith('/') ? url.substring(0, url.length - 1) : url;
+    serverUrl.value =
+        url.endsWith('/') ? url.substring(0, url.length - 1) : url;
   }
 
   /// 设置当前学生ID
@@ -108,7 +109,8 @@ class ApiService extends GetxService {
   // ==================== 作答记录 ====================
 
   /// 提交答案
-  Future<SubmitAnswerResponse?> submitAnswer(SubmitAnswerRequest request) async {
+  Future<SubmitAnswerResponse?> submitAnswer(
+      SubmitAnswerRequest request) async {
     try {
       final response = await http.post(
         Uri.parse('${serverUrl.value}/api/answers/submit'),
@@ -139,10 +141,16 @@ class ApiService extends GetxService {
         final decoded = json.decode(utf8.decode(response.bodyBytes));
         // 后端可能返回Map或List，需要处理两种情况
         if (decoded is List) {
-          return decoded.map((item) => AnswerRecord.fromJson(item as Map<String, dynamic>)).toList();
+          return decoded
+              .map(
+                  (item) => AnswerRecord.fromJson(item as Map<String, dynamic>))
+              .toList();
         } else if (decoded is Map && decoded.containsKey('records')) {
           final List<dynamic> records = decoded['records'] as List;
-          return records.map((item) => AnswerRecord.fromJson(item as Map<String, dynamic>)).toList();
+          return records
+              .map(
+                  (item) => AnswerRecord.fromJson(item as Map<String, dynamic>))
+              .toList();
         }
       }
       return [];
@@ -176,7 +184,8 @@ class ApiService extends GetxService {
   // ==================== 个性化推荐 ====================
 
   /// 获取个性化推荐题目
-  Future<RecommendationResponse?> getRecommendations(RecommendationRequest request) async {
+  Future<RecommendationResponse?> getRecommendations(
+      RecommendationRequest request) async {
     try {
       final response = await http.post(
         Uri.parse('${serverUrl.value}/api/student/recommend'),
@@ -238,13 +247,15 @@ class ApiService extends GetxService {
   }
 
   /// 获取指定章节的讲解内容
-  Future<TutorialChapter?> getChapterTutorial(String themeName, String chapterName) async {
+  Future<TutorialChapter?> getChapterTutorial(
+      String themeName, String chapterName) async {
     try {
       final encodedTheme = Uri.encodeComponent(themeName);
       final encodedChapter = Uri.encodeComponent(chapterName);
 
       final response = await http.get(
-        Uri.parse('${serverUrl.value}/api/tutorials/chapter/$encodedTheme/$encodedChapter'),
+        Uri.parse(
+            '${serverUrl.value}/api/tutorials/chapter/$encodedTheme/$encodedChapter'),
         headers: headers,
       );
 
@@ -279,4 +290,3 @@ class ApiService extends GetxService {
     }
   }
 }
-

@@ -47,10 +47,7 @@ class AnswerFormatter {
 
   /// 规范化用户输入的答案
   static String normalizeInput(String input) {
-    return input.trim()
-        .replaceAll(' ', '')
-        .replaceAll('\$', '')
-        .toUpperCase();
+    return input.trim().replaceAll(' ', '').replaceAll('\$', '').toUpperCase();
   }
 
   /// 检查两个答案是否等价
@@ -77,4 +74,3 @@ class AnswerFormatter {
     return false;
   }
 }
-

@@ -37,7 +37,8 @@ class ChapterSelectorDropdown extends GetView<DrillController> {
             const SizedBox(width: 8),
             Expanded(
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.blue.shade200),
                   borderRadius: BorderRadius.circular(8),
@@ -72,5 +73,8 @@ class ChapterSelectorDropdown extends GetView<DrillController> {
     });
   }
 }
+
+
+
 
 
